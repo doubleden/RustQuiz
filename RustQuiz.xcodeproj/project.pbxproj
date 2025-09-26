@@ -6,23 +6,30 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		056C6C132E868A07006C44D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 056C6C0F2E868A07006C44D3 /* Assets.xcassets */; };
+		056C6C142E868A07006C44D3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6C102E868A07006C44D3 /* ContentView.swift */; };
+		056C6C152E868A07006C44D3 /* RustQuizApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6C112E868A07006C44D3 /* RustQuizApp.swift */; };
+		056C6C182E868A47006C44D3 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 056C6C172E868A47006C44D3 /* ComposableArchitecture */; };
+		056C6C612E868E98006C44D3 /* RootScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6C5F2E868E98006C44D3 /* RootScreenView.swift */; };
+		056C6C622E868E98006C44D3 /*  RootScreenFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6C5E2E868E98006C44D3 /*  RootScreenFeature.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		056C6C012E868A01006C44D3 /* RustQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RustQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		056C6C0F2E868A07006C44D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		056C6C102E868A07006C44D3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		056C6C112E868A07006C44D3 /* RustQuizApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RustQuizApp.swift; sourceTree = "<group>"; };
+		056C6C5E2E868E98006C44D3 /*  RootScreenFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " RootScreenFeature.swift"; sourceTree = "<group>"; };
+		056C6C5F2E868E98006C44D3 /* RootScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		056C6C032E868A01006C44D3 /* RustQuiz */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = RustQuiz;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		056C6BFE2E868A01006C44D3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				056C6C182E868A47006C44D3 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,7 +39,7 @@
 		056C6BF82E868A01006C44D3 = {
 			isa = PBXGroup;
 			children = (
-				056C6C032E868A01006C44D3 /* RustQuiz */,
+				056C6C122E868A07006C44D3 /* RustQuiz */,
 				056C6C022E868A01006C44D3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +50,26 @@
 				056C6C012E868A01006C44D3 /* RustQuiz.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		056C6C122E868A07006C44D3 /* RustQuiz */ = {
+			isa = PBXGroup;
+			children = (
+				056C6C112E868A07006C44D3 /* RustQuizApp.swift */,
+				056C6C102E868A07006C44D3 /* ContentView.swift */,
+				056C6C602E868E98006C44D3 /* RootScreen */,
+				056C6C0F2E868A07006C44D3 /* Assets.xcassets */,
+			);
+			path = RustQuiz;
+			sourceTree = "<group>";
+		};
+		056C6C602E868E98006C44D3 /* RootScreen */ = {
+			isa = PBXGroup;
+			children = (
+				056C6C5E2E868E98006C44D3 /*  RootScreenFeature.swift */,
+				056C6C5F2E868E98006C44D3 /* RootScreenView.swift */,
+			);
+			path = RootScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -60,11 +87,9 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				056C6C032E868A01006C44D3 /* RustQuiz */,
-			);
 			name = RustQuiz;
 			packageProductDependencies = (
+				056C6C172E868A47006C44D3 /* ComposableArchitecture */,
 			);
 			productName = RustQuiz;
 			productReference = 056C6C012E868A01006C44D3 /* RustQuiz.app */;
@@ -94,6 +119,9 @@
 			);
 			mainGroup = 056C6BF82E868A01006C44D3;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				056C6C162E868A47006C44D3 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 056C6C022E868A01006C44D3 /* Products */;
 			projectDirPath = "";
@@ -109,6 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				056C6C132E868A07006C44D3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +148,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				056C6C142E868A07006C44D3 /* ContentView.swift in Sources */,
+				056C6C152E868A07006C44D3 /* RustQuizApp.swift in Sources */,
+				056C6C612E868E98006C44D3 /* RootScreenView.swift in Sources */,
+				056C6C622E868E98006C44D3 /*  RootScreenFeature.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +292,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -269,12 +303,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = DenisDenisov.RustQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -291,8 +329,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,12 +340,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = DenisDenisov.RustQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -332,6 +375,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		056C6C162E868A47006C44D3 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.22.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		056C6C172E868A47006C44D3 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 056C6C162E868A47006C44D3 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 056C6BF92E868A01006C44D3 /* Project object */;
 }
