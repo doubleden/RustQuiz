@@ -8,20 +8,39 @@
 
 /* Begin PBXBuildFile section */
 		056C6C132E868A07006C44D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 056C6C0F2E868A07006C44D3 /* Assets.xcassets */; };
-		056C6C142E868A07006C44D3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6C102E868A07006C44D3 /* ContentView.swift */; };
 		056C6C152E868A07006C44D3 /* RustQuizApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6C112E868A07006C44D3 /* RustQuizApp.swift */; };
 		056C6C182E868A47006C44D3 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 056C6C172E868A47006C44D3 /* ComposableArchitecture */; };
 		056C6C612E868E98006C44D3 /* RootScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6C5F2E868E98006C44D3 /* RootScreenView.swift */; };
 		056C6C622E868E98006C44D3 /*  RootScreenFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6C5E2E868E98006C44D3 /*  RootScreenFeature.swift */; };
+		056C6CDD2E86B47D006C44D3 /*  SettingsScreenFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6CDA2E86B47D006C44D3 /*  SettingsScreenFeature.swift */; };
+		056C6CDE2E86B47D006C44D3 /* SettingsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6CDB2E86B47D006C44D3 /* SettingsScreenView.swift */; };
+		056C6CE22E86B48C006C44D3 /* QuizScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6CE02E86B48C006C44D3 /* QuizScreenView.swift */; };
+		056C6CE32E86B48C006C44D3 /*  QuizScreenFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6CDF2E86B48C006C44D3 /*  QuizScreenFeature.swift */; };
+		056C6CE72E86B644006C44D3 /*  MainScreenFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6CE42E86B644006C44D3 /*  MainScreenFeature.swift */; };
+		056C6CE82E86B644006C44D3 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6CE52E86B644006C44D3 /* MainScreenView.swift */; };
+		056C6CEC2E86B6BB006C44D3 /*  OnBoardingScreenFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6CE92E86B6BB006C44D3 /*  OnBoardingScreenFeature.swift */; };
+		056C6CED2E86B6BB006C44D3 /* OnBoardingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6CEA2E86B6BB006C44D3 /* OnBoardingScreenView.swift */; };
+		056C6D0B2E86C85D006C44D3 /* SQLiteData in Frameworks */ = {isa = PBXBuildFile; productRef = 056C6D0A2E86C85D006C44D3 /* SQLiteData */; };
+		056C6D0E2E89318B006C44D3 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6D0D2E89318B006C44D3 /* Theme.swift */; };
+		056C6D112E8940A1006C44D3 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6D102E8940A1006C44D3 /* StorageService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		056C6C012E868A01006C44D3 /* RustQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RustQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		056C6C0F2E868A07006C44D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		056C6C102E868A07006C44D3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		056C6C112E868A07006C44D3 /* RustQuizApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RustQuizApp.swift; sourceTree = "<group>"; };
 		056C6C5E2E868E98006C44D3 /*  RootScreenFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " RootScreenFeature.swift"; sourceTree = "<group>"; };
 		056C6C5F2E868E98006C44D3 /* RootScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScreenView.swift; sourceTree = "<group>"; };
+		056C6CDA2E86B47D006C44D3 /*  SettingsScreenFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " SettingsScreenFeature.swift"; sourceTree = "<group>"; };
+		056C6CDB2E86B47D006C44D3 /* SettingsScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenView.swift; sourceTree = "<group>"; };
+		056C6CDF2E86B48C006C44D3 /*  QuizScreenFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " QuizScreenFeature.swift"; sourceTree = "<group>"; };
+		056C6CE02E86B48C006C44D3 /* QuizScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizScreenView.swift; sourceTree = "<group>"; };
+		056C6CE42E86B644006C44D3 /*  MainScreenFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " MainScreenFeature.swift"; sourceTree = "<group>"; };
+		056C6CE52E86B644006C44D3 /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
+		056C6CE92E86B6BB006C44D3 /*  OnBoardingScreenFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " OnBoardingScreenFeature.swift"; sourceTree = "<group>"; };
+		056C6CEA2E86B6BB006C44D3 /* OnBoardingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingScreenView.swift; sourceTree = "<group>"; };
+		056C6D0D2E89318B006C44D3 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		056C6D102E8940A1006C44D3 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				056C6D0B2E86C85D006C44D3 /* SQLiteData in Frameworks */,
 				056C6C182E868A47006C44D3 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -55,9 +75,14 @@
 		056C6C122E868A07006C44D3 /* RustQuiz */ = {
 			isa = PBXGroup;
 			children = (
-				056C6C112E868A07006C44D3 /* RustQuizApp.swift */,
-				056C6C102E868A07006C44D3 /* ContentView.swift */,
+				05D5259E2E89546A0002C6BE /* App */,
 				056C6C602E868E98006C44D3 /* RootScreen */,
+				056C6CEB2E86B6BB006C44D3 /* OnBoardingScreen */,
+				056C6CE62E86B644006C44D3 /* MainScreen */,
+				056C6CDC2E86B47D006C44D3 /* SettingsScreen */,
+				056C6CE12E86B48C006C44D3 /* QuizScreen */,
+				056C6D0C2E89306F006C44D3 /* Models */,
+				056C6D0F2E894088006C44D3 /* Services */,
 				056C6C0F2E868A07006C44D3 /* Assets.xcassets */,
 			);
 			path = RustQuiz;
@@ -70,6 +95,66 @@
 				056C6C5F2E868E98006C44D3 /* RootScreenView.swift */,
 			);
 			path = RootScreen;
+			sourceTree = "<group>";
+		};
+		056C6CDC2E86B47D006C44D3 /* SettingsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				056C6CDA2E86B47D006C44D3 /*  SettingsScreenFeature.swift */,
+				056C6CDB2E86B47D006C44D3 /* SettingsScreenView.swift */,
+			);
+			path = SettingsScreen;
+			sourceTree = "<group>";
+		};
+		056C6CE12E86B48C006C44D3 /* QuizScreen */ = {
+			isa = PBXGroup;
+			children = (
+				056C6CDF2E86B48C006C44D3 /*  QuizScreenFeature.swift */,
+				056C6CE02E86B48C006C44D3 /* QuizScreenView.swift */,
+			);
+			path = QuizScreen;
+			sourceTree = "<group>";
+		};
+		056C6CE62E86B644006C44D3 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				056C6CE42E86B644006C44D3 /*  MainScreenFeature.swift */,
+				056C6CE52E86B644006C44D3 /* MainScreenView.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		056C6CEB2E86B6BB006C44D3 /* OnBoardingScreen */ = {
+			isa = PBXGroup;
+			children = (
+				056C6CE92E86B6BB006C44D3 /*  OnBoardingScreenFeature.swift */,
+				056C6CEA2E86B6BB006C44D3 /* OnBoardingScreenView.swift */,
+			);
+			path = OnBoardingScreen;
+			sourceTree = "<group>";
+		};
+		056C6D0C2E89306F006C44D3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				056C6D0D2E89318B006C44D3 /* Theme.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		056C6D0F2E894088006C44D3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				056C6D102E8940A1006C44D3 /* StorageService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		05D5259E2E89546A0002C6BE /* App */ = {
+			isa = PBXGroup;
+			children = (
+				056C6C112E868A07006C44D3 /* RustQuizApp.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,6 +175,7 @@
 			name = RustQuiz;
 			packageProductDependencies = (
 				056C6C172E868A47006C44D3 /* ComposableArchitecture */,
+				056C6D0A2E86C85D006C44D3 /* SQLiteData */,
 			);
 			productName = RustQuiz;
 			productReference = 056C6C012E868A01006C44D3 /* RustQuiz.app */;
@@ -121,6 +207,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				056C6C162E868A47006C44D3 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				056C6D092E86C85D006C44D3 /* XCRemoteSwiftPackageReference "sqlite-data" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 056C6C022E868A01006C44D3 /* Products */;
@@ -148,10 +235,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				056C6C142E868A07006C44D3 /* ContentView.swift in Sources */,
 				056C6C152E868A07006C44D3 /* RustQuizApp.swift in Sources */,
 				056C6C612E868E98006C44D3 /* RootScreenView.swift in Sources */,
 				056C6C622E868E98006C44D3 /*  RootScreenFeature.swift in Sources */,
+				056C6CE72E86B644006C44D3 /*  MainScreenFeature.swift in Sources */,
+				056C6CE82E86B644006C44D3 /* MainScreenView.swift in Sources */,
+				056C6D112E8940A1006C44D3 /* StorageService.swift in Sources */,
+				056C6CDD2E86B47D006C44D3 /*  SettingsScreenFeature.swift in Sources */,
+				056C6CDE2E86B47D006C44D3 /* SettingsScreenView.swift in Sources */,
+				056C6CE22E86B48C006C44D3 /* QuizScreenView.swift in Sources */,
+				056C6CE32E86B48C006C44D3 /*  QuizScreenFeature.swift in Sources */,
+				056C6D0E2E89318B006C44D3 /* Theme.swift in Sources */,
+				056C6CEC2E86B6BB006C44D3 /*  OnBoardingScreenFeature.swift in Sources */,
+				056C6CED2E86B6BB006C44D3 /* OnBoardingScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +481,14 @@
 				minimumVersion = 1.22.3;
 			};
 		};
+		056C6D092E86C85D006C44D3 /* XCRemoteSwiftPackageReference "sqlite-data" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/sqlite-data";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -392,6 +496,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 056C6C162E868A47006C44D3 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
+		};
+		056C6D0A2E86C85D006C44D3 /* SQLiteData */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 056C6D092E86C85D006C44D3 /* XCRemoteSwiftPackageReference "sqlite-data" */;
+			productName = SQLiteData;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
