@@ -31,6 +31,7 @@ struct RootScreenFeature {
     }
     
     @Dependency(\.storageService) var storageService
+    @Dependency(\.seedService) var seedService
     
     var body: some Reducer<State, Action> {
         Scope(state: \.mainScreenState, action: \.mainScreenAction) {
@@ -54,7 +55,8 @@ struct RootScreenFeature {
             case .setDefaultThemes:
                 print("setDefaultThemes")
                 return .run { send in
-                    try await storageService.createThemes([])
+                    let themes = try await seedService.getDefaultThemes()
+                    try await storageService.createThemes(themes)
                     await send(.checkQuantityOfThemes)
                 }
             default:
