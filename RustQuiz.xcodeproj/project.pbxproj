@@ -10,6 +10,7 @@
 		0533878D2E8A7D7300554004 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0533878C2E8A7D7300554004 /* Quiz.swift */; };
 		0533878F2E8A7D8B00554004 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0533878E2E8A7D8B00554004 /* Question.swift */; };
 		053387912E8A7D9000554004 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053387902E8A7D9000554004 /* Answer.swift */; };
+		053387C72E8A9E0000554004 /* DatabaseAppConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053387C62E8A9E0000554004 /* DatabaseAppConfigurator.swift */; };
 		056C6C132E868A07006C44D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 056C6C0F2E868A07006C44D3 /* Assets.xcassets */; };
 		056C6C152E868A07006C44D3 /* RustQuizApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6C112E868A07006C44D3 /* RustQuizApp.swift */; };
 		056C6C182E868A47006C44D3 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 056C6C172E868A47006C44D3 /* ComposableArchitecture */; };
@@ -32,6 +33,7 @@
 		0533878C2E8A7D7300554004 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		0533878E2E8A7D8B00554004 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		053387902E8A7D9000554004 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		053387C62E8A9E0000554004 /* DatabaseAppConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseAppConfigurator.swift; sourceTree = "<group>"; };
 		056C6C012E868A01006C44D3 /* RustQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RustQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		056C6C0F2E868A07006C44D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		056C6C112E868A07006C44D3 /* RustQuizApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RustQuizApp.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				056C6C112E868A07006C44D3 /* RustQuizApp.swift */,
+				053387C62E8A9E0000554004 /* DatabaseAppConfigurator.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				053387C72E8A9E0000554004 /* DatabaseAppConfigurator.swift in Sources */,
 				0533878F2E8A7D8B00554004 /* Question.swift in Sources */,
 				056C6C152E868A07006C44D3 /* RustQuizApp.swift in Sources */,
 				056C6C612E868E98006C44D3 /* RootScreenView.swift in Sources */,
