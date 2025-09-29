@@ -33,18 +33,18 @@ struct RootScreenView: View {
             //
             VStack {
                 Spacer()
-                if store.themes.isEmpty {
+                if store.sources.isEmpty {
                     Text("Emtpy")
                 } else {
-                    ForEach(store.themes) { theme in
-                        Text(theme.title)
+                    ForEach(store.sources) { source in
+                        Text(source.title)
                     }
                 }
             }
             //
         }
         .onAppear {
-            store.send(.checkQuantityOfThemes)
+            store.send(.checkQuantityOfSources)
         }
     }
 }

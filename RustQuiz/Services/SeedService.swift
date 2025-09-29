@@ -9,15 +9,15 @@ import Foundation
 import ComposableArchitecture
 
 struct SeedService {
-    var getDefaultThemes: @Sendable () async throws -> [Theme]
+    var getDefaultSources: @Sendable () async throws -> [Source]
 }
 
 extension SeedService: DependencyKey {
     
     // MARK: - Live
     static let liveValue: SeedService = .init(
-        getDefaultThemes: {
-            let theBookThemeID = UUID()
+        getDefaultSources: {
+            let theBookSourceID = UUID()
             return []
         }
     )

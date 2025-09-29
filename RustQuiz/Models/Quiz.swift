@@ -11,9 +11,9 @@ import SQLiteData
 @Table
 struct Quiz: Identifiable {
     let id: UUID
-    var title = ""
+    var theme = ""
     var priority = 0
-    var themeID: Theme.ID
+    var sourceID: Source.ID
 }
 
 extension Quiz {

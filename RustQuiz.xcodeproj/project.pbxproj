@@ -25,7 +25,7 @@
 		056C6CEC2E86B6BB006C44D3 /*  OnBoardingScreenFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6CE92E86B6BB006C44D3 /*  OnBoardingScreenFeature.swift */; };
 		056C6CED2E86B6BB006C44D3 /* OnBoardingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6CEA2E86B6BB006C44D3 /* OnBoardingScreenView.swift */; };
 		056C6D0B2E86C85D006C44D3 /* SQLiteData in Frameworks */ = {isa = PBXBuildFile; productRef = 056C6D0A2E86C85D006C44D3 /* SQLiteData */; };
-		056C6D0E2E89318B006C44D3 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6D0D2E89318B006C44D3 /* Theme.swift */; };
+		056C6D0E2E89318B006C44D3 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6D0D2E89318B006C44D3 /* Source.swift */; };
 		056C6D112E8940A1006C44D3 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6D102E8940A1006C44D3 /* StorageService.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,7 +47,7 @@
 		056C6CE52E86B644006C44D3 /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
 		056C6CE92E86B6BB006C44D3 /*  OnBoardingScreenFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " OnBoardingScreenFeature.swift"; sourceTree = "<group>"; };
 		056C6CEA2E86B6BB006C44D3 /* OnBoardingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingScreenView.swift; sourceTree = "<group>"; };
-		056C6D0D2E89318B006C44D3 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		056C6D0D2E89318B006C44D3 /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
 		056C6D102E8940A1006C44D3 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,7 +144,7 @@
 		056C6D0C2E89306F006C44D3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				056C6D0D2E89318B006C44D3 /* Theme.swift */,
+				056C6D0D2E89318B006C44D3 /* Source.swift */,
 				0533878C2E8A7D7300554004 /* Quiz.swift */,
 				0533878E2E8A7D8B00554004 /* Question.swift */,
 				053387902E8A7D9000554004 /* Answer.swift */,
@@ -261,7 +261,7 @@
 				056C6CDE2E86B47D006C44D3 /* SettingsScreenView.swift in Sources */,
 				056C6CE22E86B48C006C44D3 /* QuizScreenView.swift in Sources */,
 				056C6CE32E86B48C006C44D3 /*  QuizScreenFeature.swift in Sources */,
-				056C6D0E2E89318B006C44D3 /* Theme.swift in Sources */,
+				056C6D0E2E89318B006C44D3 /* Source.swift in Sources */,
 				056C6CEC2E86B6BB006C44D3 /*  OnBoardingScreenFeature.swift in Sources */,
 				056C6CED2E86B6BB006C44D3 /* OnBoardingScreenView.swift in Sources */,
 			);

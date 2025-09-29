@@ -73,10 +73,10 @@ extension RustQuizApp {
         
         // Регистрация миграций
         migrator.registerMigration("Create quiz tables") { db in
-            // Таблица тем
+            // Таблица источника
             try #sql(
                 """
-                CREATE TABLE "themes" (
+                CREATE TABLE "source" (
                     "id" TEXT PRIMARY KEY NOT NULL ON CONFLICT REPLACE DEFAULT (uuid()),
                     "title" TEXT NOT NULL ON CONFLICT REPLACE DEFAULT '',
                     "priority" INTEGER NOT NULL ON CONFLICT REPLACE DEFAULT 0
@@ -90,9 +90,9 @@ extension RustQuizApp {
                 """
                 CREATE TABLE "quizzes" (
                     "id" TEXT PRIMARY KEY NOT NULL ON CONFLICT REPLACE DEFAULT (uuid()),
-                    "title" TEXT NOT NULL ON CONFLICT REPLACE DEFAULT '',
+                    "theme" TEXT NOT NULL ON CONFLICT REPLACE DEFAULT '',
                     "priority" INTEGER NOT NULL ON CONFLICT REPLACE DEFAULT 0,
-                    "themeID" TEXT NOT NULL REFERENCES "themes"("id") ON DELETE CASCADE
+                    "sourceID" TEXT NOT NULL REFERENCES "source"("id") ON DELETE CASCADE
                 ) STRICT
                 """
             )
@@ -128,7 +128,7 @@ extension RustQuizApp {
             .execute(db)
             
             // Создаем индексы для оптимизации
-            try db.execute(sql: "CREATE INDEX idx_quizzes_themeID ON quizzes(themeID)")
+            try db.execute(sql: "CREATE INDEX idx_quizzes_sourceID ON quizzes(sourceID)")
             try db.execute(sql: "CREATE INDEX idx_questions_quizID ON questions(quizID)")
             try db.execute(sql: "CREATE INDEX idx_answers_questionID ON answers(questionID)")
         }

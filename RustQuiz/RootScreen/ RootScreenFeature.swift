@@ -18,14 +18,13 @@ struct RootScreenFeature {
         var onBoardingScreenState = OnBoardingScreenFeature.State()
         var stack = StackState<Destination.State>()
         //
-//        @FetchAll(Theme.order(by: \.title)) var themes: [Theme]
-        var themes: [Theme] = []
+        var sources: [Source] = []
     }
     
     enum Action {
-        case checkQuantityOfThemes
-        case setDefaultThemes
-        case setThemes([Theme])
+        case checkQuantityOfSources
+        case setDefaultSources
+        case setSources([Source])
         case mainScreenAction(MainScreenFeature.Action)
         case stackAction(StackActionOf<Destination>)
     }
@@ -42,22 +41,22 @@ struct RootScreenFeature {
             state,
             action in
             switch action {
-            case .checkQuantityOfThemes:
+            case .checkQuantityOfSources:
                 return .run { send in
-                    let themes = try await storageService.readThemes()
-                    await themes.isEmpty
-                    ? send(.setDefaultThemes)
-                    : send(.setThemes(themes))
+                    let sources = try await storageService.readSources()
+                    await sources.isEmpty
+                    ? send(.setDefaultSources)
+                    : send(.setSources(sources))
                 }
-            case .setThemes(let themes):
-                state.themes = themes
+            case .setSources(let sources):
+                state.sources = sources
                 return .none
-            case .setDefaultThemes:
-                print("setDefaultThemes")
+            case .setDefaultSources:
+                print("setDefaultSources")
                 return .run { send in
-                    let themes = try await seedService.getDefaultThemes()
-                    try await storageService.createThemes(themes)
-                    await send(.checkQuantityOfThemes)
+                    let sources = try await seedService.getDefaultSources()
+                    try await storageService.createSources(sources)
+                    await send(.checkQuantityOfSources)
                 }
             default:
                 return .none
