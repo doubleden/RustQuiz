@@ -11,5 +11,11 @@ import Foundation
 @Table
 struct Theme: Identifiable {
     let id: UUID
-    var title: String
+    var title = ""
+    var priority = 0
 }
+
+extension Theme {
+    static let withQuizzes = group(by: \.id).leftJoin(Quiz.all) { $0.id.eq($1.themeID) }
+}
+

@@ -10,7 +10,7 @@ import ComposableArchitecture
 import SQLiteData
 
 struct StorageService {
-    var createThemes: @Sendable () async throws -> Void
+    var createThemes: @Sendable ([Theme]) async throws -> Void
     var readThemes: @Sendable () async throws -> [Theme]
 }
 
@@ -18,19 +18,22 @@ extension StorageService: DependencyKey {
     
     // MARK: - Live
     static let liveValue: StorageService = .init(
-        createThemes: {
+        createThemes: { themes in
             @Dependency(\.defaultDatabase) var db
             try await db.write { db in
-                try Theme.insert{
-                    Theme(id: UUID(), title: "demo")
+                for theme in themes {
+                    try Theme.insert{
+                        theme
+                    }
+                    .execute(db)
                 }
-                .execute(db)
             }
         },
         readThemes: {
             @Dependency(\.defaultDatabase) var database
             let themes = try await database.read { db in
                 try Theme.all
+                    .order(by: \.priority)
                     .fetchAll(db)
             }
             print("fetched \(themes.count) themes")
@@ -40,13 +43,13 @@ extension StorageService: DependencyKey {
     
     // MARK: - Preview
     static let previewValue: StorageService = .init(
-        createThemes: {
+        createThemes: { _ in
             
         },
         readThemes: {
             [
-                Theme(id: UUID(), title: "1"),
-                Theme(id: UUID(), title: "2"),
+                Theme(id: UUID(), title: "1", priority: 1),
+                Theme(id: UUID(), title: "2", priority: 2),
             ]
         }
     )

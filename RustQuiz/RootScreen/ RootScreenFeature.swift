@@ -54,7 +54,7 @@ struct RootScreenFeature {
             case .setDefaultThemes:
                 print("setDefaultThemes")
                 return .run { send in
-                    try await storageService.createThemes()
+                    try await storageService.createThemes([])
                     await send(.checkQuantityOfThemes)
                 }
             default:
