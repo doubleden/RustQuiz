@@ -11,7 +11,7 @@ import Foundation
 @Table("SourceTable")
 struct SourceTable: Identifiable {
     let id: UUID
-    var title = ""
-    var priority = 0
+    var title: String
+    var priority: Int
 }
 

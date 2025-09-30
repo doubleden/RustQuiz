@@ -11,8 +11,8 @@ import SQLiteData
 @Table("QuizTable")
 struct QuizTable: Identifiable {
     let id: UUID
-    var theme = ""
-    var priority = 0
+    var theme: String
+    var priority: Int
     var sourceRowID: SourceTable.ID
 }
 

@@ -24,6 +24,8 @@ struct RootScreenFeature {
     enum Action {
         case checkQuantityOfSources
         case setDefaultSources
+        case delete
+        case update
         case setSources([Source])
         case mainScreenAction(MainScreenFeature.Action)
         case stackAction(StackActionOf<Destination>)
@@ -56,6 +58,19 @@ struct RootScreenFeature {
                 return .run { send in
                     let theBookSource = try await seedService.getTheBookSource()
                     try await storageService.createSource(theBookSource)
+                    await send(.checkQuantityOfSources)
+                }
+            case .delete:
+                let source = state.sources.remove(at: 0)
+                return .run { _ in
+                    try await storageService.deleteSource(source)
+                }
+            case .update:
+                var source = state.sources[0]
+                source.title = "Updated"
+                source.quizzes[0].theme = "dsdsddsd"
+                return .run { [source = source] send in
+                    try await storageService.updateSource(source)
                     await send(.checkQuantityOfSources)
                 }
             default:

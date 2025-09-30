@@ -10,7 +10,7 @@ import SQLiteData
 
 struct RootScreenView: View {
     let store: StoreOf<RootScreenFeature>
-    
+    @State var refresh: Bool = true
     var body: some View {
         ZStack {
             if store.isFirstLaunch {
@@ -32,16 +32,28 @@ struct RootScreenView: View {
             
             //
             VStack {
-                Spacer()
-                if store.sources.isEmpty {
-                    Text("Emtpy")
-                } else {
-                    ForEach(store.sources) { source in
-                        Text(source.title)
-                            .onAppear {
-                                dump(source, name: "Source")
-                            }
+                if refresh {
+                    if store.sources.isEmpty {
+                        Text("No sources")
+                    } else {
+                        ForEach(store.sources) { source in
+                            Text(source.title)
+                                .onAppear {
+                                    dump(source, name: "Source")
+                                }
+                        }
                     }
+                }
+                
+                Spacer()
+                Button("delete") {
+                    store.send(.delete)
+                }
+                Button("update") {
+                    store.send(.update)
+                }
+                Button("refresh") {
+                    refresh.toggle()
                 }
             }
             //

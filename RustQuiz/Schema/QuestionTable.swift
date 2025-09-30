@@ -10,15 +10,15 @@ import SQLiteData
 
 @Table("QuestionTable")
 struct QuestionTable: Identifiable {
-  let id: UUID
-  var title = ""
+    let id: UUID
+    var title: String
     
-  var descriptionText = ""
-  var descriptionLink = ""
+    var descriptionText: String
+    var descriptionLink: String
     
-  var hasUserAnswered = false
-  var isUserAnswerCorrect = false
+    var hasUserAnswered: Bool
+    var isUserAnswerCorrect: Bool
     
-  var quizRowID: QuizTable.ID
+    var quizRowID: QuizTable.ID
 }
 
