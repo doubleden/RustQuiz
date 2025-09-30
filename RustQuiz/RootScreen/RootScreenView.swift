@@ -38,6 +38,9 @@ struct RootScreenView: View {
                 } else {
                     ForEach(store.sources) { source in
                         Text(source.title)
+                            .onAppear {
+                                dump(source, name: "Source")
+                            }
                     }
                 }
             }

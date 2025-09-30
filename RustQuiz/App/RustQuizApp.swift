@@ -72,65 +72,56 @@ extension RustQuizApp {
         #endif
         
         // Регистрация миграций
-        migrator.registerMigration("Create quiz tables") { db in
+        migrator.registerMigration("Create quiz tables v2") { db in
             // Таблица источника
-            try #sql(
-                """
-                CREATE TABLE "source" (
-                    "id" TEXT PRIMARY KEY NOT NULL ON CONFLICT REPLACE DEFAULT (uuid()),
-                    "title" TEXT NOT NULL ON CONFLICT REPLACE DEFAULT '',
-                    "priority" INTEGER NOT NULL ON CONFLICT REPLACE DEFAULT 0
+            try db.execute(sql: """
+                CREATE TABLE IF NOT EXISTS "SourceTable" (
+                    "id" TEXT PRIMARY KEY NOT NULL,
+                    "title" TEXT NOT NULL,
+                    "priority" INTEGER NOT NULL
                 ) STRICT
-                """
-            )
-            .execute(db)
+                """)
             
-            // Таблица квизов
-            try #sql(
-                """
-                CREATE TABLE "quizzes" (
-                    "id" TEXT PRIMARY KEY NOT NULL ON CONFLICT REPLACE DEFAULT (uuid()),
-                    "theme" TEXT NOT NULL ON CONFLICT REPLACE DEFAULT '',
-                    "priority" INTEGER NOT NULL ON CONFLICT REPLACE DEFAULT 0,
-                    "sourceID" TEXT NOT NULL REFERENCES "source"("id") ON DELETE CASCADE
+            // Таблица квизов - ИСПРАВЛЕНО имя и колонки
+            try db.execute(sql: """
+                CREATE TABLE IF NOT EXISTS "QuizTable" (
+                    "id" TEXT PRIMARY KEY NOT NULL,
+                    "theme" TEXT NOT NULL,
+                    "priority" INTEGER NOT NULL,
+                    "sourceRowID" TEXT NOT NULL,
+                    FOREIGN KEY ("sourceRowID") REFERENCES "SourceTable"("id") ON DELETE CASCADE
                 ) STRICT
-                """
-            )
-            .execute(db)
+                """)
             
-            // Таблица вопросов
-            try #sql(
-                """
-                CREATE TABLE "questions" (
-                    "id" TEXT PRIMARY KEY NOT NULL ON CONFLICT REPLACE DEFAULT (uuid()),
-                    "title" TEXT NOT NULL ON CONFLICT REPLACE DEFAULT '',
-                    "descriptionText" TEXT NOT NULL ON CONFLICT REPLACE DEFAULT '',
-                    "descriptionLink" TEXT NOT NULL ON CONFLICT REPLACE DEFAULT '',
-                    "hasUserAnswered" INTEGER NOT NULL ON CONFLICT REPLACE DEFAULT 0,
-                    "isUserAnswerCorrect" INTEGER NOT NULL ON CONFLICT REPLACE DEFAULT 0,
-                    "quizID" TEXT NOT NULL REFERENCES "quizzes"("id") ON DELETE CASCADE
+            // Таблица вопросов - ИСПРАВЛЕНО имя колонки
+            try db.execute(sql: """
+                CREATE TABLE IF NOT EXISTS "QuestionTable" (
+                    "id" TEXT PRIMARY KEY NOT NULL,
+                    "title" TEXT NOT NULL,
+                    "descriptionText" TEXT,
+                    "descriptionLink" TEXT,
+                    "hasUserAnswered" INTEGER NOT NULL DEFAULT 0,
+                    "isUserAnswerCorrect" INTEGER,
+                    "quizRowID" TEXT NOT NULL,
+                    FOREIGN KEY ("quizRowID") REFERENCES "QuizTable"("id") ON DELETE CASCADE
                 ) STRICT
-                """
-            )
-            .execute(db)
+                """)
             
             // Таблица ответов
-            try #sql(
-                """
-                CREATE TABLE "answers" (
-                    "id" TEXT PRIMARY KEY NOT NULL ON CONFLICT REPLACE DEFAULT (uuid()),
-                    "title" TEXT NOT NULL ON CONFLICT REPLACE DEFAULT '',
-                    "isCorrect" INTEGER NOT NULL ON CONFLICT REPLACE DEFAULT 0,
-                    "questionID" TEXT NOT NULL REFERENCES "questions"("id") ON DELETE CASCADE
+            try db.execute(sql: """
+                CREATE TABLE IF NOT EXISTS "AnswerTable" (
+                    "id" TEXT PRIMARY KEY NOT NULL,
+                    "title" TEXT NOT NULL,
+                    "isCorrect" INTEGER NOT NULL DEFAULT 0,
+                    "questionID" TEXT NOT NULL,
+                    FOREIGN KEY ("questionID") REFERENCES "QuestionTable"("id") ON DELETE CASCADE
                 ) STRICT
-                """
-            )
-            .execute(db)
+                """)
             
-            // Создаем индексы для оптимизации
-            try db.execute(sql: "CREATE INDEX idx_quizzes_sourceID ON quizzes(sourceID)")
-            try db.execute(sql: "CREATE INDEX idx_questions_quizID ON questions(quizID)")
-            try db.execute(sql: "CREATE INDEX idx_answers_questionID ON answers(questionID)")
+            // Создаем индексы для оптимизации - ИСПРАВЛЕНЫ имена таблиц
+            try db.execute(sql: "CREATE INDEX IF NOT EXISTS idx_quiz_source ON QuizTable(sourceRowID)")
+            try db.execute(sql: "CREATE INDEX IF NOT EXISTS idx_question_quiz ON QuestionTable(quizRowID)")
+            try db.execute(sql: "CREATE INDEX IF NOT EXISTS idx_answer_question ON AnswerTable(questionID)")
         }
         
         // Применяем миграции

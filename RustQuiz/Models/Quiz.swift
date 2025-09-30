@@ -2,20 +2,14 @@
 //  Quiz.swift
 //  RustQuiz
 //
-//  Created by Denis Denisov on 29/9/25.
+//  Created by Denis Denisov on 30/9/25.
 //
 
 import Foundation
-import SQLiteData
 
-@Table
 struct Quiz: Identifiable {
     let id: UUID
-    var theme = ""
-    var priority = 0
-    var sourceID: Source.ID
-}
-
-extension Quiz {
-    static let withQuestions = group(by: \.id).leftJoin(Question.all) { $0.id.eq($1.quizID) }
+    var theme: String
+    var priority: Int
+    var questions: [Question]
 }

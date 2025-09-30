@@ -2,26 +2,20 @@
 //  Question.swift
 //  RustQuiz
 //
-//  Created by Denis Denisov on 29/9/25.
+//  Created by Denis Denisov on 30/9/25.
 //
 
 import Foundation
-import SQLiteData
 
-@Table
 struct Question: Identifiable {
-  let id: UUID
-  var title = ""
+    let id: UUID
+    var title: String
+    var answers: [Answer]
     
-  var descriptionText = ""
-  var descriptionLink = ""
+    var descriptionText: String
+    var descriptionLink: String
     
-  var hasUserAnswered = false
-  var isUserAnswerCorrect = false
+    var hasUserAnswered = false
+    var isUserAnswerCorrect = false
     
-  var quizID: Quiz.ID
-}
-
-extension Question {
-    static let withAnswers = group(by: \.id).leftJoin(Answer.all) { $0.id.eq($1.questionID) }
 }

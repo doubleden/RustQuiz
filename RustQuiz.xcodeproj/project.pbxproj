@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0533878D2E8A7D7300554004 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0533878C2E8A7D7300554004 /* Quiz.swift */; };
-		0533878F2E8A7D8B00554004 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0533878E2E8A7D8B00554004 /* Question.swift */; };
-		053387912E8A7D9000554004 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053387902E8A7D9000554004 /* Answer.swift */; };
+		0533878D2E8A7D7300554004 /* QuizTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0533878C2E8A7D7300554004 /* QuizTable.swift */; };
+		0533878F2E8A7D8B00554004 /* QuestionTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0533878E2E8A7D8B00554004 /* QuestionTable.swift */; };
+		053387912E8A7D9000554004 /* AnswerTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053387902E8A7D9000554004 /* AnswerTable.swift */; };
 		053387CE2E8AAB0000554004 /* SeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053387CD2E8AAB0000554004 /* SeedService.swift */; };
+		053388552E8C1A8C00554004 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053388542E8C1A8C00554004 /* Source.swift */; };
+		053388572E8C1ACA00554004 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053388562E8C1ACA00554004 /* Quiz.swift */; };
+		053388592E8C1B0900554004 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053388582E8C1B0900554004 /* Question.swift */; };
+		0533885B2E8C1B1800554004 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0533885A2E8C1B1800554004 /* Answer.swift */; };
 		056C6C132E868A07006C44D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 056C6C0F2E868A07006C44D3 /* Assets.xcassets */; };
 		056C6C152E868A07006C44D3 /* RustQuizApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6C112E868A07006C44D3 /* RustQuizApp.swift */; };
 		056C6C182E868A47006C44D3 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 056C6C172E868A47006C44D3 /* ComposableArchitecture */; };
@@ -25,15 +29,19 @@
 		056C6CEC2E86B6BB006C44D3 /*  OnBoardingScreenFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6CE92E86B6BB006C44D3 /*  OnBoardingScreenFeature.swift */; };
 		056C6CED2E86B6BB006C44D3 /* OnBoardingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6CEA2E86B6BB006C44D3 /* OnBoardingScreenView.swift */; };
 		056C6D0B2E86C85D006C44D3 /* SQLiteData in Frameworks */ = {isa = PBXBuildFile; productRef = 056C6D0A2E86C85D006C44D3 /* SQLiteData */; };
-		056C6D0E2E89318B006C44D3 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6D0D2E89318B006C44D3 /* Source.swift */; };
+		056C6D0E2E89318B006C44D3 /* SourceTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6D0D2E89318B006C44D3 /* SourceTable.swift */; };
 		056C6D112E8940A1006C44D3 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6D102E8940A1006C44D3 /* StorageService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0533878C2E8A7D7300554004 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
-		0533878E2E8A7D8B00554004 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
-		053387902E8A7D9000554004 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		0533878C2E8A7D7300554004 /* QuizTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTable.swift; sourceTree = "<group>"; };
+		0533878E2E8A7D8B00554004 /* QuestionTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTable.swift; sourceTree = "<group>"; };
+		053387902E8A7D9000554004 /* AnswerTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTable.swift; sourceTree = "<group>"; };
 		053387CD2E8AAB0000554004 /* SeedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeedService.swift; sourceTree = "<group>"; };
+		053388542E8C1A8C00554004 /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
+		053388562E8C1ACA00554004 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		053388582E8C1B0900554004 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		0533885A2E8C1B1800554004 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		056C6C012E868A01006C44D3 /* RustQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RustQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		056C6C0F2E868A07006C44D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		056C6C112E868A07006C44D3 /* RustQuizApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RustQuizApp.swift; sourceTree = "<group>"; };
@@ -47,7 +55,7 @@
 		056C6CE52E86B644006C44D3 /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
 		056C6CE92E86B6BB006C44D3 /*  OnBoardingScreenFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " OnBoardingScreenFeature.swift"; sourceTree = "<group>"; };
 		056C6CEA2E86B6BB006C44D3 /* OnBoardingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingScreenView.swift; sourceTree = "<group>"; };
-		056C6D0D2E89318B006C44D3 /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
+		056C6D0D2E89318B006C44D3 /* SourceTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceTable.swift; sourceTree = "<group>"; };
 		056C6D102E8940A1006C44D3 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,6 +72,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		053388532E8C1A5F00554004 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				053388542E8C1A8C00554004 /* Source.swift */,
+				053388562E8C1ACA00554004 /* Quiz.swift */,
+				053388582E8C1B0900554004 /* Question.swift */,
+				0533885A2E8C1B1800554004 /* Answer.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		056C6BF82E868A01006C44D3 = {
 			isa = PBXGroup;
 			children = (
@@ -89,7 +108,8 @@
 				056C6CE62E86B644006C44D3 /* MainScreen */,
 				056C6CDC2E86B47D006C44D3 /* SettingsScreen */,
 				056C6CE12E86B48C006C44D3 /* QuizScreen */,
-				056C6D0C2E89306F006C44D3 /* Models */,
+				053388532E8C1A5F00554004 /* Models */,
+				056C6D0C2E89306F006C44D3 /* Schema */,
 				056C6D0F2E894088006C44D3 /* Services */,
 				056C6C0F2E868A07006C44D3 /* Assets.xcassets */,
 			);
@@ -141,15 +161,15 @@
 			path = OnBoardingScreen;
 			sourceTree = "<group>";
 		};
-		056C6D0C2E89306F006C44D3 /* Models */ = {
+		056C6D0C2E89306F006C44D3 /* Schema */ = {
 			isa = PBXGroup;
 			children = (
-				056C6D0D2E89318B006C44D3 /* Source.swift */,
-				0533878C2E8A7D7300554004 /* Quiz.swift */,
-				0533878E2E8A7D8B00554004 /* Question.swift */,
-				053387902E8A7D9000554004 /* Answer.swift */,
+				056C6D0D2E89318B006C44D3 /* SourceTable.swift */,
+				0533878C2E8A7D7300554004 /* QuizTable.swift */,
+				0533878E2E8A7D8B00554004 /* QuestionTable.swift */,
+				053387902E8A7D9000554004 /* AnswerTable.swift */,
 			);
-			path = Models;
+			path = Schema;
 			sourceTree = "<group>";
 		};
 		056C6D0F2E894088006C44D3 /* Services */ = {
@@ -247,21 +267,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0533878F2E8A7D8B00554004 /* Question.swift in Sources */,
+				0533878F2E8A7D8B00554004 /* QuestionTable.swift in Sources */,
 				056C6C152E868A07006C44D3 /* RustQuizApp.swift in Sources */,
 				053387CE2E8AAB0000554004 /* SeedService.swift in Sources */,
+				0533885B2E8C1B1800554004 /* Answer.swift in Sources */,
 				056C6C612E868E98006C44D3 /* RootScreenView.swift in Sources */,
-				0533878D2E8A7D7300554004 /* Quiz.swift in Sources */,
+				0533878D2E8A7D7300554004 /* QuizTable.swift in Sources */,
+				053388592E8C1B0900554004 /* Question.swift in Sources */,
 				056C6C622E868E98006C44D3 /*  RootScreenFeature.swift in Sources */,
 				056C6CE72E86B644006C44D3 /*  MainScreenFeature.swift in Sources */,
 				056C6CE82E86B644006C44D3 /* MainScreenView.swift in Sources */,
-				053387912E8A7D9000554004 /* Answer.swift in Sources */,
+				053387912E8A7D9000554004 /* AnswerTable.swift in Sources */,
 				056C6D112E8940A1006C44D3 /* StorageService.swift in Sources */,
 				056C6CDD2E86B47D006C44D3 /*  SettingsScreenFeature.swift in Sources */,
 				056C6CDE2E86B47D006C44D3 /* SettingsScreenView.swift in Sources */,
 				056C6CE22E86B48C006C44D3 /* QuizScreenView.swift in Sources */,
 				056C6CE32E86B48C006C44D3 /*  QuizScreenFeature.swift in Sources */,
-				056C6D0E2E89318B006C44D3 /* Source.swift in Sources */,
+				053388552E8C1A8C00554004 /* Source.swift in Sources */,
+				053388572E8C1ACA00554004 /* Quiz.swift in Sources */,
+				056C6D0E2E89318B006C44D3 /* SourceTable.swift in Sources */,
 				056C6CEC2E86B6BB006C44D3 /*  OnBoardingScreenFeature.swift in Sources */,
 				056C6CED2E86B6BB006C44D3 /* OnBoardingScreenView.swift in Sources */,
 			);

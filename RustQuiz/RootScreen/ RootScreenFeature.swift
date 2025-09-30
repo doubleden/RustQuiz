@@ -54,8 +54,8 @@ struct RootScreenFeature {
             case .setDefaultSources:
                 print("setDefaultSources")
                 return .run { send in
-                    let sources = try await seedService.getDefaultSources()
-                    try await storageService.createSources(sources)
+                    let theBookSource = try await seedService.getTheBookSource()
+                    try await storageService.createSource(theBookSource)
                     await send(.checkQuantityOfSources)
                 }
             default:
