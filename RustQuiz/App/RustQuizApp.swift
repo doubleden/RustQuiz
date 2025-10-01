@@ -82,7 +82,7 @@ extension RustQuizApp {
                 ) STRICT
                 """)
             
-            // Таблица квизов - ИСПРАВЛЕНО имя и колонки
+            // Таблица квизов
             try db.execute(sql: """
                 CREATE TABLE IF NOT EXISTS "QuizTable" (
                     "id" TEXT PRIMARY KEY NOT NULL,
@@ -93,7 +93,7 @@ extension RustQuizApp {
                 ) STRICT
                 """)
             
-            // Таблица вопросов - ИСПРАВЛЕНО имя колонки
+            // Таблица вопросов
             try db.execute(sql: """
                 CREATE TABLE IF NOT EXISTS "QuestionTable" (
                     "id" TEXT PRIMARY KEY NOT NULL,
@@ -118,7 +118,7 @@ extension RustQuizApp {
                 ) STRICT
                 """)
             
-            // Создаем индексы для оптимизации - ИСПРАВЛЕНЫ имена таблиц
+            // Создаем индексы для оптимизации
             try db.execute(sql: "CREATE INDEX IF NOT EXISTS idx_quiz_source ON QuizTable(sourceRowID)")
             try db.execute(sql: "CREATE INDEX IF NOT EXISTS idx_question_quiz ON QuestionTable(quizRowID)")
             try db.execute(sql: "CREATE INDEX IF NOT EXISTS idx_answer_question ON AnswerTable(questionID)")
