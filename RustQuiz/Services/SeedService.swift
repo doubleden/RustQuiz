@@ -10,6 +10,7 @@ import ComposableArchitecture
 
 struct SeedService {
     var getTheBookSource: @Sendable () async throws -> Source
+    var getPatternsSource: @Sendable () async throws -> Source
 }
 
 extension SeedService: DependencyKey {
@@ -8470,6 +8471,21 @@ extension SeedService: DependencyKey {
                                 descriptionLink: "advanced_features_link"
                             )
                         ]
+                    )
+                ]
+            )
+        },
+        getPatternsSource: {
+            Source(
+                id: UUID(),
+                title: "patterns",
+                priority: 2,
+                quizzes: [
+                    Quiz(
+                        id: UUID(),
+                        theme: "patterns",
+                        priority: 1,
+                        questions: []
                     )
                 ]
             )
