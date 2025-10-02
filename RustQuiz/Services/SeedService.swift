@@ -816,16 +816,364 @@ extension SeedService: DependencyKey {
                         questions: [
                             Question(
                                 id: UUID(),
-                                title: "how_are_variables_declared_by_default_in_Rust",
+                                title: "what_is_ownership_in_Rust",
                                 answers: [
-                                    Answer(id: UUID(),title: "mutable", isCorrect: false),
-                                    Answer(id: UUID(),title: "immutable", isCorrect: true),
-                                    Answer(id: UUID(),title: "dynamic", isCorrect: false),
-                                    Answer(id: UUID(),title: "by_reference", isCorrect: false)
+                                    Answer(id: UUID(),title: "background_GC", isCorrect: false),
+                                    Answer(id: UUID(),title: "a_set_of_compiler_checked_rules_for_memory_management", isCorrect: true),
+                                    Answer(id: UUID(),title: "manual_freeing_via_free", isCorrect: false),
+                                    Answer(id: UUID(),title: "a_compile_time_optimization", isCorrect: false)
                                 ],
-                                descriptionText: "let_creates_an_immutable_binding_mutability_is_only_via_mut",
-                                descriptionLink: "common_programming_concepts_link"
+                                descriptionText: "ownership_is_rules_the_compiler_checks_it_provides_safety_without_a_GC",
+                                descriptionLink: "understanding_ownership_link"
                             ),
+                            Question(
+                                id: UUID(),
+                                title: "which_rule_about_values_owner_is_true",
+                                answers: [
+                                    Answer(id: UUID(),title: "a_value_can_have_many_owners", isCorrect: false),
+                                    Answer(id: UUID(),title: "a_value_may_have_no_owner", isCorrect: false),
+                                    Answer(id: UUID(),title: "at_any_moment_there_is_exactly_one_owner", isCorrect: true),
+                                    Answer(id: UUID(),title: "owners_exist_only_for_heap_data", isCorrect: false)
+                                ],
+                                descriptionText: "one_owner_at_a_time_prevents_double_drop",
+                                descriptionLink: "understanding_ownership_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "what_happens_when_owner_goes_out_of_scope",
+                                answers: [
+                                    Answer(id: UUID(),title: "nothing", isCorrect: false),
+                                    Answer(id: UUID(),title: "memory_leaks", isCorrect: false),
+                                    Answer(id: UUID(),title: "drop_is_called_and_resource_is_released", isCorrect: true),
+                                    Answer(id: UUID(),title: "the_value_becomes_static", isCorrect: false)
+                                ],
+                                descriptionText: "automatic_drop_rust_uses_raii",
+                                descriptionLink: "understanding_ownership_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "where_do_fixed_size_types_live_entirely",
+                                answers: [
+                                    Answer(id: UUID(),title: "on_the_heap", isCorrect: false),
+                                    Answer(id: UUID(),title: "on_the_stack", isCorrect: true),
+                                    Answer(id: UUID(),title: "always_in_static_memory", isCorrect: false),
+                                    Answer(id: UUID(),title: "in_the_binary_file", isCorrect: false)
+                                ],
+                                descriptionText: "scalars_are_on_stack_size_known_at_compile_time",
+                                descriptionLink: "understanding_ownership_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "how_does_str_differ_from_string",
+                                answers: [
+                                    Answer(id: UUID(),title: "no_difference", isCorrect: false),
+                                    Answer(id: UUID(),title: "str_is_immutable_slice_string_owns_and_mutably_manages_heap_data", isCorrect: true),
+                                    Answer(id: UUID(),title: "str_is_always_on_heap", isCorrect: false),
+                                    Answer(id: UUID(),title: "string_is_always_on_stack", isCorrect: false)
+                                ],
+                                descriptionText: "str_is_slice_string_is_owning_buffer_different_memory_models",
+                                descriptionLink: "understanding_ownership_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "what_will_happen_string_move_example",
+                                answers: [
+                                    Answer(id: UUID(),title: "prints_hi", isCorrect: false),
+                                    Answer(id: UUID(),title: "compile_error_use_of_moved_value", isCorrect: true),
+                                    Answer(id: UUID(),title: "runtime_panic", isCorrect: false),
+                                    Answer(id: UUID(),title: "s1_is_automatically_cloned", isCorrect: false)
+                                ],
+                                descriptionText: "s1_was_moved_string_is_not_copy",
+                                descriptionLink: "understanding_ownership_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "what_is_name_of_ownership_transfer_in_let_s2_s1",
+                                answers: [
+                                    Answer(id: UUID(),title: "borrowing", isCorrect: false),
+                                    Answer(id: UUID(),title: "moving", isCorrect: true),
+                                    Answer(id: UUID(),title: "cloning", isCorrect: false),
+                                    Answer(id: UUID(),title: "aliasing", isCorrect: false)
+                                ],
+                                descriptionText: "that_is_move_ownership_is_transferred_to_new_name",
+                                descriptionLink: "understanding_ownership_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "what_is_copied_in_let_s2_s1_for_string",
+                                answers: [
+                                    Answer(id: UUID(),title: "heap_data", isCorrect: false),
+                                    Answer(id: UUID(),title: "only_the_length", isCorrect: false),
+                                    Answer(id: UUID(),title: "pointer_length_and_capacity_stack_part", isCorrect: true),
+                                    Answer(id: UUID(),title: "nothing", isCorrect: false)
+                                ],
+                                descriptionText: "stack_metadata_no_deep_copy_is_performed",
+                                descriptionLink: "understanding_ownership_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "why_does_rust_invalidate_old_variable_after_move",
+                                answers: [
+                                    Answer(id: UUID(),title: "to_speed_up_compilation", isCorrect: false),
+                                    Answer(id: UUID(),title: "to_avoid_double_free", isCorrect: true),
+                                    Answer(id: UUID(),title: "to_make_debugging_easier", isCorrect: false),
+                                    Answer(id: UUID(),title: "to_speed_up_memory_access", isCorrect: false)
+                                ],
+                                descriptionText: "no_two_owners_of_one_buffer_memory_safety",
+                                descriptionLink: "understanding_ownership_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "what_does_clone_do_for_string",
+                                answers: [
+                                    Answer(id: UUID(),title: "copies_only_the_pointer", isCorrect: false),
+                                    Answer(id: UUID(),title: "moves_ownership", isCorrect: false),
+                                    Answer(id: UUID(),title: "performs_deep_copy_of_heap_data", isCorrect: true),
+                                    Answer(id: UUID(),title: "frees_the_original", isCorrect: false)
+                                ],
+                                descriptionText: "deep_copy_duplicates_the_bytes",
+                                descriptionLink: "understanding_ownership_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "which_types_typically_implement_copy",
+                                answers: [
+                                    Answer(id: UUID(),title: "all_heap_types", isCorrect: false),
+                                    Answer(id: UUID(),title: "scalars_and_tuples_composed_entirely_of_copy_types", isCorrect: true),
+                                    Answer(id: UUID(),title: "only_string", isCorrect: false),
+                                    Answer(id: UUID(),title: "any_structs", isCorrect: false)
+                                ],
+                                descriptionText: "simple_stack_types_copying_is_trivial",
+                                descriptionLink: "understanding_ownership_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "why_isnt_string_copy",
+                                answers: [
+                                    Answer(id: UUID(),title: "it_is_str", isCorrect: false),
+                                    Answer(id: UUID(),title: "it_manages_heap_resource_drop", isCorrect: true),
+                                    Answer(id: UUID(),title: "it_is_too_long", isCorrect: false),
+                                    Answer(id: UUID(),title: "it_requires_static", isCorrect: false)
+                                ],
+                                descriptionText: "has_resource_and_drop_copying_would_be_unsafe",
+                                descriptionLink: "understanding_ownership_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "passing_arguments_to_function_by_value",
+                                answers: [
+                                    Answer(id: UUID(),title: "is_always_deep_copy", isCorrect: false),
+                                    Answer(id: UUID(),title: "behaves_like_assignment_move_or_copy", isCorrect: true),
+                                    Answer(id: UUID(),title: "is_always_by_reference", isCorrect: false),
+                                    Answer(id: UUID(),title: "never_moves", isCorrect: false)
+                                ],
+                                descriptionText: "same_rules_unified_ownership_model",
+                                descriptionLink: "understanding_ownership_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "which_is_true_function_takes_string",
+                                answers: [
+                                    Answer(id: UUID(),title: "x_is_available", isCorrect: false),
+                                    Answer(id: UUID(),title: "x_is_unavailable_moved", isCorrect: true),
+                                    Answer(id: UUID(),title: "x_is_copy", isCorrect: false),
+                                    Answer(id: UUID(),title: "there_will_be_panic", isCorrect: false)
+                                ],
+                                descriptionText: "move_into_function_string_passed_by_ownership",
+                                descriptionLink: "understanding_ownership_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "how_to_return_value_without_return",
+                                answers: [
+                                    Answer(id: UUID(),title: "you_cant", isCorrect: false),
+                                    Answer(id: UUID(),title: "make_it_last_expression_without_semicolon", isCorrect: true),
+                                    Answer(id: UUID(),title: "use_yield", isCorrect: false),
+                                    Answer(id: UUID(),title: "use_give_back", isCorrect: false)
+                                ],
+                                descriptionText: "tail_expression_expressions_return_values",
+                                descriptionLink: "understanding_ownership_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "why_use_references_t",
+                                answers: [
+                                    Answer(id: UUID(),title: "to_speed_up_compilation", isCorrect: false),
+                                    Answer(id: UUID(),title: "to_temporarily_borrow_value_without_transferring_ownership", isCorrect: true),
+                                    Answer(id: UUID(),title: "for_deep_copy", isCorrect: false),
+                                    Answer(id: UUID(),title: "to_make_it_static", isCorrect: false)
+                                ],
+                                descriptionText: "use_without_move_borrowing",
+                                descriptionLink: "understanding_ownership_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "what_is_true_about_string_reference",
+                                answers: [
+                                    Answer(id: UUID(),title: "allows_modifying_string", isCorrect: false),
+                                    Answer(id: UUID(),title: "immutable_reference_read_without_owning", isCorrect: true),
+                                    Answer(id: UUID(),title: "extends_owners_lifetime", isCorrect: false),
+                                    Answer(id: UUID(),title: "calls_drop_on_owner", isCorrect: false)
+                                ],
+                                descriptionText: "read_only_need_mut_for_mutation",
+                                descriptionLink: "understanding_ownership_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "how_to_allow_modifying_borrowed_string",
+                                answers: [
+                                    Answer(id: UUID(),title: "accept_mut_string_and_pass_mut_s", isCorrect: true),
+                                    Answer(id: UUID(),title: "accept_string", isCorrect: false),
+                                    Answer(id: UUID(),title: "accept_string", isCorrect: false),
+                                    Answer(id: UUID(),title: "accept_box_string", isCorrect: false)
+                                ],
+                                descriptionText: "need_mutable_reference_explicit_write_permission",
+                                descriptionLink: "understanding_ownership_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "constraint_on_references",
+                                answers: [
+                                    Answer(id: UUID(),title: "many_mut_at_same_time_are_allowed", isCorrect: false),
+                                    Answer(id: UUID(),title: "either_one_mut_or_any_number_of_but_not_both_simultaneously", isCorrect: true),
+                                    Answer(id: UUID(),title: "one_mut_and_one_are_allowed_together", isCorrect: false),
+                                    Answer(id: UUID(),title: "no_constraints", isCorrect: false)
+                                ],
+                                descriptionText: "anti_data_race_rule_prevents_races",
+                                descriptionLink: "understanding_ownership_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "what_happens_with_simultaneous_and_mut_to_same_object",
+                                answers: [
+                                    Answer(id: UUID(),title: "compiles", isCorrect: false),
+                                    Answer(id: UUID(),title: "compile_error_e0502", isCorrect: true),
+                                    Answer(id: UUID(),title: "runtime_panic", isCorrect: false),
+                                    Answer(id: UUID(),title: "ub", isCorrect: false)
+                                ],
+                                descriptionText: "borrowing_conflict_violates_rules",
+                                descriptionLink: "understanding_ownership_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "when_does_reference_lifetime_end_in_simple_cases_nll",
+                                answers: [
+                                    Answer(id: UUID(),title: "always_at_end_of_block", isCorrect: false),
+                                    Answer(id: UUID(),title: "when_owner_is_dropped", isCorrect: false),
+                                    Answer(id: UUID(),title: "after_its_last_use", isCorrect: true),
+                                    Answer(id: UUID(),title: "never", isCorrect: false)
+                                ],
+                                descriptionText: "non_lexical_lifetimes_shorten_it_safer_and_more_flexible",
+                                descriptionLink: "understanding_ownership_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "what_is_dangling_reference",
+                                answers: [
+                                    Answer(id: UUID(),title: "reference_to_another_type", isCorrect: false),
+                                    Answer(id: UUID(),title: "reference_to_already_freed_memory", isCorrect: true),
+                                    Answer(id: UUID(),title: "reference_always_on_stack", isCorrect: false),
+                                    Answer(id: UUID(),title: "reference_to_empty_array", isCorrect: false)
+                                ],
+                                descriptionText: "dangling_reference_object_already_dropped",
+                                descriptionLink: "understanding_ownership_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "why_doesnt_dangle_function_compile",
+                                answers: [
+                                    Answer(id: UUID(),title: "you_cant_return_references", isCorrect: false),
+                                    Answer(id: UUID(),title: "s_will_be_dropped_reference_becomes_invalid", isCorrect: true),
+                                    Answer(id: UUID(),title: "you_cant_allocate_in_function", isCorrect: false),
+                                    Answer(id: UUID(),title: "you_need_gc", isCorrect: false)
+                                ],
+                                descriptionText: "returning_reference_to_local_dangling_references_are_forbidden",
+                                descriptionLink: "understanding_ownership_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "how_to_fix_dangle",
+                                answers: [
+                                    Answer(id: UUID(),title: "return_string_by_ownership", isCorrect: true),
+                                    Answer(id: UUID(),title: "always_return_static_string", isCorrect: false),
+                                    Answer(id: UUID(),title: "return_string", isCorrect: false),
+                                    Answer(id: UUID(),title: "use_unsafe", isCorrect: false)
+                                ],
+                                descriptionText: "move_value_out_owner_lives_outside",
+                                descriptionLink: "understanding_ownership_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "what_is_slice_str_t",
+                                answers: [
+                                    Answer(id: UUID(),title: "ownership_of_part_of_collection", isCorrect: false),
+                                    Answer(id: UUID(),title: "non_owning_reference_to_contiguous_region_of_data", isCorrect: true),
+                                    Answer(id: UUID(),title: "copied_range", isCorrect: false),
+                                    Answer(id: UUID(),title: "smart_pointer_with_auto_drop", isCorrect: false)
+                                ],
+                                descriptionText: "slice_equals_pointer_plus_length_no_ownership",
+                                descriptionLink: "understanding_ownership_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "why_is_returning_usize_index_from_first_word_risky",
+                                answers: [
+                                    Answer(id: UUID(),title: "index_can_be_negative", isCorrect: false),
+                                    Answer(id: UUID(),title: "index_isnt_tied_to_data_and_becomes_stale_after_modifications", isCorrect: true),
+                                    Answer(id: UUID(),title: "usize_is_too_small", isCorrect: false),
+                                    Answer(id: UUID(),title: "you_cant_compute_string_length", isCorrect: false)
+                                ],
+                                descriptionText: "detached_index_breaks_after_clear_no_coupling_to_data",
+                                descriptionLink: "understanding_ownership_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "which_signature_is_more_general_first_word",
+                                answers: [
+                                    Answer(id: UUID(),title: "fn_first_word_s_string_str", isCorrect: false),
+                                    Answer(id: UUID(),title: "fn_first_word_s_str_str", isCorrect: true),
+                                    Answer(id: UUID(),title: "fn_first_word_s_string_str", isCorrect: false),
+                                    Answer(id: UUID(),title: "fn_first_word_t_s_t_str", isCorrect: false)
+                                ],
+                                descriptionText: "works_with_string_and_literals_more_general_slice",
+                                descriptionLink: "understanding_ownership_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "what_does_slice_s_3_7_of_string_store",
+                                answers: [
+                                    Answer(id: UUID(),title: "copy_of_bytes", isCorrect: false),
+                                    Answer(id: UUID(),title: "pointer_to_start_and_length", isCorrect: true),
+                                    Answer(id: UUID(),title: "new_string", isCorrect: false),
+                                    Answer(id: UUID(),title: "static_data", isCorrect: false)
+                                ],
+                                descriptionText: "pointer_plus_len_no_copying",
+                                descriptionLink: "understanding_ownership_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "what_slice_bounds_are_valid_for_string",
+                                answers: [
+                                    Answer(id: UUID(),title: "any_byte_offsets", isCorrect: false),
+                                    Answer(id: UUID(),title: "only_at_valid_utf8_boundaries", isCorrect: true),
+                                    Answer(id: UUID(),title: "only_on_unicode_grapheme_boundaries", isCorrect: false),
+                                    Answer(id: UUID(),title: "only_multiples_of_4", isCorrect: false)
+                                ],
+                                descriptionText: "by_unicode_scalar_boundaries_otherwise_runtime_error",
+                                descriptionLink: "understanding_ownership_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "what_will_happen_string_clear_borrow_conflict",
+                                answers: [
+                                    Answer(id: UUID(),title: "prints_empty", isCorrect: false),
+                                    Answer(id: UUID(),title: "compiles_and_crashes", isCorrect: false),
+                                    Answer(id: UUID(),title: "compile_error_borrow_conflict", isCorrect: true),
+                                    Answer(id: UUID(),title: "its_fine_w_isnt_tied_to_s", isCorrect: false)
+                                ],
+                                descriptionText: "cannot_have_and_mut_simultaneously_clear_needs_mut_while_w_is_alive",
+                                descriptionLink: "understanding_ownership_link"
+                            )
                         ]
                     )
                 ]

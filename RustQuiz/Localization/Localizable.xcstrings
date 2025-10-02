@@ -1171,6 +1171,516 @@
           }
         }
       }
+    },
+    "what_is_ownership_in_Rust" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What is ownership in Rust?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что такое владение в Rust?"
+          }
+        }
+      }
+    },
+    "which_rule_about_values_owner_is_true" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Which rule about a value's owner is true?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Какое правило о владельце значения верно?"
+          }
+        }
+      }
+    },
+    "what_happens_when_owner_goes_out_of_scope" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What happens when the owner goes out of scope?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что происходит, когда владелец выходит из области видимости?"
+          }
+        }
+      }
+    },
+    "where_do_fixed_size_types_live_entirely" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Where do fixed-size types (e.g., i32) live entirely?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Где полностью находятся типы фиксированного размера (например, i32)?"
+          }
+        }
+      }
+    },
+    "how_does_str_differ_from_string" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How does &str differ from String?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Чем &str отличается от String?"
+          }
+        }
+      }
+    },
+    "what_will_happen_string_move_example" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What will happen?\n\nlet s1 = String::from(\"hi\");\nlet s2 = s1;\nprintln!(\"{s1}\");"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что произойдет?\n\nlet s1 = String::from(\"hi\");\nlet s2 = s1;\nprintln!(\"{s1}\");"
+          }
+        }
+      }
+    },
+    "what_is_name_of_ownership_transfer_in_let_s2_s1" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What is the name of the ownership transfer in let s2 = s1;?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Как называется передача владения в let s2 = s1;?"
+          }
+        }
+      }
+    },
+    "what_is_copied_in_let_s2_s1_for_string" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What is copied in let s2 = s1; for String?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что копируется в let s2 = s1; для String?"
+          }
+        }
+      }
+    },
+    "why_does_rust_invalidate_old_variable_after_move" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Why does Rust invalidate the old variable after a move?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Почему Rust делает недействительной старую переменную после перемещения?"
+          }
+        }
+      }
+    },
+    "what_does_clone_do_for_string" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What does clone() do for String?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что делает clone() для String?"
+          }
+        }
+      }
+    },
+    "which_types_typically_implement_copy" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Which types typically implement Copy?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Какие типы обычно реализуют Copy?"
+          }
+        }
+      }
+    },
+    "why_isnt_string_copy" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Why isn't String Copy?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Почему String не Copy?"
+          }
+        }
+      }
+    },
+    "passing_arguments_to_function_by_value" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Passing arguments to a function by value…"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Передача аргументов в функцию по значению…"
+          }
+        }
+      }
+    },
+    "which_is_true_function_takes_string" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Which is true?\n\nfn takes(s: String) {}\nlet x = String::from(\"hi\");\ntakes(x);\n// here x ..."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что верно?\n\nfn takes(s: String) {}\nlet x = String::from(\"hi\");\ntakes(x);\n// здесь x ..."
+          }
+        }
+      }
+    },
+    "how_to_return_value_without_return" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How to return a value without return?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Как вернуть значение без return?"
+          }
+        }
+      }
+    },
+    "why_use_references_t" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Why use references &T?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Зачем использовать ссылки &T?"
+          }
+        }
+      }
+    },
+    "what_is_true_about_string_reference" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What is true about &String?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что верно о &String?"
+          }
+        }
+      }
+    },
+    "how_to_allow_modifying_borrowed_string" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How to allow modifying a borrowed String?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Как разрешить изменение заимствованной String?"
+          }
+        }
+      }
+    },
+    "constraint_on_references" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Constraint on references:"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ограничение на ссылки:"
+          }
+        }
+      }
+    },
+    "what_happens_with_simultaneous_and_mut_to_same_object" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What happens with simultaneous & and &mut to the same object?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что происходит при одновременных & и &mut к одному объекту?"
+          }
+        }
+      }
+    },
+    "when_does_reference_lifetime_end_in_simple_cases_nll" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "When does a reference's lifetime end in simple cases (NLL)?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Когда заканчивается время жизни ссылки в простых случаях (NLL)?"
+          }
+        }
+      }
+    },
+    "what_is_dangling_reference" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What is a \"dangling\" reference?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что такое \"висячая\" ссылка?"
+          }
+        }
+      }
+    },
+    "why_doesnt_dangle_function_compile" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Why doesn't this compile:\nfn dangle() -> &String { let s = String::from(\"x\"); &s }?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Почему это не компилируется:\nfn dangle() -> &String { let s = String::from(\"x\"); &s }?"
+          }
+        }
+      }
+    },
+    "how_to_fix_dangle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How to fix dangle?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Как исправить dangle?"
+          }
+        }
+      }
+    },
+    "what_is_slice_str_t" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What is a slice (&str, &[T])?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что такое срез (&str, &[T])?"
+          }
+        }
+      }
+    },
+    "why_is_returning_usize_index_from_first_word_risky" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Why is returning a usize index from first_word risky?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Почему возврат usize индекса из first_word рискован?"
+          }
+        }
+      }
+    },
+    "which_signature_is_more_general_first_word" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Which signature is more general?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Какая сигнатура более общая?"
+          }
+        }
+      }
+    },
+    "what_does_slice_s_3_7_of_string_store" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What does the slice &s[3..7] of a String store?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что хранит срез &s[3..7] строки String?"
+          }
+        }
+      }
+    },
+    "what_slice_bounds_are_valid_for_string" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What slice bounds are valid for a string?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Какие границы среза валидны для строки?"
+          }
+        }
+      }
+    },
+    "what_will_happen_string_clear_borrow_conflict" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What will happen?\n\nlet mut s = String::from(\"hello world\");\nlet w = first_word(&s);\ns.clear();\nprintln!(\"{w}\");"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что произойдет?\n\nlet mut s = String::from(\"hello world\");\nlet w = first_word(&s);\ns.clear();\nprintln!(\"{w}\");"
+          }
+        }
+      }
     }
   },
   "version" : "1.1"
