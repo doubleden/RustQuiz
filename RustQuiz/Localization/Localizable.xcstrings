@@ -1681,6 +1681,1468 @@
           }
         }
       }
+    },
+    "how_is_a_struct_defined_in_Rust" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How is a struct defined in Rust?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Как определяется структура в Rust?"
+          }
+        }
+      }
+    },
+    "what_are_fields_in_a_struct" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What are fields in a struct?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что такое поля в структуре?"
+          }
+        }
+      }
+    },
+    "what_must_be_specified_when_declaring_a_field" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What must be specified when declaring a field?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что должно быть указано при объявлении поля?"
+          }
+        }
+      }
+    },
+    "how_do_you_create_a_struct_instance" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How do you create a struct instance?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Как создать экземпляр структуры?"
+          }
+        }
+      }
+    },
+    "can_you_change_the_fields_of_a_struct_instance" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Can you change the fields of a struct instance?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Можно ли изменять поля экземпляра структуры?"
+          }
+        }
+      }
+    },
+    "how_do_you_access_a_struct_field" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How do you access a struct field?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Как получить доступ к полю структуры?"
+          }
+        }
+      }
+    },
+    "what_does_field_init_shorthand_do" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What does \"field init shorthand\" do?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что делает \"сокращенная инициализация полей\"?"
+          }
+        }
+      }
+    },
+    "what_does_the_shorthand_call_look_like" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What does the shorthand call look like?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Как выглядит сокращенный вызов?"
+          }
+        }
+      }
+    },
+    "what_does_the_struct_update_syntax_do" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What does the \"struct update syntax\" do?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что делает \"синтаксис обновления структуры\"?"
+          }
+        }
+      }
+    },
+    "how_is_the_update_syntax_written" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How is the update syntax written?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Как записывается синтаксис обновления?"
+          }
+        }
+      }
+    },
+    "what_happens_to_user1_username_when_using_user1" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What happens to user1.username when using ..user1?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что происходит с user1.username при использовании ..user1?"
+          }
+        }
+      }
+    },
+    "what_happens_to_user1_active_if_its_a_bool" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What happens to user1.active if it's a bool?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что происходит с user1.active если это bool?"
+          }
+        }
+      }
+    },
+    "what_is_a_tuple_struct" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What is a tuple struct?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что такое tuple struct?"
+          }
+        }
+      }
+    },
+    "how_do_you_declare_a_tuple_struct" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How do you declare a tuple struct?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Как объявить tuple struct?"
+          }
+        }
+      }
+    },
+    "how_do_Color_and_Point_differ" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How do Color and Point differ?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Чем отличаются Color и Point?"
+          }
+        }
+      }
+    },
+    "what_is_a_unit_like_struct" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What is a unit-like struct?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что такое unit-like struct?"
+          }
+        }
+      }
+    },
+    "what_are_unit_like_structs_used_for" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What are unit-like structs used for?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Для чего используются unit-like structs?"
+          }
+        }
+      }
+    },
+    "why_do_structs_usually_use_String_instead_of_str" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Why do structs usually use String instead of &str?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Почему структуры обычно используют String вместо &str?"
+          }
+        }
+      }
+    },
+    "what_happens_if_you_put_str_in_a_struct_without_a_lifetime" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What happens if you put &str in a struct without a lifetime?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что происходит, если поместить &str в структуру без времени жизни?"
+          }
+        }
+      }
+    },
+    "how_do_you_fix_a_struct_with_str" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How do you fix a struct with &str?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Как исправить структуру с &str?"
+          }
+        }
+      }
+    },
+    "why_is_area_width_height_inconvenient" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Why is area(width, height) inconvenient?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Почему area(width, height) неудобно?"
+          }
+        }
+      }
+    },
+    "why_is_a_tuple_inconvenient_for_a_rectangle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Why is a tuple inconvenient for a rectangle?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Почему кортеж неудобен для прямоугольника?"
+          }
+        }
+      }
+    },
+    "why_is_struct_Rectangle_better_than_a_tuple" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Why is struct Rectangle better than a tuple?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Почему struct Rectangle лучше кортежа?"
+          }
+        }
+      }
+    },
+    "what_happens_with_println_rect1" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What happens with println!(\"{rect1}\")?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что происходит с println!(\"{rect1}\")?"
+          }
+        }
+      }
+    },
+    "whats_needed_for_debug_formatting" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What's needed for debug formatting?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что нужно для отладочного форматирования?"
+          }
+        }
+      }
+    },
+    "how_does_dbg_differ_from_println" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How does dbg! differ from println!?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Чем dbg! отличается от println!?"
+          }
+        }
+      }
+    },
+    "how_do_you_declare_a_method_for_a_struct" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How do you declare a method for a struct?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Как объявить метод для структуры?"
+          }
+        }
+      }
+    },
+    "how_does_a_function_differ_from_a_method" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How does a function differ from a method?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Чем функция отличается от метода?"
+          }
+        }
+      }
+    },
+    "what_does_self_mean" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What does &self mean?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что означает &self?"
+          }
+        }
+      }
+    },
+    "how_do_you_declare_a_method_that_changes_fields" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How do you declare a method that changes fields?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Как объявить метод, который изменяет поля?"
+          }
+        }
+      }
+    },
+    "what_does_the_can_hold_method_do" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What does the can_hold() method do?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что делает метод can_hold()?"
+          }
+        }
+      }
+    },
+    "how_do_you_call_a_method" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How do you call a method?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Как вызвать метод?"
+          }
+        }
+      }
+    },
+    "what_is_an_associated_function" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What is an associated function?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что такое ассоциированная функция?"
+          }
+        }
+      }
+    },
+    "how_do_you_call_an_associated_function" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How do you call an associated function?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Как вызвать ассоциированную функцию?"
+          }
+        }
+      }
+    },
+    "what_does_Self_refer_to_in_an_impl" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What does Self refer to in an impl?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "На что ссылается Self в impl?"
+          }
+        }
+      }
+    },
+    "can_you_have_multiple_impl_blocks_for_one_struct" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Can you have multiple impl blocks for one struct?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Можно ли иметь несколько impl блоков для одной структуры?"
+          }
+        }
+      }
+    },
+    "what_happens_if_a_method_and_a_field_share_a_name" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What happens if a method and a field share a name?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что происходит, если метод и поле имеют одинаковое имя?"
+          }
+        }
+      }
+    },
+    "what_is_a_getter_in_Rust" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What is a getter in Rust?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что такое getter в Rust?"
+          }
+        }
+      }
+    },
+    "how_does_Rust_replace_from_C" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How does Rust replace -> from C++?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Как Rust заменяет -> из C++?"
+          }
+        }
+      }
+    },
+    "what_does_dbg_print_for_dbg_30_2" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What does dbg! print for dbg!(30 * 2)?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что выводит dbg! для dbg!(30 * 2)?"
+          }
+        }
+      }
+    },
+    "what_is_the_pretty_debug_syntax" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What is the pretty debug syntax?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Какой синтаксис для красивого отладочного вывода?"
+          }
+        }
+      }
+    },
+    "what_does_impl_Rectangle_fn_new_Self_do" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What does impl Rectangle { fn new() -> Self { … } } do?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что делает impl Rectangle { fn new() -> Self { … } }?"
+          }
+        }
+      }
+    },
+    "bottom_line_why_use_structs" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bottom line: why use structs?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "В итоге: зачем использовать структуры?"
+          }
+        }
+      }
+    },
+    "use_the_struct_keyword_with_braces_Rust_has_no_Java_Kotlin_style_class_or_object" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Use the struct keyword with braces. Rust has no Java/Kotlin style class or object."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Используйте ключевое слово struct с фигурными скобками. В Rust нет классов или объектов в стиле Java/Kotlin."
+          }
+        }
+      }
+    },
+    "fields_are_the_components_of_a_struct_each_with_its_own_name_and_type" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fields are the components of a struct, each with its own name and type."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поля - это компоненты структуры, каждый со своим именем и типом."
+          }
+        }
+      }
+    },
+    "struct_fields_always_specify_both_name_and_type" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Struct fields always specify both name and type."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поля структуры всегда указывают и имя, и тип."
+          }
+        }
+      }
+    },
+    "a_struct_instance_is_created_with_key_value" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A struct instance is created with { key: value }."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Экземпляр структуры создается с помощью { ключ: значение }."
+          }
+        }
+      }
+    },
+    "in_Rust_mutability_is_set_for_the_whole_instance" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In Rust, mutability is set for the whole instance."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "В Rust изменяемость устанавливается для всего экземпляра."
+          }
+        }
+      }
+    },
+    "use_dot_notation" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Use dot notation."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Используйте точечную нотацию."
+          }
+        }
+      }
+    },
+    "if_a_parameter_and_field_share_a_name_you_can_write_it_once" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "If a parameter and field share a name, you can write it once."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Если параметр и поле имеют одинаковое имя, можно написать его один раз."
+          }
+        }
+      }
+    },
+    "Rust_expands_email_to_email_email" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rust expands email to email: email."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rust разворачивает email в email: email."
+          }
+        }
+      }
+    },
+    "use_other_struct" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Use ..other_struct."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Используйте ..other_struct."
+          }
+        }
+      }
+    },
+    "user1_copies_the_remaining_fields" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "..user1 copies the remaining fields."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "..user1 копирует оставшиеся поля."
+          }
+        }
+      }
+    },
+    "String_fields_are_moved" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "String fields are moved."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поля String перемещаются."
+          }
+        }
+      }
+    },
+    "bool_implements_Copy" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "bool implements Copy."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "bool реализует Copy."
+          }
+        }
+      }
+    },
+    "fields_are_specified_only_by_types" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fields are specified only by types."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поля указываются только типами."
+          }
+        }
+      }
+    },
+    "provide_the_name_and_types_in_parentheses" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Provide the name and types in parentheses."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Укажите имя и типы в скобках."
+          }
+        }
+      }
+    },
+    "each_struct_is_a_distinct_type" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Each struct is a distinct type."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Каждая структура - это отдельный тип."
+          }
+        }
+      }
+    },
+    "written_as_struct_Name" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Written as struct Name;"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Записывается как struct Name;"
+          }
+        }
+      }
+    },
+    "used_for_behavior_not_data" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Used for behavior, not data."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Используется для поведения, а не данных."
+          }
+        }
+      }
+    },
+    "String_owns_data_str_requires_a_lifetime" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "String owns data; &str requires a lifetime."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "String владеет данными; &str требует время жизни."
+          }
+        }
+      }
+    },
+    "Rust_requires_lifetime_parameters_for_references" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rust requires lifetime parameters for references."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rust требует параметры времени жизни для ссылок."
+          }
+        }
+      }
+    },
+    "references_need_a_lifetime" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "References need a lifetime."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ссылкам нужно время жизни."
+          }
+        }
+      }
+    },
+    "width_and_height_arent_tied_together" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "width and height aren't tied together."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "width и height не связаны между собой."
+          }
+        }
+      }
+    },
+    "with_tuples_you_must_remember_indices" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "With tuples you must remember indices."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "С кортежами нужно помнить индексы."
+          }
+        }
+      }
+    },
+    "a_struct_adds_semantics" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A struct adds semantics."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Структура добавляет семантику."
+          }
+        }
+      }
+    },
+    "structs_dont_have_Display_by_default" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Structs don't have Display by default."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Структуры не имеют Display по умолчанию."
+          }
+        }
+      }
+    },
+    "Debug_must_be_explicitly_enabled" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Debug must be explicitly enabled."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Debug должен быть явно включен."
+          }
+        }
+      }
+    },
+    "dbg_is_handy_for_debugging" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "dbg! is handy for debugging."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "dbg! удобен для отладки."
+          }
+        }
+      }
+    },
+    "methods_live_inside_impl_blocks" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Methods live inside impl blocks."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Методы находятся внутри impl блоков."
+          }
+        }
+      }
+    },
+    "a_method_is_a_function_bound_to_a_type" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A method is a function bound to a type."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Метод - это функция, привязанная к типу."
+          }
+        }
+      }
+    },
+    "self_is_sugar_for_self_Self" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "&self is sugar for self: &Self."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "&self - это сахар для self: &Self."
+          }
+        }
+      }
+    },
+    "you_need_mut_self" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You need &mut self."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нужен &mut self."
+          }
+        }
+      }
+    },
+    "compares_width_and_height" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compares width and height."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сравнивает ширину и высоту."
+          }
+        }
+      }
+    },
+    "use_instance_method" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Use instance.method()."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Используйте instance.method()."
+          }
+        }
+      }
+    },
+    "an_associated_function_doesnt_take_self" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "An associated function doesn't take self."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ассоциированная функция не принимает self."
+          }
+        }
+      }
+    },
+    "use_Type_func" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Use Type::func()."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Используйте Type::func()."
+          }
+        }
+      }
+    },
+    "Self_equals_the_type_being_implemented" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Self equals the type being implemented."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Self равен типу, который реализуется."
+          }
+        }
+      }
+    },
+    "you_can_split_impls" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You can split impls."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Можно разделить impl блоки."
+          }
+        }
+      }
+    },
+    "parentheses_indicate_a_method_call" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Parentheses indicate a method call."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скобки указывают на вызов метода."
+          }
+        }
+      }
+    },
+    "Rust_doesnt_auto_generate_getters" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rust doesn't auto-generate getters."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rust не генерирует getter'ы автоматически."
+          }
+        }
+      }
+    },
+    "Rust_auto_references_as_needed" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rust auto-references as needed."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rust автоматически создает ссылки по необходимости."
+          }
+        }
+      }
+    },
+    "dbg_prints_context_value" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "dbg! prints context + value."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "dbg! выводит контекст + значение."
+          }
+        }
+      }
+    },
+    "pretty_print_is_pretty" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pretty-print is {:#?}."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Красивый вывод - это {:#?}."
+          }
+        }
+      }
+    },
+    "a_constructor_via_new" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A constructor via new."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Конструктор через new."
+          }
+        }
+      }
+    },
+    "a_struct_groups_data_and_methods" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A struct groups data and methods."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Структура группирует данные и методы."
+          }
+        }
+      }
     }
   },
   "version" : "1.1"

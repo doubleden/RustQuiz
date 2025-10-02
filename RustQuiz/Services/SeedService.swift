@@ -1175,6 +1175,529 @@ extension SeedService: DependencyKey {
                                 descriptionLink: "understanding_ownership_link"
                             )
                         ]
+                    ),
+                    Quiz(
+                        id: UUID(),
+                        theme: "using_structs_to_structure_related_data",
+                        priority: 3,
+                        questions: [
+                            Question(
+                                id: UUID(),
+                                title: "how_is_a_struct_defined_in_Rust",
+                                answers: [
+                                    Answer(id: UUID(),title: "class_user_{ … }", isCorrect: false),
+                                    Answer(id: UUID(),title: "struct_user_{ … }", isCorrect: true),
+                                    Answer(id: UUID(),title: "object_user_{ … }", isCorrect: false),
+                                    Answer(id: UUID(),title: "data_user_{ … }", isCorrect: false)
+                                ],
+                                descriptionText: "use_the_struct_keyword_with_braces_Rust_has_no_Java_Kotlin_style_class_or_object",
+                                descriptionLink: "using_structs_to_structure_related_data_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "what_are_fields_in_a_struct",
+                                answers: [
+                                    Answer(id: UUID(),title: "default_values", isCorrect: false),
+                                    Answer(id: UUID(),title: "variables_inside_a_function", isCorrect: false),
+                                    Answer(id: UUID(),title: "named_data_inside_a_struct", isCorrect: true),
+                                    Answer(id: UUID(),title: "separate_methods_of_the_struct", isCorrect: false)
+                                ],
+                                descriptionText: "fields_are_the_components_of_a_struct_each_with_its_own_name_and_type",
+                                descriptionLink: "using_structs_to_structure_related_data_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "what_must_be_specified_when_declaring_a_field",
+                                answers: [
+                                    Answer(id: UUID(),title: "only_the_name", isCorrect: false),
+                                    Answer(id: UUID(),title: "only_the_type", isCorrect: false),
+                                    Answer(id: UUID(),title: "name_and_type", isCorrect: true),
+                                    Answer(id: UUID(),title: "nothing_Rust_infers_it", isCorrect: false)
+                                ],
+                                descriptionText: "struct_fields_always_specify_both_name_and_type",
+                                descriptionLink: "using_structs_to_structure_related_data_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "how_do_you_create_a_struct_instance",
+                                answers: [
+                                    Answer(id: UUID(),title: "User_true_name_email_1", isCorrect: false),
+                                    Answer(id: UUID(),title: "User_active_true_username_email_sign_in_count_1", isCorrect: true),
+                                    Answer(id: UUID(),title: "new_User", isCorrect: false),
+                                    Answer(id: UUID(),title: "User_new_always", isCorrect: false)
+                                ],
+                                descriptionText: "a_struct_instance_is_created_with_key_value",
+                                descriptionLink: "using_structs_to_structure_related_data_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "can_you_change_the_fields_of_a_struct_instance",
+                                answers: [
+                                    Answer(id: UUID(),title: "always", isCorrect: false),
+                                    Answer(id: UUID(),title: "only_if_the_field_itself_is_mut", isCorrect: false),
+                                    Answer(id: UUID(),title: "only_if_the_binding_the_whole_variable_is_mut", isCorrect: true),
+                                    Answer(id: UUID(),title: "never", isCorrect: false)
+                                ],
+                                descriptionText: "in_Rust_mutability_is_set_for_the_whole_instance",
+                                descriptionLink: "using_structs_to_structure_related_data_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "how_do_you_access_a_struct_field",
+                                answers: [
+                                    Answer(id: UUID(),title: "user_email", isCorrect: false),
+                                    Answer(id: UUID(),title: "user_email", isCorrect: false),
+                                    Answer(id: UUID(),title: "user_email", isCorrect: true),
+                                    Answer(id: UUID(),title: "email_user", isCorrect: false)
+                                ],
+                                descriptionText: "use_dot_notation",
+                                descriptionLink: "using_structs_to_structure_related_data_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "what_does_field_init_shorthand_do",
+                                answers: [
+                                    Answer(id: UUID(),title: "automatically_creates_getters", isCorrect: false),
+                                    Answer(id: UUID(),title: "lets_you_omit_the_field_name_if_it_matches_the_parameter_name", isCorrect: true),
+                                    Answer(id: UUID(),title: "automatically_makes_all_fields_mut", isCorrect: false),
+                                    Answer(id: UUID(),title: "duplicates_all_fields", isCorrect: false)
+                                ],
+                                descriptionText: "if_a_parameter_and_field_share_a_name_you_can_write_it_once",
+                                descriptionLink: "using_structs_to_structure_related_data_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "what_does_the_shorthand_call_look_like",
+                                answers: [
+                                    Answer(id: UUID(),title: "User_email_email_username_username", isCorrect: false),
+                                    Answer(id: UUID(),title: "User_email_username", isCorrect: true),
+                                    Answer(id: UUID(),title: "User_email_username", isCorrect: false),
+                                    Answer(id: UUID(),title: "User_from_email_username", isCorrect: false)
+                                ],
+                                descriptionText: "Rust_expands_email_to_email_email",
+                                descriptionLink: "using_structs_to_structure_related_data_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "what_does_the_struct_update_syntax_do",
+                                answers: [
+                                    Answer(id: UUID(),title: "clones_a_struct", isCorrect: false),
+                                    Answer(id: UUID(),title: "creates_a_new_instance_by_changing_some_fields_and_copying_the_rest_from_another_instance", isCorrect: true),
+                                    Answer(id: UUID(),title: "mutates_the_struct_in_place", isCorrect: false),
+                                    Answer(id: UUID(),title: "deletes_fields", isCorrect: false)
+                                ],
+                                descriptionText: "use_other_struct",
+                                descriptionLink: "using_structs_to_structure_related_data_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "how_is_the_update_syntax_written",
+                                answers: [
+                                    Answer(id: UUID(),title: "User_email_x_user1", isCorrect: false),
+                                    Answer(id: UUID(),title: "User_email_x_user1", isCorrect: true),
+                                    Answer(id: UUID(),title: "User_update_user1_x", isCorrect: false),
+                                    Answer(id: UUID(),title: "User_user1_email_x", isCorrect: false)
+                                ],
+                                descriptionText: "user1_copies_the_remaining_fields",
+                                descriptionLink: "using_structs_to_structure_related_data_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "what_happens_to_user1_username_when_using_user1",
+                                answers: [
+                                    Answer(id: UUID(),title: "its_cloned", isCorrect: false),
+                                    Answer(id: UUID(),title: "its_moved", isCorrect: true),
+                                    Answer(id: UUID(),title: "it_remains_accessible", isCorrect: false),
+                                    Answer(id: UUID(),title: "its_always_copied_even_if_its_a_String", isCorrect: false)
+                                ],
+                                descriptionText: "String_fields_are_moved",
+                                descriptionLink: "using_structs_to_structure_related_data_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "what_happens_to_user1_active_if_its_a_bool",
+                                answers: [
+                                    Answer(id: UUID(),title: "its_moved", isCorrect: false),
+                                    Answer(id: UUID(),title: "its_copied", isCorrect: true),
+                                    Answer(id: UUID(),title: "compile_error", isCorrect: false),
+                                    Answer(id: UUID(),title: "dropped", isCorrect: false)
+                                ],
+                                descriptionText: "bool_implements_Copy",
+                                descriptionLink: "using_structs_to_structure_related_data_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "what_is_a_tuple_struct",
+                                answers: [
+                                    Answer(id: UUID(),title: "a_struct_without_fields", isCorrect: false),
+                                    Answer(id: UUID(),title: "a_struct_with_a_name_but_without_field_names", isCorrect: true),
+                                    Answer(id: UUID(),title: "a_struct_of_only_bools", isCorrect: false),
+                                    Answer(id: UUID(),title: "a_struct_with_dynamic_fields", isCorrect: false)
+                                ],
+                                descriptionText: "fields_are_specified_only_by_types",
+                                descriptionLink: "using_structs_to_structure_related_data_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "how_do_you_declare_a_tuple_struct",
+                                answers: [
+                                    Answer(id: UUID(),title: "struct_Color_i32_i32_i32", isCorrect: false),
+                                    Answer(id: UUID(),title: "struct_Color_i32_i32_i32", isCorrect: true),
+                                    Answer(id: UUID(),title: "tuple_Color_i32_i32_i32", isCorrect: false),
+                                    Answer(id: UUID(),title: "struct_Color_i32_i32_i32", isCorrect: false)
+                                ],
+                                descriptionText: "provide_the_name_and_types_in_parentheses",
+                                descriptionLink: "using_structs_to_structure_related_data_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "how_do_Color_and_Point_differ",
+                                answers: [
+                                    Answer(id: UUID(),title: "no_difference_theyre_aliases", isCorrect: false),
+                                    Answer(id: UUID(),title: "theyre_different_types_even_if_they_have_identical_fields", isCorrect: true),
+                                    Answer(id: UUID(),title: "the_only_difference_is_variable_names", isCorrect: false),
+                                    Answer(id: UUID(),title: "Point_can_be_used_in_place_of_Color", isCorrect: false)
+                                ],
+                                descriptionText: "each_struct_is_a_distinct_type",
+                                descriptionLink: "using_structs_to_structure_related_data_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "what_is_a_unit_like_struct",
+                                answers: [
+                                    Answer(id: UUID(),title: "a_struct_with_one_field", isCorrect: false),
+                                    Answer(id: UUID(),title: "a_struct_with_no_fields", isCorrect: true),
+                                    Answer(id: UUID(),title: "a_struct_with_str", isCorrect: false),
+                                    Answer(id: UUID(),title: "a_struct_thats_always_mut", isCorrect: false)
+                                ],
+                                descriptionText: "written_as_struct_Name",
+                                descriptionLink: "using_structs_to_structure_related_data_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "what_are_unit_like_structs_used_for",
+                                answers: [
+                                    Answer(id: UUID(),title: "storing_an_empty_string", isCorrect: false),
+                                    Answer(id: UUID(),title: "implementing_traits_without_storing_data", isCorrect: true),
+                                    Answer(id: UUID(),title: "saving_memory", isCorrect: false),
+                                    Answer(id: UUID(),title: "replacing_enums", isCorrect: false)
+                                ],
+                                descriptionText: "used_for_behavior_not_data",
+                                descriptionLink: "using_structs_to_structure_related_data_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "why_do_structs_usually_use_String_instead_of_str",
+                                answers: [
+                                    Answer(id: UUID(),title: "String_is_faster", isCorrect: false),
+                                    Answer(id: UUID(),title: "String_is_always_smaller_in_memory", isCorrect: false),
+                                    Answer(id: UUID(),title: "so_the_struct_owns_its_data", isCorrect: true),
+                                    Answer(id: UUID(),title: "to_avoid_writing_lifetimes", isCorrect: false)
+                                ],
+                                descriptionText: "String_owns_data_str_requires_a_lifetime",
+                                descriptionLink: "using_structs_to_structure_related_data_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "what_happens_if_you_put_str_in_a_struct_without_a_lifetime",
+                                answers: [
+                                    Answer(id: UUID(),title: "compiles", isCorrect: false),
+                                    Answer(id: UUID(),title: "error_missing_lifetime_specifier", isCorrect: true),
+                                    Answer(id: UUID(),title: "always_works", isCorrect: false),
+                                    Answer(id: UUID(),title: "automatically_becomes_String", isCorrect: false)
+                                ],
+                                descriptionText: "Rust_requires_lifetime_parameters_for_references",
+                                descriptionLink: "using_structs_to_structure_related_data_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "how_do_you_fix_a_struct_with_str",
+                                answers: [
+                                    Answer(id: UUID(),title: "struct_User_username_str", isCorrect: false),
+                                    Answer(id: UUID(),title: "struct_User_a_username_a_str", isCorrect: true),
+                                    Answer(id: UUID(),title: "struct_User_username_str", isCorrect: false),
+                                    Answer(id: UUID(),title: "struct_User_static_str", isCorrect: false)
+                                ],
+                                descriptionText: "references_need_a_lifetime",
+                                descriptionLink: "using_structs_to_structure_related_data_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "why_is_area_width_height_inconvenient",
+                                answers: [
+                                    Answer(id: UUID(),title: "the_call_is_too_long", isCorrect: false),
+                                    Answer(id: UUID(),title: "theres_no_relationship_between_the_parameters", isCorrect: true),
+                                    Answer(id: UUID(),title: "Rust_doesnt_support_two_parameter_functions", isCorrect: false),
+                                    Answer(id: UUID(),title: "its_slower", isCorrect: false)
+                                ],
+                                descriptionText: "width_and_height_arent_tied_together",
+                                descriptionLink: "using_structs_to_structure_related_data_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "why_is_a_tuple_inconvenient_for_a_rectangle",
+                                answers: [
+                                    Answer(id: UUID(),title: "no_field_names_only_indices", isCorrect: true),
+                                    Answer(id: UUID(),title: "doesnt_support_multiplication", isCorrect: false),
+                                    Answer(id: UUID(),title: "slower_than_a_struct", isCorrect: false),
+                                    Answer(id: UUID(),title: "doesnt_store_numbers", isCorrect: false)
+                                ],
+                                descriptionText: "with_tuples_you_must_remember_indices",
+                                descriptionLink: "using_structs_to_structure_related_data_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "why_is_struct_Rectangle_better_than_a_tuple",
+                                answers: [
+                                    Answer(id: UUID(),title: "stores_data_on_the_heap", isCorrect: false),
+                                    Answer(id: UUID(),title: "gives_field_names_width_and_height", isCorrect: true),
+                                    Answer(id: UUID(),title: "can_only_be_used_in_main", isCorrect: false),
+                                    Answer(id: UUID(),title: "always_gets_copied", isCorrect: false)
+                                ],
+                                descriptionText: "a_struct_adds_semantics",
+                                descriptionLink: "using_structs_to_structure_related_data_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "what_happens_with_println_rect1",
+                                answers: [
+                                    Answer(id: UUID(),title: "it_prints_the_struct", isCorrect: false),
+                                    Answer(id: UUID(),title: "error_no_Display", isCorrect: true),
+                                    Answer(id: UUID(),title: "panic", isCorrect: false),
+                                    Answer(id: UUID(),title: "always_works", isCorrect: false)
+                                ],
+                                descriptionText: "structs_dont_have_Display_by_default",
+                                descriptionLink: "using_structs_to_structure_related_data_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "whats_needed_for_debug_formatting",
+                                answers: [
+                                    Answer(id: UUID(),title: "implement_Display", isCorrect: false),
+                                    Answer(id: UUID(),title: "use_and_derive_Debug", isCorrect: true),
+                                    Answer(id: UUID(),title: "just_println", isCorrect: false),
+                                    Answer(id: UUID(),title: "dbg_is_enough", isCorrect: false)
+                                ],
+                                descriptionText: "Debug_must_be_explicitly_enabled",
+                                descriptionLink: "using_structs_to_structure_related_data_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "how_does_dbg_differ_from_println",
+                                answers: [
+                                    Answer(id: UUID(),title: "dbg_always_colors_text", isCorrect: false),
+                                    Answer(id: UUID(),title: "dbg_prints_to_stderr_and_returns_the_value", isCorrect: true),
+                                    Answer(id: UUID(),title: "dbg_works_only_for_numbers", isCorrect: false),
+                                    Answer(id: UUID(),title: "println_is_faster", isCorrect: false)
+                                ],
+                                descriptionText: "dbg_is_handy_for_debugging",
+                                descriptionLink: "using_structs_to_structure_related_data_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "how_do_you_declare_a_method_for_a_struct",
+                                answers: [
+                                    Answer(id: UUID(),title: "fn_area_self", isCorrect: false),
+                                    Answer(id: UUID(),title: "impl_Rectangle_fn_area_self", isCorrect: true),
+                                    Answer(id: UUID(),title: "Rectangle_area_fn", isCorrect: false),
+                                    Answer(id: UUID(),title: "method_Rectangle_area", isCorrect: false)
+                                ],
+                                descriptionText: "methods_live_inside_impl_blocks",
+                                descriptionLink: "using_structs_to_structure_related_data_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "how_does_a_function_differ_from_a_method",
+                                answers: [
+                                    Answer(id: UUID(),title: "a_method_always_returns_self", isCorrect: false),
+                                    Answer(id: UUID(),title: "a_method_is_always_public", isCorrect: false),
+                                    Answer(id: UUID(),title: "a_method_is_inside_impl_and_takes_self", isCorrect: true),
+                                    Answer(id: UUID(),title: "a_function_works_only_in_main", isCorrect: false)
+                                ],
+                                descriptionText: "a_method_is_a_function_bound_to_a_type",
+                                descriptionLink: "using_structs_to_structure_related_data_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "what_does_self_mean",
+                                answers: [
+                                    Answer(id: UUID(),title: "the_method_takes_a_copy", isCorrect: false),
+                                    Answer(id: UUID(),title: "the_method_takes_a_reference_to_itself", isCorrect: true),
+                                    Answer(id: UUID(),title: "the_method_requires_mut", isCorrect: false),
+                                    Answer(id: UUID(),title: "the_method_transfers_ownership", isCorrect: false)
+                                ],
+                                descriptionText: "self_is_sugar_for_self_Self",
+                                descriptionLink: "using_structs_to_structure_related_data_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "how_do_you_declare_a_method_that_changes_fields",
+                                answers: [
+                                    Answer(id: UUID(),title: "fn_change_self", isCorrect: false),
+                                    Answer(id: UUID(),title: "fn_change_mut_self", isCorrect: false),
+                                    Answer(id: UUID(),title: "fn_change_mut_self", isCorrect: true),
+                                    Answer(id: UUID(),title: "fn_change_self", isCorrect: false)
+                                ],
+                                descriptionText: "you_need_mut_self",
+                                descriptionLink: "using_structs_to_structure_related_data_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "what_does_the_can_hold_method_do",
+                                answers: [
+                                    Answer(id: UUID(),title: "compares_two_numbers", isCorrect: false),
+                                    Answer(id: UUID(),title: "checks_whether_one_Rectangle_fits_inside_another", isCorrect: true),
+                                    Answer(id: UUID(),title: "creates_a_new_Rectangle", isCorrect: false),
+                                    Answer(id: UUID(),title: "checks_Debug", isCorrect: false)
+                                ],
+                                descriptionText: "compares_width_and_height",
+                                descriptionLink: "using_structs_to_structure_related_data_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "how_do_you_call_a_method",
+                                answers: [
+                                    Answer(id: UUID(),title: "Rectangle_area_rect", isCorrect: false),
+                                    Answer(id: UUID(),title: "rect_area", isCorrect: true),
+                                    Answer(id: UUID(),title: "area_rect", isCorrect: false),
+                                    Answer(id: UUID(),title: "rect_area", isCorrect: false)
+                                ],
+                                descriptionText: "use_instance_method",
+                                descriptionLink: "using_structs_to_structure_related_data_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "what_is_an_associated_function",
+                                answers: [
+                                    Answer(id: UUID(),title: "always_a_static_method", isCorrect: false),
+                                    Answer(id: UUID(),title: "any_function_inside_impl", isCorrect: false),
+                                    Answer(id: UUID(),title: "a_function_without_self", isCorrect: true),
+                                    Answer(id: UUID(),title: "only_a_constructor", isCorrect: false)
+                                ],
+                                descriptionText: "an_associated_function_doesnt_take_self",
+                                descriptionLink: "using_structs_to_structure_related_data_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "how_do_you_call_an_associated_function",
+                                answers: [
+                                    Answer(id: UUID(),title: "Rectangle_square_3", isCorrect: true),
+                                    Answer(id: UUID(),title: "rect_square_3", isCorrect: false),
+                                    Answer(id: UUID(),title: "new_Rectangle_3", isCorrect: false),
+                                    Answer(id: UUID(),title: "square_Rectangle_3", isCorrect: false)
+                                ],
+                                descriptionText: "use_Type_func",
+                                descriptionLink: "using_structs_to_structure_related_data_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "what_does_Self_refer_to_in_an_impl",
+                                answers: [
+                                    Answer(id: UUID(),title: "empty_tuple", isCorrect: false),
+                                    Answer(id: UUID(),title: "the_structs_type_name", isCorrect: true),
+                                    Answer(id: UUID(),title: "static_struct", isCorrect: false),
+                                    Answer(id: UUID(),title: "void", isCorrect: false)
+                                ],
+                                descriptionText: "Self_equals_the_type_being_implemented",
+                                descriptionLink: "using_structs_to_structure_related_data_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "can_you_have_multiple_impl_blocks_for_one_struct",
+                                answers: [
+                                    Answer(id: UUID(),title: "no", isCorrect: false),
+                                    Answer(id: UUID(),title: "yes_and_thats_valid_syntax", isCorrect: true),
+                                    Answer(id: UUID(),title: "only_when_using_a_trait", isCorrect: false),
+                                    Answer(id: UUID(),title: "only_on_nightly", isCorrect: false)
+                                ],
+                                descriptionText: "you_can_split_impls",
+                                descriptionLink: "using_structs_to_structure_related_data_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "what_happens_if_a_method_and_a_field_share_a_name",
+                                answers: [
+                                    Answer(id: UUID(),title: "error", isCorrect: false),
+                                    Answer(id: UUID(),title: "Rust_distinguishes_them_rect_width_field_vs_rect_width_method", isCorrect: true),
+                                    Answer(id: UUID(),title: "the_method_overwrites_the_field", isCorrect: false),
+                                    Answer(id: UUID(),title: "the_field_becomes_private", isCorrect: false)
+                                ],
+                                descriptionText: "parentheses_indicate_a_method_call",
+                                descriptionLink: "using_structs_to_structure_related_data_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "what_is_a_getter_in_Rust",
+                                answers: [
+                                    Answer(id: UUID(),title: "generated_automatically", isCorrect: false),
+                                    Answer(id: UUID(),title: "you_write_it_manually_typically_returning_a_field", isCorrect: true),
+                                    Answer(id: UUID(),title: "not_supported", isCorrect: false),
+                                    Answer(id: UUID(),title: "created_via_a_macro", isCorrect: false)
+                                ],
+                                descriptionText: "Rust_doesnt_auto_generate_getters",
+                                descriptionLink: "using_structs_to_structure_related_data_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "how_does_Rust_replace_from_C",
+                                answers: [
+                                    Answer(id: UUID(),title: "Rust_also_uses", isCorrect: false),
+                                    Answer(id: UUID(),title: "Rust_uses_auto_ref_deref_when_calling_methods", isCorrect: true),
+                                    Answer(id: UUID(),title: "Rust_requires_before_the_call", isCorrect: false),
+                                    Answer(id: UUID(),title: "Rust_always_copies", isCorrect: false)
+                                ],
+                                descriptionText: "Rust_auto_references_as_needed",
+                                descriptionLink: "using_structs_to_structure_related_data_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "what_does_dbg_print_for_dbg_30_2",
+                                answers: [
+                                    Answer(id: UUID(),title: "only_the_number", isCorrect: false),
+                                    Answer(id: UUID(),title: "file_line_and_result", isCorrect: true),
+                                    Answer(id: UUID(),title: "nothing", isCorrect: false),
+                                    Answer(id: UUID(),title: "compiler_error", isCorrect: false)
+                                ],
+                                descriptionText: "dbg_prints_context_value",
+                                descriptionLink: "using_structs_to_structure_related_data_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "what_is_the_pretty_debug_syntax",
+                                answers: [
+                                    Answer(id: UUID(),title: "pretty", isCorrect: true),
+                                    Answer(id: UUID(),title: "debug", isCorrect: false),
+                                    Answer(id: UUID(),title: "debug", isCorrect: false),
+                                    Answer(id: UUID(),title: "debug", isCorrect: false)
+                                ],
+                                descriptionText: "pretty_print_is_pretty",
+                                descriptionLink: "using_structs_to_structure_related_data_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "what_does_impl_Rectangle_fn_new_Self_do",
+                                answers: [
+                                    Answer(id: UUID(),title: "not_allowed", isCorrect: false),
+                                    Answer(id: UUID(),title: "defines_an_associated_function_constructor", isCorrect: true),
+                                    Answer(id: UUID(),title: "defines_a_method", isCorrect: false),
+                                    Answer(id: UUID(),title: "nothing", isCorrect: false)
+                                ],
+                                descriptionText: "a_constructor_via_new",
+                                descriptionLink: "using_structs_to_structure_related_data_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "bottom_line_why_use_structs",
+                                answers: [
+                                    Answer(id: UUID(),title: "to_replace_enums", isCorrect: false),
+                                    Answer(id: UUID(),title: "to_store_values_like_an_array", isCorrect: false),
+                                    Answer(id: UUID(),title: "to_group_related_data_with_names_and_behavior", isCorrect: true),
+                                    Answer(id: UUID(),title: "to_speed_up_compilation", isCorrect: false)
+                                ],
+                                descriptionText: "a_struct_groups_data_and_methods",
+                                descriptionLink: "using_structs_to_structure_related_data_link"
+                            ),
+                        ]
                     )
                 ]
             )
