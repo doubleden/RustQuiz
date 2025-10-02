@@ -1698,6 +1698,301 @@ extension SeedService: DependencyKey {
                                 descriptionLink: "using_structs_to_structure_related_data_link"
                             ),
                         ]
+                    ),
+                    Quiz(
+                        id: UUID(),
+                        theme: "enums_and_pattern_matching",
+                        priority: 4,
+                        questions: [
+                            Question(
+                                id: UUID(),
+                                title: "what_does_an_enum_do_in_Rust",
+                                answers: [
+                                    Answer(id: UUID(),title: "creates_an_array_of_values", isCorrect: false),
+                                    Answer(id: UUID(),title: "lets_you_list_the_possible_variants_of_a_type", isCorrect: true),
+                                    Answer(id: UUID(),title: "stores_only_numbers", isCorrect: false),
+                                    Answer(id: UUID(),title: "works_like_a_struct_without_fields", isCorrect: false)
+                                ],
+                                descriptionText: "an_enum_defines_a_type_that_can_be_one_of_several_variants",
+                                descriptionLink: "enums_and_pattern_matching_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "how_do_you_declare_an_enum_IpAddrKind_with_variants_V4_and_V6",
+                                answers: [
+                                    Answer(id: UUID(),title: "enum_IpAddrKind_V4_V6", isCorrect: true),
+                                    Answer(id: UUID(),title: "enum_IpAddrKind_V4_V6", isCorrect: false),
+                                    Answer(id: UUID(),title: "struct_IpAddrKind_V4_V6", isCorrect: false),
+                                    Answer(id: UUID(),title: "type_IpAddrKind_V4_V6", isCorrect: false)
+                                ],
+                                descriptionText: "enums_use_braces_with_listed_variants",
+                                descriptionLink: "enums_and_pattern_matching_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "how_do_you_create_an_enum_instance",
+                                answers: [
+                                    Answer(id: UUID(),title: "let_x_V4", isCorrect: false),
+                                    Answer(id: UUID(),title: "let_x_IpAddrKind_V4", isCorrect: true),
+                                    Answer(id: UUID(),title: "let_x_IpAddrKind_V4", isCorrect: false),
+                                    Answer(id: UUID(),title: "let_x_new_IpAddrKind_V4", isCorrect: false)
+                                ],
+                                descriptionText: "variants_are_accessed_with",
+                                descriptionLink: "enums_and_pattern_matching_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "can_variants_of_an_enum_hold_data",
+                                answers: [
+                                    Answer(id: UUID(),title: "no", isCorrect: false),
+                                    Answer(id: UUID(),title: "only_numbers", isCorrect: false),
+                                    Answer(id: UUID(),title: "yes_any_type", isCorrect: true),
+                                    Answer(id: UUID(),title: "only_strings", isCorrect: false)
+                                ],
+                                descriptionText: "enums_can_contain_different_kinds_of_data",
+                                descriptionLink: "enums_and_pattern_matching_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "why_is_enum_IpAddr_better_than_struct_IpAddrKind_String",
+                                answers: [
+                                    Answer(id: UUID(),title: "enums_are_faster", isCorrect: false),
+                                    Answer(id: UUID(),title: "enums_are_clearer_and_shorter", isCorrect: true),
+                                    Answer(id: UUID(),title: "enums_always_use_less_memory", isCorrect: false),
+                                    Answer(id: UUID(),title: "theres_no_difference", isCorrect: false)
+                                ],
+                                descriptionText: "an_enum_stores_the_kind_and_the_data_together",
+                                descriptionLink: "enums_and_pattern_matching_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "can_different_enum_variants_have_different_amounts_and_types_of_data",
+                                answers: [
+                                    Answer(id: UUID(),title: "no", isCorrect: false),
+                                    Answer(id: UUID(),title: "yes", isCorrect: true),
+                                    Answer(id: UUID(),title: "only_the_same_types", isCorrect: false),
+                                    Answer(id: UUID(),title: "only_the_same_arity", isCorrect: false)
+                                ],
+                                descriptionText: "V4_u8_u8_u8_u8_and_V6_String_are_valid_together",
+                                descriptionLink: "enums_and_pattern_matching_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "how_do_Message_Quit_and_Message_Write_String_differ",
+                                answers: [
+                                    Answer(id: UUID(),title: "the_first_has_no_data_the_second_carries_data", isCorrect: true),
+                                    Answer(id: UUID(),title: "theyre_the_same", isCorrect: false),
+                                    Answer(id: UUID(),title: "Quit_is_always_a_String", isCorrect: false),
+                                    Answer(id: UUID(),title: "Write_cant_be_used", isCorrect: false)
+                                ],
+                                descriptionText: "Quit_is_unit_like_Write_stores_a_String",
+                                descriptionLink: "enums_and_pattern_matching_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "can_you_add_methods_to_an_enum",
+                                answers: [
+                                    Answer(id: UUID(),title: "no", isCorrect: false),
+                                    Answer(id: UUID(),title: "yes_via_impl", isCorrect: true),
+                                    Answer(id: UUID(),title: "only_to_variants", isCorrect: false),
+                                    Answer(id: UUID(),title: "only_if_the_enum_is_empty", isCorrect: false)
+                                ],
+                                descriptionText: "enums_support_impl_blocks",
+                                descriptionLink: "enums_and_pattern_matching_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "what_is_Option",
+                                answers: [
+                                    Answer(id: UUID(),title: "an_enum_for_storing_a_bool", isCorrect: false),
+                                    Answer(id: UUID(),title: "an_enum_representing_presence_or_absence_of_a_value", isCorrect: true),
+                                    Answer(id: UUID(),title: "null_in_Rust", isCorrect: false),
+                                    Answer(id: UUID(),title: "a_special_numeric_type", isCorrect: false)
+                                ],
+                                descriptionText: "Option_is_Some_T_or_None",
+                                descriptionLink: "enums_and_pattern_matching_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "what_is_true_about_Option",
+                                answers: [
+                                    Answer(id: UUID(),title: "Option_and_T_are_the_same_type", isCorrect: false),
+                                    Answer(id: UUID(),title: "Option_and_T_are_different_types", isCorrect: true),
+                                    Answer(id: UUID(),title: "you_can_add_Option_to_T_directly", isCorrect: false),
+                                    Answer(id: UUID(),title: "Option_is_always_compiled_as_null", isCorrect: false)
+                                ],
+                                descriptionText: "you_mustnt_confuse_Option_with_T",
+                                descriptionLink: "enums_and_pattern_matching_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "why_doesnt_Rust_have_null",
+                                answers: [
+                                    Answer(id: UUID(),title: "to_save_memory", isCorrect: false),
+                                    Answer(id: UUID(),title: "personal_preference_of_the_authors", isCorrect: false),
+                                    Answer(id: UUID(),title: "to_avoid_errors_the_billion_dollar_mistake", isCorrect: true),
+                                    Answer(id: UUID(),title: "Rust_has_hidden_nulls", isCorrect: false)
+                                ],
+                                descriptionText: "null_often_leads_to_bugs",
+                                descriptionLink: "enums_and_pattern_matching_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "how_do_you_get_a_value_out_of_an_Option",
+                                answers: [
+                                    Answer(id: UUID(),title: "always_unwrap", isCorrect: false),
+                                    Answer(id: UUID(),title: "with_match_or_helper_methods", isCorrect: true),
+                                    Answer(id: UUID(),title: "automatically_when_adding", isCorrect: false),
+                                    Answer(id: UUID(),title: "using_a_null_check", isCorrect: false)
+                                ],
+                                descriptionText: "typically_use_match_if_let_or_methods",
+                                descriptionLink: "enums_and_pattern_matching_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "what_does_the_match_construct_do",
+                                answers: [
+                                    Answer(id: UUID(),title: "checks_only_bool", isCorrect: false),
+                                    Answer(id: UUID(),title: "compares_a_value_against_patterns", isCorrect: true),
+                                    Answer(id: UUID(),title: "always_replaces_if", isCorrect: false),
+                                    Answer(id: UUID(),title: "works_only_with_numbers", isCorrect: false)
+                                ],
+                                descriptionText: "match_matches_a_value_to_patterns",
+                                descriptionLink: "enums_and_pattern_matching_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "how_does_match_differ_from_if",
+                                answers: [
+                                    Answer(id: UUID(),title: "match_is_faster", isCorrect: false),
+                                    Answer(id: UUID(),title: "if_checks_a_bool_match_works_with_any_value", isCorrect: true),
+                                    Answer(id: UUID(),title: "if_requires_all_branches_match_doesnt", isCorrect: false),
+                                    Answer(id: UUID(),title: "if_can_store_data_match_cant", isCorrect: false)
+                                ],
+                                descriptionText: "match_works_with_many_types_not_just_bool",
+                                descriptionLink: "enums_and_pattern_matching_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "what_does_the_arrow_mean_in_match",
+                                answers: [
+                                    Answer(id: UUID(),title: "assignment", isCorrect: false),
+                                    Answer(id: UUID(),title: "condition", isCorrect: false),
+                                    Answer(id: UUID(),title: "separates_the_pattern_from_its_arms_code", isCorrect: true),
+                                    Answer(id: UUID(),title: "typing", isCorrect: false)
+                                ],
+                                descriptionText: "code_for_the_arm_goes_after",
+                                descriptionLink: "enums_and_pattern_matching_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "what_happens_if_you_dont_cover_all_enum_variants_in_a_match",
+                                answers: [
+                                    Answer(id: UUID(),title: "compiles_with_a_warning", isCorrect: false),
+                                    Answer(id: UUID(),title: "compile_error", isCorrect: true),
+                                    Answer(id: UUID(),title: "a_default_is_added_automatically", isCorrect: false),
+                                    Answer(id: UUID(),title: "runtime_panic", isCorrect: false)
+                                ],
+                                descriptionText: "match_must_be_exhaustive_in_Rust",
+                                descriptionLink: "enums_and_pattern_matching_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "what_is_used_for_in_match",
+                                answers: [
+                                    Answer(id: UUID(),title: "printing_a_value", isCorrect: false),
+                                    Answer(id: UUID(),title: "catch_all_any_remaining_case", isCorrect: true),
+                                    Answer(id: UUID(),title: "comments", isCorrect: false),
+                                    Answer(id: UUID(),title: "calling_a_method", isCorrect: false)
+                                ],
+                                descriptionText: "ignores_the_value_and_matches_anything",
+                                descriptionLink: "enums_and_pattern_matching_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "what_does_match_x_Some_i_i_0_do",
+                                answers: [
+                                    Answer(id: UUID(),title: "always_returns_i", isCorrect: false),
+                                    Answer(id: UUID(),title: "returns_i_or_0_if_None", isCorrect: true),
+                                    Answer(id: UUID(),title: "compile_error", isCorrect: false),
+                                    Answer(id: UUID(),title: "returns_null", isCorrect: false)
+                                ],
+                                descriptionText: "covers_the_None_case",
+                                descriptionLink: "enums_and_pattern_matching_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "whats_the_advantage_of_if_let_over_match",
+                                answers: [
+                                    Answer(id: UUID(),title: "ensures_exhaustiveness", isCorrect: false),
+                                    Answer(id: UUID(),title: "shorter_when_handling_a_single_variant", isCorrect: true),
+                                    Answer(id: UUID(),title: "works_only_with_numbers", isCorrect: false),
+                                    Answer(id: UUID(),title: "no_advantage", isCorrect: false)
+                                ],
+                                descriptionText: "if_let_is_handy_when_you_care_about_one_case",
+                                descriptionLink: "enums_and_pattern_matching_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "what_do_you_lose_when_using_if_let_instead_of_match",
+                                answers: [
+                                    Answer(id: UUID(),title: "performance", isCorrect: false),
+                                    Answer(id: UUID(),title: "automatic_coverage_of_all_cases", isCorrect: true),
+                                    Answer(id: UUID(),title: "ability_to_use_Option", isCorrect: false),
+                                    Answer(id: UUID(),title: "the_call_method", isCorrect: false)
+                                ],
+                                descriptionText: "if_let_doesnt_require_handling_all_variants",
+                                descriptionLink: "enums_and_pattern_matching_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "how_does_let_else_differ_from_if_let",
+                                answers: [
+                                    Answer(id: UUID(),title: "let_else_is_always_faster", isCorrect: false),
+                                    Answer(id: UUID(),title: "let_else_requires_the_else_branch_to_exit_e_g_return", isCorrect: true),
+                                    Answer(id: UUID(),title: "let_else_works_only_with_Option", isCorrect: false),
+                                    Answer(id: UUID(),title: "no_difference", isCorrect: false)
+                                ],
+                                descriptionText: "in_let_else_the_else_must_terminate_the_function",
+                                descriptionLink: "enums_and_pattern_matching_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "how_does_data_binding_work_in_match",
+                                answers: [
+                                    Answer(id: UUID(),title: "you_cant_extract_data", isCorrect: false),
+                                    Answer(id: UUID(),title: "through_variables_in_the_pattern", isCorrect: true),
+                                    Answer(id: UUID(),title: "only_via_unwrap", isCorrect: false),
+                                    Answer(id: UUID(),title: "only_via_Option_methods", isCorrect: false)
+                                ],
+                                descriptionText: "Coin_Quarter_state_println_state",
+                                descriptionLink: "enums_and_pattern_matching_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "what_does_this_code_do_if_let_Some_x_y",
+                                answers: [
+                                    Answer(id: UUID(),title: "always_prints_y", isCorrect: false),
+                                    Answer(id: UUID(),title: "prints_x_if_y_Some_x", isCorrect: true),
+                                    Answer(id: UUID(),title: "compile_error", isCorrect: false),
+                                    Answer(id: UUID(),title: "works_only_for_numbers", isCorrect: false)
+                                ],
+                                descriptionText: "if_let_extracts_the_value_from_Some",
+                                descriptionLink: "enums_and_pattern_matching_link"
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "bottom_line_why_use_enum_match",
+                                answers: [
+                                    Answer(id: UUID(),title: "to_replace_structs", isCorrect: false),
+                                    Answer(id: UUID(),title: "to_store_only_strings", isCorrect: false),
+                                    Answer(id: UUID(),title: "to_express_a_set_of_variants_and_handle_them_safely", isCorrect: true),
+                                    Answer(id: UUID(),title: "to_speed_up_println", isCorrect: false)
+                                ],
+                                descriptionText: "enums_describe_variants_match_handles_them_reliably",
+                                descriptionLink: "enums_and_pattern_matching_link"
+                            ),
+                        ]
                     )
                 ]
             )

@@ -3143,6 +3143,822 @@
           }
         }
       }
+    },
+    "what_does_an_enum_do_in_Rust" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What does an enum do in Rust?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что делает enum в Rust?"
+          }
+        }
+      }
+    },
+    "how_do_you_declare_an_enum_IpAddrKind_with_variants_V4_and_V6" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How do you declare an enum IpAddrKind with variants V4 and V6?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Как объявить enum IpAddrKind с вариантами V4 и V6?"
+          }
+        }
+      }
+    },
+    "how_do_you_create_an_enum_instance" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How do you create an enum instance?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Как создать экземпляр enum?"
+          }
+        }
+      }
+    },
+    "can_variants_of_an_enum_hold_data" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Can variants of an enum hold data?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Могут ли варианты enum содержать данные?"
+          }
+        }
+      }
+    },
+    "why_is_enum_IpAddr_better_than_struct_IpAddrKind_String" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Why is enum IpAddr better than struct IpAddrKind + String?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Почему enum IpAddr лучше чем struct IpAddrKind + String?"
+          }
+        }
+      }
+    },
+    "can_different_enum_variants_have_different_amounts_and_types_of_data" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Can different enum variants have different amounts and types of data?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Могут ли разные варианты enum иметь разное количество и типы данных?"
+          }
+        }
+      }
+    },
+    "how_do_Message_Quit_and_Message_Write_String_differ" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How do Message::Quit and Message::Write(String) differ?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Чем отличаются Message::Quit и Message::Write(String)?"
+          }
+        }
+      }
+    },
+    "can_you_add_methods_to_an_enum" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Can you add methods to an enum?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Можно ли добавить методы к enum?"
+          }
+        }
+      }
+    },
+    "what_is_Option" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What is Option?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что такое Option?"
+          }
+        }
+      }
+    },
+    "what_is_true_about_Option" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What is true about Option?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что верно об Option?"
+          }
+        }
+      }
+    },
+    "why_doesnt_Rust_have_null" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Why doesn't Rust have null?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Почему в Rust нет null?"
+          }
+        }
+      }
+    },
+    "how_do_you_get_a_value_out_of_an_Option" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How do you get a value out of an Option?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Как получить значение из Option?"
+          }
+        }
+      }
+    },
+    "what_does_the_match_construct_do" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What does the match construct do?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что делает конструкция match?"
+          }
+        }
+      }
+    },
+    "how_does_match_differ_from_if" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How does match differ from if?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Чем match отличается от if?"
+          }
+        }
+      }
+    },
+    "what_does_the_arrow_mean_in_match" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What does the arrow => mean in match?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что означает стрелка => в match?"
+          }
+        }
+      }
+    },
+    "what_happens_if_you_dont_cover_all_enum_variants_in_a_match" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What happens if you don't cover all enum variants in a match?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что происходит, если не покрыть все варианты enum в match?"
+          }
+        }
+      }
+    },
+    "what_is_used_for_in_match" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What is _ used for in match?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Для чего используется _ в match?"
+          }
+        }
+      }
+    },
+    "what_does_match_x_Some_i_i_0_do" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What does match x { Some(i) => i, _ => 0 } do?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что делает match x { Some(i) => i, _ => 0 }?"
+          }
+        }
+      }
+    },
+    "whats_the_advantage_of_if_let_over_match" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What's the advantage of if let over match?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Какое преимущество if let над match?"
+          }
+        }
+      }
+    },
+    "what_do_you_lose_when_using_if_let_instead_of_match" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What do you lose when using if let instead of match?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что теряется при использовании if let вместо match?"
+          }
+        }
+      }
+    },
+    "how_does_let_else_differ_from_if_let" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How does let…else differ from if let?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Чем let…else отличается от if let?"
+          }
+        }
+      }
+    },
+    "how_does_data_binding_work_in_match" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How does data binding work in match?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Как работает привязка данных в match?"
+          }
+        }
+      }
+    },
+    "what_does_this_code_do_if_let_Some_x_y" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What does this code do?\n\nif let Some(x) = y {\n    println!(\"{x}\");\n}"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что делает этот код?\n\nif let Some(x) = y {\n    println!(\"{x}\");\n}"
+          }
+        }
+      }
+    },
+    "bottom_line_why_use_enum_match" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bottom line: why use enum + match?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "В итоге: зачем использовать enum + match?"
+          }
+        }
+      }
+    },
+    "an_enum_defines_a_type_that_can_be_one_of_several_variants" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "An enum defines a type that can be one of several variants."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enum определяет тип, который может быть одним из нескольких вариантов."
+          }
+        }
+      }
+    },
+    "enums_use_braces_with_listed_variants" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enums use braces with listed variants."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enum'ы используют фигурные скобки со списком вариантов."
+          }
+        }
+      }
+    },
+    "variants_are_accessed_with" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Variants are accessed with ::."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Варианты доступны через ::."
+          }
+        }
+      }
+    },
+    "enums_can_contain_different_kinds_of_data" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enums can contain different kinds of data."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enum'ы могут содержать разные типы данных."
+          }
+        }
+      }
+    },
+    "an_enum_stores_the_kind_and_the_data_together" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "An enum stores the kind and the data together."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enum хранит тип и данные вместе."
+          }
+        }
+      }
+    },
+    "V4_u8_u8_u8_u8_and_V6_String_are_valid_together" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "V4(u8,u8,u8,u8) and V6(String) are valid together."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "V4(u8,u8,u8,u8) и V6(String) валидны вместе."
+          }
+        }
+      }
+    },
+    "Quit_is_unit_like_Write_stores_a_String" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quit is unit-like; Write stores a String."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quit - unit-like; Write хранит String."
+          }
+        }
+      }
+    },
+    "enums_support_impl_blocks" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enums support impl blocks."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enum'ы поддерживают impl блоки."
+          }
+        }
+      }
+    },
+    "Option_is_Some_T_or_None" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Option is Some(T) or None."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Option - это Some(T) или None."
+          }
+        }
+      }
+    },
+    "you_mustnt_confuse_Option_with_T" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You mustn't confuse Option with T."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не путайте Option с T."
+          }
+        }
+      }
+    },
+    "null_often_leads_to_bugs" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Null often leads to bugs."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Null часто приводит к ошибкам."
+          }
+        }
+      }
+    },
+    "typically_use_match_if_let_or_methods" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Typically use match, if let, or methods."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Обычно используют match, if let или методы."
+          }
+        }
+      }
+    },
+    "match_matches_a_value_to_patterns" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "match matches a value to patterns."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "match сопоставляет значение с паттернами."
+          }
+        }
+      }
+    },
+    "match_works_with_many_types_not_just_bool" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "match works with many types, not just bool."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "match работает с многими типами, не только bool."
+          }
+        }
+      }
+    },
+    "code_for_the_arm_goes_after" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Code for the arm goes after =>."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Код для ветки идет после =>."
+          }
+        }
+      }
+    },
+    "match_must_be_exhaustive_in_Rust" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "match must be exhaustive in Rust."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "match должен быть исчерпывающим в Rust."
+          }
+        }
+      }
+    },
+    "ignores_the_value_and_matches_anything" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "_ ignores the value and matches anything."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "_ игнорирует значение и совпадает с чем угодно."
+          }
+        }
+      }
+    },
+    "covers_the_None_case" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "_ covers the None case."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "_ покрывает случай None."
+          }
+        }
+      }
+    },
+    "if_let_is_handy_when_you_care_about_one_case" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "if let is handy when you care about one case."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "if let удобен, когда вас интересует один случай."
+          }
+        }
+      }
+    },
+    "if_let_doesnt_require_handling_all_variants" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "if let doesn't require handling all variants."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "if let не требует обработки всех вариантов."
+          }
+        }
+      }
+    },
+    "in_let_else_the_else_must_terminate_the_function" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In let…else, the else must terminate the function."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "В let…else, else должен завершить функцию."
+          }
+        }
+      }
+    },
+    "Coin_Quarter_state_println_state" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Coin::Quarter(state) => println!(\"{state:?}\")."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Coin::Quarter(state) => println!(\"{state:?}\")."
+          }
+        }
+      }
+    },
+    "if_let_extracts_the_value_from_Some" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "if let extracts the value from Some."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "if let извлекает значение из Some."
+          }
+        }
+      }
+    },
+    "enums_describe_variants_match_handles_them_reliably" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enums describe variants; match handles them reliably."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enum'ы описывают варианты; match обрабатывает их надежно."
+          }
+        }
+      }
     }
   },
   "version" : "1.1"
