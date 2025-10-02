@@ -1993,6 +1993,810 @@ extension SeedService: DependencyKey {
                                 descriptionLink: "enums_and_pattern_matching_link"
                             ),
                         ]
+                    ),
+                    Quiz(
+                        id: UUID(),
+                        theme: "managing_growing_projects_with_packages_crates_and_modules",
+                        priority: 5,
+                        questions: [
+                            // Question 1
+                            Question(
+                                id: UUID(),
+                                title: "what_is_a_crate_in_rust",
+                                answers: [
+                                    Answer(id: UUID(), title: "the_cargo_toml_file", isCorrect: false),
+                                    Answer(id: UUID(), title: "the_smallest_unit_of_code_for_compilation", isCorrect: true),
+                                    Answer(id: UUID(), title: "only_a_binary_executable", isCorrect: false),
+                                    Answer(id: UUID(), title: "a_separate_package_with_dependencies", isCorrect: false)
+                                ],
+                                descriptionText: "a_crate_is_the_minimal_compilation_unit_even_a_single_rs_file_compiles_as_a_crate",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 2
+                            Question(
+                                id: UUID(),
+                                title: "what_kinds_of_crates_exist",
+                                answers: [
+                                    Answer(id: UUID(), title: "library_only", isCorrect: false),
+                                    Answer(id: UUID(), title: "binary_only", isCorrect: false),
+                                    Answer(id: UUID(), title: "binary_and_library", isCorrect: true),
+                                    Answer(id: UUID(), title: "module_only", isCorrect: false)
+                                ],
+                                descriptionText: "crates_come_in_two_types_binary_with_main_and_library_without_main",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 3
+                            Question(
+                                id: UUID(),
+                                title: "what_must_a_binary_crate_contain",
+                                answers: [
+                                    Answer(id: UUID(), title: "a_cargo_toml_file", isCorrect: false),
+                                    Answer(id: UUID(), title: "main_rs", isCorrect: false),
+                                    Answer(id: UUID(), title: "a_main_function", isCorrect: true),
+                                    Answer(id: UUID(), title: "a_lib_module", isCorrect: false)
+                                ],
+                                descriptionText: "a_binary_crate_requires_fn_main_as_the_entry_point",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 4
+                            Question(
+                                id: UUID(),
+                                title: "what_does_a_library_crate_conventionally_specify",
+                                answers: [
+                                    Answer(id: UUID(), title: "a_main_entry_point", isCorrect: false),
+                                    Answer(id: UUID(), title: "the_file_src_lib_rs", isCorrect: true),
+                                    Answer(id: UUID(), title: "cargo_lock", isCorrect: false),
+                                    Answer(id: UUID(), title: "a_separate_front_of_house_module", isCorrect: false)
+                                ],
+                                descriptionText: "by_convention_a_library_starts_at_src_lib_rs",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 5
+                            Question(
+                                id: UUID(),
+                                title: "what_is_the_crate_root",
+                                answers: [
+                                    Answer(id: UUID(), title: "the_projects_root_directory", isCorrect: false),
+                                    Answer(id: UUID(), title: "the_first_module_where_the_compiler_starts", isCorrect: true),
+                                    Answer(id: UUID(), title: "cargo_toml", isCorrect: false),
+                                    Answer(id: UUID(), title: "the_target_folder", isCorrect: false)
+                                ],
+                                descriptionText: "src_main_rs_or_src_lib_rs_is_the_crate_root_from_which_the_module_tree_is_built",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 6
+                            Question(
+                                id: UUID(),
+                                title: "what_is_a_package",
+                                answers: [
+                                    Answer(id: UUID(), title: "any_binary_crate", isCorrect: false),
+                                    Answer(id: UUID(), title: "a_group_of_modules", isCorrect: false),
+                                    Answer(id: UUID(), title: "a_bundle_of_one_or_more_crates_with_a_cargo_toml", isCorrect: true),
+                                    Answer(id: UUID(), title: "a_workspace", isCorrect: false)
+                                ],
+                                descriptionText: "a_package_is_a_set_of_crates_plus_cargo_toml_describing_how_to_build_them",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 7
+                            Question(
+                                id: UUID(),
+                                title: "how_many_library_crates_can_a_package_have",
+                                answers: [
+                                    Answer(id: UUID(), title: "any_number", isCorrect: false),
+                                    Answer(id: UUID(), title: "at_most_one", isCorrect: true),
+                                    Answer(id: UUID(), title: "only_if_there_are_no_binaries", isCorrect: false),
+                                    Answer(id: UUID(), title: "depends_on_cargo_toml", isCorrect: false)
+                                ],
+                                descriptionText: "a_package_may_contain_many_binary_crates_but_only_one_library_crate",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 8
+                            Question(
+                                id: UUID(),
+                                title: "where_does_cargo_look_for_the_binary_crate_root",
+                                answers: [
+                                    Answer(id: UUID(), title: "src_bin_rs", isCorrect: false),
+                                    Answer(id: UUID(), title: "src_bin_mod_rs", isCorrect: false),
+                                    Answer(id: UUID(), title: "src_main_rs", isCorrect: true),
+                                    Answer(id: UUID(), title: "src_root_rs", isCorrect: false)
+                                ],
+                                descriptionText: "by_default_a_binary_crate_starts_at_src_main_rs",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 9
+                            Question(
+                                id: UUID(),
+                                title: "where_does_cargo_look_for_the_library_crate_root",
+                                answers: [
+                                    Answer(id: UUID(), title: "src_main_rs", isCorrect: false),
+                                    Answer(id: UUID(), title: "src_root_rs", isCorrect: false),
+                                    Answer(id: UUID(), title: "src_lib_rs", isCorrect: true),
+                                    Answer(id: UUID(), title: "lib_toml", isCorrect: false)
+                                ],
+                                descriptionText: "a_library_crate_is_defined_in_src_lib_rs",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 10
+                            Question(
+                                id: UUID(),
+                                title: "how_do_you_create_a_new_project_with_a_binary_crate",
+                                answers: [
+                                    Answer(id: UUID(), title: "cargo_create", isCorrect: false),
+                                    Answer(id: UUID(), title: "cargo_new_myproj", isCorrect: true),
+                                    Answer(id: UUID(), title: "cargo_init_lib", isCorrect: false),
+                                    Answer(id: UUID(), title: "cargo_bin_myproj", isCorrect: false)
+                                ],
+                                descriptionText: "cargo_new_creates_a_binary_crate_by_default",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 11
+                            Question(
+                                id: UUID(),
+                                title: "how_do_you_create_a_new_project_with_a_library_crate",
+                                answers: [
+                                    Answer(id: UUID(), title: "cargo_new_mylib", isCorrect: false),
+                                    Answer(id: UUID(), title: "cargo_new_mylib_lib", isCorrect: true),
+                                    Answer(id: UUID(), title: "cargo_lib_mylib", isCorrect: false),
+                                    Answer(id: UUID(), title: "cargo_init_bin", isCorrect: false)
+                                ],
+                                descriptionText: "the_lib_flag_tells_cargo_to_create_a_library",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 12
+                            Question(
+                                id: UUID(),
+                                title: "what_does_the_mod_keyword_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "brings_in_an_external_crate", isCorrect: false),
+                                    Answer(id: UUID(), title: "declares_a_module", isCorrect: true),
+                                    Answer(id: UUID(), title: "makes_a_function_public", isCorrect: false),
+                                    Answer(id: UUID(), title: "adds_a_dependency", isCorrect: false)
+                                ],
+                                descriptionText: "mod_is_used_to_declare_a_module",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 13
+                            Question(
+                                id: UUID(),
+                                title: "where_is_code_for_mod_garden_searched",
+                                answers: [
+                                    Answer(id: UUID(), title: "only_in_src_garden_rs", isCorrect: false),
+                                    Answer(id: UUID(), title: "src_garden_rs_or_src_garden_mod_rs", isCorrect: true),
+                                    Answer(id: UUID(), title: "only_inside_main_rs", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_in_cargo_toml", isCorrect: false)
+                                ],
+                                descriptionText: "the_compiler_checks_two_paths_garden_rs_or_garden_mod_rs",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 14
+                            Question(
+                                id: UUID(),
+                                title: "what_does_pub_mod_mean",
+                                answers: [
+                                    Answer(id: UUID(), title: "makes_the_module_and_all_its_contents_public", isCorrect: false),
+                                    Answer(id: UUID(), title: "makes_the_module_accessible_from_outside", isCorrect: true),
+                                    Answer(id: UUID(), title: "removes_privacy_from_all_functions", isCorrect: false),
+                                    Answer(id: UUID(), title: "creates_a_new_binary_crate", isCorrect: false)
+                                ],
+                                descriptionText: "pub_mod_exposes_the_module_its_contents_remain_private_by_default",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 15
+                            Question(
+                                id: UUID(),
+                                title: "whats_the_default_visibility_for_modules_and_functions",
+                                answers: [
+                                    Answer(id: UUID(), title: "public", isCorrect: false),
+                                    Answer(id: UUID(), title: "private", isCorrect: true),
+                                    Answer(id: UUID(), title: "protected", isCorrect: false),
+                                    Answer(id: UUID(), title: "internal", isCorrect: false)
+                                ],
+                                descriptionText: "in_rust_everything_is_private_by_default",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 16
+                            Question(
+                                id: UUID(),
+                                title: "what_is_true_of_an_absolute_path",
+                                answers: [
+                                    Answer(id: UUID(), title: "starts_with_self", isCorrect: false),
+                                    Answer(id: UUID(), title: "starts_with_super", isCorrect: false),
+                                    Answer(id: UUID(), title: "starts_with_crate", isCorrect: true),
+                                    Answer(id: UUID(), title: "always_starts_with_lib", isCorrect: false)
+                                ],
+                                descriptionText: "an_absolute_path_starts_with_crate_or_an_external_crate_name",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 17
+                            Question(
+                                id: UUID(),
+                                title: "what_is_true_of_a_relative_path",
+                                answers: [
+                                    Answer(id: UUID(), title: "starts_with_crate", isCorrect: false),
+                                    Answer(id: UUID(), title: "starts_with_self_or_super", isCorrect: true),
+                                    Answer(id: UUID(), title: "always_starts_with_pub", isCorrect: false),
+                                    Answer(id: UUID(), title: "can_only_be_used_in_lib_rs", isCorrect: false)
+                                ],
+                                descriptionText: "relative_paths_are_built_from_the_current_module_via_self_super_or_identifiers",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 18
+                            Question(
+                                id: UUID(),
+                                title: "how_does_use_differ_from_pub_use",
+                                answers: [
+                                    Answer(id: UUID(), title: "use_works_only_in_binaries", isCorrect: false),
+                                    Answer(id: UUID(), title: "pub_use_performs_a_re_export", isCorrect: true),
+                                    Answer(id: UUID(), title: "pub_use_is_only_for_std", isCorrect: false),
+                                    Answer(id: UUID(), title: "use_cant_be_used_in_lib_rs", isCorrect: false)
+                                ],
+                                descriptionText: "use_brings_a_name_into_scope_pub_use_also_makes_it_accessible_to_external_users",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 19
+                            Question(
+                                id: UUID(),
+                                title: "which_privacy_rule_is_correct",
+                                answers: [
+                                    Answer(id: UUID(), title: "a_parent_sees_a_childs_private_items", isCorrect: false),
+                                    Answer(id: UUID(), title: "a_child_sees_its_parent", isCorrect: true),
+                                    Answer(id: UUID(), title: "everyone_sees_everyone", isCorrect: false),
+                                    Answer(id: UUID(), title: "privacy_applies_only_to_functions", isCorrect: false)
+                                ],
+                                descriptionText: "a_parent_cannot_access_a_childs_private_items_but_the_child_can_access_the_parent",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 20
+                            Question(
+                                id: UUID(),
+                                title: "what_does_the_keyword_super_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "brings_in_std", isCorrect: false),
+                                    Answer(id: UUID(), title: "refers_to_the_parent_module", isCorrect: true),
+                                    Answer(id: UUID(), title: "makes_a_struct_public", isCorrect: false),
+                                    Answer(id: UUID(), title: "overrides_pub", isCorrect: false)
+                                ],
+                                descriptionText: "super_means_go_up_one_level_in_the_module_tree",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 21
+                            Question(
+                                id: UUID(),
+                                title: "how_do_struct_and_enum_differ_with_pub",
+                                answers: [
+                                    Answer(id: UUID(), title: "struct_fields_are_public_by_default", isCorrect: false),
+                                    Answer(id: UUID(), title: "all_enum_variants_become_public", isCorrect: true),
+                                    Answer(id: UUID(), title: "enum_variants_are_private", isCorrect: false),
+                                    Answer(id: UUID(), title: "struct_fields_cant_be_made_private", isCorrect: false)
+                                ],
+                                descriptionText: "if_an_enum_is_public_all_its_variants_are_public",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 22
+                            Question(
+                                id: UUID(),
+                                title: "what_happens_with_pub_struct_s_x_i32",
+                                answers: [
+                                    Answer(id: UUID(), title: "field_x_is_public", isCorrect: false),
+                                    Answer(id: UUID(), title: "field_x_is_private", isCorrect: true),
+                                    Answer(id: UUID(), title: "compile_error", isCorrect: false),
+                                    Answer(id: UUID(), title: "everything_is_public", isCorrect: false)
+                                ],
+                                descriptionText: "even_with_pub_struct_fields_are_private_by_default",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 23
+                            Question(
+                                id: UUID(),
+                                title: "what_does_use_std_collections_hashmap_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "imports_all_of_std", isCorrect: false),
+                                    Answer(id: UUID(), title: "makes_hashmap_available_by_its_name", isCorrect: true),
+                                    Answer(id: UUID(), title: "creates_a_new_crate", isCorrect: false),
+                                    Answer(id: UUID(), title: "imports_the_entire_collections_module", isCorrect: false)
+                                ],
+                                descriptionText: "use_shortens_the_path_to_refer_to_hashmap_directly",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 24
+                            Question(
+                                id: UUID(),
+                                title: "how_to_import_two_items_from_std_correctly",
+                                answers: [
+                                    Answer(id: UUID(), title: "use_std_io_use_std_cmp", isCorrect: false),
+                                    Answer(id: UUID(), title: "use_std_io_cmp", isCorrect: true),
+                                    Answer(id: UUID(), title: "use_std_io_cmp_semicolon", isCorrect: false),
+                                    Answer(id: UUID(), title: "use_std_io_cmp_parentheses", isCorrect: false)
+                                ],
+                                descriptionText: "nested_paths_reduce_repetition",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 25
+                            Question(
+                                id: UUID(),
+                                title: "what_does_use_std_io_self_write_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "imports_only_write", isCorrect: false),
+                                    Answer(id: UUID(), title: "imports_io_and_write", isCorrect: true),
+                                    Answer(id: UUID(), title: "imports_everything_from_io", isCorrect: false),
+                                    Answer(id: UUID(), title: "compile_error", isCorrect: false)
+                                ],
+                                descriptionText: "self_refers_to_the_module_itself_you_import_both_io_and_write",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 26
+                            Question(
+                                id: UUID(),
+                                title: "what_does_asterisk_do_with_use",
+                                answers: [
+                                    Answer(id: UUID(), title: "imports_only_pub_use", isCorrect: false),
+                                    Answer(id: UUID(), title: "imports_all_public_items", isCorrect: true),
+                                    Answer(id: UUID(), title: "imports_private_items", isCorrect: false),
+                                    Answer(id: UUID(), title: "creates_an_alias", isCorrect: false)
+                                ],
+                                descriptionText: "asterisk_imports_all_public_items_from_a_module",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 27
+                            Question(
+                                id: UUID(),
+                                title: "when_is_glob_asterisk_often_used",
+                                answers: [
+                                    Answer(id: UUID(), title: "in_main_rs", isCorrect: false),
+                                    Answer(id: UUID(), title: "in_tests", isCorrect: true),
+                                    Answer(id: UUID(), title: "in_cargo_toml", isCorrect: false),
+                                    Answer(id: UUID(), title: "in_enums", isCorrect: false)
+                                ],
+                                descriptionText: "asterisk_is_commonly_used_in_a_tests_module",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 28
+                            Question(
+                                id: UUID(),
+                                title: "what_does_as_do_in_use",
+                                answers: [
+                                    Answer(id: UUID(), title: "makes_it_private", isCorrect: false),
+                                    Answer(id: UUID(), title: "creates_an_alias", isCorrect: true),
+                                    Answer(id: UUID(), title: "exports_it_outward", isCorrect: false),
+                                    Answer(id: UUID(), title: "replaces_super", isCorrect: false)
+                                ],
+                                descriptionText: "as_lets_you_rename_an_import",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 29
+                            Question(
+                                id: UUID(),
+                                title: "what_happens_on_a_name_conflict",
+                                answers: [
+                                    Answer(id: UUID(), title: "compile_error", isCorrect: true),
+                                    Answer(id: UUID(), title: "rust_takes_the_first", isCorrect: false),
+                                    Answer(id: UUID(), title: "rust_takes_the_last", isCorrect: false),
+                                    Answer(id: UUID(), title: "an_alias_is_created_automatically", isCorrect: false)
+                                ],
+                                descriptionText: "rust_doesnt_allow_the_same_name_twice_in_one_scope",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 30
+                            Question(
+                                id: UUID(),
+                                title: "how_do_you_add_the_external_crate_rand",
+                                answers: [
+                                    Answer(id: UUID(), title: "use_rand_in_cargo_toml", isCorrect: false),
+                                    Answer(id: UUID(), title: "rand_0_8_in_cargo_toml", isCorrect: true),
+                                    Answer(id: UUID(), title: "mod_rand", isCorrect: false),
+                                    Answer(id: UUID(), title: "extern_rand", isCorrect: false)
+                                ],
+                                descriptionText: "external_crates_are_added_as_dependencies_in_cargo_toml",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 31
+                            Question(
+                                id: UUID(),
+                                title: "what_is_needed_to_use_rand_thread_rng",
+                                answers: [
+                                    Answer(id: UUID(), title: "use_rand_rng", isCorrect: true),
+                                    Answer(id: UUID(), title: "mod_rand", isCorrect: false),
+                                    Answer(id: UUID(), title: "pub_use_rand", isCorrect: false),
+                                    Answer(id: UUID(), title: "extern_crate_rng", isCorrect: false)
+                                ],
+                                descriptionText: "you_must_import_the_traits_for_the_methods_to_work",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 32
+                            Question(
+                                id: UUID(),
+                                title: "how_is_the_standard_library_included",
+                                answers: [
+                                    Answer(id: UUID(), title: "automatically", isCorrect: true),
+                                    Answer(id: UUID(), title: "through_cargo_toml", isCorrect: false),
+                                    Answer(id: UUID(), title: "via_extern_crate_std", isCorrect: false),
+                                    Answer(id: UUID(), title: "via_pub_mod", isCorrect: false)
+                                ],
+                                descriptionText: "std_is_included_automatically_but_you_must_use_items_into_scope",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 33
+                            Question(
+                                id: UUID(),
+                                title: "where_is_a_crates_module_structure_stored",
+                                answers: [
+                                    Answer(id: UUID(), title: "in_cargo_lock", isCorrect: false),
+                                    Answer(id: UUID(), title: "in_the_mod_tree", isCorrect: true),
+                                    Answer(id: UUID(), title: "in_cargo_toml", isCorrect: false),
+                                    Answer(id: UUID(), title: "in_bin", isCorrect: false)
+                                ],
+                                descriptionText: "the_crate_builds_a_module_tree_starting_at_the_crate_root",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 34
+                            Question(
+                                id: UUID(),
+                                title: "what_is_a_re_export",
+                                answers: [
+                                    Answer(id: UUID(), title: "a_new_crate", isCorrect: false),
+                                    Answer(id: UUID(), title: "pub_use", isCorrect: true),
+                                    Answer(id: UUID(), title: "an_alias", isCorrect: false),
+                                    Answer(id: UUID(), title: "pub_mod", isCorrect: false)
+                                ],
+                                descriptionText: "re_exporting_pub_use_simplifies_a_public_api",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 35
+                            Question(
+                                id: UUID(),
+                                title: "whats_the_idiomatic_way_to_import_a_function",
+                                answers: [
+                                    Answer(id: UUID(), title: "use_path_to_func", isCorrect: false),
+                                    Answer(id: UUID(), title: "use_path_to_module_module_func", isCorrect: true),
+                                    Answer(id: UUID(), title: "always_via_asterisk", isCorrect: false),
+                                    Answer(id: UUID(), title: "via_self", isCorrect: false)
+                                ],
+                                descriptionText: "idiomatic_rust_imports_the_module_then_calls_module_func",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 36
+                            Question(
+                                id: UUID(),
+                                title: "where_is_a_module_file_searched",
+                                answers: [
+                                    Answer(id: UUID(), title: "only_mod_rs", isCorrect: false),
+                                    Answer(id: UUID(), title: "file_rs_or_dir_mod_rs", isCorrect: true),
+                                    Answer(id: UUID(), title: "only_in_src_bin", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_in_cargo_toml", isCorrect: false)
+                                ],
+                                descriptionText: "rust_supports_both_styles_file_rs_and_dir_mod_rs",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 37
+                            Question(
+                                id: UUID(),
+                                title: "what_if_you_create_both_file_rs_and_dir_mod_rs_for_the_same_module",
+                                answers: [
+                                    Answer(id: UUID(), title: "the_first_is_used", isCorrect: false),
+                                    Answer(id: UUID(), title: "compile_error", isCorrect: true),
+                                    Answer(id: UUID(), title: "everything_works", isCorrect: false),
+                                    Answer(id: UUID(), title: "cargo_chooses_automatically", isCorrect: false)
+                                ],
+                                descriptionText: "rust_doesnt_allow_both_variants_for_a_single_module",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 38
+                            Question(
+                                id: UUID(),
+                                title: "where_is_the_module_tree_usually_written",
+                                answers: [
+                                    Answer(id: UUID(), title: "in_cargo_lock", isCorrect: false),
+                                    Answer(id: UUID(), title: "in_lib_rs", isCorrect: true),
+                                    Answer(id: UUID(), title: "in_bin", isCorrect: false),
+                                    Answer(id: UUID(), title: "in_target", isCorrect: false)
+                                ],
+                                descriptionText: "the_module_structure_is_declared_in_the_crate_root_lib_rs_or_main_rs",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 39
+                            Question(
+                                id: UUID(),
+                                title: "what_does_a_use_apply_to_by_default",
+                                answers: [
+                                    Answer(id: UUID(), title: "works_everywhere", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_within_the_current_module", isCorrect: true),
+                                    Answer(id: UUID(), title: "automatically_propagates", isCorrect: false),
+                                    Answer(id: UUID(), title: "always_global", isCorrect: false)
+                                ],
+                                descriptionText: "use_is_limited_to_the_current_scope",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 40
+                            Question(
+                                id: UUID(),
+                                title: "how_does_a_workspace_differ_from_a_package",
+                                answers: [
+                                    Answer(id: UUID(), title: "a_workspace_is_a_set_of_packages", isCorrect: true),
+                                    Answer(id: UUID(), title: "a_package_is_a_set_of_workspaces", isCorrect: false),
+                                    Answer(id: UUID(), title: "they_are_the_same", isCorrect: false),
+                                    Answer(id: UUID(), title: "a_workspace_binaries_only", isCorrect: false)
+                                ],
+                                descriptionText: "a_workspace_is_a_collection_of_multiple_packages",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 41
+                            Question(
+                                id: UUID(),
+                                title: "how_do_you_create_multiple_binary_crates_in_one_package",
+                                answers: [
+                                    Answer(id: UUID(), title: "put_files_in_src_bin", isCorrect: true),
+                                    Answer(id: UUID(), title: "in_cargo_toml_bin", isCorrect: false),
+                                    Answer(id: UUID(), title: "in_lib_rs", isCorrect: false),
+                                    Answer(id: UUID(), title: "in_cargo_lock", isCorrect: false)
+                                ],
+                                descriptionText: "each_file_in_src_bin_becomes_a_separate_binary_crate",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 42
+                            Question(
+                                id: UUID(),
+                                title: "what_does_self_mean_in_a_path",
+                                answers: [
+                                    Answer(id: UUID(), title: "refers_to_the_parent", isCorrect: false),
+                                    Answer(id: UUID(), title: "refers_to_the_current_module", isCorrect: true),
+                                    Answer(id: UUID(), title: "imports_private_items", isCorrect: false),
+                                    Answer(id: UUID(), title: "points_to_the_crate", isCorrect: false)
+                                ],
+                                descriptionText: "self_equals_the_current_module",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 43
+                            Question(
+                                id: UUID(),
+                                title: "whats_the_default_for_pub_enum",
+                                answers: [
+                                    Answer(id: UUID(), title: "variants_are_private", isCorrect: false),
+                                    Answer(id: UUID(), title: "all_variants_are_public", isCorrect: true),
+                                    Answer(id: UUID(), title: "compile_error", isCorrect: false),
+                                    Answer(id: UUID(), title: "nothing_changes", isCorrect: false)
+                                ],
+                                descriptionText: "for_an_enum_making_it_pub_makes_all_its_variants_public",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 44
+                            Question(
+                                id: UUID(),
+                                title: "what_is_true_about_a_struct",
+                                answers: [
+                                    Answer(id: UUID(), title: "all_fields_are_public", isCorrect: false),
+                                    Answer(id: UUID(), title: "fields_are_private_by_default", isCorrect: true),
+                                    Answer(id: UUID(), title: "fields_are_always_public", isCorrect: false),
+                                    Answer(id: UUID(), title: "fields_are_hidden_only_with_mod", isCorrect: false)
+                                ],
+                                descriptionText: "even_with_pub_struct_fields_are_private_unless_marked_pub",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 45
+                            Question(
+                                id: UUID(),
+                                title: "whats_the_idiomatic_use_for_hashmap",
+                                answers: [
+                                    Answer(id: UUID(), title: "use_std_hashmap_new", isCorrect: false),
+                                    Answer(id: UUID(), title: "use_std_collections_hashmap", isCorrect: true),
+                                    Answer(id: UUID(), title: "use_std_hashmap", isCorrect: false),
+                                    Answer(id: UUID(), title: "pub_use_std_hashmap", isCorrect: false)
+                                ],
+                                descriptionText: "idiomatic_is_to_import_the_full_path_to_the_type",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 46
+                            Question(
+                                id: UUID(),
+                                title: "what_happens_with_use_std_fmt_result_and_use_std_io_result",
+                                answers: [
+                                    Answer(id: UUID(), title: "compile_error", isCorrect: true),
+                                    Answer(id: UUID(), title: "the_first_is_chosen", isCorrect: false),
+                                    Answer(id: UUID(), title: "the_last_is_chosen", isCorrect: false),
+                                    Answer(id: UUID(), title: "automatic_alias", isCorrect: false)
+                                ],
+                                descriptionText: "you_cant_import_two_items_with_the_same_name_into_one_scope",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 47
+                            Question(
+                                id: UUID(),
+                                title: "how_to_resolve_the_result_name_conflict",
+                                answers: [
+                                    Answer(id: UUID(), title: "use_pub_mod", isCorrect: false),
+                                    Answer(id: UUID(), title: "use_as_for_an_alias", isCorrect: true),
+                                    Answer(id: UUID(), title: "use_only_glob", isCorrect: false),
+                                    Answer(id: UUID(), title: "remove_one_import", isCorrect: false)
+                                ],
+                                descriptionText: "as_lets_you_rename_eg_ioresult",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 48
+                            Question(
+                                id: UUID(),
+                                title: "what_does_pub_use_hosting_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "imports_only_locally", isCorrect: false),
+                                    Answer(id: UUID(), title: "makes_the_name_hosting_available_both_internally_and_externally", isCorrect: true),
+                                    Answer(id: UUID(), title: "deletes_the_hosting_module", isCorrect: false),
+                                    Answer(id: UUID(), title: "duplicates_hosting_code", isCorrect: false)
+                                ],
+                                descriptionText: "plain_use_is_local_pub_use_re_exports_making_it_part_of_the_public_api",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 49
+                            Question(
+                                id: UUID(),
+                                title: "what_does_pub_use_crate_front_of_house_hosting_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "makes_hosting_visible_only_in_the_current_file", isCorrect: false),
+                                    Answer(id: UUID(), title: "exports_hosting_outward_as_part_of_the_public_api", isCorrect: true),
+                                    Answer(id: UUID(), title: "imports_hosting_for_tests_only", isCorrect: false),
+                                    Answer(id: UUID(), title: "creates_a_new_module", isCorrect: false)
+                                ],
+                                descriptionText: "pub_use_shortens_the_internal_path_and_re_exports_the_name_for_external_use",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 50
+                            Question(
+                                id: UUID(),
+                                title: "what_happens_if_lib_rs_has_mod_garden_but_theres_no_garden_rs_or_garden_mod_rs",
+                                answers: [
+                                    Answer(id: UUID(), title: "cargo_creates_an_empty_module", isCorrect: false),
+                                    Answer(id: UUID(), title: "compile_error", isCorrect: true),
+                                    Answer(id: UUID(), title: "the_module_is_private", isCorrect: false),
+                                    Answer(id: UUID(), title: "rust_ignores_the_module", isCorrect: false)
+                                ],
+                                descriptionText: "mod_tells_the_compiler_to_find_a_file_if_its_missing_thats_an_error",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 51
+                            Question(
+                                id: UUID(),
+                                title: "how_do_you_properly_move_submodule_hosting_to_a_separate_file",
+                                answers: [
+                                    Answer(id: UUID(), title: "src_hosting_rs", isCorrect: false),
+                                    Answer(id: UUID(), title: "src_front_of_house_hosting_rs", isCorrect: true),
+                                    Answer(id: UUID(), title: "src_bin_hosting_rs", isCorrect: false),
+                                    Answer(id: UUID(), title: "lib_hosting_rs", isCorrect: false)
+                                ],
+                                descriptionText: "child_modules_must_live_under_the_directory_of_their_parent_module",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 52
+                            Question(
+                                id: UUID(),
+                                title: "what_about_the_mod_rs_style",
+                                answers: [
+                                    Answer(id: UUID(), title: "deprecated_but_still_supported", isCorrect: true),
+                                    Answer(id: UUID(), title: "mandatory_in_all_projects", isCorrect: false),
+                                    Answer(id: UUID(), title: "completely_replaced_garden_rs", isCorrect: false),
+                                    Answer(id: UUID(), title: "works_only_in_a_workspace", isCorrect: false)
+                                ],
+                                descriptionText: "mod_rs_src_garden_mod_rs_is_the_older_style_and_still_supported",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 53
+                            Question(
+                                id: UUID(),
+                                title: "what_if_both_garden_rs_and_garden_mod_rs_exist",
+                                answers: [
+                                    Answer(id: UUID(), title: "rust_merges_them", isCorrect: false),
+                                    Answer(id: UUID(), title: "compile_error", isCorrect: true),
+                                    Answer(id: UUID(), title: "cargo_chooses_garden_rs", isCorrect: false),
+                                    Answer(id: UUID(), title: "cargo_chooses_mod_rs", isCorrect: false)
+                                ],
+                                descriptionText: "rust_forbids_defining_one_module_in_two_places",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 54
+                            Question(
+                                id: UUID(),
+                                title: "what_does_glob_use_std_collections_asterisk_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "imports_all_public_items_from_collections", isCorrect: true),
+                                    Answer(id: UUID(), title: "imports_only_hashmap", isCorrect: false),
+                                    Answer(id: UUID(), title: "imports_private_items_too", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_enums", isCorrect: false)
+                                ],
+                                descriptionText: "asterisk_pulls_in_all_public_items_of_the_module",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 55
+                            Question(
+                                id: UUID(),
+                                title: "when_should_you_avoid_glob_asterisk",
+                                answers: [
+                                    Answer(id: UUID(), title: "in_small_files", isCorrect: false),
+                                    Answer(id: UUID(), title: "when_you_need_to_see_explicitly_what_is_imported", isCorrect: true),
+                                    Answer(id: UUID(), title: "when_working_with_std", isCorrect: false),
+                                    Answer(id: UUID(), title: "when_theres_no_pub_use", isCorrect: false)
+                                ],
+                                descriptionText: "glob_can_obscure_which_items_are_in_scope",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 56
+                            Question(
+                                id: UUID(),
+                                title: "where_is_glob_most_often_used",
+                                answers: [
+                                    Answer(id: UUID(), title: "in_tests", isCorrect: true),
+                                    Answer(id: UUID(), title: "in_cargo_toml", isCorrect: false),
+                                    Answer(id: UUID(), title: "in_a_workspace", isCorrect: false),
+                                    Answer(id: UUID(), title: "in_bin", isCorrect: false)
+                                ],
+                                descriptionText: "its_commonly_used_in_the_tests_module_to_import_everything",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            ),
+                            
+                            // Question 57
+                            Question(
+                                id: UUID(),
+                                title: "which_statement_best_describes_rusts_module_system",
+                                answers: [
+                                    Answer(id: UUID(), title: "its_only_about_pub_private", isCorrect: false),
+                                    Answer(id: UUID(), title: "its_the_combination_of_packages_crates_modules_paths_and_use", isCorrect: true),
+                                    Answer(id: UUID(), title: "its_an_analog_of_c_plus_plus_include", isCorrect: false),
+                                    Answer(id: UUID(), title: "its_only_about_workspaces", isCorrect: false)
+                                ],
+                                descriptionText: "rusts_module_system_encompasses_all_code_organization_mechanisms_packages_crates_modules_pub_use_and_paths",
+                                descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
+                            )
+                        ]
                     )
                 ]
             )
