@@ -2797,6 +2797,5679 @@ extension SeedService: DependencyKey {
                                 descriptionLink: "managing_growing_projects_with_packages_crates_and_modules_link"
                             )
                         ]
+                    ),
+                    Quiz(
+                        id: UUID(),
+                        theme: "common_collections",
+                        priority: 6,
+                        questions: [
+                            // Question 1
+                            Question(
+                                id: UUID(),
+                                title: "what_is_vec_t_in_rust",
+                                answers: [
+                                    Answer(id: UUID(), title: "a_fixed_size_stack_array", isCorrect: false),
+                                    Answer(id: UUID(), title: "a_dynamic_heap_array", isCorrect: true),
+                                    Answer(id: UUID(), title: "an_associative_array", isCorrect: false),
+                                    Answer(id: UUID(), title: "a_utf_8_string", isCorrect: false)
+                                ],
+                                descriptionText: "vec_t_stores_data_on_the_heap_its_size_can_change_at_runtime",
+                                descriptionLink: "common_collections_link"
+                            ),
+                            
+                            // Question 2
+                            Question(
+                                id: UUID(),
+                                title: "how_do_you_create_an_empty_i32_vector",
+                                answers: [
+                                    Answer(id: UUID(), title: "let_v_vec_new", isCorrect: true),
+                                    Answer(id: UUID(), title: "let_v_empty_brackets", isCorrect: false),
+                                    Answer(id: UUID(), title: "let_v_vec_empty", isCorrect: false),
+                                    Answer(id: UUID(), title: "let_v_array_macro", isCorrect: false)
+                                ],
+                                descriptionText: "vec_new_creates_an_empty_vector_the_type_is_via_annotation_or_later_inference",
+                                descriptionLink: "common_collections_link"
+                            ),
+                            
+                            // Question 3
+                            Question(
+                                id: UUID(),
+                                title: "macro_to_create_a_vector_with_elements",
+                                answers: [
+                                    Answer(id: UUID(), title: "vec_macro", isCorrect: true),
+                                    Answer(id: UUID(), title: "array_macro", isCorrect: false),
+                                    Answer(id: UUID(), title: "make_vec_macro", isCorrect: false),
+                                    Answer(id: UUID(), title: "collection_macro", isCorrect: false)
+                                ],
+                                descriptionText: "vec_is_the_built_in_macro_for_vector_literals",
+                                descriptionLink: "common_collections_link"
+                            ),
+                            
+                            // Question 4
+                            Question(
+                                id: UUID(),
+                                title: "what_does_v_2_return_if_v_vec_1_2_3",
+                                answers: [
+                                    Answer(id: UUID(), title: "some_3", isCorrect: false),
+                                    Answer(id: UUID(), title: "ref_3", isCorrect: true),
+                                    Answer(id: UUID(), title: "value_3", isCorrect: false),
+                                    Answer(id: UUID(), title: "option_i32", isCorrect: false)
+                                ],
+                                descriptionText: "indexing_with_brackets_returns_ref_t_not_a_value",
+                                descriptionLink: "common_collections_link"
+                            ),
+                            
+                            // Question 5
+                            Question(
+                                id: UUID(),
+                                title: "what_does_v_get_100_do_if_the_index_is_out_of_bounds",
+                                answers: [
+                                    Answer(id: UUID(), title: "panics", isCorrect: false),
+                                    Answer(id: UUID(), title: "returns_none", isCorrect: true),
+                                    Answer(id: UUID(), title: "returns_0", isCorrect: false),
+                                    Answer(id: UUID(), title: "returns_a_reference", isCorrect: false)
+                                ],
+                                descriptionText: "get_is_safe_and_always_returns_option_ref_t",
+                                descriptionLink: "common_collections_link"
+                            ),
+                            
+                            // Question 6
+                            Question(
+                                id: UUID(),
+                                title: "what_happens_with_ref_v_100_if_there_are_fewer_elements",
+                                answers: [
+                                    Answer(id: UUID(), title: "returns_none", isCorrect: false),
+                                    Answer(id: UUID(), title: "panics", isCorrect: true),
+                                    Answer(id: UUID(), title: "returns_0", isCorrect: false),
+                                    Answer(id: UUID(), title: "compile_time_error", isCorrect: false)
+                                ],
+                                descriptionText: "brackets_indexing_panics_on_out_of_bounds",
+                                descriptionLink: "common_collections_link"
+                            ),
+                            
+                            // Question 7
+                            Question(
+                                id: UUID(),
+                                title: "can_you_have_ref_v_0_and_call_v_push_5_in_the_same_scope",
+                                answers: [
+                                    Answer(id: UUID(), title: "yes", isCorrect: false),
+                                    Answer(id: UUID(), title: "no", isCorrect: true),
+                                    Answer(id: UUID(), title: "only_if_push_doesnt_move_the_buffer", isCorrect: false),
+                                    Answer(id: UUID(), title: "always_possible", isCorrect: false)
+                                ],
+                                descriptionText: "the_borrow_checker_forbids_this_since_push_may_reallocate_invalidating_the_reference",
+                                descriptionLink: "common_collections_link"
+                            ),
+                            
+                            // Question 8
+                            Question(
+                                id: UUID(),
+                                title: "how_to_iterate_immutably_over_a_vector",
+                                answers: [
+                                    Answer(id: UUID(), title: "for_i_in_v", isCorrect: false),
+                                    Answer(id: UUID(), title: "for_i_in_ref_v", isCorrect: true),
+                                    Answer(id: UUID(), title: "for_i_in_v_iter_mut", isCorrect: false),
+                                    Answer(id: UUID(), title: "for_i_in_mut_v", isCorrect: false)
+                                ],
+                                descriptionText: "ref_v_yields_ref_t",
+                                descriptionLink: "common_collections_link"
+                            ),
+                            
+                            // Question 9
+                            Question(
+                                id: UUID(),
+                                title: "how_to_modify_all_elements_in_a_vector",
+                                answers: [
+                                    Answer(id: UUID(), title: "for_i_in_v_star_i_plus_1", isCorrect: false),
+                                    Answer(id: UUID(), title: "for_i_in_ref_mut_v_star_i_plus_1", isCorrect: true),
+                                    Answer(id: UUID(), title: "for_mut_i_in_v_i_plus_1", isCorrect: false),
+                                    Answer(id: UUID(), title: "v_map_x_x_plus_1", isCorrect: false)
+                                ],
+                                descriptionText: "ref_mut_v_yields_ref_mut_t_use_star_to_mutate_the_value",
+                                descriptionLink: "common_collections_link"
+                            ),
+                            
+                            // Question 10
+                            Question(
+                                id: UUID(),
+                                title: "what_if_you_need_different_types_in_a_vec",
+                                answers: [
+                                    Answer(id: UUID(), title: "you_cant", isCorrect: false),
+                                    Answer(id: UUID(), title: "use_an_enum", isCorrect: true),
+                                    Answer(id: UUID(), title: "use_a_tuple", isCorrect: false),
+                                    Answer(id: UUID(), title: "use_vec_dynamic", isCorrect: false)
+                                ],
+                                descriptionText: "a_vector_is_homogeneous_an_enum_unifies_variants_under_one_type",
+                                descriptionLink: "common_collections_link"
+                            ),
+                            
+                            // Question 11
+                            Question(
+                                id: UUID(),
+                                title: "what_happens_to_vector_elements_when_it_goes_out_of_scope",
+                                answers: [
+                                    Answer(id: UUID(), title: "they_arent_freed", isCorrect: false),
+                                    Answer(id: UUID(), title: "memory_leak", isCorrect: false),
+                                    Answer(id: UUID(), title: "all_elements_are_dropped", isCorrect: true),
+                                    Answer(id: UUID(), title: "only_the_first_element_is_dropped", isCorrect: false)
+                                ],
+                                descriptionText: "vec_frees_memory_and_calls_drop_for_each_element",
+                                descriptionLink: "common_collections_link"
+                            ),
+                            
+                            // Question 12
+                            Question(
+                                id: UUID(),
+                                title: "what_is_string",
+                                answers: [
+                                    Answer(id: UUID(), title: "a_fixed_length_string", isCorrect: false),
+                                    Answer(id: UUID(), title: "a_wrapper_around_vec_u8", isCorrect: true),
+                                    Answer(id: UUID(), title: "a_utf_16_string", isCorrect: false),
+                                    Answer(id: UUID(), title: "a_bag_of_chars", isCorrect: false)
+                                ],
+                                descriptionText: "string_is_utf_8_backed_by_vec_u8",
+                                descriptionLink: "common_collections_link"
+                            ),
+                            
+                            // Question 13
+                            Question(
+                                id: UUID(),
+                                title: "how_to_create_an_empty_string",
+                                answers: [
+                                    Answer(id: UUID(), title: "string_empty", isCorrect: false),
+                                    Answer(id: UUID(), title: "string_new", isCorrect: true),
+                                    Answer(id: UUID(), title: "string_default", isCorrect: false),
+                                    Answer(id: UUID(), title: "empty_string_literal", isCorrect: false)
+                                ],
+                                descriptionText: "string_new_creates_an_empty_string",
+                                descriptionLink: "common_collections_link"
+                            ),
+                            
+                            // Question 14
+                            Question(
+                                id: UUID(),
+                                title: "how_to_create_a_string_from_a_literal",
+                                answers: [
+                                    Answer(id: UUID(), title: "hello_clone", isCorrect: false),
+                                    Answer(id: UUID(), title: "hello_to_string", isCorrect: true),
+                                    Answer(id: UUID(), title: "string_literal_hello", isCorrect: false),
+                                    Answer(id: UUID(), title: "string_str_hello", isCorrect: false)
+                                ],
+                                descriptionText: "ref_str_has_to_string",
+                                descriptionLink: "common_collections_link"
+                            ),
+                            
+                            // Question 15
+                            Question(
+                                id: UUID(),
+                                title: "difference_between_string_from_hi_and_hi_to_string",
+                                answers: [
+                                    Answer(id: UUID(), title: "different_types", isCorrect: false),
+                                    Answer(id: UUID(), title: "no_difference", isCorrect: true),
+                                    Answer(id: UUID(), title: "the_second_is_faster", isCorrect: false),
+                                    Answer(id: UUID(), title: "the_first_is_forbidden", isCorrect: false)
+                                ],
+                                descriptionText: "both_create_a_string_from_a_literal",
+                                descriptionLink: "common_collections_link"
+                            ),
+                            
+                            // Question 16
+                            Question(
+                                id: UUID(),
+                                title: "what_does_push_str_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "appends_a_char", isCorrect: false),
+                                    Answer(id: UUID(), title: "appends_an_ref_str", isCorrect: true),
+                                    Answer(id: UUID(), title: "deletes_the_string", isCorrect: false),
+                                    Answer(id: UUID(), title: "returns_a_copy", isCorrect: false)
+                                ],
+                                descriptionText: "push_str_takes_ref_str_and_appends_it",
+                                descriptionLink: "common_collections_link"
+                            ),
+                            
+                            // Question 17
+                            Question(
+                                id: UUID(),
+                                title: "what_does_push_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "appends_an_ref_str", isCorrect: false),
+                                    Answer(id: UUID(), title: "appends_a_single_char", isCorrect: true),
+                                    Answer(id: UUID(), title: "concatenates_strings", isCorrect: false),
+                                    Answer(id: UUID(), title: "appends_an_array", isCorrect: false)
+                                ],
+                                descriptionText: "push_accepts_only_a_char",
+                                descriptionLink: "common_collections_link"
+                            ),
+                            
+                            // Question 18
+                            Question(
+                                id: UUID(),
+                                title: "what_happens_with_let_s3_s1_plus_ref_s2",
+                                answers: [
+                                    Answer(id: UUID(), title: "both_remain_accessible", isCorrect: false),
+                                    Answer(id: UUID(), title: "s1_is_moved", isCorrect: true),
+                                    Answer(id: UUID(), title: "s2_is_moved", isCorrect: false),
+                                    Answer(id: UUID(), title: "compile_error", isCorrect: false)
+                                ],
+                                descriptionText: "plus_is_fn_add_self_s_ref_str_string_so_s1_is_moved",
+                                descriptionLink: "common_collections_link"
+                            ),
+                            
+                            // Question 19
+                            Question(
+                                id: UUID(),
+                                title: "why_is_format_better_than_plus_for_strings",
+                                answers: [
+                                    Answer(id: UUID(), title: "its_faster", isCorrect: false),
+                                    Answer(id: UUID(), title: "clearer_and_doesnt_move_arguments", isCorrect: true),
+                                    Answer(id: UUID(), title: "produces_ref_str", isCorrect: false),
+                                    Answer(id: UUID(), title: "for_printing_only", isCorrect: false)
+                                ],
+                                descriptionText: "format_takes_references_nothing_is_moved",
+                                descriptionLink: "common_collections_link"
+                            ),
+                            
+                            // Question 20
+                            Question(
+                                id: UUID(),
+                                title: "why_cant_you_index_a_string_as_s_0",
+                                answers: [
+                                    Answer(id: UUID(), title: "arbitrary_language_choice", isCorrect: false),
+                                    Answer(id: UUID(), title: "utf_8_has_variable_width", isCorrect: true),
+                                    Answer(id: UUID(), title: "borrow_checker_issue", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_arrays_support_indexing", isCorrect: false)
+                                ],
+                                descriptionText: "one_character_can_span_multiple_bytes_byte_indexing_isnt_a_character",
+                                descriptionLink: "common_collections_link"
+                            ),
+                            
+                            // Question 21
+                            Question(
+                                id: UUID(),
+                                title: "what_does_zdravstvuyte_len_return",
+                                answers: [
+                                    Answer(id: UUID(), title: "12", isCorrect: false),
+                                    Answer(id: UUID(), title: "24", isCorrect: true),
+                                    Answer(id: UUID(), title: "error", isCorrect: false),
+                                    Answer(id: UUID(), title: "0", isCorrect: false)
+                                ],
+                                descriptionText: "len_returns_bytes_cyrillic_letters_here_are_2_bytes_each",
+                                descriptionLink: "common_collections_link"
+                            ),
+                            
+                            // Question 22
+                            Question(
+                                id: UUID(),
+                                title: "how_to_get_a_slice_of_the_first_4_bytes_of_a_string",
+                                answers: [
+                                    Answer(id: UUID(), title: "ref_s_0_2", isCorrect: false),
+                                    Answer(id: UUID(), title: "ref_s_0_4", isCorrect: true),
+                                    Answer(id: UUID(), title: "s_slice_4", isCorrect: false),
+                                    Answer(id: UUID(), title: "s_bytes_0_4", isCorrect: false)
+                                ],
+                                descriptionText: "range_slicing_yields_ref_str_but_only_on_valid_char_boundaries",
+                                descriptionLink: "common_collections_link"
+                            ),
+                            
+                            // Question 23
+                            Question(
+                                id: UUID(),
+                                title: "what_does_zd_chars_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "bytes", isCorrect: false),
+                                    Answer(id: UUID(), title: "unicode_scalar_chars", isCorrect: true),
+                                    Answer(id: UUID(), title: "ref_str_slices", isCorrect: false),
+                                    Answer(id: UUID(), title: "error", isCorrect: false)
+                                ],
+                                descriptionText: "chars_iterates_unicode_scalar_values",
+                                descriptionLink: "common_collections_link"
+                            ),
+                            
+                            // Question 24
+                            Question(
+                                id: UUID(),
+                                title: "what_does_zd_bytes_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "characters", isCorrect: false),
+                                    Answer(id: UUID(), title: "an_array_of_char", isCorrect: false),
+                                    Answer(id: UUID(), title: "utf_8_bytes", isCorrect: true),
+                                    Answer(id: UUID(), title: "graphemes", isCorrect: false)
+                                ],
+                                descriptionText: "bytes_yields_u8",
+                                descriptionLink: "common_collections_link"
+                            ),
+                            
+                            // Question 25
+                            Question(
+                                id: UUID(),
+                                title: "what_doesnt_the_standard_library_provide_for_strings",
+                                answers: [
+                                    Answer(id: UUID(), title: "bytes", isCorrect: false),
+                                    Answer(id: UUID(), title: "chars", isCorrect: false),
+                                    Answer(id: UUID(), title: "grapheme_clusters", isCorrect: true),
+                                    Answer(id: UUID(), title: "length", isCorrect: false)
+                                ],
+                                descriptionText: "graphemes_require_external_crates",
+                                descriptionLink: "common_collections_link"
+                            ),
+                            
+                            // Question 26
+                            Question(
+                                id: UUID(),
+                                title: "how_to_create_a_hashmap",
+                                answers: [
+                                    Answer(id: UUID(), title: "let_m_hashmap_new", isCorrect: true),
+                                    Answer(id: UUID(), title: "let_m_map_macro", isCorrect: false),
+                                    Answer(id: UUID(), title: "let_m_curly_braces", isCorrect: false),
+                                    Answer(id: UUID(), title: "let_m_dictionary_macro", isCorrect: false)
+                                ],
+                                descriptionText: "hashmap_new_is_the_standard_way",
+                                descriptionLink: "common_collections_link"
+                            ),
+                            
+                            // Question 27
+                            Question(
+                                id: UUID(),
+                                title: "where_is_hashmap_located",
+                                answers: [
+                                    Answer(id: UUID(), title: "std_hash", isCorrect: false),
+                                    Answer(id: UUID(), title: "std_map", isCorrect: false),
+                                    Answer(id: UUID(), title: "std_collections", isCorrect: true),
+                                    Answer(id: UUID(), title: "std_core", isCorrect: false)
+                                ],
+                                descriptionText: "hashmap_lives_in_the_collections_module",
+                                descriptionLink: "common_collections_link"
+                            ),
+                            
+                            // Question 28
+                            Question(
+                                id: UUID(),
+                                title: "how_to_get_a_value_from_a_hashmap",
+                                answers: [
+                                    Answer(id: UUID(), title: "map_key", isCorrect: false),
+                                    Answer(id: UUID(), title: "map_get_key", isCorrect: true),
+                                    Answer(id: UUID(), title: "map_value_key", isCorrect: false),
+                                    Answer(id: UUID(), title: "map_find_key", isCorrect: false)
+                                ],
+                                descriptionText: "use_get_which_returns_option_ref_v",
+                                descriptionLink: "common_collections_link"
+                            ),
+                            
+                            // Question 29
+                            Question(
+                                id: UUID(),
+                                title: "what_does_the_entry_method_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "checks_key_existence", isCorrect: true),
+                                    Answer(id: UUID(), title: "deletes_an_entry", isCorrect: false),
+                                    Answer(id: UUID(), title: "overwrites_a_key", isCorrect: false),
+                                    Answer(id: UUID(), title: "returns_the_list_of_keys", isCorrect: false)
+                                ],
+                                descriptionText: "entry_returns_an_entry_on_which_you_can_call_or_insert",
+                                descriptionLink: "common_collections_link"
+                            ),
+                            
+                            // Question 30
+                            Question(
+                                id: UUID(),
+                                title: "what_does_or_insert_50_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "always_inserts_50", isCorrect: false),
+                                    Answer(id: UUID(), title: "inserts_only_if_the_key_is_absent", isCorrect: true),
+                                    Answer(id: UUID(), title: "deletes_the_key", isCorrect: false),
+                                    Answer(id: UUID(), title: "returns_an_option", isCorrect: false)
+                                ],
+                                descriptionText: "or_insert_inserts_when_missing_otherwise_it_returns_a_mutable_ref_to_the_existing_value",
+                                descriptionLink: "common_collections_link"
+                            )
+                        ]
+                    ),
+                    Quiz(
+                        id: UUID(),
+                        theme: "error_handling",
+                        priority: 7,
+                        questions: [
+                            // Question 1
+                            Question(
+                                id: UUID(),
+                                title: "how_do_error_kinds_differ_in_rust",
+                                answers: [
+                                    Answer(id: UUID(), title: "compile_time_vs_runtime", isCorrect: false),
+                                    Answer(id: UUID(), title: "light_vs_heavy", isCorrect: false),
+                                    Answer(id: UUID(), title: "recoverable_vs_unrecoverable", isCorrect: true),
+                                    Answer(id: UUID(), title: "syntactic_vs_logical", isCorrect: false)
+                                ],
+                                descriptionText: "recoverable_result_t_e_unrecoverable_panic",
+                                descriptionLink: "error_handling_link"
+                            ),
+                            
+                            // Question 2
+                            Question(
+                                id: UUID(),
+                                title: "what_does_panic_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "returns_err", isCorrect: false),
+                                    Answer(id: UUID(), title: "prints_a_warning_and_continues", isCorrect: false),
+                                    Answer(id: UUID(), title: "terminates_the_thread_with_stack_unwinding_by_default", isCorrect: true),
+                                    Answer(id: UUID(), title: "silently_logs_an_error", isCorrect: false)
+                                ],
+                                descriptionText: "a_panic_stops_execution_default_behavior_is_unwinding",
+                                descriptionLink: "error_handling_link"
+                            ),
+                            
+                            // Question 3
+                            Question(
+                                id: UUID(),
+                                title: "how_to_switch_panics_to_immediate_abort",
+                                answers: [
+                                    Answer(id: UUID(), title: "rust_panic_abort", isCorrect: false),
+                                    Answer(id: UUID(), title: "in_cargo_toml_panic_abort_in_the_target_profile", isCorrect: true),
+                                    Answer(id: UUID(), title: "compiler_flag_abort", isCorrect: false),
+                                    Answer(id: UUID(), title: "function_std_panic_abort", isCorrect: false)
+                                ],
+                                descriptionText: "the_cargo_profile_sets_the_strategy",
+                                descriptionLink: "error_handling_link"
+                            ),
+                            
+                            // Question 4
+                            Question(
+                                id: UUID(),
+                                title: "what_does_rust_backtrace_1_show",
+                                answers: [
+                                    Answer(id: UUID(), title: "error_type", isCorrect: false),
+                                    Answer(id: UUID(), title: "the_call_stack_up_to_the_panic_site", isCorrect: true),
+                                    Answer(id: UUID(), title: "memory_contents", isCorrect: false),
+                                    Answer(id: UUID(), title: "rust_version", isCorrect: false)
+                                ],
+                                descriptionText: "enables_backtrace_output",
+                                descriptionLink: "error_handling_link"
+                            ),
+                            
+                            // Question 5
+                            Question(
+                                id: UUID(),
+                                title: "which_type_is_used_for_recoverable_errors",
+                                answers: [
+                                    Answer(id: UUID(), title: "option_t", isCorrect: false),
+                                    Answer(id: UUID(), title: "result_t_e", isCorrect: true),
+                                    Answer(id: UUID(), title: "try_t", isCorrect: false),
+                                    Answer(id: UUID(), title: "either_t_e", isCorrect: false)
+                                ],
+                                descriptionText: "result_encapsulates_success_error",
+                                descriptionLink: "error_handling_link"
+                            ),
+                            
+                            // Question 6
+                            Question(
+                                id: UUID(),
+                                title: "what_does_file_open_a_txt_return",
+                                answers: [
+                                    Answer(id: UUID(), title: "option_file", isCorrect: false),
+                                    Answer(id: UUID(), title: "result_file_io_error", isCorrect: true),
+                                    Answer(id: UUID(), title: "result_ref_file_ref_io_error", isCorrect: false),
+                                    Answer(id: UUID(), title: "file", isCorrect: false)
+                                ],
+                                descriptionText: "the_operation_can_fail",
+                                descriptionLink: "error_handling_link"
+                            ),
+                            
+                            // Question 7
+                            Question(
+                                id: UUID(),
+                                title: "what_does_unwrap_on_a_result_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "always_returns_t", isCorrect: false),
+                                    Answer(id: UUID(), title: "returns_t_or_panics", isCorrect: true),
+                                    Answer(id: UUID(), title: "always_panics", isCorrect: false),
+                                    Answer(id: UUID(), title: "converts_to_option", isCorrect: false)
+                                ],
+                                descriptionText: "shortcut_for_ok_or_panic",
+                                descriptionLink: "error_handling_link"
+                            ),
+                            
+                            // Question 8
+                            Question(
+                                id: UUID(),
+                                title: "how_does_expect_differ_from_unwrap",
+                                answers: [
+                                    Answer(id: UUID(), title: "returns_option", isCorrect: false),
+                                    Answer(id: UUID(), title: "doesnt_panic", isCorrect: false),
+                                    Answer(id: UUID(), title: "lets_you_set_a_custom_panic_message", isCorrect: true),
+                                    Answer(id: UUID(), title: "is_2x_slower", isCorrect: false)
+                                ],
+                                descriptionText: "you_provide_your_own_message",
+                                descriptionLink: "error_handling_link"
+                            ),
+                            
+                            // Question 9
+                            Question(
+                                id: UUID(),
+                                title: "how_to_react_differently_to_io_error_kinds",
+                                answers: [
+                                    Answer(id: UUID(), title: "if_error_equals_notfound", isCorrect: false),
+                                    Answer(id: UUID(), title: "match_error_kind", isCorrect: true),
+                                    Answer(id: UUID(), title: "error_code", isCorrect: false),
+                                    Answer(id: UUID(), title: "you_cant", isCorrect: false)
+                                ],
+                                descriptionText: "errorkind_indicates_the_class_of_error",
+                                descriptionLink: "error_handling_link"
+                            ),
+                            
+                            // Question 10
+                            Question(
+                                id: UUID(),
+                                title: "what_does_unwrap_or_else_e_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "always_uses_a_default_value", isCorrect: false),
+                                    Answer(id: UUID(), title: "handles_ok", isCorrect: false),
+                                    Answer(id: UUID(), title: "calls_the_closure_only_on_err", isCorrect: true),
+                                    Answer(id: UUID(), title: "never_called", isCorrect: false)
+                                ],
+                                descriptionText: "lazily_creates_a_value_on_error",
+                                descriptionLink: "error_handling_link"
+                            ),
+                            
+                            // Question 11
+                            Question(
+                                id: UUID(),
+                                title: "what_is_error_propagation",
+                                answers: [
+                                    Answer(id: UUID(), title: "logging_and_continuing", isCorrect: false),
+                                    Answer(id: UUID(), title: "converting_to_panic", isCorrect: false),
+                                    Answer(id: UUID(), title: "returning_the_error_to_the_caller", isCorrect: true),
+                                    Answer(id: UUID(), title: "retrying", isCorrect: false)
+                                ],
+                                descriptionText: "let_the_caller_decide",
+                                descriptionLink: "error_handling_link"
+                            ),
+                            
+                            // Question 12
+                            Question(
+                                id: UUID(),
+                                title: "what_does_the_question_mark_operator_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "converts_result_to_option", isCorrect: false),
+                                    Answer(id: UUID(), title: "if_ok_unwrap_if_err_return_from_the_function", isCorrect: true),
+                                    Answer(id: UUID(), title: "catches_panics", isCorrect: false),
+                                    Answer(id: UUID(), title: "hides_the_error", isCorrect: false)
+                                ],
+                                descriptionText: "sugar_for_match_on_result",
+                                descriptionLink: "error_handling_link"
+                            ),
+                            
+                            // Question 13
+                            Question(
+                                id: UUID(),
+                                title: "where_can_you_use_question_mark",
+                                answers: [
+                                    Answer(id: UUID(), title: "in_any_function", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_in_main", isCorrect: false),
+                                    Answer(id: UUID(), title: "in_functions_whose_return_type_is_compatible_result_option", isCorrect: true),
+                                    Answer(id: UUID(), title: "only_in_async", isCorrect: false)
+                                ],
+                                descriptionText: "early_return_must_match_the_functions_return_type",
+                                descriptionLink: "error_handling_link"
+                            ),
+                            
+                            // Question 14
+                            Question(
+                                id: UUID(),
+                                title: "what_does_question_mark_do_on_option_t",
+                                answers: [
+                                    Answer(id: UUID(), title: "converts_to_result", isCorrect: false),
+                                    Answer(id: UUID(), title: "returns_none_on_none_otherwise_unwraps_some", isCorrect: true),
+                                    Answer(id: UUID(), title: "panics_on_none", isCorrect: false),
+                                    Answer(id: UUID(), title: "ignores_none", isCorrect: false)
+                                ],
+                                descriptionText: "same_idea_as_result_but_for_option",
+                                descriptionLink: "error_handling_link"
+                            ),
+                            
+                            // Question 15
+                            Question(
+                                id: UUID(),
+                                title: "can_you_use_question_mark_on_a_result_inside_a_function_returning_option",
+                                answers: [
+                                    Answer(id: UUID(), title: "yes_automatically", isCorrect: false),
+                                    Answer(id: UUID(), title: "no_you_need_explicit_conversion_ok_ok_or", isCorrect: true),
+                                    Answer(id: UUID(), title: "yes_only_on_nightly", isCorrect: false),
+                                    Answer(id: UUID(), title: "yes_if_from_is_implemented", isCorrect: false)
+                                ],
+                                descriptionText: "types_are_incompatible_without_conversion",
+                                descriptionLink: "error_handling_link"
+                            ),
+                            
+                            // Question 16
+                            Question(
+                                id: UUID(),
+                                title: "what_does_from_do_in_the_context_of_question_mark",
+                                answers: [
+                                    Answer(id: UUID(), title: "writes_to_logs", isCorrect: false),
+                                    Answer(id: UUID(), title: "converts_ok_into_err", isCorrect: false),
+                                    Answer(id: UUID(), title: "converts_the_error_type_into_the_functions_error_type", isCorrect: true),
+                                    Answer(id: UUID(), title: "suppresses_the_error", isCorrect: false)
+                                ],
+                                descriptionText: "question_mark_uses_from_from_err_to_coerce_errors",
+                                descriptionLink: "error_handling_link"
+                            ),
+                            
+                            // Question 17
+                            Question(
+                                id: UUID(),
+                                title: "can_you_use_question_mark_in_main",
+                                answers: [
+                                    Answer(id: UUID(), title: "no", isCorrect: false),
+                                    Answer(id: UUID(), title: "yes_if_main_returns_result_e", isCorrect: true),
+                                    Answer(id: UUID(), title: "only_with_box_dyn_error", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_with_io_result", isCorrect: false)
+                                ],
+                                descriptionText: "main_can_return_result_then_question_mark_is_allowed",
+                                descriptionLink: "error_handling_link"
+                            ),
+                            
+                            // Question 18
+                            Question(
+                                id: UUID(),
+                                title: "what_does_box_dyn_error_mean_in_main_result_box_dyn_error",
+                                answers: [
+                                    Answer(id: UUID(), title: "forbids_question_mark", isCorrect: false),
+                                    Answer(id: UUID(), title: "allows_any_error_type", isCorrect: true),
+                                    Answer(id: UUID(), title: "hides_the_stack", isCorrect: false),
+                                    Answer(id: UUID(), title: "panics_on_any_error", isCorrect: false)
+                                ],
+                                descriptionText: "trait_object_for_any_error",
+                                descriptionLink: "error_handling_link"
+                            ),
+                            
+                            // Question 19
+                            Question(
+                                id: UUID(),
+                                title: "which_is_preferable_in_production_unwrap_or_expect",
+                                answers: [
+                                    Answer(id: UUID(), title: "unwrap", isCorrect: false),
+                                    Answer(id: UUID(), title: "expect_with_a_clear_message", isCorrect: true),
+                                    Answer(id: UUID(), title: "neither", isCorrect: false),
+                                    Answer(id: UUID(), title: "no_difference", isCorrect: false)
+                                ],
+                                descriptionText: "gives_context_on_failure",
+                                descriptionLink: "error_handling_link"
+                            ),
+                            
+                            // Question 20
+                            Question(
+                                id: UUID(),
+                                title: "when_is_panicking_appropriate",
+                                answers: [
+                                    Answer(id: UUID(), title: "always_for_any_error", isCorrect: false),
+                                    Answer(id: UUID(), title: "in_examples_prototypes_tests_on_invariant_violations_in_unsafe_states", isCorrect: true),
+                                    Answer(id: UUID(), title: "never", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_in_release", isCorrect: false)
+                                ],
+                                descriptionText: "panic_is_for_truly_impossible_dangerous_situations",
+                                descriptionLink: "error_handling_link"
+                            ),
+                            
+                            // Question 21
+                            Question(
+                                id: UUID(),
+                                title: "what_is_a_bad_state",
+                                answers: [
+                                    Answer(id: UUID(), title: "any_input_error", isCorrect: false),
+                                    Answer(id: UUID(), title: "contract_invariant_violation_dangerous_inconsistent_values", isCorrect: true),
+                                    Answer(id: UUID(), title: "a_zero_value", isCorrect: false),
+                                    Answer(id: UUID(), title: "an_empty_file", isCorrect: false)
+                                ],
+                                descriptionText: "unsafe_to_continue_afterwards",
+                                descriptionLink: "error_handling_link"
+                            ),
+                            
+                            // Question 22
+                            Question(
+                                id: UUID(),
+                                title: "for_expected_failures_eg_api_rate_limit_whats_better",
+                                answers: [
+                                    Answer(id: UUID(), title: "panic", isCorrect: false),
+                                    Answer(id: UUID(), title: "return_result", isCorrect: true),
+                                    Answer(id: UUID(), title: "ignore_it", isCorrect: false),
+                                    Answer(id: UUID(), title: "unwrap", isCorrect: false)
+                                ],
+                                descriptionText: "let_the_caller_choose_a_recovery_strategy",
+                                descriptionLink: "error_handling_link"
+                            ),
+                            
+                            // Question 23
+                            Question(
+                                id: UUID(),
+                                title: "how_to_bake_in_value_validation_into_types",
+                                answers: [
+                                    Answer(id: UUID(), title: "check_with_if_in_every_function", isCorrect: false),
+                                    Answer(id: UUID(), title: "create_a_new_type_and_validate_in_its_constructor", isCorrect: true),
+                                    Answer(id: UUID(), title: "use_a_global_variable", isCorrect: false),
+                                    Answer(id: UUID(), title: "rely_on_comments", isCorrect: false)
+                                ],
+                                descriptionText: "encapsulation_enforces_correctness_at_the_type_level",
+                                descriptionLink: "error_handling_link"
+                            ),
+                            
+                            // Question 24
+                            Question(
+                                id: UUID(),
+                                title: "why_make_fields_of_a_validating_type_private",
+                                answers: [
+                                    Answer(id: UUID(), title: "for_speed", isCorrect: false),
+                                    Answer(id: UUID(), title: "to_prevent_bypassing_constructor_checks", isCorrect: true),
+                                    Answer(id: UUID(), title: "to_make_it_compile", isCorrect: false),
+                                    Answer(id: UUID(), title: "for_automatic_debug", isCorrect: false)
+                                ],
+                                descriptionText: "otherwise_invalid_values_could_be_assigned_directly",
+                                descriptionLink: "error_handling_link"
+                            ),
+                            
+                            // Question 25
+                            Question(
+                                id: UUID(),
+                                title: "what_does_fs_read_to_string_path_return",
+                                answers: [
+                                    Answer(id: UUID(), title: "string_or_panic", isCorrect: false),
+                                    Answer(id: UUID(), title: "result_string_io_error", isCorrect: true),
+                                    Answer(id: UUID(), title: "ref_str", isCorrect: false),
+                                    Answer(id: UUID(), title: "option_string", isCorrect: false)
+                                ],
+                                descriptionText: "convenience_function_with_its_own_error_type",
+                                descriptionLink: "error_handling_link"
+                            ),
+                            
+                            // Question 26
+                            Question(
+                                id: UUID(),
+                                title: "how_does_match_on_result_compare_to_question_mark",
+                                answers: [
+                                    Answer(id: UUID(), title: "match_is_shorter", isCorrect: false),
+                                    Answer(id: UUID(), title: "question_mark_is_shorter_and_does_the_same_unwrap_ok_return_err", isCorrect: true),
+                                    Answer(id: UUID(), title: "question_mark_is_slower", isCorrect: false),
+                                    Answer(id: UUID(), title: "match_cant_be_used", isCorrect: false)
+                                ],
+                                descriptionText: "question_mark_is_syntactic_sugar",
+                                descriptionLink: "error_handling_link"
+                            ),
+                            
+                            // Question 27
+                            Question(
+                                id: UUID(),
+                                title: "what_happens_with_v_99_if_v_is_shorter",
+                                answers: [
+                                    Answer(id: UUID(), title: "returns_none", isCorrect: false),
+                                    Answer(id: UUID(), title: "panics_due_to_out_of_bounds", isCorrect: true),
+                                    Answer(id: UUID(), title: "returns_err", isCorrect: false),
+                                    Answer(id: UUID(), title: "nothing", isCorrect: false)
+                                ],
+                                descriptionText: "bounds_checked_indexing_panic",
+                                descriptionLink: "error_handling_link"
+                            ),
+                            
+                            // Question 28
+                            Question(
+                                id: UUID(),
+                                title: "what_does_a_vectors_get_method_return",
+                                answers: [
+                                    Answer(id: UUID(), title: "result_ref_t_outofbounds", isCorrect: false),
+                                    Answer(id: UUID(), title: "option_ref_t", isCorrect: true),
+                                    Answer(id: UUID(), title: "ref_t", isCorrect: false),
+                                    Answer(id: UUID(), title: "option_t", isCorrect: false)
+                                ],
+                                descriptionText: "safe_access_without_panic",
+                                descriptionLink: "error_handling_link"
+                            ),
+                            
+                            // Question 29
+                            Question(
+                                id: UUID(),
+                                title: "shorter_way_to_open_a_file_and_read_it_into_a_string_using_question_mark",
+                                answers: [
+                                    Answer(id: UUID(), title: "file_open_question_mark_read_to_string_question_mark_with_a_buffer", isCorrect: false),
+                                    Answer(id: UUID(), title: "fs_read_to_string_hello_txt", isCorrect: true),
+                                    Answer(id: UUID(), title: "include_str", isCorrect: false),
+                                    Answer(id: UUID(), title: "std_read_all", isCorrect: false)
+                                ],
+                                descriptionText: "theres_a_ready_made_std_function",
+                                descriptionLink: "error_handling_link"
+                            ),
+                            
+                            // Question 30
+                            Question(
+                                id: UUID(),
+                                title: "what_does_unwinding_mean_during_a_panic",
+                                answers: [
+                                    Answer(id: UUID(), title: "the_gc_cleans_the_heap", isCorrect: false),
+                                    Answer(id: UUID(), title: "the_stack_is_unwound_and_destructors_drop_are_called", isCorrect: true),
+                                    Answer(id: UUID(), title: "threads_migrate", isCorrect: false),
+                                    Answer(id: UUID(), title: "nothing", isCorrect: false)
+                                ],
+                                descriptionText: "proper_cleanup_unless_abort_is_chosen",
+                                descriptionLink: "error_handling_link"
+                            ),
+                            
+                            // Question 31
+                            Question(
+                                id: UUID(),
+                                title: "why_choose_panic_abort_sometimes",
+                                answers: [
+                                    Answer(id: UUID(), title: "smaller_binary_simpler_behavior_in_production", isCorrect: true),
+                                    Answer(id: UUID(), title: "to_catch_errors", isCorrect: false),
+                                    Answer(id: UUID(), title: "for_debugging", isCorrect: false),
+                                    Answer(id: UUID(), title: "for_faster_compilation", isCorrect: false)
+                                ],
+                                descriptionText: "no_unwinding_code_smaller_size",
+                                descriptionLink: "error_handling_link"
+                            ),
+                            
+                            // Question 32
+                            Question(
+                                id: UUID(),
+                                title: "what_happens_if_you_use_question_mark_in_a_function_returning_unit",
+                                answers: [
+                                    Answer(id: UUID(), title: "it_compiles", isCorrect: false),
+                                    Answer(id: UUID(), title: "it_doesnt_compile_return_type_mismatch", isCorrect: true),
+                                    Answer(id: UUID(), title: "automatically_wraps_in_result", isCorrect: false),
+                                    Answer(id: UUID(), title: "converts_to_a_panic", isCorrect: false)
+                                ],
+                                descriptionText: "question_mark_returns_early_with_err_the_function_must_return_a_compatible_type",
+                                descriptionLink: "error_handling_link"
+                            ),
+                            
+                            // Question 33
+                            Question(
+                                id: UUID(),
+                                title: "which_code_is_valid_with_question_mark_in_main",
+                                answers: [
+                                    Answer(id: UUID(), title: "fn_main_file_open_x_question_mark", isCorrect: false),
+                                    Answer(id: UUID(), title: "fn_main_result_box_dyn_error_file_open_x_question_mark_ok", isCorrect: true),
+                                    Answer(id: UUID(), title: "fn_main_option_file_open_x_question_mark_some", isCorrect: false),
+                                    Answer(id: UUID(), title: "none", isCorrect: false)
+                                ],
+                                descriptionText: "main_must_return_result_for_question_mark_on_result_to_be_valid",
+                                descriptionLink: "error_handling_link"
+                            )
+                        ]
+                    ),
+                    Quiz(
+                        id: UUID(),
+                        theme: "generic_types_traits_and_lifetimes",
+                        priority: 8,
+                        questions: [
+                            // Question 1
+                            Question(
+                                id: UUID(),
+                                title: "what_are_generics_used_for_in_rust",
+                                answers: [
+                                    Answer(id: UUID(), title: "to_reduce_binary_size", isCorrect: false),
+                                    Answer(id: UUID(), title: "to_avoid_code_duplication", isCorrect: true),
+                                    Answer(id: UUID(), title: "to_speed_up_compilation", isCorrect: false),
+                                    Answer(id: UUID(), title: "to_replace_macros", isCorrect: false)
+                                ],
+                                descriptionText: "generics_allow_writing_abstract_code_for_different_types_without_copying_logic",
+                                descriptionLink: "generic_types_traits_and_lifetimes_link"
+                            ),
+                            
+                            // Question 2
+                            Question(
+                                id: UUID(),
+                                title: "how_is_a_type_parameter_denoted_in_rust",
+                                answers: [
+                                    Answer(id: UUID(), title: "square_brackets_t", isCorrect: false),
+                                    Answer(id: UUID(), title: "curly_braces_t", isCorrect: false),
+                                    Answer(id: UUID(), title: "angle_brackets_t", isCorrect: true),
+                                    Answer(id: UUID(), title: "parentheses_t", isCorrect: false)
+                                ],
+                                descriptionText: "generics_are_written_in_angle_brackets",
+                                descriptionLink: "generic_types_traits_and_lifetimes_link"
+                            ),
+                            
+                            // Question 3
+                            Question(
+                                id: UUID(),
+                                title: "what_does_a_function_signature_with_generics_look_like",
+                                answers: [
+                                    Answer(id: UUID(), title: "fn_foo_t_i32_t", isCorrect: false),
+                                    Answer(id: UUID(), title: "fn_foo_t_x_t_t", isCorrect: true),
+                                    Answer(id: UUID(), title: "fn_foo_x_generic_t", isCorrect: false),
+                                    Answer(id: UUID(), title: "fn_foo_t_t_x_t", isCorrect: false)
+                                ],
+                                descriptionText: "generics_are_declared_after_the_function_name_in_angle_brackets",
+                                descriptionLink: "generic_types_traits_and_lifetimes_link"
+                            ),
+                            
+                            // Question 4
+                            Question(
+                                id: UUID(),
+                                title: "what_happens_if_you_use_the_greater_than_operator_in_a_generic_function_without_constraints",
+                                answers: [
+                                    Answer(id: UUID(), title: "always_works", isCorrect: false),
+                                    Answer(id: UUID(), title: "compilation_error", isCorrect: true),
+                                    Answer(id: UUID(), title: "partialord_is_automatically_applied", isCorrect: false),
+                                    Answer(id: UUID(), title: "runtime_panic", isCorrect: false)
+                                ],
+                                descriptionText: "the_greater_than_comparison_requires_the_partialord_trait",
+                                descriptionLink: "generic_types_traits_and_lifetimes_link"
+                            ),
+                            
+                            // Question 5
+                            Question(
+                                id: UUID(),
+                                title: "how_do_you_constrain_a_generic_type_in_rust",
+                                answers: [
+                                    Answer(id: UUID(), title: "t", isCorrect: false),
+                                    Answer(id: UUID(), title: "where_t_partialord", isCorrect: true),
+                                    Answer(id: UUID(), title: "bound_t_partialord", isCorrect: false),
+                                    Answer(id: UUID(), title: "impl_partialord_for_t", isCorrect: false)
+                                ],
+                                descriptionText: "constraints_bounds_are_written_as_t_trait",
+                                descriptionLink: "generic_types_traits_and_lifetimes_link"
+                            ),
+                            
+                            // Question 6
+                            Question(
+                                id: UUID(),
+                                title: "what_is_a_trait_in_rust",
+                                answers: [
+                                    Answer(id: UUID(), title: "a_data_type", isCorrect: false),
+                                    Answer(id: UUID(), title: "an_interface", isCorrect: true),
+                                    Answer(id: UUID(), title: "a_macro", isCorrect: false),
+                                    Answer(id: UUID(), title: "an_attribute", isCorrect: false)
+                                ],
+                                descriptionText: "trait_describes_common_behavior_like_interfaces_in_other_languages",
+                                descriptionLink: "generic_types_traits_and_lifetimes_link"
+                            ),
+                            
+                            // Question 7
+                            Question(
+                                id: UUID(),
+                                title: "how_do_you_declare_a_trait",
+                                answers: [
+                                    Answer(id: UUID(), title: "interface_summary", isCorrect: false),
+                                    Answer(id: UUID(), title: "trait_summary", isCorrect: true),
+                                    Answer(id: UUID(), title: "class_summary", isCorrect: false),
+                                    Answer(id: UUID(), title: "impl_summary", isCorrect: false)
+                                ],
+                                descriptionText: "the_trait_keyword_is_used",
+                                descriptionLink: "generic_types_traits_and_lifetimes_link"
+                            ),
+                            
+                            // Question 8
+                            Question(
+                                id: UUID(),
+                                title: "how_do_you_implement_a_trait_for_a_struct",
+                                answers: [
+                                    Answer(id: UUID(), title: "impl_struct_trait", isCorrect: false),
+                                    Answer(id: UUID(), title: "impl_trait_for_struct", isCorrect: true),
+                                    Answer(id: UUID(), title: "trait_struct_impl", isCorrect: false),
+                                    Answer(id: UUID(), title: "class_struct_trait", isCorrect: false)
+                                ],
+                                descriptionText: "syntax_is_impl_trait_for_type",
+                                descriptionLink: "generic_types_traits_and_lifetimes_link"
+                            ),
+                            
+                            // Question 9
+                            Question(
+                                id: UUID(),
+                                title: "can_you_implement_an_external_trait_for_an_external_type",
+                                answers: [
+                                    Answer(id: UUID(), title: "yes", isCorrect: false),
+                                    Answer(id: UUID(), title: "no", isCorrect: true),
+                                    Answer(id: UUID(), title: "only_with_allow_external_attribute", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_in_main", isCorrect: false)
+                                ],
+                                descriptionText: "prohibited_by_the_orphan_rule",
+                                descriptionLink: "generic_types_traits_and_lifetimes_link"
+                            ),
+                            
+                            // Question 10
+                            Question(
+                                id: UUID(),
+                                title: "what_is_the_orphan_rule",
+                                answers: [
+                                    Answer(id: UUID(), title: "traits_cannot_be_inherited", isCorrect: false),
+                                    Answer(id: UUID(), title: "cannot_implement_an_external_trait_for_an_external_type", isCorrect: true),
+                                    Answer(id: UUID(), title: "prohibits_using_static", isCorrect: false),
+                                    Answer(id: UUID(), title: "requires_private_fields", isCorrect: false)
+                                ],
+                                descriptionText: "protects_against_implementation_conflicts",
+                                descriptionLink: "generic_types_traits_and_lifetimes_link"
+                            ),
+                            
+                            // Question 11
+                            Question(
+                                id: UUID(),
+                                title: "how_do_you_define_a_default_method_in_a_trait",
+                                answers: [
+                                    Answer(id: UUID(), title: "fn_foo", isCorrect: false),
+                                    Answer(id: UUID(), title: "fn_foo_body", isCorrect: true),
+                                    Answer(id: UUID(), title: "default_fn_foo", isCorrect: false),
+                                    Answer(id: UUID(), title: "impl_fn_foo", isCorrect: false)
+                                ],
+                                descriptionText: "implementation_in_the_trait_serves_as_the_default",
+                                descriptionLink: "generic_types_traits_and_lifetimes_link"
+                            ),
+                            
+                            // Question 12
+                            Question(
+                                id: UUID(),
+                                title: "can_you_override_a_default_method",
+                                answers: [
+                                    Answer(id: UUID(), title: "no", isCorrect: false),
+                                    Answer(id: UUID(), title: "yes", isCorrect: true),
+                                    Answer(id: UUID(), title: "only_with_override_attribute", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_for_generics", isCorrect: false)
+                                ],
+                                descriptionText: "in_impl_you_can_override_a_method_with_any_implementation",
+                                descriptionLink: "generic_types_traits_and_lifetimes_link"
+                            ),
+                            
+                            // Question 13
+                            Question(
+                                id: UUID(),
+                                title: "how_do_you_use_a_trait_as_a_function_parameter",
+                                answers: [
+                                    Answer(id: UUID(), title: "fn_foo_t_x_t_where_t_summary", isCorrect: false),
+                                    Answer(id: UUID(), title: "fn_foo_x_impl_summary", isCorrect: true),
+                                    Answer(id: UUID(), title: "fn_foo_x_dyn_summary", isCorrect: false),
+                                    Answer(id: UUID(), title: "fn_foo_t_impl_summary_x_t", isCorrect: false)
+                                ],
+                                descriptionText: "impl_trait_is_the_short_syntax",
+                                descriptionLink: "generic_types_traits_and_lifetimes_link"
+                            ),
+                            
+                            // Question 14
+                            Question(
+                                id: UUID(),
+                                title: "whats_the_difference_between_impl_trait_and_trait_bound",
+                                answers: [
+                                    Answer(id: UUID(), title: "they_are_different_things", isCorrect: false),
+                                    Answer(id: UUID(), title: "impl_trait_is_syntactic_sugar_for_trait_bound", isCorrect: true),
+                                    Answer(id: UUID(), title: "impl_trait_works_faster", isCorrect: false),
+                                    Answer(id: UUID(), title: "trait_bound_is_forbidden", isCorrect: false)
+                                ],
+                                descriptionText: "both_express_the_same_thing",
+                                descriptionLink: "generic_types_traits_and_lifetimes_link"
+                            ),
+                            
+                            // Question 15
+                            Question(
+                                id: UUID(),
+                                title: "how_do_you_combine_multiple_trait_bounds",
+                                answers: [
+                                    Answer(id: UUID(), title: "t_trait1_trait2", isCorrect: false),
+                                    Answer(id: UUID(), title: "t_trait1_plus_trait2", isCorrect: true),
+                                    Answer(id: UUID(), title: "t_trait1_trait2_brackets", isCorrect: false),
+                                    Answer(id: UUID(), title: "t_trait1_ampersand_trait2", isCorrect: false)
+                                ],
+                                descriptionText: "multiple_traits_are_specified_with_plus",
+                                descriptionLink: "generic_types_traits_and_lifetimes_link"
+                            ),
+                            
+                            // Question 16
+                            Question(
+                                id: UUID(),
+                                title: "where_is_it_more_convenient_to_write_complex_bounds",
+                                answers: [
+                                    Answer(id: UUID(), title: "in_the_signature", isCorrect: false),
+                                    Answer(id: UUID(), title: "in_where", isCorrect: true),
+                                    Answer(id: UUID(), title: "in_impl_only", isCorrect: false),
+                                    Answer(id: UUID(), title: "in_comments", isCorrect: false)
+                                ],
+                                descriptionText: "where_makes_the_signature_more_readable",
+                                descriptionLink: "generic_types_traits_and_lifetimes_link"
+                            ),
+                            
+                            // Question 17
+                            Question(
+                                id: UUID(),
+                                title: "how_do_you_return_a_type_that_implements_a_trait",
+                                answers: [
+                                    Answer(id: UUID(), title: "fn_foo_impl_trait", isCorrect: true),
+                                    Answer(id: UUID(), title: "fn_foo_trait", isCorrect: false),
+                                    Answer(id: UUID(), title: "fn_foo_t_trait_t", isCorrect: false),
+                                    Answer(id: UUID(), title: "fn_foo_dyn_trait", isCorrect: false)
+                                ],
+                                descriptionText: "impl_trait_in_return_position",
+                                descriptionLink: "generic_types_traits_and_lifetimes_link"
+                            ),
+                            
+                            // Question 18
+                            Question(
+                                id: UUID(),
+                                title: "can_you_return_different_types_through_impl_trait",
+                                answers: [
+                                    Answer(id: UUID(), title: "yes", isCorrect: false),
+                                    Answer(id: UUID(), title: "no", isCorrect: true),
+                                    Answer(id: UUID(), title: "only_with_dynamic_attribute", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_with_unsafe", isCorrect: false)
+                                ],
+                                descriptionText: "only_one_concrete_type_is_allowed",
+                                descriptionLink: "generic_types_traits_and_lifetimes_link"
+                            ),
+                            
+                            // Question 19
+                            Question(
+                                id: UUID(),
+                                title: "what_is_a_blanket_implementation",
+                                answers: [
+                                    Answer(id: UUID(), title: "implementing_a_trait_for_all_types_with_a_constraint", isCorrect: true),
+                                    Answer(id: UUID(), title: "automatic_code_generation", isCorrect: false),
+                                    Answer(id: UUID(), title: "a_macro_in_std", isCorrect: false),
+                                    Answer(id: UUID(), title: "duplication_prohibition", isCorrect: false)
+                                ],
+                                descriptionText: "example_impl_t_display_tostring_for_t",
+                                descriptionLink: "generic_types_traits_and_lifetimes_link"
+                            ),
+                            
+                            // Question 20
+                            Question(
+                                id: UUID(),
+                                title: "what_does_monomorphization_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "generates_code_for_each_type", isCorrect: true),
+                                    Answer(id: UUID(), title: "removes_generics", isCorrect: false),
+                                    Answer(id: UUID(), title: "optimizes_code_at_runtime", isCorrect: false),
+                                    Answer(id: UUID(), title: "turns_into_trait_object", isCorrect: false)
+                                ],
+                                descriptionText: "generics_are_turned_into_concrete_types_at_compile_time",
+                                descriptionLink: "generic_types_traits_and_lifetimes_link"
+                            ),
+                            
+                            // Question 21
+                            Question(
+                                id: UUID(),
+                                title: "is_there_runtime_overhead_with_generics",
+                                answers: [
+                                    Answer(id: UUID(), title: "yes_due_to_virtual_calls", isCorrect: false),
+                                    Answer(id: UUID(), title: "no", isCorrect: true),
+                                    Answer(id: UUID(), title: "sometimes", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_in_debug", isCorrect: false)
+                                ],
+                                descriptionText: "thanks_to_monomorphization_theres_no_overhead",
+                                descriptionLink: "generic_types_traits_and_lifetimes_link"
+                            ),
+                            
+                            // Question 22
+                            Question(
+                                id: UUID(),
+                                title: "what_is_a_lifetime",
+                                answers: [
+                                    Answer(id: UUID(), title: "variable_lifetime", isCorrect: false),
+                                    Answer(id: UUID(), title: "reference_validity_duration", isCorrect: true),
+                                    Answer(id: UUID(), title: "variable_type", isCorrect: false),
+                                    Answer(id: UUID(), title: "program_execution_time", isCorrect: false)
+                                ],
+                                descriptionText: "lifetimes_describe_how_long_a_reference_lives",
+                                descriptionLink: "generic_types_traits_and_lifetimes_link"
+                            ),
+                            
+                            // Question 23
+                            Question(
+                                id: UUID(),
+                                title: "what_are_lifetime_annotations_for",
+                                answers: [
+                                    Answer(id: UUID(), title: "speed_up_compilation", isCorrect: false),
+                                    Answer(id: UUID(), title: "help_the_borrow_checker_understand_relationships_between_references", isCorrect: true),
+                                    Answer(id: UUID(), title: "increase_object_lifetimes", isCorrect: false),
+                                    Answer(id: UUID(), title: "give_access_to_static", isCorrect: false)
+                                ],
+                                descriptionText: "lifetimes_connect_references_and_are_checked_at_compile_time",
+                                descriptionLink: "generic_types_traits_and_lifetimes_link"
+                            ),
+                            
+                            // Question 24
+                            Question(
+                                id: UUID(),
+                                title: "how_are_lifetime_parameters_denoted",
+                                answers: [
+                                    Answer(id: UUID(), title: "caret_a", isCorrect: false),
+                                    Answer(id: UUID(), title: "apostrophe_a", isCorrect: true),
+                                    Answer(id: UUID(), title: "ampersand_a", isCorrect: false),
+                                    Answer(id: UUID(), title: "hash_a", isCorrect: false)
+                                ],
+                                descriptionText: "lifetimes_always_start_with_apostrophe",
+                                descriptionLink: "generic_types_traits_and_lifetimes_link"
+                            ),
+                            
+                            // Question 25
+                            Question(
+                                id: UUID(),
+                                title: "where_are_lifetime_annotations_written_in_functions",
+                                answers: [
+                                    Answer(id: UUID(), title: "inside_the_body", isCorrect: false),
+                                    Answer(id: UUID(), title: "in_the_signature", isCorrect: true),
+                                    Answer(id: UUID(), title: "only_in_impl", isCorrect: false),
+                                    Answer(id: UUID(), title: "in_comments", isCorrect: false)
+                                ],
+                                descriptionText: "lifetimes_are_part_of_the_function_contract",
+                                descriptionLink: "generic_types_traits_and_lifetimes_link"
+                            ),
+                            
+                            // Question 26
+                            Question(
+                                id: UUID(),
+                                title: "what_happens_if_you_return_a_reference_to_a_local_variable",
+                                answers: [
+                                    Answer(id: UUID(), title: "always_works", isCorrect: false),
+                                    Answer(id: UUID(), title: "compilation_error", isCorrect: true),
+                                    Answer(id: UUID(), title: "panic_at_runtime", isCorrect: false),
+                                    Answer(id: UUID(), title: "undefined_behavior", isCorrect: false)
+                                ],
+                                descriptionText: "the_compiler_prohibits_dangling_references",
+                                descriptionLink: "generic_types_traits_and_lifetimes_link"
+                            ),
+                            
+                            // Question 27
+                            Question(
+                                id: UUID(),
+                                title: "what_does_the_borrow_checker_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "checks_type_sizes", isCorrect: false),
+                                    Answer(id: UUID(), title: "checks_that_references_live_long_enough", isCorrect: true),
+                                    Answer(id: UUID(), title: "optimizes_the_heap", isCorrect: false),
+                                    Answer(id: UUID(), title: "removes_duplicates", isCorrect: false)
+                                ],
+                                descriptionText: "guarantees_no_dangling_references",
+                                descriptionLink: "generic_types_traits_and_lifetimes_link"
+                            ),
+                            
+                            // Question 28
+                            Question(
+                                id: UUID(),
+                                title: "what_does_the_static_lifetime_mean",
+                                answers: [
+                                    Answer(id: UUID(), title: "reference_lives_until_the_end_of_the_program", isCorrect: true),
+                                    Answer(id: UUID(), title: "global_variable", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_for_const", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_for_string", isCorrect: false)
+                                ],
+                                descriptionText: "string_literals_have_static",
+                                descriptionLink: "generic_types_traits_and_lifetimes_link"
+                            ),
+                            
+                            // Question 29
+                            Question(
+                                id: UUID(),
+                                title: "what_is_lifetime_elision",
+                                answers: [
+                                    Answer(id: UUID(), title: "garbage_collector", isCorrect: false),
+                                    Answer(id: UUID(), title: "rules_that_allow_omitting_lifetimes_in_simple_cases", isCorrect: true),
+                                    Answer(id: UUID(), title: "turning_lifetimes_into_static", isCorrect: false),
+                                    Answer(id: UUID(), title: "panic_on_mismatch", isCorrect: false)
+                                ],
+                                descriptionText: "the_compiler_applies_three_rules_for_lifetime_inference",
+                                descriptionLink: "generic_types_traits_and_lifetimes_link"
+                            ),
+                            
+                            // Question 30
+                            Question(
+                                id: UUID(),
+                                title: "which_function_falls_under_elision_rules",
+                                answers: [
+                                    Answer(id: UUID(), title: "fn_foo_x_ref_str_ref_str", isCorrect: true),
+                                    Answer(id: UUID(), title: "fn_foo_x_ref_str_y_ref_str_ref_str", isCorrect: false),
+                                    Answer(id: UUID(), title: "fn_foo_x_ref_str_y_ref_str_ref_string", isCorrect: false),
+                                    Answer(id: UUID(), title: "fn_foo_a_x_ref_a_str_y_ref_a_str_ref_a_str", isCorrect: false)
+                                ],
+                                descriptionText: "one_input_value_its_lifetime_is_used_as_output",
+                                descriptionLink: "generic_types_traits_and_lifetimes_link"
+                            ),
+                            
+                            // Question 31
+                            Question(
+                                id: UUID(),
+                                title: "why_are_lifetimes_often_not_written_in_methods",
+                                answers: [
+                                    Answer(id: UUID(), title: "static_is_automatically_substituted", isCorrect: false),
+                                    Answer(id: UUID(), title: "the_3rd_elision_rule_works_with_ref_self", isCorrect: true),
+                                    Answer(id: UUID(), title: "because_impl_hides_them", isCorrect: false),
+                                    Answer(id: UUID(), title: "the_compiler_ignores_them", isCorrect: false)
+                                ],
+                                descriptionText: "if_theres_ref_self_the_returned_reference_gets_its_lifetime",
+                                descriptionLink: "generic_types_traits_and_lifetimes_link"
+                            ),
+                            
+                            // Question 32
+                            Question(
+                                id: UUID(),
+                                title: "can_you_store_a_reference_in_a_struct",
+                                answers: [
+                                    Answer(id: UUID(), title: "no", isCorrect: false),
+                                    Answer(id: UUID(), title: "yes_with_lifetime_annotation", isCorrect: true),
+                                    Answer(id: UUID(), title: "yes_always", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_in_enum", isCorrect: false)
+                                ],
+                                descriptionText: "a_struct_with_ref_t_requires_lifetime_a",
+                                descriptionLink: "generic_types_traits_and_lifetimes_link"
+                            ),
+                            
+                            // Question 33
+                            Question(
+                                id: UUID(),
+                                title: "what_happens_if_a_struct_lifetime_parameter_is_not_specified",
+                                answers: [
+                                    Answer(id: UUID(), title: "always_works", isCorrect: false),
+                                    Answer(id: UUID(), title: "compilation_error", isCorrect: true),
+                                    Answer(id: UUID(), title: "panic", isCorrect: false),
+                                    Answer(id: UUID(), title: "will_be_static", isCorrect: false)
+                                ],
+                                descriptionText: "references_always_require_lifetimes",
+                                descriptionLink: "generic_types_traits_and_lifetimes_link"
+                            )
+                        ]
+                    ),
+                    Quiz(
+                        id: UUID(),
+                        theme: "writing_automated_tests",
+                        priority: 9,
+                        questions: [
+                            // Question 1
+                            Question(
+                                id: UUID(),
+                                title: "what_does_the_test_attribute_before_a_function_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "makes_the_function_public", isCorrect: false),
+                                    Answer(id: UUID(), title: "marks_the_function_as_a_test", isCorrect: true),
+                                    Answer(id: UUID(), title: "prohibits_compilation", isCorrect: false),
+                                    Answer(id: UUID(), title: "makes_the_function_private", isCorrect: false)
+                                ],
+                                descriptionText: "test_tells_the_test_runner_that_this_is_a_test",
+                                descriptionLink: "writing_automated_tests_link"
+                            ),
+                            
+                            // Question 2
+                            Question(
+                                id: UUID(),
+                                title: "which_command_runs_tests_in_a_rust_project",
+                                answers: [
+                                    Answer(id: UUID(), title: "cargo_run", isCorrect: false),
+                                    Answer(id: UUID(), title: "cargo_build", isCorrect: false),
+                                    Answer(id: UUID(), title: "cargo_test", isCorrect: true),
+                                    Answer(id: UUID(), title: "rustc_test_rs", isCorrect: false)
+                                ],
+                                descriptionText: "tests_are_run_with_cargo_test_which_compiles_and_executes_them",
+                                descriptionLink: "writing_automated_tests_link"
+                            ),
+                            
+                            // Question 3
+                            Question(
+                                id: UUID(),
+                                title: "what_happens_if_you_call_panic_in_a_test",
+                                answers: [
+                                    Answer(id: UUID(), title: "the_test_completes_successfully", isCorrect: false),
+                                    Answer(id: UUID(), title: "the_test_fails", isCorrect: true),
+                                    Answer(id: UUID(), title: "the_compiler_ignores_it", isCorrect: false),
+                                    Answer(id: UUID(), title: "panic_is_hidden", isCorrect: false)
+                                ],
+                                descriptionText: "a_test_is_considered_failed_if_it_panics",
+                                descriptionLink: "writing_automated_tests_link"
+                            ),
+                            
+                            // Question 4
+                            Question(
+                                id: UUID(),
+                                title: "what_does_the_assert_macro_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "checks_equality_of_two_values", isCorrect: false),
+                                    Answer(id: UUID(), title: "checks_a_condition_for_true", isCorrect: true),
+                                    Answer(id: UUID(), title: "calls_drop_on_a_variable", isCorrect: false),
+                                    Answer(id: UUID(), title: "creates_a_log_in_stdout", isCorrect: false)
+                                ],
+                                descriptionText: "assert_cond_checks_a_boolean_condition_on_false_panic",
+                                descriptionLink: "writing_automated_tests_link"
+                            ),
+                            
+                            // Question 5
+                            Question(
+                                id: UUID(),
+                                title: "how_does_assert_eq_differ_from_assert",
+                                answers: [
+                                    Answer(id: UUID(), title: "works_faster", isCorrect: false),
+                                    Answer(id: UUID(), title: "shows_left_right_values_on_error", isCorrect: true),
+                                    Answer(id: UUID(), title: "uses_unsafe", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_works_with_numbers", isCorrect: false)
+                                ],
+                                descriptionText: "assert_eq_prints_both_values_on_mismatch",
+                                descriptionLink: "writing_automated_tests_link"
+                            ),
+                            
+                            // Question 6
+                            Question(
+                                id: UUID(),
+                                title: "what_does_assert_ne_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "checks_for_equality", isCorrect: false),
+                                    Answer(id: UUID(), title: "checks_for_inequality", isCorrect: true),
+                                    Answer(id: UUID(), title: "checks_for_null", isCorrect: false),
+                                    Answer(id: UUID(), title: "checks_for_drop", isCorrect: false)
+                                ],
+                                descriptionText: "assert_ne_passes_if_values_are_different",
+                                descriptionLink: "writing_automated_tests_link"
+                            ),
+                            
+                            // Question 7
+                            Question(
+                                id: UUID(),
+                                title: "which_traits_must_types_implement_to_use_in_assert_eq",
+                                answers: [
+                                    Answer(id: UUID(), title: "clone_and_copy", isCorrect: false),
+                                    Answer(id: UUID(), title: "partialeq_and_debug", isCorrect: true),
+                                    Answer(id: UUID(), title: "sized_and_send", isCorrect: false),
+                                    Answer(id: UUID(), title: "drop_and_default", isCorrect: false)
+                                ],
+                                descriptionText: "comparison_requires_partialeq_printing_requires_debug",
+                                descriptionLink: "writing_automated_tests_link"
+                            ),
+                            
+                            // Question 8
+                            Question(
+                                id: UUID(),
+                                title: "what_does_the_should_panic_attribute_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "prevents_test_failure", isCorrect: false),
+                                    Answer(id: UUID(), title: "expects_the_test_to_panic", isCorrect: true),
+                                    Answer(id: UUID(), title: "sets_the_test_to_ignored", isCorrect: false),
+                                    Answer(id: UUID(), title: "disables_borrow_checker", isCorrect: false)
+                                ],
+                                descriptionText: "the_test_passes_only_if_a_panic_occurred",
+                                descriptionLink: "writing_automated_tests_link"
+                            ),
+                            
+                            // Question 9
+                            Question(
+                                id: UUID(),
+                                title: "what_is_the_expected_parameter_used_for_in_should_panic_expected",
+                                answers: [
+                                    Answer(id: UUID(), title: "to_specify_the_panic_type", isCorrect: false),
+                                    Answer(id: UUID(), title: "to_check_that_panic_contains_a_substring", isCorrect: true),
+                                    Answer(id: UUID(), title: "to_specify_the_return_value", isCorrect: false),
+                                    Answer(id: UUID(), title: "to_choose_optimization_level", isCorrect: false)
+                                ],
+                                descriptionText: "helps_verify_that_panic_occurred_for_the_right_reason",
+                                descriptionLink: "writing_automated_tests_link"
+                            ),
+                            
+                            // Question 10
+                            Question(
+                                id: UUID(),
+                                title: "can_you_use_should_panic_with_tests_returning_result_t_e",
+                                answers: [
+                                    Answer(id: UUID(), title: "yes", isCorrect: false),
+                                    Answer(id: UUID(), title: "no", isCorrect: true),
+                                    Answer(id: UUID(), title: "only_with_nightly", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_for_err", isCorrect: false)
+                                ],
+                                descriptionText: "tests_with_result_cannot_be_combined_with_should_panic",
+                                descriptionLink: "writing_automated_tests_link"
+                            ),
+                            
+                            // Question 11
+                            Question(
+                                id: UUID(),
+                                title: "what_does_writing_tests_with_result_unit_e_allow",
+                                answers: [
+                                    Answer(id: UUID(), title: "using_question_mark_inside_the_test", isCorrect: true),
+                                    Answer(id: UUID(), title: "disabling_asserts", isCorrect: false),
+                                    Answer(id: UUID(), title: "turning_errors_into_warnings", isCorrect: false),
+                                    Answer(id: UUID(), title: "skipping_the_test", isCorrect: false)
+                                ],
+                                descriptionText: "question_mark_is_only_available_when_returning_result",
+                                descriptionLink: "writing_automated_tests_link"
+                            ),
+                            
+                            // Question 12
+                            Question(
+                                id: UUID(),
+                                title: "how_are_tests_run_by_default_in_rust",
+                                answers: [
+                                    Answer(id: UUID(), title: "sequentially", isCorrect: false),
+                                    Answer(id: UUID(), title: "in_parallel", isCorrect: true),
+                                    Answer(id: UUID(), title: "only_one", isCorrect: false),
+                                    Answer(id: UUID(), title: "through_separate_binary_for_each_test", isCorrect: false)
+                                ],
+                                descriptionText: "tests_run_in_threads_by_default",
+                                descriptionLink: "writing_automated_tests_link"
+                            ),
+                            
+                            // Question 13
+                            Question(
+                                id: UUID(),
+                                title: "how_do_you_limit_the_number_of_threads_for_tests",
+                                answers: [
+                                    Answer(id: UUID(), title: "cargo_test_limit_n", isCorrect: false),
+                                    Answer(id: UUID(), title: "cargo_test_test_threads_n", isCorrect: true),
+                                    Answer(id: UUID(), title: "cargo_run_threads_n", isCorrect: false),
+                                    Answer(id: UUID(), title: "export_test_threads_n", isCorrect: false)
+                                ],
+                                descriptionText: "the_test_threads_flag_sets_the_number",
+                                descriptionLink: "writing_automated_tests_link"
+                            ),
+                            
+                            // Question 14
+                            Question(
+                                id: UUID(),
+                                title: "why_cant_tests_sometimes_be_run_in_parallel",
+                                answers: [
+                                    Answer(id: UUID(), title: "because_its_slower", isCorrect: false),
+                                    Answer(id: UUID(), title: "due_to_shared_state", isCorrect: true),
+                                    Answer(id: UUID(), title: "the_compiler_prohibits_it", isCorrect: false),
+                                    Answer(id: UUID(), title: "cargo_doesnt_know_how", isCorrect: false)
+                                ],
+                                descriptionText: "parallel_tests_can_conflict_through_shared_resources",
+                                descriptionLink: "writing_automated_tests_link"
+                            ),
+                            
+                            // Question 15
+                            Question(
+                                id: UUID(),
+                                title: "what_does_the_show_output_flag_do_when_running_cargo_test",
+                                answers: [
+                                    Answer(id: UUID(), title: "shows_output_only_for_failed_tests", isCorrect: false),
+                                    Answer(id: UUID(), title: "shows_println_output_even_for_passed_tests", isCorrect: true),
+                                    Answer(id: UUID(), title: "shows_only_the_list_of_tests", isCorrect: false),
+                                    Answer(id: UUID(), title: "disables_stdout", isCorrect: false)
+                                ],
+                                descriptionText: "by_default_println_is_hidden_show_output_always_displays_it",
+                                descriptionLink: "writing_automated_tests_link"
+                            ),
+                            
+                            // Question 16
+                            Question(
+                                id: UUID(),
+                                title: "how_do_you_run_only_a_test_named_foo_test",
+                                answers: [
+                                    Answer(id: UUID(), title: "cargo_run_foo_test", isCorrect: false),
+                                    Answer(id: UUID(), title: "cargo_test_foo_test", isCorrect: true),
+                                    Answer(id: UUID(), title: "cargo_test_name_foo_test", isCorrect: false),
+                                    Answer(id: UUID(), title: "cargo_test_only_foo_test", isCorrect: false)
+                                ],
+                                descriptionText: "filtering_by_name_works_through_the_cargo_test_argument",
+                                descriptionLink: "writing_automated_tests_link"
+                            ),
+                            
+                            // Question 17
+                            Question(
+                                id: UUID(),
+                                title: "what_happens_if_you_pass_cargo_test_add",
+                                answers: [
+                                    Answer(id: UUID(), title: "only_one_test_runs", isCorrect: false),
+                                    Answer(id: UUID(), title: "all_tests_with_add_in_the_name_run", isCorrect: true),
+                                    Answer(id: UUID(), title: "all_tests_are_ignored", isCorrect: false),
+                                    Answer(id: UUID(), title: "compilation_error", isCorrect: false)
+                                ],
+                                descriptionText: "substring_filters_the_test_set",
+                                descriptionLink: "writing_automated_tests_link"
+                            ),
+                            
+                            // Question 18
+                            Question(
+                                id: UUID(),
+                                title: "what_is_the_ignore_attribute_used_for_in_a_test",
+                                answers: [
+                                    Answer(id: UUID(), title: "completely_removes_the_test", isCorrect: false),
+                                    Answer(id: UUID(), title: "skips_the_test_during_normal_run", isCorrect: true),
+                                    Answer(id: UUID(), title: "makes_the_test_private", isCorrect: false),
+                                    Answer(id: UUID(), title: "places_the_test_first_in_the_list", isCorrect: false)
+                                ],
+                                descriptionText: "ignore_excludes_the_test_from_default_run",
+                                descriptionLink: "writing_automated_tests_link"
+                            ),
+                            
+                            // Question 19
+                            Question(
+                                id: UUID(),
+                                title: "how_do_you_run_only_ignored_tests",
+                                answers: [
+                                    Answer(id: UUID(), title: "cargo_test_ignore", isCorrect: false),
+                                    Answer(id: UUID(), title: "cargo_test_ignored", isCorrect: true),
+                                    Answer(id: UUID(), title: "cargo_test_include_ignored", isCorrect: false),
+                                    Answer(id: UUID(), title: "cargo_test_ignored_only", isCorrect: false)
+                                ],
+                                descriptionText: "the_ignored_flag_runs_only_tests_with_the_ignore_attribute",
+                                descriptionLink: "writing_automated_tests_link"
+                            ),
+                            
+                            // Question 20
+                            Question(
+                                id: UUID(),
+                                title: "whats_the_difference_between_unit_and_integration_tests",
+                                answers: [
+                                    Answer(id: UUID(), title: "unit_tests_are_always_public_integration_are_private", isCorrect: false),
+                                    Answer(id: UUID(), title: "unit_tests_are_written_inside_src_integration_in_tests_folder", isCorrect: true),
+                                    Answer(id: UUID(), title: "unit_tests_require_cargo_toml_integration_dont", isCorrect: false),
+                                    Answer(id: UUID(), title: "unit_tests_only_run_with_nightly", isCorrect: false)
+                                ],
+                                descriptionText: "unit_tests_live_in_the_same_file_integration_in_separate_tests_directory",
+                                descriptionLink: "writing_automated_tests_link"
+                            )
+                        ]
+                    ),
+                    Quiz(
+                        id: UUID(),
+                        theme: "functional_language_features_iterators_and_closures",
+                        priority: 10,
+                        questions: [
+                            // Question 1
+                            Question(
+                                id: UUID(),
+                                title: "how_does_a_closure_differ_from_a_regular_function",
+                                answers: [
+                                    Answer(id: UUID(), title: "has_no_parameters", isCorrect: false),
+                                    Answer(id: UUID(), title: "can_capture_the_environment", isCorrect: true),
+                                    Answer(id: UUID(), title: "only_works_in_main", isCorrect: false),
+                                    Answer(id: UUID(), title: "always_asynchronous", isCorrect: false)
+                                ],
+                                descriptionText: "functions_cannot_capture_values_from_their_scope_closures_can",
+                                descriptionLink: "functional_language_features_iterators_and_closures_link"
+                            ),
+                            
+                            // Question 2
+                            Question(
+                                id: UUID(),
+                                title: "how_do_you_declare_a_closure_without_parameters",
+                                answers: [
+                                    Answer(id: UUID(), title: "fn_empty_braces", isCorrect: false),
+                                    Answer(id: UUID(), title: "vertical_bars_braces", isCorrect: true),
+                                    Answer(id: UUID(), title: "square_brackets_braces", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_braces", isCorrect: false)
+                                ],
+                                descriptionText: "closure_syntax_uses_vertical_bars",
+                                descriptionLink: "functional_language_features_iterators_and_closures_link"
+                            ),
+                            
+                            // Question 3
+                            Question(
+                                id: UUID(),
+                                title: "what_does_the_unwrap_or_else_method_do_for_option",
+                                answers: [
+                                    Answer(id: UUID(), title: "returns_the_value_or_panics", isCorrect: false),
+                                    Answer(id: UUID(), title: "returns_the_value_or_calls_a_closure", isCorrect: true),
+                                    Answer(id: UUID(), title: "returns_only_none", isCorrect: false),
+                                    Answer(id: UUID(), title: "returns_a_reference", isCorrect: false)
+                                ],
+                                descriptionText: "unwrap_or_else_accepts_a_closure_that_executes_on_none",
+                                descriptionLink: "functional_language_features_iterators_and_closures_link"
+                            ),
+                            
+                            // Question 4
+                            Question(
+                                id: UUID(),
+                                title: "whats_the_difference_between_unwrap_or_and_unwrap_or_else",
+                                answers: [
+                                    Answer(id: UUID(), title: "first_accepts_a_value_second_accepts_a_closure", isCorrect: true),
+                                    Answer(id: UUID(), title: "first_works_faster", isCorrect: false),
+                                    Answer(id: UUID(), title: "second_doesnt_work_with_some", isCorrect: false),
+                                    Answer(id: UUID(), title: "first_always_panics", isCorrect: false)
+                                ],
+                                descriptionText: "unwrap_or_else_lazily_computes_the_value_only_if_none",
+                                descriptionLink: "functional_language_features_iterators_and_closures_link"
+                            ),
+                            
+                            // Question 5
+                            Question(
+                                id: UUID(),
+                                title: "how_does_a_closure_capture_variables_by_default",
+                                answers: [
+                                    Answer(id: UUID(), title: "always_by_value", isCorrect: false),
+                                    Answer(id: UUID(), title: "decides_itself_by_reference_by_mut_or_by_move", isCorrect: true),
+                                    Answer(id: UUID(), title: "always_by_mut", isCorrect: false),
+                                    Answer(id: UUID(), title: "cannot_capture", isCorrect: false)
+                                ],
+                                descriptionText: "rust_chooses_the_capture_strategy_based_on_the_closure_body",
+                                descriptionLink: "functional_language_features_iterators_and_closures_link"
+                            ),
+                            
+                            // Question 6
+                            Question(
+                                id: UUID(),
+                                title: "what_does_the_move_keyword_do_for_a_closure",
+                                answers: [
+                                    Answer(id: UUID(), title: "prohibits_capture", isCorrect: false),
+                                    Answer(id: UUID(), title: "captures_variables_by_value", isCorrect: true),
+                                    Answer(id: UUID(), title: "makes_the_closure_fnmut", isCorrect: false),
+                                    Answer(id: UUID(), title: "optimizes_speed", isCorrect: false)
+                                ],
+                                descriptionText: "move_forces_ownership_transfer_into_the_closure",
+                                descriptionLink: "functional_language_features_iterators_and_closures_link"
+                            ),
+                            
+                            // Question 7
+                            Question(
+                                id: UUID(),
+                                title: "why_do_you_need_to_use_move_in_a_closure_for_a_new_thread",
+                                answers: [
+                                    Answer(id: UUID(), title: "thread_cannot_reference_parent_data", isCorrect: true),
+                                    Answer(id: UUID(), title: "its_faster", isCorrect: false),
+                                    Answer(id: UUID(), title: "without_it_panic", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_for_fnonce", isCorrect: false)
+                                ],
+                                descriptionText: "thread_can_outlive_the_parent_so_ownership_is_required",
+                                descriptionLink: "functional_language_features_iterators_and_closures_link"
+                            ),
+                            
+                            // Question 8
+                            Question(
+                                id: UUID(),
+                                title: "what_are_the_three_traits_for_closures",
+                                answers: [
+                                    Answer(id: UUID(), title: "fn_fnmut_fnonce", isCorrect: true),
+                                    Answer(id: UUID(), title: "fn_func_callable", isCorrect: false),
+                                    Answer(id: UUID(), title: "fnstatic_fnshared_fnowned", isCorrect: false),
+                                    Answer(id: UUID(), title: "copy_clone_drop", isCorrect: false)
+                                ],
+                                descriptionText: "these_three_traits_reflect_capture_methods",
+                                descriptionLink: "functional_language_features_iterators_and_closures_link"
+                            ),
+                            
+                            // Question 9
+                            Question(
+                                id: UUID(),
+                                title: "which_fn_trait_does_any_closure_implement",
+                                answers: [
+                                    Answer(id: UUID(), title: "fn", isCorrect: false),
+                                    Answer(id: UUID(), title: "fnmut", isCorrect: false),
+                                    Answer(id: UUID(), title: "fnonce", isCorrect: true),
+                                    Answer(id: UUID(), title: "none", isCorrect: false)
+                                ],
+                                descriptionText: "any_closure_can_be_called_at_least_once",
+                                descriptionLink: "functional_language_features_iterators_and_closures_link"
+                            ),
+                            
+                            // Question 10
+                            Question(
+                                id: UUID(),
+                                title: "a_closure_that_modifies_an_external_variable_implements",
+                                answers: [
+                                    Answer(id: UUID(), title: "fn", isCorrect: false),
+                                    Answer(id: UUID(), title: "fnmut", isCorrect: true),
+                                    Answer(id: UUID(), title: "fnonce", isCorrect: false),
+                                    Answer(id: UUID(), title: "copy", isCorrect: false)
+                                ],
+                                descriptionText: "modification_requires_mut_thats_fnmut",
+                                descriptionLink: "functional_language_features_iterators_and_closures_link"
+                            ),
+                            
+                            // Question 11
+                            Question(
+                                id: UUID(),
+                                title: "a_closure_that_moves_a_value_from_the_environment_implements",
+                                answers: [
+                                    Answer(id: UUID(), title: "fn", isCorrect: false),
+                                    Answer(id: UUID(), title: "fnmut", isCorrect: false),
+                                    Answer(id: UUID(), title: "fnonce", isCorrect: true),
+                                    Answer(id: UUID(), title: "all_three", isCorrect: false)
+                                ],
+                                descriptionText: "with_move_operation_closure_can_only_be_called_once",
+                                descriptionLink: "functional_language_features_iterators_and_closures_link"
+                            ),
+                            
+                            // Question 12
+                            Question(
+                                id: UUID(),
+                                title: "how_does_function_syntax_differ_from_closure_syntax",
+                                answers: [
+                                    Answer(id: UUID(), title: "function_always_with_fn_closure_with_vertical_bars", isCorrect: true),
+                                    Answer(id: UUID(), title: "closure_must_have_return", isCorrect: false),
+                                    Answer(id: UUID(), title: "closures_have_no_body", isCorrect: false),
+                                    Answer(id: UUID(), title: "functions_cannot_accept_parameters", isCorrect: false)
+                                ],
+                                descriptionText: "the_difference_is_precisely_in_vertical_bars_and_optional_type_annotations",
+                                descriptionLink: "functional_language_features_iterators_and_closures_link"
+                            ),
+                            
+                            // Question 13
+                            Question(
+                                id: UUID(),
+                                title: "do_you_always_need_to_specify_types_in_a_closure",
+                                answers: [
+                                    Answer(id: UUID(), title: "yes", isCorrect: false),
+                                    Answer(id: UUID(), title: "no", isCorrect: true),
+                                    Answer(id: UUID(), title: "only_for_fnmut", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_for_return_value", isCorrect: false)
+                                ],
+                                descriptionText: "compiler_usually_infers_types_automatically",
+                                descriptionLink: "functional_language_features_iterators_and_closures_link"
+                            ),
+                            
+                            // Question 14
+                            Question(
+                                id: UUID(),
+                                title: "when_might_explicit_type_annotation_be_needed_in_a_closure",
+                                answers: [
+                                    Answer(id: UUID(), title: "when_using_multithreading", isCorrect: false),
+                                    Answer(id: UUID(), title: "when_compiler_cannot_infer_the_type", isCorrect: true),
+                                    Answer(id: UUID(), title: "when_closure_is_empty", isCorrect: false),
+                                    Answer(id: UUID(), title: "always_in_release", isCorrect: false)
+                                ],
+                                descriptionText: "closure_types_are_inferred_but_sometimes_clarification_is_needed",
+                                descriptionLink: "functional_language_features_iterators_and_closures_link"
+                            ),
+                            
+                            // Question 15
+                            Question(
+                                id: UUID(),
+                                title: "what_happens_if_you_call_a_closure_first_with_a_string_then_with_a_number",
+                                answers: [
+                                    Answer(id: UUID(), title: "will_work", isCorrect: false),
+                                    Answer(id: UUID(), title: "type_error", isCorrect: true),
+                                    Answer(id: UUID(), title: "automatic_conversion", isCorrect: false),
+                                    Answer(id: UUID(), title: "runtime_panic", isCorrect: false)
+                                ],
+                                descriptionText: "closure_type_is_fixed_on_first_call",
+                                descriptionLink: "functional_language_features_iterators_and_closures_link"
+                            ),
+                            
+                            // Question 16
+                            Question(
+                                id: UUID(),
+                                title: "which_closure_can_be_passed_to_sort_by_key",
+                                answers: [
+                                    Answer(id: UUID(), title: "only_fnonce", isCorrect: false),
+                                    Answer(id: UUID(), title: "fnmut", isCorrect: true),
+                                    Answer(id: UUID(), title: "fn", isCorrect: false),
+                                    Answer(id: UUID(), title: "any", isCorrect: false)
+                                ],
+                                descriptionText: "sort_by_key_calls_the_closure_multiple_times",
+                                descriptionLink: "functional_language_features_iterators_and_closures_link"
+                            ),
+                            
+                            // Question 17
+                            Question(
+                                id: UUID(),
+                                title: "which_method_must_any_iterator_implement",
+                                answers: [
+                                    Answer(id: UUID(), title: "for_each", isCorrect: false),
+                                    Answer(id: UUID(), title: "next", isCorrect: true),
+                                    Answer(id: UUID(), title: "iter", isCorrect: false),
+                                    Answer(id: UUID(), title: "map", isCorrect: false)
+                                ],
+                                descriptionText: "iterator_requires_defining_next",
+                                descriptionLink: "functional_language_features_iterators_and_closures_link"
+                            ),
+                            
+                            // Question 18
+                            Question(
+                                id: UUID(),
+                                title: "what_does_the_next_method_return",
+                                answers: [
+                                    Answer(id: UUID(), title: "element_directly", isCorrect: false),
+                                    Answer(id: UUID(), title: "option", isCorrect: true),
+                                    Answer(id: UUID(), title: "result_item_err", isCorrect: false),
+                                    Answer(id: UUID(), title: "ref_item", isCorrect: false)
+                                ],
+                                descriptionText: "next_returns_some_item_or_none",
+                                descriptionLink: "functional_language_features_iterators_and_closures_link"
+                            ),
+                            
+                            // Question 19
+                            Question(
+                                id: UUID(),
+                                title: "what_happens_if_you_call_next_on_an_exhausted_iterator",
+                                answers: [
+                                    Answer(id: UUID(), title: "panic", isCorrect: false),
+                                    Answer(id: UUID(), title: "none", isCorrect: true),
+                                    Answer(id: UUID(), title: "zero", isCorrect: false),
+                                    Answer(id: UUID(), title: "compilation_error", isCorrect: false)
+                                ],
+                                descriptionText: "after_the_end_iterator_returns_none",
+                                descriptionLink: "functional_language_features_iterators_and_closures_link"
+                            ),
+                            
+                            // Question 20
+                            Question(
+                                id: UUID(),
+                                title: "why_is_an_iterator_variable_usually_declared_as_mut",
+                                answers: [
+                                    Answer(id: UUID(), title: "otherwise_compiler_always_complains", isCorrect: false),
+                                    Answer(id: UUID(), title: "next_modifies_internal_state", isCorrect: true),
+                                    Answer(id: UUID(), title: "vector_requires_mut", isCorrect: false),
+                                    Answer(id: UUID(), title: "collect_requires_mut", isCorrect: false)
+                                ],
+                                descriptionText: "next_moves_the_iterator_pointer",
+                                descriptionLink: "functional_language_features_iterators_and_closures_link"
+                            ),
+                            
+                            // Question 21
+                            Question(
+                                id: UUID(),
+                                title: "how_do_iter_into_iter_iter_mut_methods_differ_for_a_vector",
+                                answers: [
+                                    Answer(id: UUID(), title: "all_the_same", isCorrect: false),
+                                    Answer(id: UUID(), title: "iter_ref_t_into_iter_t_iter_mut_ref_mut_t", isCorrect: true),
+                                    Answer(id: UUID(), title: "iter_copies_into_iter_references", isCorrect: false),
+                                    Answer(id: UUID(), title: "iter_works_faster", isCorrect: false)
+                                ],
+                                descriptionText: "these_are_three_ways_to_traverse_by_reference_ownership_and_mutable_reference",
+                                descriptionLink: "functional_language_features_iterators_and_closures_link"
+                            ),
+                            
+                            // Question 22
+                            Question(
+                                id: UUID(),
+                                title: "what_is_iterator_laziness",
+                                answers: [
+                                    Answer(id: UUID(), title: "they_dont_compile_until_called", isCorrect: false),
+                                    Answer(id: UUID(), title: "they_do_nothing_until_consumed", isCorrect: true),
+                                    Answer(id: UUID(), title: "they_are_slow", isCorrect: false),
+                                    Answer(id: UUID(), title: "they_only_work_in_release", isCorrect: false)
+                                ],
+                                descriptionText: "iterators_defer_computation_until_a_consuming_method",
+                                descriptionLink: "functional_language_features_iterators_and_closures_link"
+                            ),
+                            
+                            // Question 23
+                            Question(
+                                id: UUID(),
+                                title: "example_of_a_method_that_consumes_an_iterator",
+                                answers: [
+                                    Answer(id: UUID(), title: "map", isCorrect: false),
+                                    Answer(id: UUID(), title: "filter", isCorrect: false),
+                                    Answer(id: UUID(), title: "sum", isCorrect: true),
+                                    Answer(id: UUID(), title: "iter", isCorrect: false)
+                                ],
+                                descriptionText: "sum_calls_next_until_the_end_and_takes_the_iterator",
+                                descriptionLink: "functional_language_features_iterators_and_closures_link"
+                            ),
+                            
+                            // Question 24
+                            Question(
+                                id: UUID(),
+                                title: "what_happens_to_an_iterator_after_calling_sum",
+                                answers: [
+                                    Answer(id: UUID(), title: "can_be_used_again", isCorrect: false),
+                                    Answer(id: UUID(), title: "its_moved_and_no_longer_accessible", isCorrect: true),
+                                    Answer(id: UUID(), title: "returns_empty", isCorrect: false),
+                                    Answer(id: UUID(), title: "its_cloned", isCorrect: false)
+                                ],
+                                descriptionText: "sum_owns_the_iterator_and_exhausts_it",
+                                descriptionLink: "functional_language_features_iterators_and_closures_link"
+                            ),
+                            
+                            // Question 25
+                            Question(
+                                id: UUID(),
+                                title: "example_of_an_adapter_method_doesnt_consume_iterator",
+                                answers: [
+                                    Answer(id: UUID(), title: "map", isCorrect: true),
+                                    Answer(id: UUID(), title: "sum", isCorrect: false),
+                                    Answer(id: UUID(), title: "collect", isCorrect: false),
+                                    Answer(id: UUID(), title: "next", isCorrect: false)
+                                ],
+                                descriptionText: "adapter_returns_a_new_iterator_without_consuming_the_original",
+                                descriptionLink: "functional_language_features_iterators_and_closures_link"
+                            ),
+                            
+                            // Question 26
+                            Question(
+                                id: UUID(),
+                                title: "what_do_you_need_to_call_to_actually_execute_map",
+                                answers: [
+                                    Answer(id: UUID(), title: "collect", isCorrect: true),
+                                    Answer(id: UUID(), title: "for_each", isCorrect: false),
+                                    Answer(id: UUID(), title: "next", isCorrect: false),
+                                    Answer(id: UUID(), title: "all_above", isCorrect: false)
+                                ],
+                                descriptionText: "map_is_lazy_collect_starts_traversal",
+                                descriptionLink: "functional_language_features_iterators_and_closures_link"
+                            ),
+                            
+                            // Question 27
+                            Question(
+                                id: UUID(),
+                                title: "what_will_collect_return_from_a_map_iterator",
+                                answers: [
+                                    Answer(id: UUID(), title: "nothing", isCorrect: false),
+                                    Answer(id: UUID(), title: "any_collection", isCorrect: true),
+                                    Answer(id: UUID(), title: "only_vec", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_string", isCorrect: false)
+                                ],
+                                descriptionText: "collect_can_be_parameterized_into_different_collections",
+                                descriptionLink: "functional_language_features_iterators_and_closures_link"
+                            ),
+                            
+                            // Question 28
+                            Question(
+                                id: UUID(),
+                                title: "how_does_filter_work",
+                                answers: [
+                                    Answer(id: UUID(), title: "removes_none", isCorrect: false),
+                                    Answer(id: UUID(), title: "keeps_elements_whose_closure_returns_true", isCorrect: true),
+                                    Answer(id: UUID(), title: "sorts_elements", isCorrect: false),
+                                    Answer(id: UUID(), title: "transforms_type", isCorrect: false)
+                                ],
+                                descriptionText: "filter_keeps_only_elements_for_which_the_condition_is_true",
+                                descriptionLink: "functional_language_features_iterators_and_closures_link"
+                            ),
+                            
+                            // Question 29
+                            Question(
+                                id: UUID(),
+                                title: "how_does_the_filter_closure_receive_elements",
+                                answers: [
+                                    Answer(id: UUID(), title: "by_value", isCorrect: false),
+                                    Answer(id: UUID(), title: "by_reference", isCorrect: true),
+                                    Answer(id: UUID(), title: "by_copy", isCorrect: false),
+                                    Answer(id: UUID(), title: "always_through_move", isCorrect: false)
+                                ],
+                                descriptionText: "filter_calls_the_closure_with_a_reference_to_the_element",
+                                descriptionLink: "functional_language_features_iterators_and_closures_link"
+                            ),
+                            
+                            // Question 30
+                            Question(
+                                id: UUID(),
+                                title: "what_does_the_for_each_method_do_for_an_iterator",
+                                answers: [
+                                    Answer(id: UUID(), title: "returns_a_new_collection", isCorrect: false),
+                                    Answer(id: UUID(), title: "applies_closure_to_each_element", isCorrect: true),
+                                    Answer(id: UUID(), title: "sorts", isCorrect: false),
+                                    Answer(id: UUID(), title: "zeros_the_iterator", isCorrect: false)
+                                ],
+                                descriptionText: "for_each_calls_the_closure_for_each_element",
+                                descriptionLink: "functional_language_features_iterators_and_closures_link"
+                            ),
+                            
+                            // Question 31
+                            Question(
+                                id: UUID(),
+                                title: "how_do_you_check_if_an_iterator_has_an_element_satisfying_a_condition",
+                                answers: [
+                                    Answer(id: UUID(), title: "map", isCorrect: false),
+                                    Answer(id: UUID(), title: "any", isCorrect: true),
+                                    Answer(id: UUID(), title: "all", isCorrect: false),
+                                    Answer(id: UUID(), title: "find", isCorrect: false)
+                                ],
+                                descriptionText: "any_checks_if_the_closure_returns_true_at_least_once",
+                                descriptionLink: "functional_language_features_iterators_and_closures_link"
+                            ),
+                            
+                            // Question 32
+                            Question(
+                                id: UUID(),
+                                title: "how_does_all_differ_from_any",
+                                answers: [
+                                    Answer(id: UUID(), title: "all_requires_true_for_all", isCorrect: true),
+                                    Answer(id: UUID(), title: "any_requires_true_for_all", isCorrect: false),
+                                    Answer(id: UUID(), title: "all_only_works_with_vec", isCorrect: false),
+                                    Answer(id: UUID(), title: "all_is_always_faster", isCorrect: false)
+                                ],
+                                descriptionText: "all_returns_true_if_the_condition_holds_for_all_elements",
+                                descriptionLink: "functional_language_features_iterators_and_closures_link"
+                            ),
+                            
+                            // Question 33
+                            Question(
+                                id: UUID(),
+                                title: "what_does_the_find_method_return",
+                                answers: [
+                                    Answer(id: UUID(), title: "bool", isCorrect: false),
+                                    Answer(id: UUID(), title: "option", isCorrect: true),
+                                    Answer(id: UUID(), title: "result", isCorrect: false),
+                                    Answer(id: UUID(), title: "usize", isCorrect: false)
+                                ],
+                                descriptionText: "find_returns_some_first_element_or_none",
+                                descriptionLink: "functional_language_features_iterators_and_closures_link"
+                            ),
+                            
+                            // Question 34
+                            Question(
+                                id: UUID(),
+                                title: "how_do_for_loops_and_iterators_differ",
+                                answers: [
+                                    Answer(id: UUID(), title: "for_is_always_faster", isCorrect: false),
+                                    Answer(id: UUID(), title: "for_is_syntactic_sugar_for_iterator", isCorrect: true),
+                                    Answer(id: UUID(), title: "iterator_only_works_with_vec", isCorrect: false),
+                                    Answer(id: UUID(), title: "for_uses_pointers", isCorrect: false)
+                                ],
+                                descriptionText: "for_internally_creates_and_consumes_an_iterator",
+                                descriptionLink: "functional_language_features_iterators_and_closures_link"
+                            ),
+                            
+                            // Question 35
+                            Question(
+                                id: UUID(),
+                                title: "why_are_iterators_in_rust_considered_zero_cost_abstraction",
+                                answers: [
+                                    Answer(id: UUID(), title: "theyre_free", isCorrect: false),
+                                    Answer(id: UUID(), title: "after_compilation_they_add_no_overhead", isCorrect: true),
+                                    Answer(id: UUID(), title: "theyre_always_inlined", isCorrect: false),
+                                    Answer(id: UUID(), title: "they_only_work_in_release", isCorrect: false)
+                                ],
+                                descriptionText: "iterators_compile_to_code_at_the_level_of_manual_loops",
+                                descriptionLink: "functional_language_features_iterators_and_closures_link"
+                            ),
+                            
+                            // Question 36
+                            Question(
+                                id: UUID(),
+                                title: "what_does_the_enumerate_method_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "numbers_the_collection_in_println", isCorrect: false),
+                                    Answer(id: UUID(), title: "adds_an_index_to_each_element", isCorrect: true),
+                                    Answer(id: UUID(), title: "sorts", isCorrect: false),
+                                    Answer(id: UUID(), title: "returns_usize", isCorrect: false)
+                                ],
+                                descriptionText: "enumerate_returns_pairs_index_element",
+                                descriptionLink: "functional_language_features_iterators_and_closures_link"
+                            ),
+                            
+                            // Question 37
+                            Question(
+                                id: UUID(),
+                                title: "what_does_zip_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "combines_two_iterators_into_tuples", isCorrect: true),
+                                    Answer(id: UUID(), title: "joins_strings", isCorrect: false),
+                                    Answer(id: UUID(), title: "removes_duplicates", isCorrect: false),
+                                    Answer(id: UUID(), title: "does_flatmap", isCorrect: false)
+                                ],
+                                descriptionText: "zip_combines_elements_in_pairs",
+                                descriptionLink: "functional_language_features_iterators_and_closures_link"
+                            ),
+                            
+                            // Question 38
+                            Question(
+                                id: UUID(),
+                                title: "what_does_the_chain_method_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "joins_two_iterators_sequentially", isCorrect: true),
+                                    Answer(id: UUID(), title: "does_merge_sort", isCorrect: false),
+                                    Answer(id: UUID(), title: "joins_strings", isCorrect: false),
+                                    Answer(id: UUID(), title: "concatenates_vec", isCorrect: false)
+                                ],
+                                descriptionText: "chain_creates_one_iterator_from_two",
+                                descriptionLink: "functional_language_features_iterators_and_closures_link"
+                            ),
+                            
+                            // Question 39
+                            Question(
+                                id: UUID(),
+                                title: "what_does_the_take_method_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "takes_the_first_n_elements", isCorrect: true),
+                                    Answer(id: UUID(), title: "removes_the_first_n_elements", isCorrect: false),
+                                    Answer(id: UUID(), title: "does_clone", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_works_with_vec", isCorrect: false)
+                                ],
+                                descriptionText: "take_limits_the_number_of_iterations",
+                                descriptionLink: "functional_language_features_iterators_and_closures_link"
+                            ),
+                            
+                            // Question 40
+                            Question(
+                                id: UUID(),
+                                title: "what_does_the_skip_method_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "skips_the_first_n_elements", isCorrect: true),
+                                    Answer(id: UUID(), title: "removes_duplicates", isCorrect: false),
+                                    Answer(id: UUID(), title: "skips_none", isCorrect: false),
+                                    Answer(id: UUID(), title: "sorts", isCorrect: false)
+                                ],
+                                descriptionText: "skip_shifts_the_iteration_start",
+                                descriptionLink: "functional_language_features_iterators_and_closures_link"
+                            )
+                        ]
+                    ),
+                    Quiz(
+                        id: UUID(),
+                        theme: "smart_pointers",
+                        priority: 11,
+                        questions: [
+                            // Question 1
+                            Question(
+                                id: UUID(),
+                                title: "what_is_a_smart_pointer_in_rust",
+                                answers: [
+                                    Answer(id: UUID(), title: "any_variable_with_reference_ref_t", isCorrect: false),
+                                    Answer(id: UUID(), title: "a_struct_that_behaves_like_a_pointer_and_has_additional_behavior", isCorrect: true),
+                                    Answer(id: UUID(), title: "any_wrapper_over_vec_t", isCorrect: false),
+                                    Answer(id: UUID(), title: "any_type_with_copy", isCorrect: false)
+                                ],
+                                descriptionText: "smart_pointer_is_a_struct_that_mimics_a_pointer_and_implements_traits_like_deref_drop",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 2
+                            Question(
+                                id: UUID(),
+                                title: "what_does_box_t_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "places_value_on_the_stack", isCorrect: false),
+                                    Answer(id: UUID(), title: "places_value_in_static_memory", isCorrect: false),
+                                    Answer(id: UUID(), title: "places_value_on_the_heap", isCorrect: true),
+                                    Answer(id: UUID(), title: "clones_value_on_each_access", isCorrect: false)
+                                ],
+                                descriptionText: "box_stores_a_thin_pointer_to_a_value_on_the_heap",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 3
+                            Question(
+                                id: UUID(),
+                                title: "when_is_it_appropriate_to_use_box_t",
+                                answers: [
+                                    Answer(id: UUID(), title: "always_for_fixed_size_values", isCorrect: false),
+                                    Answer(id: UUID(), title: "when_you_need_a_known_size_type_for_a_recursive_structure", isCorrect: true),
+                                    Answer(id: UUID(), title: "to_speed_up_cache_line_access", isCorrect: false),
+                                    Answer(id: UUID(), title: "to_automatically_share_ownership", isCorrect: false)
+                                ],
+                                descriptionText: "box_breaks_infinite_recursion_in_size_eg_in_cons_i32_box_list",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 4
+                            Question(
+                                id: UUID(),
+                                title: "what_happens_when_box_t_goes_out_of_scope",
+                                answers: [
+                                    Answer(id: UUID(), title: "only_the_pointer_on_the_stack_is_freed", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_the_heap_is_freed", isCorrect: false),
+                                    Answer(id: UUID(), title: "both_the_stack_pointer_and_heap_data_are_freed", isCorrect: true),
+                                    Answer(id: UUID(), title: "nothing_garbage_collector_frees_later", isCorrect: false)
+                                ],
+                                descriptionText: "drop_is_implemented_to_free_both_the_box_and_stored_data",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 5
+                            Question(
+                                id: UUID(),
+                                title: "why_doesnt_enum_list_cons_i32_list_nil_compile",
+                                answers: [
+                                    Answer(id: UUID(), title: "type_error", isCorrect: false),
+                                    Answer(id: UUID(), title: "recursive_type_of_infinite_size", isCorrect: true),
+                                    Answer(id: UUID(), title: "cannot_have_nil_in_enum", isCorrect: false),
+                                    Answer(id: UUID(), title: "compiler_doesnt_support_such_enums", isCorrect: false)
+                                ],
+                                descriptionText: "list_size_cannot_be_computed_need_indirection_via_pointer_box_rc_ref",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 6
+                            Question(
+                                id: UUID(),
+                                title: "what_does_the_deref_trait_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "manages_lifetimes", isCorrect: false),
+                                    Answer(id: UUID(), title: "allows_using_star_operator_and_reference_coercions", isCorrect: true),
+                                    Answer(id: UUID(), title: "allows_copying_without_cloning", isCorrect: false),
+                                    Answer(id: UUID(), title: "enables_garbage_collection", isCorrect: false)
+                                ],
+                                descriptionText: "deref_deref_ref_self_ref_target_describes_what_the_type_dereferences_to",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 7
+                            Question(
+                                id: UUID(),
+                                title: "why_cant_mybox_t_without_deref_be_dereferenced_with_star_y",
+                                answers: [
+                                    Answer(id: UUID(), title: "no_copy", isCorrect: false),
+                                    Answer(id: UUID(), title: "drop_not_implemented", isCorrect: false),
+                                    Answer(id: UUID(), title: "deref_not_implemented", isCorrect: true),
+                                    Answer(id: UUID(), title: "type_must_be_enum", isCorrect: false)
+                                ],
+                                descriptionText: "dereferencing_custom_smart_pointers_requires_deref",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 8
+                            Question(
+                                id: UUID(),
+                                title: "what_is_derefmut_for",
+                                answers: [
+                                    Answer(id: UUID(), title: "for_coercion_ref_t_ref_u", isCorrect: false),
+                                    Answer(id: UUID(), title: "for_coercion_ref_mut_t_ref_mut_u", isCorrect: true),
+                                    Answer(id: UUID(), title: "for_default_copying", isCorrect: false),
+                                    Answer(id: UUID(), title: "for_resource_cleanup", isCorrect: false)
+                                ],
+                                descriptionText: "derefmut_allows_dereferencing_coercing_mutable_references",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 9
+                            Question(
+                                id: UUID(),
+                                title: "what_is_the_automatic_conversion_of_references_through_deref_in_function_signatures_called",
+                                answers: [
+                                    Answer(id: UUID(), title: "lifting", isCorrect: false),
+                                    Answer(id: UUID(), title: "monomorphization", isCorrect: false),
+                                    Answer(id: UUID(), title: "deref_coercion", isCorrect: true),
+                                    Answer(id: UUID(), title: "copy_elision", isCorrect: false)
+                                ],
+                                descriptionText: "compiler_automatically_inserts_deref_calls_to_match_expected_reference_type",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 10
+                            Question(
+                                id: UUID(),
+                                title: "what_is_true_about_deref_coercion",
+                                answers: [
+                                    Answer(id: UUID(), title: "only_works_for_box_t", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_works_for_methods_not_functions", isCorrect: false),
+                                    Answer(id: UUID(), title: "works_for_types_implementing_deref_derefmut", isCorrect: true),
+                                    Answer(id: UUID(), title: "only_works_in_nightly", isCorrect: false)
+                                ],
+                                descriptionText: "conditions_are_having_the_corresponding_trait_implementations",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 11
+                            Question(
+                                id: UUID(),
+                                title: "which_coercion_is_allowed",
+                                answers: [
+                                    Answer(id: UUID(), title: "ref_mut_t_to_ref_t", isCorrect: true),
+                                    Answer(id: UUID(), title: "ref_t_to_ref_mut_t", isCorrect: false),
+                                    Answer(id: UUID(), title: "ref_t_to_t", isCorrect: false),
+                                    Answer(id: UUID(), title: "t_to_ref_t_always", isCorrect: false)
+                                ],
+                                descriptionText: "mutable_reference_can_be_downgraded_to_immutable_reverse_is_forbidden_by_borrowing_rules",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 12
+                            Question(
+                                id: UUID(),
+                                title: "what_is_the_drop_trait_for",
+                                answers: [
+                                    Answer(id: UUID(), title: "allows_copying_types_by_value", isCorrect: false),
+                                    Answer(id: UUID(), title: "defines_behavior_when_going_out_of_scope", isCorrect: true),
+                                    Answer(id: UUID(), title: "speeds_up_memory_deallocation", isCorrect: false),
+                                    Answer(id: UUID(), title: "replaces_raii", isCorrect: false)
+                                ],
+                                descriptionText: "drop_ref_mut_self_is_called_automatically_on_destruction",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 13
+                            Question(
+                                id: UUID(),
+                                title: "can_you_explicitly_call_the_drop_method_from_drop",
+                                answers: [
+                                    Answer(id: UUID(), title: "yes", isCorrect: false),
+                                    Answer(id: UUID(), title: "yes_but_only_in_unsafe", isCorrect: false),
+                                    Answer(id: UUID(), title: "no_need_to_use_std_mem_drop_value", isCorrect: true),
+                                    Answer(id: UUID(), title: "can_but_only_for_box_t", isCorrect: false)
+                                ],
+                                descriptionText: "direct_call_value_drop_is_forbidden_use_free_function_drop",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 14
+                            Question(
+                                id: UUID(),
+                                title: "order_of_variable_destruction_in_a_block",
+                                answers: [
+                                    Answer(id: UUID(), title: "in_order_of_declaration", isCorrect: false),
+                                    Answer(id: UUID(), title: "in_reverse_order_of_declaration", isCorrect: true),
+                                    Answer(id: UUID(), title: "random", isCorrect: false),
+                                    Answer(id: UUID(), title: "by_name", isCorrect: false)
+                                ],
+                                descriptionText: "lifo_last_created_first_destroyed",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 15
+                            Question(
+                                id: UUID(),
+                                title: "what_is_rc_t_for",
+                                answers: [
+                                    Answer(id: UUID(), title: "single_ownership", isCorrect: false),
+                                    Answer(id: UUID(), title: "multiple_ownership_of_one_value_in_multithreaded_context", isCorrect: false),
+                                    Answer(id: UUID(), title: "multiple_ownership_of_one_value_in_single_threaded_context", isCorrect: true),
+                                    Answer(id: UUID(), title: "thread_synchronization", isCorrect: false)
+                                ],
+                                descriptionText: "rc_is_reference_counting_but_only_for_single_thread",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 16
+                            Question(
+                                id: UUID(),
+                                title: "what_does_rc_clone_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "deep_copies_data", isCorrect: false),
+                                    Answer(id: UUID(), title: "increments_strong_reference_count", isCorrect: true),
+                                    Answer(id: UUID(), title: "copies_only_header_and_data", isCorrect: false),
+                                    Answer(id: UUID(), title: "moves_data", isCorrect: false)
+                                ],
+                                descriptionText: "fast_increment_of_counter_data_is_not_copied",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 17
+                            Question(
+                                id: UUID(),
+                                title: "why_is_calling_rc_clone_ref_rc_instead_of_rc_clone_recommended",
+                                answers: [
+                                    Answer(id: UUID(), title: "its_faster", isCorrect: false),
+                                    Answer(id: UUID(), title: "its_the_only_way", isCorrect: false),
+                                    Answer(id: UUID(), title: "its_an_idiom_to_explicitly_denote_cheap_reference_cloning", isCorrect: true),
+                                    Answer(id: UUID(), title: "otherwise_wont_compile", isCorrect: false)
+                                ],
+                                descriptionText: "signals_to_the_reader_that_no_deep_copying_occurs",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 18
+                            Question(
+                                id: UUID(),
+                                title: "what_does_rc_strong_count_ref_rc_show",
+                                answers: [
+                                    Answer(id: UUID(), title: "number_of_weak_references", isCorrect: false),
+                                    Answer(id: UUID(), title: "number_of_all_references", isCorrect: false),
+                                    Answer(id: UUID(), title: "number_of_strong_references", isCorrect: true),
+                                    Answer(id: UUID(), title: "shows_nothing_deprecated", isCorrect: false)
+                                ],
+                                descriptionText: "shows_the_number_of_strong_references",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 19
+                            Question(
+                                id: UUID(),
+                                title: "when_will_data_inside_rc_t_be_freed",
+                                answers: [
+                                    Answer(id: UUID(), title: "when_strong_count_equals_0", isCorrect: true),
+                                    Answer(id: UUID(), title: "when_weak_count_equals_0", isCorrect: false),
+                                    Answer(id: UUID(), title: "when_strong_count_equals_weak_count", isCorrect: false),
+                                    Answer(id: UUID(), title: "when_both_owner_variables_go_out_of_scope", isCorrect: false)
+                                ],
+                                descriptionText: "weak_references_dont_prevent_deallocation",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 20
+                            Question(
+                                id: UUID(),
+                                title: "can_you_modify_data_through_rc_t",
+                                answers: [
+                                    Answer(id: UUID(), title: "yes_through_mut_rc", isCorrect: false),
+                                    Answer(id: UUID(), title: "no_never", isCorrect: false),
+                                    Answer(id: UUID(), title: "yes_if_you_wrap_data_in_refcell_t_and_use_rc_refcell_t", isCorrect: true),
+                                    Answer(id: UUID(), title: "yes_if_you_call_rc_get_mut", isCorrect: false)
+                                ],
+                                descriptionText: "rc_t_gives_only_immutable_access_for_mutation_interior_mutability_through_refcell",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 21
+                            Question(
+                                id: UUID(),
+                                title: "when_does_rc_get_mut_ref_mut_rc_return_some_ref_mut_t",
+                                answers: [
+                                    Answer(id: UUID(), title: "always", isCorrect: false),
+                                    Answer(id: UUID(), title: "if_strong_references_are_exactly_1", isCorrect: true),
+                                    Answer(id: UUID(), title: "if_weak_references_are_0", isCorrect: false),
+                                    Answer(id: UUID(), title: "never", isCorrect: false)
+                                ],
+                                descriptionText: "safe_mutation_possible_only_with_sole_ownership",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 22
+                            Question(
+                                id: UUID(),
+                                title: "what_does_refcell_t_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "moves_borrow_checking_to_runtime", isCorrect: true),
+                                    Answer(id: UUID(), title: "adds_thread_safety", isCorrect: false),
+                                    Answer(id: UUID(), title: "improves_mutation_performance", isCorrect: false),
+                                    Answer(id: UUID(), title: "guarantees_no_panics", isCorrect: false)
+                                ],
+                                descriptionText: "compiler_allows_but_checks_number_of_ref_refmut_are_performed_at_runtime",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 23
+                            Question(
+                                id: UUID(),
+                                title: "what_will_borrow_on_refcell_t_return",
+                                answers: [
+                                    Answer(id: UUID(), title: "ref_t", isCorrect: false),
+                                    Answer(id: UUID(), title: "ref_mut_t", isCorrect: false),
+                                    Answer(id: UUID(), title: "ref_of_t", isCorrect: true),
+                                    Answer(id: UUID(), title: "refmut_of_t", isCorrect: false)
+                                ],
+                                descriptionText: "its_a_smart_pointer_with_deref_to_ref_t",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 24
+                            Question(
+                                id: UUID(),
+                                title: "what_will_borrow_mut_return",
+                                answers: [
+                                    Answer(id: UUID(), title: "ref_mut_t", isCorrect: false),
+                                    Answer(id: UUID(), title: "refmut_of_t", isCorrect: true),
+                                    Answer(id: UUID(), title: "ref_of_t", isCorrect: false),
+                                    Answer(id: UUID(), title: "ref_t", isCorrect: false)
+                                ],
+                                descriptionText: "smart_pointer_with_derefmut_to_ref_mut_t",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 25
+                            Question(
+                                id: UUID(),
+                                title: "what_happens_with_two_borrow_mut_in_the_same_scope",
+                                answers: [
+                                    Answer(id: UUID(), title: "compilation_fails", isCorrect: false),
+                                    Answer(id: UUID(), title: "program_panics_at_runtime", isCorrect: true),
+                                    Answer(id: UUID(), title: "second_returns_none", isCorrect: false),
+                                    Answer(id: UUID(), title: "everythings_fine", isCorrect: false)
+                                ],
+                                descriptionText: "violation_of_only_one_mutable_reference_rule_panic_with_borrowmuterror",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 26
+                            Question(
+                                id: UUID(),
+                                title: "can_you_have_borrow_and_borrow_mut_active_simultaneously",
+                                answers: [
+                                    Answer(id: UUID(), title: "yes", isCorrect: false),
+                                    Answer(id: UUID(), title: "yes_if_t_sync", isCorrect: false),
+                                    Answer(id: UUID(), title: "no_leads_to_panic", isCorrect: true),
+                                    Answer(id: UUID(), title: "depends_on_platform", isCorrect: false)
+                                ],
+                                descriptionText: "either_many_ref_or_one_refmut",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 27
+                            Question(
+                                id: UUID(),
+                                title: "the_rc_refcell_t_combination_provides",
+                                answers: [
+                                    Answer(id: UUID(), title: "multiple_owners_of_immutable_data", isCorrect: false),
+                                    Answer(id: UUID(), title: "multiple_owners_with_mutation_capability_via_interior_mutability", isCorrect: true),
+                                    Answer(id: UUID(), title: "single_owner_and_mutation", isCorrect: false),
+                                    Answer(id: UUID(), title: "thread_safety", isCorrect: false)
+                                ],
+                                descriptionText: "multiple_ownership_plus_interior_mutability",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 28
+                            Question(
+                                id: UUID(),
+                                title: "what_is_interior_mutability",
+                                answers: [
+                                    Answer(id: UUID(), title: "mutation_through_unsafe_always", isCorrect: false),
+                                    Answer(id: UUID(), title: "ability_to_change_internal_value_with_externally_immutable_container", isCorrect: true),
+                                    Answer(id: UUID(), title: "mutation_only_in_tests", isCorrect: false),
+                                    Answer(id: UUID(), title: "technique_exclusively_with_box_t", isCorrect: false)
+                                ],
+                                descriptionText: "mutating_through_immutable_interface",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 29
+                            Question(
+                                id: UUID(),
+                                title: "why_are_reference_cycles_with_rc_t_dangerous",
+                                answers: [
+                                    Answer(id: UUID(), title: "lead_to_data_race", isCorrect: false),
+                                    Answer(id: UUID(), title: "lead_to_memory_leak", isCorrect: true),
+                                    Answer(id: UUID(), title: "lead_to_ub", isCorrect: false),
+                                    Answer(id: UUID(), title: "lead_to_double_free", isCorrect: false)
+                                ],
+                                descriptionText: "strong_references_dont_drop_to_zero_drop_is_not_called",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 30
+                            Question(
+                                id: UUID(),
+                                title: "how_to_avoid_reference_cycle_in_parent_children_tree",
+                                answers: [
+                                    Answer(id: UUID(), title: "use_box_t", isCorrect: false),
+                                    Answer(id: UUID(), title: "use_weak_t_for_parent_reference", isCorrect: true),
+                                    Answer(id: UUID(), title: "forbid_parents", isCorrect: false),
+                                    Answer(id: UUID(), title: "use_refcell_t", isCorrect: false)
+                                ],
+                                descriptionText: "weak_reference_doesnt_increment_strong_count",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 31
+                            Question(
+                                id: UUID(),
+                                title: "what_does_rc_downgrade_ref_rc_return",
+                                answers: [
+                                    Answer(id: UUID(), title: "rc_t", isCorrect: false),
+                                    Answer(id: UUID(), title: "ref_t", isCorrect: false),
+                                    Answer(id: UUID(), title: "weak_t", isCorrect: true),
+                                    Answer(id: UUID(), title: "option_rc_t", isCorrect: false)
+                                ],
+                                descriptionText: "returns_weak_reference",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 32
+                            Question(
+                                id: UUID(),
+                                title: "how_to_get_rc_t_from_weak_t",
+                                answers: [
+                                    Answer(id: UUID(), title: "clone", isCorrect: false),
+                                    Answer(id: UUID(), title: "upgrade", isCorrect: true),
+                                    Answer(id: UUID(), title: "try_clone", isCorrect: false),
+                                    Answer(id: UUID(), title: "as_rc", isCorrect: false)
+                                ],
+                                descriptionText: "upgrade_returns_option_rc_t_if_object_still_alive",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 33
+                            Question(
+                                id: UUID(),
+                                title: "when_does_weak_t_stop_being_a_valid_reference",
+                                answers: [
+                                    Answer(id: UUID(), title: "when_weak_count_equals_0", isCorrect: false),
+                                    Answer(id: UUID(), title: "when_strong_count_equals_0", isCorrect: true),
+                                    Answer(id: UUID(), title: "when_both_variables_go_out_of_scope", isCorrect: false),
+                                    Answer(id: UUID(), title: "never", isCorrect: false)
+                                ],
+                                descriptionText: "when_strong_count_equals_0_data_is_freed_upgrade_returns_none",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 34
+                            Question(
+                                id: UUID(),
+                                title: "what_does_rc_weak_count_ref_rc_show",
+                                answers: [
+                                    Answer(id: UUID(), title: "number_of_weak_references", isCorrect: true),
+                                    Answer(id: UUID(), title: "number_of_strong_references", isCorrect: false),
+                                    Answer(id: UUID(), title: "total_number_of_references", isCorrect: false),
+                                    Answer(id: UUID(), title: "not_publicly_available", isCorrect: false)
+                                ],
+                                descriptionText: "shows_the_weak_reference_count",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 35
+                            Question(
+                                id: UUID(),
+                                title: "can_rc_t_be_made_thread_safe",
+                                answers: [
+                                    Answer(id: UUID(), title: "yes_with_mutex_t", isCorrect: false),
+                                    Answer(id: UUID(), title: "yes_by_using_arc_t_instead_of_rc_t", isCorrect: true),
+                                    Answer(id: UUID(), title: "yes_through_refcell_t", isCorrect: false),
+                                    Answer(id: UUID(), title: "no", isCorrect: false)
+                                ],
+                                descriptionText: "for_multithreading_arc_t_is_used",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 36
+                            Question(
+                                id: UUID(),
+                                title: "why_couldnt_vec_string_be_stored_in_mock_object_messenger_example_without_refcell",
+                                answers: [
+                                    Answer(id: UUID(), title: "cannot_allocate_in_tests", isCorrect: false),
+                                    Answer(id: UUID(), title: "method_send_ref_self_takes_ref_self_but_mutation_requires_ref_mut_self", isCorrect: true),
+                                    Answer(id: UUID(), title: "vec_is_not_send", isCorrect: false),
+                                    Answer(id: UUID(), title: "vec_is_not_sync", isCorrect: false)
+                                ],
+                                descriptionText: "interior_mutability_through_refcell_allows_mutation_with_ref_self",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 37
+                            Question(
+                                id: UUID(),
+                                title: "what_happens_if_you_call_two_borrow_mut_in_a_row_in_mock_object",
+                                answers: [
+                                    Answer(id: UUID(), title: "compilation_breaks", isCorrect: false),
+                                    Answer(id: UUID(), title: "panic_triggers", isCorrect: true),
+                                    Answer(id: UUID(), title: "returns_two_independent_refmut", isCorrect: false),
+                                    Answer(id: UUID(), title: "copies_data", isCorrect: false)
+                                ],
+                                descriptionText: "runtime_panic_on_borrow_rule_violation",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 38
+                            Question(
+                                id: UUID(),
+                                title: "is_box_t_a_thin_pointer",
+                                answers: [
+                                    Answer(id: UUID(), title: "yes", isCorrect: true),
+                                    Answer(id: UUID(), title: "no", isCorrect: false),
+                                    Answer(id: UUID(), title: "depends_on_t", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_in_nightly", isCorrect: false)
+                                ],
+                                descriptionText: "stores_only_address_plus_metadata_for_dst_size_is_known",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 39
+                            Question(
+                                id: UUID(),
+                                title: "what_is_box_dyn_trait_useful_for",
+                                answers: [
+                                    Answer(id: UUID(), title: "for_generics", isCorrect: false),
+                                    Answer(id: UUID(), title: "for_storing_values_of_concrete_type", isCorrect: false),
+                                    Answer(id: UUID(), title: "for_dynamic_dispatch_via_trait_object", isCorrect: true),
+                                    Answer(id: UUID(), title: "to_speed_up_compilation", isCorrect: false)
+                                ],
+                                descriptionText: "enables_trait_objects_and_dynamic_dispatch",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 40
+                            Question(
+                                id: UUID(),
+                                title: "can_you_dereference_box_t_with_star_operator",
+                                answers: [
+                                    Answer(id: UUID(), title: "no", isCorrect: false),
+                                    Answer(id: UUID(), title: "yes_thanks_to_deref", isCorrect: true),
+                                    Answer(id: UUID(), title: "only_if_t_copy", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_through_unsafe", isCorrect: false)
+                                ],
+                                descriptionText: "deref_trait_allows_dereferencing",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 41
+                            Question(
+                                id: UUID(),
+                                title: "what_happens_if_you_panic_in_drop_drop",
+                                answers: [
+                                    Answer(id: UUID(), title: "always_ub", isCorrect: false),
+                                    Answer(id: UUID(), title: "allowed_but_may_lead_to_double_panic_and_abort", isCorrect: true),
+                                    Answer(id: UUID(), title: "ignored", isCorrect: false),
+                                    Answer(id: UUID(), title: "forbidden_by_compiler", isCorrect: false)
+                                ],
+                                descriptionText: "panic_in_drop_is_dangerous_during_ongoing_panic_double_panic",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 42
+                            Question(
+                                id: UUID(),
+                                title: "what_doesnt_refcell_t_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "allows_mutation_with_ref_self", isCorrect: false),
+                                    Answer(id: UUID(), title: "makes_type_thread_safe", isCorrect: true),
+                                    Answer(id: UUID(), title: "checks_borrows_at_runtime", isCorrect: false),
+                                    Answer(id: UUID(), title: "returns_ref_refmut", isCorrect: false)
+                                ],
+                                descriptionText: "refcell_is_not_thread_safe",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 43
+                            Question(
+                                id: UUID(),
+                                title: "why_can_ref_string_be_coerced_to_ref_str",
+                                answers: [
+                                    Answer(id: UUID(), title: "special_compiler_magic", isCorrect: false),
+                                    Answer(id: UUID(), title: "because_string_deref_target_str", isCorrect: true),
+                                    Answer(id: UUID(), title: "because_str_deref_string", isCorrect: false),
+                                    Answer(id: UUID(), title: "because_string_asref_str_and_its_automatic", isCorrect: false)
+                                ],
+                                descriptionText: "string_implements_deref_with_target_str",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 44
+                            Question(
+                                id: UUID(),
+                                title: "what_is_a_recursive_type_with_known_size",
+                                answers: [
+                                    Answer(id: UUID(), title: "type_where_all_variants_are_equal_in_size", isCorrect: false),
+                                    Answer(id: UUID(), title: "recursive_type_where_recursion_goes_through_pointer_box_rc_ref", isCorrect: true),
+                                    Answer(id: UUID(), title: "type_that_doesnt_use_box", isCorrect: false),
+                                    Answer(id: UUID(), title: "type_whose_size_is_computed_at_runtime", isCorrect: false)
+                                ],
+                                descriptionText: "recursion_via_indirection_makes_size_computable",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 45
+                            Question(
+                                id: UUID(),
+                                title: "what_happens_when_printing_cyclic_rc_structure_without_protection",
+                                answers: [
+                                    Answer(id: UUID(), title: "everything_prints", isCorrect: false),
+                                    Answer(id: UUID(), title: "compiler_forbids", isCorrect: false),
+                                    Answer(id: UUID(), title: "possible_stack_overflow_infinite_recursion", isCorrect: true),
+                                    Answer(id: UUID(), title: "returns_none", isCorrect: false)
+                                ],
+                                descriptionText: "infinite_cycle_causes_stack_overflow",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 46
+                            Question(
+                                id: UUID(),
+                                title: "when_is_it_appropriate_to_call_drop_x_manually",
+                                answers: [
+                                    Answer(id: UUID(), title: "never", isCorrect: false),
+                                    Answer(id: UUID(), title: "when_need_to_free_resource_before_end_of_scope_eg_mutex", isCorrect: true),
+                                    Answer(id: UUID(), title: "to_speed_up_program", isCorrect: false),
+                                    Answer(id: UUID(), title: "to_decrease_rc_strong_count", isCorrect: false)
+                                ],
+                                descriptionText: "early_drop_useful_for_releasing_locks_and_resources",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 47
+                            Question(
+                                id: UUID(),
+                                title: "what_does_weak_t_store",
+                                answers: [
+                                    Answer(id: UUID(), title: "strong_reference", isCorrect: false),
+                                    Answer(id: UUID(), title: "weak_reference_not_preventing_deallocation", isCorrect: true),
+                                    Answer(id: UUID(), title: "copy_of_data", isCorrect: false),
+                                    Answer(id: UUID(), title: "offset_for_zst", isCorrect: false)
+                                ],
+                                descriptionText: "weak_doesnt_keep_data_alive",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 48
+                            Question(
+                                id: UUID(),
+                                title: "how_to_check_if_object_pointed_to_by_weak_t_is_alive",
+                                answers: [
+                                    Answer(id: UUID(), title: "is_alive", isCorrect: false),
+                                    Answer(id: UUID(), title: "try", isCorrect: false),
+                                    Answer(id: UUID(), title: "upgrade_is_some", isCorrect: true),
+                                    Answer(id: UUID(), title: "alive", isCorrect: false)
+                                ],
+                                descriptionText: "upgrade_returns_some_if_still_alive",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 49
+                            Question(
+                                id: UUID(),
+                                title: "how_does_rc_t_differ_from_box_t",
+                                answers: [
+                                    Answer(id: UUID(), title: "rc_is_single_owner_box_is_shared", isCorrect: false),
+                                    Answer(id: UUID(), title: "rc_is_shared_owner_box_is_single", isCorrect: true),
+                                    Answer(id: UUID(), title: "both_are_shared_owners", isCorrect: false),
+                                    Answer(id: UUID(), title: "both_are_single_owners", isCorrect: false)
+                                ],
+                                descriptionText: "rc_allows_multiple_owners_box_is_single_ownership",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 50
+                            Question(
+                                id: UUID(),
+                                title: "what_happens_with_refmut_t_if_you_try_to_take_borrow_in_parallel",
+                                answers: [
+                                    Answer(id: UUID(), title: "returns_another_refmut", isCorrect: false),
+                                    Answer(id: UUID(), title: "returns_ref", isCorrect: false),
+                                    Answer(id: UUID(), title: "runtime_panic", isCorrect: true),
+                                    Answer(id: UUID(), title: "compiles_but_ub", isCorrect: false)
+                                ],
+                                descriptionText: "cannot_have_immutable_and_mutable_borrows_simultaneously",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 51
+                            Question(
+                                id: UUID(),
+                                title: "why_is_refcell_t_only_for_single_threaded_code",
+                                answers: [
+                                    Answer(id: UUID(), title: "doesnt_implement_sync_send", isCorrect: true),
+                                    Answer(id: UUID(), title: "because_its_slow", isCorrect: false),
+                                    Answer(id: UUID(), title: "requires_unsafe", isCorrect: false),
+                                    Answer(id: UUID(), title: "because_its_deprecated", isCorrect: false)
+                                ],
+                                descriptionText: "refcell_not_thread_safe_lacks_sync_send",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 52
+                            Question(
+                                id: UUID(),
+                                title: "what_properties_does_rc_refcell_t_provide",
+                                answers: [
+                                    Answer(id: UUID(), title: "multiple_mutation_without_checks", isCorrect: false),
+                                    Answer(id: UUID(), title: "multiple_mutation_with_compile_time_checks", isCorrect: false),
+                                    Answer(id: UUID(), title: "multiple_ownership_plus_runtime_mutation_checks", isCorrect: true),
+                                    Answer(id: UUID(), title: "multiple_ownership_plus_thread_safety", isCorrect: false)
+                                ],
+                                descriptionText: "combines_shared_ownership_with_interior_mutability",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 53
+                            Question(
+                                id: UUID(),
+                                title: "what_happens_if_last_rc_t_is_destroyed_but_weak_t_remain",
+                                answers: [
+                                    Answer(id: UUID(), title: "data_lives_until_last_weak", isCorrect: false),
+                                    Answer(id: UUID(), title: "data_freed_weak_upgrade_returns_none", isCorrect: true),
+                                    Answer(id: UUID(), title: "data_not_freed", isCorrect: false),
+                                    Answer(id: UUID(), title: "panic", isCorrect: false)
+                                ],
+                                descriptionText: "weak_references_dont_keep_data_alive",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 54
+                            Question(
+                                id: UUID(),
+                                title: "why_are_just_references_ref_t_in_recursive_type_inconvenient",
+                                answers: [
+                                    Answer(id: UUID(), title: "always_slower", isCorrect: false),
+                                    Answer(id: UUID(), title: "require_lifetimes_and_often_dont_express_needed_ownership", isCorrect: true),
+                                    Answer(id: UUID(), title: "forbidden_in_enum", isCorrect: false),
+                                    Answer(id: UUID(), title: "dont_work_with_vec", isCorrect: false)
+                                ],
+                                descriptionText: "lifetimes_complicate_ownership_semantics",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 55
+                            Question(
+                                id: UUID(),
+                                title: "what_is_derive_debug_useful_for_in_list_tree_examples",
+                                answers: [
+                                    Answer(id: UUID(), title: "for_cloning", isCorrect: false),
+                                    Answer(id: UUID(), title: "for_automatic_drop", isCorrect: false),
+                                    Answer(id: UUID(), title: "for_convenient_debug_printing_of_structures", isCorrect: true),
+                                    Answer(id: UUID(), title: "for_optimizations", isCorrect: false)
+                                ],
+                                descriptionText: "enables_debug_formatting",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 56
+                            Question(
+                                id: UUID(),
+                                title: "why_can_rc_plus_refcell_lead_to_leaks",
+                                answers: [
+                                    Answer(id: UUID(), title: "because_of_refcell", isCorrect: false),
+                                    Answer(id: UUID(), title: "because_of_panics", isCorrect: false),
+                                    Answer(id: UUID(), title: "because_of_strong_reference_cycles_in_rc", isCorrect: true),
+                                    Answer(id: UUID(), title: "because_of_deref", isCorrect: false)
+                                ],
+                                descriptionText: "cycles_prevent_reference_count_from_reaching_zero",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 57
+                            Question(
+                                id: UUID(),
+                                title: "how_to_break_cycle_in_rc_graph",
+                                answers: [
+                                    Answer(id: UUID(), title: "use_box_instead_of_rc", isCorrect: false),
+                                    Answer(id: UUID(), title: "use_weak_in_edges_where_ownership_not_required", isCorrect: true),
+                                    Answer(id: UUID(), title: "switch_to_refcell", isCorrect: false),
+                                    Answer(id: UUID(), title: "forbidden_in_rust", isCorrect: false)
+                                ],
+                                descriptionText: "weak_breaks_strong_reference_cycles",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 58
+                            Question(
+                                id: UUID(),
+                                title: "whats_true_about_box_t_and_performance",
+                                answers: [
+                                    Answer(id: UUID(), title: "always_faster_than_stack", isCorrect: false),
+                                    Answer(id: UUID(), title: "no_overhead_except_heap_indirection", isCorrect: true),
+                                    Answer(id: UUID(), title: "10x_slower_everywhere", isCorrect: false),
+                                    Answer(id: UUID(), title: "significantly_slows_compilation", isCorrect: false)
+                                ],
+                                descriptionText: "box_is_zero_cost_abstraction_except_heap_allocation",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 59
+                            Question(
+                                id: UUID(),
+                                title: "can_you_store_unsized_types_dst_in_box",
+                                answers: [
+                                    Answer(id: UUID(), title: "no", isCorrect: false),
+                                    Answer(id: UUID(), title: "yes_eg_box_str_or_box_t", isCorrect: true),
+                                    Answer(id: UUID(), title: "only_in_nightly", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_through_unsafe", isCorrect: false)
+                                ],
+                                descriptionText: "box_supports_dynamically_sized_types",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 60
+                            Question(
+                                id: UUID(),
+                                title: "why_shouldnt_you_call_drop_in_drop_drop_on_same_object",
+                                answers: [
+                                    Answer(id: UUID(), title: "it_speeds_up", isCorrect: false),
+                                    Answer(id: UUID(), title: "leads_to_double_destruction_panic", isCorrect: true),
+                                    Answer(id: UUID(), title: "requires_unsafe", isCorrect: false),
+                                    Answer(id: UUID(), title: "meaningless_no_such_api", isCorrect: false)
+                                ],
+                                descriptionText: "double_drop_causes_undefined_behavior",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 61
+                            Question(
+                                id: UUID(),
+                                title: "what_makes_ref_t_useful",
+                                answers: [
+                                    Answer(id: UUID(), title: "its_ref_t_with_borrow_counting", isCorrect: true),
+                                    Answer(id: UUID(), title: "its_rc_t", isCorrect: false),
+                                    Answer(id: UUID(), title: "its_box_t", isCorrect: false),
+                                    Answer(id: UUID(), title: "its_weak_t", isCorrect: false)
+                                ],
+                                descriptionText: "ref_tracks_borrows_at_runtime",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 62
+                            Question(
+                                id: UUID(),
+                                title: "what_if_ref_t_hasnt_left_scope_and_we_take_borrow_mut",
+                                answers: [
+                                    Answer(id: UUID(), title: "returns_some", isCorrect: false),
+                                    Answer(id: UUID(), title: "will_panic_with_borrowmuterror", isCorrect: true),
+                                    Answer(id: UUID(), title: "compilation_fails", isCorrect: false),
+                                    Answer(id: UUID(), title: "implicit_drop_occurs", isCorrect: false)
+                                ],
+                                descriptionText: "cannot_have_immutable_and_mutable_borrows_at_same_time",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 63
+                            Question(
+                                id: UUID(),
+                                title: "why_doesnt_rc_t_have_method_to_always_get_ref_mut_t",
+                                answers: [
+                                    Answer(id: UUID(), title: "there_is_as_mut", isCorrect: false),
+                                    Answer(id: UUID(), title: "there_is_get_unchecked_mut", isCorrect: false),
+                                    Answer(id: UUID(), title: "because_there_can_be_multiple_owners_and_unique_mutation_isnt_safe", isCorrect: true),
+                                    Answer(id: UUID(), title: "because_t_may_not_be_copy", isCorrect: false)
+                                ],
+                                descriptionText: "multiple_ownership_prevents_exclusive_mutable_access",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 64
+                            Question(
+                                id: UUID(),
+                                title: "what_does_cons_rc_refcell_i32_rc_list_mean_for_mutation",
+                                answers: [
+                                    Answer(id: UUID(), title: "cannot_mutate", isCorrect: false),
+                                    Answer(id: UUID(), title: "can_only_mutate_tail", isCorrect: false),
+                                    Answer(id: UUID(), title: "can_mutate_number_inside_list_via_borrow_mut", isCorrect: true),
+                                    Answer(id: UUID(), title: "can_only_mutate_through_unsafe", isCorrect: false)
+                                ],
+                                descriptionText: "refcell_allows_interior_mutability_of_shared_data",
+                                descriptionLink: "smart_pointers_link"
+                            ),
+                            
+                            // Question 65
+                            Question(
+                                id: UUID(),
+                                title: "whats_the_main_advantage_of_smart_pointers_in_rust",
+                                answers: [
+                                    Answer(id: UUID(), title: "garbage_collector", isCorrect: false),
+                                    Answer(id: UUID(), title: "zero_cost_abstractions_when_used_correctly", isCorrect: true),
+                                    Answer(id: UUID(), title: "automatic_unsafe", isCorrect: false),
+                                    Answer(id: UUID(), title: "ability_to_bypass_borrow_checker_everywhere", isCorrect: false)
+                                ],
+                                descriptionText: "smart_pointers_provide_safety_without_runtime_overhead",
+                                descriptionLink: "smart_pointers_link"
+                            )
+                        ]
+                    ),
+                    Quiz(
+                        id: UUID(),
+                        theme: "fearless_concurrency",
+                        priority: 12,
+                        questions: [
+                            // Question 1
+                            Question(
+                                id: UUID(),
+                                title: "what_is_a_thread_in_the_context_of_rust_standard_library",
+                                answers: [
+                                    Answer(id: UUID(), title: "lightweight_green_thread_of_runtime", isCorrect: false),
+                                    Answer(id: UUID(), title: "one_to_one_correspondence_with_os_thread", isCorrect: true),
+                                    Answer(id: UUID(), title: "os_process", isCorrect: false),
+                                    Answer(id: UUID(), title: "asynchronous_task", isCorrect: false)
+                                ],
+                                descriptionText: "rust_standard_library_uses_one_to_one_model_os_thread_per_thread",
+                                descriptionLink: "fearless_concurrency_link"
+                            ),
+                            
+                            // Question 2
+                            Question(
+                                id: UUID(),
+                                title: "what_does_thread_spawn_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "starts_a_new_process", isCorrect: false),
+                                    Answer(id: UUID(), title: "creates_a_new_thread_and_returns_joinhandle_t", isCorrect: true),
+                                    Answer(id: UUID(), title: "blocks_current_thread", isCorrect: false),
+                                    Answer(id: UUID(), title: "returns_result", isCorrect: false)
+                                ],
+                                descriptionText: "spawn_accepts_a_closure_and_returns_a_handle_for_joining",
+                                descriptionLink: "fearless_concurrency_link"
+                            ),
+                            
+                            // Question 3
+                            Question(
+                                id: UUID(),
+                                title: "what_is_joinhandle_join_for",
+                                answers: [
+                                    Answer(id: UUID(), title: "to_kill_the_thread", isCorrect: false),
+                                    Answer(id: UUID(), title: "to_wait_for_thread_completion_and_get_result", isCorrect: true),
+                                    Answer(id: UUID(), title: "to_detach_the_thread", isCorrect: false),
+                                    Answer(id: UUID(), title: "to_increase_thread_priority", isCorrect: false)
+                                ],
+                                descriptionText: "join_blocks_calling_thread_until_spawned_one_finishes",
+                                descriptionLink: "fearless_concurrency_link"
+                            ),
+                            
+                            // Question 4
+                            Question(
+                                id: UUID(),
+                                title: "what_happens_to_child_threads_if_main_thread_exits",
+                                answers: [
+                                    Answer(id: UUID(), title: "they_continue_running", isCorrect: false),
+                                    Answer(id: UUID(), title: "runtime_takes_over_their_work", isCorrect: false),
+                                    Answer(id: UUID(), title: "they_are_terminated_prematurely", isCorrect: true),
+                                    Answer(id: UUID(), title: "nothing_behavior_is_undefined", isCorrect: false)
+                                ],
+                                descriptionText: "child_threads_terminate_when_main_exits",
+                                descriptionLink: "fearless_concurrency_link"
+                            ),
+                            
+                            // Question 5
+                            Question(
+                                id: UUID(),
+                                title: "why_is_the_move_keyword_often_used_in_closures_passed_to_spawn",
+                                answers: [
+                                    Answer(id: UUID(), title: "to_speed_up_execution", isCorrect: false),
+                                    Answer(id: UUID(), title: "to_make_closure_capture_values_by_reference", isCorrect: false),
+                                    Answer(id: UUID(), title: "to_make_closure_move_ownership_of_captured_values_into_thread", isCorrect: true),
+                                    Answer(id: UUID(), title: "to_make_closure_fnmut", isCorrect: false)
+                                ],
+                                descriptionText: "move_transfers_ownership_to_thread",
+                                descriptionLink: "fearless_concurrency_link"
+                            ),
+                            
+                            // Question 6
+                            Question(
+                                id: UUID(),
+                                title: "why_might_code_using_borrows_from_outer_scope_without_move_not_compile",
+                                answers: [
+                                    Answer(id: UUID(), title: "compiler_doesnt_support_references_in_threads", isCorrect: false),
+                                    Answer(id: UUID(), title: "static_is_required_for_data_used_by_thread", isCorrect: true),
+                                    Answer(id: UUID(), title: "always_need_arc", isCorrect: false),
+                                    Answer(id: UUID(), title: "references_are_forbidden_in_rust", isCorrect: false)
+                                ],
+                                descriptionText: "thread_can_outlive_current_scope_so_captured_data_must_be_static_or_moved_inside",
+                                descriptionLink: "fearless_concurrency_link"
+                            ),
+                            
+                            // Question 7
+                            Question(
+                                id: UUID(),
+                                title: "channels_std_sync_mpsc_are",
+                                answers: [
+                                    Answer(id: UUID(), title: "multiple_consumer_single_producer", isCorrect: false),
+                                    Answer(id: UUID(), title: "single_consumer_multiple_producers", isCorrect: true),
+                                    Answer(id: UUID(), title: "multiple_consumer_multiple_producer", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_single_producer_and_consumer", isCorrect: false)
+                                ],
+                                descriptionText: "mpsc_means_multiple_producer_single_consumer",
+                                descriptionLink: "fearless_concurrency_link"
+                            ),
+                            
+                            // Question 8
+                            Question(
+                                id: UUID(),
+                                title: "what_does_mpsc_channel_return",
+                                answers: [
+                                    Answer(id: UUID(), title: "sender_t_receiver_t", isCorrect: true),
+                                    Answer(id: UUID(), title: "result_sender_t_receiver_t", isCorrect: false),
+                                    Answer(id: UUID(), title: "arc_mutex_t", isCorrect: false),
+                                    Answer(id: UUID(), title: "joinhandle_sender_t_receiver_t", isCorrect: false)
+                                ],
+                                descriptionText: "returns_tuple_of_sender_and_receiver",
+                                descriptionLink: "fearless_concurrency_link"
+                            ),
+                            
+                            // Question 9
+                            Question(
+                                id: UUID(),
+                                title: "what_does_sender_send_value_do_in_terms_of_ownership",
+                                answers: [
+                                    Answer(id: UUID(), title: "copies_the_value", isCorrect: false),
+                                    Answer(id: UUID(), title: "moves_the_value_to_another_thread", isCorrect: true),
+                                    Answer(id: UUID(), title: "borrows_the_value", isCorrect: false),
+                                    Answer(id: UUID(), title: "none_of_these", isCorrect: false)
+                                ],
+                                descriptionText: "send_transfers_ownership",
+                                descriptionLink: "fearless_concurrency_link"
+                            ),
+                            
+                            // Question 10
+                            Question(
+                                id: UUID(),
+                                title: "how_does_recv_differ_from_try_recv_on_receiver",
+                                answers: [
+                                    Answer(id: UUID(), title: "recv_is_non_blocking_try_recv_is_blocking", isCorrect: false),
+                                    Answer(id: UUID(), title: "both_block", isCorrect: false),
+                                    Answer(id: UUID(), title: "recv_blocks_try_recv_returns_immediately", isCorrect: true),
+                                    Answer(id: UUID(), title: "both_are_non_blocking", isCorrect: false)
+                                ],
+                                descriptionText: "recv_waits_try_recv_does_not",
+                                descriptionLink: "fearless_concurrency_link"
+                            ),
+                            
+                            // Question 11
+                            Question(
+                                id: UUID(),
+                                title: "can_you_have_multiple_senders_for_one_receiver",
+                                answers: [
+                                    Answer(id: UUID(), title: "no", isCorrect: false),
+                                    Answer(id: UUID(), title: "yes_via_clone_of_sender", isCorrect: true),
+                                    Answer(id: UUID(), title: "only_through_arc_sender", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_in_nightly", isCorrect: false)
+                                ],
+                                descriptionText: "sender_can_be_cloned_for_multiple_producers",
+                                descriptionLink: "fearless_concurrency_link"
+                            ),
+                            
+                            // Question 12
+                            Question(
+                                id: UUID(),
+                                title: "what_happens_when_sending_on_a_channel_if_receiver_is_already_closed",
+                                answers: [
+                                    Answer(id: UUID(), title: "blocks_forever", isCorrect: false),
+                                    Answer(id: UUID(), title: "process_crashes", isCorrect: false),
+                                    Answer(id: UUID(), title: "send_returns_error", isCorrect: true),
+                                    Answer(id: UUID(), title: "message_is_lost_without_error", isCorrect: false)
+                                ],
+                                descriptionText: "send_fails_when_receiver_dropped",
+                                descriptionLink: "fearless_concurrency_link"
+                            ),
+                            
+                            // Question 13
+                            Question(
+                                id: UUID(),
+                                title: "how_does_the_message_passing_approach_slogan_sound",
+                                answers: [
+                                    Answer(id: UUID(), title: "communicate_by_sharing_memory", isCorrect: false),
+                                    Answer(id: UUID(), title: "dont_share_memory_to_communicate_communicate_to_share_memory", isCorrect: true),
+                                    Answer(id: UUID(), title: "use_global_variables", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_mutexes_only_hardcore", isCorrect: false)
+                                ],
+                                descriptionText: "rust_philosophy_on_concurrency",
+                                descriptionLink: "fearless_concurrency_link"
+                            ),
+                            
+                            // Question 14
+                            Question(
+                                id: UUID(),
+                                title: "what_is_mutex_t",
+                                answers: [
+                                    Answer(id: UUID(), title: "primitive_allowing_only_one_thread_to_own_t_at_any_moment", isCorrect: true),
+                                    Answer(id: UUID(), title: "asynchronous_queue", isCorrect: false),
+                                    Answer(id: UUID(), title: "atomic_counter", isCorrect: false),
+                                    Answer(id: UUID(), title: "read_write_lock", isCorrect: false)
+                                ],
+                                descriptionText: "mutex_provides_mutual_exclusion",
+                                descriptionLink: "fearless_concurrency_link"
+                            ),
+                            
+                            // Question 15
+                            Question(
+                                id: UUID(),
+                                title: "what_does_mutex_lock_return_on_success",
+                                answers: [
+                                    Answer(id: UUID(), title: "ref_mut_t", isCorrect: false),
+                                    Answer(id: UUID(), title: "mutexguard_t", isCorrect: true),
+                                    Answer(id: UUID(), title: "arc_t", isCorrect: false),
+                                    Answer(id: UUID(), title: "option_ref_mut_t", isCorrect: false)
+                                ],
+                                descriptionText: "mutexguard_implements_deref_derefmut_and_releases_lock_in_drop",
+                                descriptionLink: "fearless_concurrency_link"
+                            ),
+                            
+                            // Question 16
+                            Question(
+                                id: UUID(),
+                                title: "when_is_mutex_lock_released",
+                                answers: [
+                                    Answer(id: UUID(), title: "on_explicit_unlock", isCorrect: false),
+                                    Answer(id: UUID(), title: "when_mutexguard_goes_out_of_scope_drop", isCorrect: true),
+                                    Answer(id: UUID(), title: "on_calling_mem_drop_mutex", isCorrect: false),
+                                    Answer(id: UUID(), title: "when_all_threads_finish", isCorrect: false)
+                                ],
+                                descriptionText: "lock_released_automatically_via_drop",
+                                descriptionLink: "fearless_concurrency_link"
+                            ),
+                            
+                            // Question 17
+                            Question(
+                                id: UUID(),
+                                title: "why_cant_rc_t_be_used_between_threads",
+                                answers: [
+                                    Answer(id: UUID(), title: "because_its_slow", isCorrect: false),
+                                    Answer(id: UUID(), title: "because_rc_t_is_not_send", isCorrect: true),
+                                    Answer(id: UUID(), title: "because_rc_t_is_not_clone", isCorrect: false),
+                                    Answer(id: UUID(), title: "because_rc_t_is_not_sync_and_has_no_drop", isCorrect: false)
+                                ],
+                                descriptionText: "reference_count_modification_in_rc_is_not_thread_safe",
+                                descriptionLink: "fearless_concurrency_link"
+                            ),
+                            
+                            // Question 18
+                            Question(
+                                id: UUID(),
+                                title: "how_does_arc_t_differ_from_rc_t",
+                                answers: [
+                                    Answer(id: UUID(), title: "nothing", isCorrect: false),
+                                    Answer(id: UUID(), title: "arc_t_is_thread_safe_atomic_counter_rc_t_is_not", isCorrect: true),
+                                    Answer(id: UUID(), title: "arc_t_cannot_be_cloned", isCorrect: false),
+                                    Answer(id: UUID(), title: "arc_t_is_slower_and_forbidden", isCorrect: false)
+                                ],
+                                descriptionText: "arc_uses_atomic_operations_for_thread_safety",
+                                descriptionLink: "fearless_concurrency_link"
+                            ),
+                            
+                            // Question 19
+                            Question(
+                                id: UUID(),
+                                title: "how_to_organize_many_owners_plus_mutation_in_multithreaded_code",
+                                answers: [
+                                    Answer(id: UUID(), title: "rc_t_plus_refcell_t", isCorrect: false),
+                                    Answer(id: UUID(), title: "arc_t_plus_refcell_t", isCorrect: false),
+                                    Answer(id: UUID(), title: "arc_t_plus_mutex_t", isCorrect: true),
+                                    Answer(id: UUID(), title: "box_t_plus_mutex_t", isCorrect: false)
+                                ],
+                                descriptionText: "arc_for_sharing_mutex_for_safe_mutation",
+                                descriptionLink: "fearless_concurrency_link"
+                            ),
+                            
+                            // Question 20
+                            Question(
+                                id: UUID(),
+                                title: "what_logic_defect_is_common_with_mutex_t",
+                                answers: [
+                                    Answer(id: UUID(), title: "memory_leak_always", isCorrect: false),
+                                    Answer(id: UUID(), title: "data_race", isCorrect: false),
+                                    Answer(id: UUID(), title: "deadlock_mutual_blocking", isCorrect: true),
+                                    Answer(id: UUID(), title: "impossible_to_compile", isCorrect: false)
+                                ],
+                                descriptionText: "mutexes_can_cause_deadlocks",
+                                descriptionLink: "fearless_concurrency_link"
+                            ),
+                            
+                            // Question 21
+                            Question(
+                                id: UUID(),
+                                title: "what_does_the_marker_trait_send_mean",
+                                answers: [
+                                    Answer(id: UUID(), title: "type_can_be_safely_passed_between_threads_by_reference", isCorrect: false),
+                                    Answer(id: UUID(), title: "ownership_of_types_value_can_be_transferred_between_threads", isCorrect: true),
+                                    Answer(id: UUID(), title: "type_is_thread_safe_for_concurrent_reading", isCorrect: false),
+                                    Answer(id: UUID(), title: "type_cannot_be_passed_between_threads", isCorrect: false)
+                                ],
+                                descriptionText: "send_means_safe_to_move_between_threads",
+                                descriptionLink: "fearless_concurrency_link"
+                            ),
+                            
+                            // Question 22
+                            Question(
+                                id: UUID(),
+                                title: "what_does_the_marker_trait_sync_mean",
+                                answers: [
+                                    Answer(id: UUID(), title: "type_can_be_copied", isCorrect: false),
+                                    Answer(id: UUID(), title: "type_can_be_moved", isCorrect: false),
+                                    Answer(id: UUID(), title: "ref_t_can_be_safely_shared_between_threads", isCorrect: true),
+                                    Answer(id: UUID(), title: "ref_mut_t_can_be_shared_between_threads", isCorrect: false)
+                                ],
+                                descriptionText: "sync_means_safe_to_share_references_between_threads",
+                                descriptionLink: "fearless_concurrency_link"
+                            ),
+                            
+                            // Question 23
+                            Question(
+                                id: UUID(),
+                                title: "is_send_sync_automatically_derived_implemented",
+                                answers: [
+                                    Answer(id: UUID(), title: "no_only_manually", isCorrect: false),
+                                    Answer(id: UUID(), title: "yes_if_all_component_types_are_also_send_sync", isCorrect: true),
+                                    Answer(id: UUID(), title: "only_for_primitives", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_in_nightly", isCorrect: false)
+                                ],
+                                descriptionText: "send_sync_are_auto_traits",
+                                descriptionLink: "fearless_concurrency_link"
+                            ),
+                            
+                            // Question 24
+                            Question(
+                                id: UUID(),
+                                title: "can_send_sync_be_implemented_manually",
+                                answers: [
+                                    Answer(id: UUID(), title: "yes_its_always_safe", isCorrect: false),
+                                    Answer(id: UUID(), title: "yes_but_its_unsafe_and_requires_great_care", isCorrect: true),
+                                    Answer(id: UUID(), title: "no_forbidden", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_send_can_be", isCorrect: false)
+                                ],
+                                descriptionText: "manual_implementation_requires_unsafe",
+                                descriptionLink: "fearless_concurrency_link"
+                            ),
+                            
+                            // Question 25
+                            Question(
+                                id: UUID(),
+                                title: "why_is_refcell_t_not_sync",
+                                answers: [
+                                    Answer(id: UUID(), title: "because_its_expensive", isCorrect: false),
+                                    Answer(id: UUID(), title: "because_it_checks_borrows_at_runtime_which_is_not_thread_safe", isCorrect: true),
+                                    Answer(id: UUID(), title: "because_it_has_no_drop", isCorrect: false),
+                                    Answer(id: UUID(), title: "because_its_not_clone", isCorrect: false)
+                                ],
+                                descriptionText: "refcell_runtime_checks_are_not_thread_safe",
+                                descriptionLink: "fearless_concurrency_link"
+                            ),
+                            
+                            // Question 26
+                            Question(
+                                id: UUID(),
+                                title: "how_to_get_result_from_thread_launched_with_spawn",
+                                answers: [
+                                    Answer(id: UUID(), title: "global_variable", isCorrect: false),
+                                    Answer(id: UUID(), title: "mpsc_channel", isCorrect: false),
+                                    Answer(id: UUID(), title: "via_return_value_from_closure_and_join", isCorrect: true),
+                                    Answer(id: UUID(), title: "no_way", isCorrect: false)
+                                ],
+                                descriptionText: "join_returns_result_of_closure",
+                                descriptionLink: "fearless_concurrency_link"
+                            ),
+                            
+                            // Question 27
+                            Question(
+                                id: UUID(),
+                                title: "what_happens_if_you_try_to_use_a_value_after_send_val",
+                                answers: [
+                                    Answer(id: UUID(), title: "compiles_and_copies_value", isCorrect: false),
+                                    Answer(id: UUID(), title: "compilation_error_value_was_moved", isCorrect: true),
+                                    Answer(id: UUID(), title: "runtime_panic", isCorrect: false),
+                                    Answer(id: UUID(), title: "ub", isCorrect: false)
+                                ],
+                                descriptionText: "send_moves_value_preventing_further_use",
+                                descriptionLink: "fearless_concurrency_link"
+                            ),
+                            
+                            // Question 28
+                            Question(
+                                id: UUID(),
+                                title: "why_does_output_order_from_threads_differ_between_runs",
+                                answers: [
+                                    Answer(id: UUID(), title: "due_to_undefined_behavior", isCorrect: false),
+                                    Answer(id: UUID(), title: "due_to_os_scheduler_and_lack_of_execution_order_guarantees", isCorrect: true),
+                                    Answer(id: UUID(), title: "due_to_println", isCorrect: false),
+                                    Answer(id: UUID(), title: "designed_that_way_but_always_deterministic", isCorrect: false)
+                                ],
+                                descriptionText: "thread_scheduling_is_non_deterministic",
+                                descriptionLink: "fearless_concurrency_link"
+                            ),
+                            
+                            // Question 29
+                            Question(
+                                id: UUID(),
+                                title: "what_does_thread_sleep_duration_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "blocks_all_process_threads", isCorrect: false),
+                                    Answer(id: UUID(), title: "puts_current_thread_to_sleep_giving_others_a_chance", isCorrect: true),
+                                    Answer(id: UUID(), title: "switches_context_to_specified_thread", isCorrect: false),
+                                    Answer(id: UUID(), title: "speeds_up_execution", isCorrect: false)
+                                ],
+                                descriptionText: "sleep_pauses_current_thread",
+                                descriptionLink: "fearless_concurrency_link"
+                            ),
+                            
+                            // Question 30
+                            Question(
+                                id: UUID(),
+                                title: "can_you_iterate_over_receiver_as_an_iterator",
+                                answers: [
+                                    Answer(id: UUID(), title: "no", isCorrect: false),
+                                    Answer(id: UUID(), title: "yes_while_channel_is_not_closed", isCorrect: true),
+                                    Answer(id: UUID(), title: "yes_but_only_once", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_through_try_iter_in_nightly", isCorrect: false)
+                                ],
+                                descriptionText: "receiver_implements_iterator",
+                                descriptionLink: "fearless_concurrency_link"
+                            ),
+                            
+                            // Question 31
+                            Question(
+                                id: UUID(),
+                                title: "what_happens_if_join_is_called_before_main_thread_does_its_work",
+                                answers: [
+                                    Answer(id: UUID(), title: "nothing", isCorrect: false),
+                                    Answer(id: UUID(), title: "there_will_be_interleaving", isCorrect: false),
+                                    Answer(id: UUID(), title: "main_thread_waits_then_executes_its_work_no_interleaving", isCorrect: true),
+                                    Answer(id: UUID(), title: "thread_exits_with_error", isCorrect: false)
+                                ],
+                                descriptionText: "join_blocks_until_thread_completes",
+                                descriptionLink: "fearless_concurrency_link"
+                            ),
+                            
+                            // Question 32
+                            Question(
+                                id: UUID(),
+                                title: "what_primitive_is_simpler_and_faster_for_simple_numeric_counters_in_multithreading",
+                                answers: [
+                                    Answer(id: UUID(), title: "arc_mutex_i32", isCorrect: false),
+                                    Answer(id: UUID(), title: "std_sync_atomic_atomici32", isCorrect: true),
+                                    Answer(id: UUID(), title: "rc_cell_i32", isCorrect: false),
+                                    Answer(id: UUID(), title: "box_i32", isCorrect: false)
+                                ],
+                                descriptionText: "atomics_are_faster_for_simple_counters",
+                                descriptionLink: "fearless_concurrency_link"
+                            ),
+                            
+                            // Question 33
+                            Question(
+                                id: UUID(),
+                                title: "what_does_fearless_concurrency_mean_in_rust",
+                                answers: [
+                                    Answer(id: UUID(), title: "complete_absence_of_errors", isCorrect: false),
+                                    Answer(id: UUID(), title: "concurrent_code_without_locks", isCorrect: false),
+                                    Answer(id: UUID(), title: "most_concurrency_errors_become_compile_errors_thanks_to_ownership_system_and_types", isCorrect: true),
+                                    Answer(id: UUID(), title: "universal_green_threads", isCorrect: false)
+                                ],
+                                descriptionText: "compile_time_guarantees_prevent_concurrency_bugs",
+                                descriptionLink: "fearless_concurrency_link"
+                            ),
+                            
+                            // Question 34
+                            Question(
+                                id: UUID(),
+                                title: "whats_the_key_difference_between_messaging_vs_shared_state",
+                                answers: [
+                                    Answer(id: UUID(), title: "messages_are_slower_shared_state_is_faster", isCorrect: false),
+                                    Answer(id: UUID(), title: "messages_transfer_ownership_shared_state_shares_memory_between_threads", isCorrect: true),
+                                    Answer(id: UUID(), title: "no_difference", isCorrect: false),
+                                    Answer(id: UUID(), title: "messages_require_unsafe", isCorrect: false)
+                                ],
+                                descriptionText: "two_paradigms_for_concurrency",
+                                descriptionLink: "fearless_concurrency_link"
+                            ),
+                            
+                            // Question 35
+                            Question(
+                                id: UUID(),
+                                title: "what_happens_if_thread_with_captured_mutexguard_panics",
+                                answers: [
+                                    Answer(id: UUID(), title: "lock_is_always_released_via_drop_of_mutexguard", isCorrect: true),
+                                    Answer(id: UUID(), title: "lock_remains_forever", isCorrect: false),
+                                    Answer(id: UUID(), title: "leak_occurs", isCorrect: false),
+                                    Answer(id: UUID(), title: "ub", isCorrect: false)
+                                ],
+                                descriptionText: "drop_ensures_lock_release_even_on_panic",
+                                descriptionLink: "fearless_concurrency_link"
+                            ),
+                            
+                            // Question 36
+                            Question(
+                                id: UUID(),
+                                title: "is_it_true_arc_t_itself_provides_mutation_of_t",
+                                answers: [
+                                    Answer(id: UUID(), title: "yes", isCorrect: false),
+                                    Answer(id: UUID(), title: "no_need_additional_primitive_mutex_rwlock_for_safe_mutation", isCorrect: true),
+                                    Answer(id: UUID(), title: "yes_if_t_sync", isCorrect: false),
+                                    Answer(id: UUID(), title: "yes_if_t_send", isCorrect: false)
+                                ],
+                                descriptionText: "arc_only_provides_shared_ownership_not_mutation",
+                                descriptionLink: "fearless_concurrency_link"
+                            ),
+                            
+                            // Question 37
+                            Question(
+                                id: UUID(),
+                                title: "why_does_join_return_result_t_box_any_send_simplified",
+                                answers: [
+                                    Answer(id: UUID(), title: "to_return_lock_status", isCorrect: false),
+                                    Answer(id: UUID(), title: "to_signal_panic_in_child_thread", isCorrect: true),
+                                    Answer(id: UUID(), title: "to_return_sender", isCorrect: false),
+                                    Answer(id: UUID(), title: "to_convert_to_option", isCorrect: false)
+                                ],
+                                descriptionText: "join_propagates_panics_from_child_thread",
+                                descriptionLink: "fearless_concurrency_link"
+                            ),
+                            
+                            // Question 38
+                            Question(
+                                id: UUID(),
+                                title: "can_you_use_move_closure_and_then_use_the_moved_variable_in_main_thread",
+                                answers: [
+                                    Answer(id: UUID(), title: "yes", isCorrect: false),
+                                    Answer(id: UUID(), title: "no_variable_was_moved_use_leads_to_compilation_error", isCorrect: true),
+                                    Answer(id: UUID(), title: "yes_but_only_if_copy", isCorrect: false),
+                                    Answer(id: UUID(), title: "yes_but_only_through_unsafe", isCorrect: false)
+                                ],
+                                descriptionText: "move_transfers_ownership_permanently",
+                                descriptionLink: "fearless_concurrency_link"
+                            ),
+                            
+                            // Question 39
+                            Question(
+                                id: UUID(),
+                                title: "why_is_mutex_t_also_considered_an_implementation_of_interior_mutability",
+                                answers: [
+                                    Answer(id: UUID(), title: "because_mutex_t_is_always_mut", isCorrect: false),
+                                    Answer(id: UUID(), title: "because_it_allows_changing_t_through_immutable_wrapper_arc_mutex_t_while_following_locking_protocol", isCorrect: true),
+                                    Answer(id: UUID(), title: "because_it_uses_refcell", isCorrect: false),
+                                    Answer(id: UUID(), title: "because_it_implements_copy", isCorrect: false)
+                                ],
+                                descriptionText: "mutex_provides_interior_mutability_through_locking",
+                                descriptionLink: "fearless_concurrency_link"
+                            )
+                        ]
+                    ),
+                    Quiz(
+                        id: UUID(),
+                        theme: "async_fundamentals",
+                        priority: 13,
+                        questions: [
+                            // 1
+                            Question(
+                                id: UUID(),
+                                title: "what_is_a_future_in_rust",
+                                answers: [
+                                    Answer(id: UUID(), title: "function_runs_immediately", isCorrect: false),
+                                    Answer(id: UUID(), title: "value_ready_in_future", isCorrect: true),
+                                    Answer(id: UUID(), title: "date_time_datatype", isCorrect: false),
+                                    Answer(id: UUID(), title: "synonym_for_thread", isCorrect: false)
+                                ],
+                                descriptionText: "future_represents_value_becoming_available_later",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 2
+                            Question(
+                                id: UUID(),
+                                title: "keyword_for_async_function",
+                                answers: [
+                                    Answer(id: UUID(), title: "future_kw", isCorrect: false),
+                                    Answer(id: UUID(), title: "await_kw", isCorrect: false),
+                                    Answer(id: UUID(), title: "async_kw", isCorrect: true),
+                                    Answer(id: UUID(), title: "defer_kw", isCorrect: false)
+                                ],
+                                descriptionText: "async_before_fn_or_block_makes_it_async",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 3
+                            Question(
+                                id: UUID(),
+                                title: "what_does_await_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "blocks_thread", isCorrect: false),
+                                    Answer(id: UUID(), title: "suspends_future_yields_to_runtime", isCorrect: true),
+                                    Answer(id: UUID(), title: "deletes_future", isCorrect: false),
+                                    Answer(id: UUID(), title: "creates_new_thread", isCorrect: false)
+                                ],
+                                descriptionText: "await_pauses_and_allows_runtime_to_schedule_others",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 4
+                            Question(
+                                id: UUID(),
+                                title: "parallelism_vs_concurrency",
+                                answers: [
+                                    Answer(id: UUID(), title: "parallelism_on_cores_concurrency_switching", isCorrect: true),
+                                    Answer(id: UUID(), title: "they_are_synonyms", isCorrect: false),
+                                    Answer(id: UUID(), title: "parallelism_only_with_async", isCorrect: false),
+                                    Answer(id: UUID(), title: "concurrency_requires_multithreading", isCorrect: false)
+                                ],
+                                descriptionText: "parallelism_is_simultaneous_concurrency_is_interleaving",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 5
+                            Question(
+                                id: UUID(),
+                                title: "future_trait_readiness_method",
+                                answers: [
+                                    Answer(id: UUID(), title: "check", isCorrect: false),
+                                    Answer(id: UUID(), title: "ready", isCorrect: false),
+                                    Answer(id: UUID(), title: "poll", isCorrect: true),
+                                    Answer(id: UUID(), title: "await_method", isCorrect: false)
+                                ],
+                                descriptionText: "poll_returns_ready_or_pending",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 6
+                            Question(
+                                id: UUID(),
+                                title: "poll_return_type_for_future",
+                                answers: [
+                                    Answer(id: UUID(), title: "bool_type", isCorrect: false),
+                                    Answer(id: UUID(), title: "option_of_t", isCorrect: false),
+                                    Answer(id: UUID(), title: "poll_of_self_output", isCorrect: true),
+                                    Answer(id: UUID(), title: "result_t_e", isCorrect: false)
+                                ],
+                                descriptionText: "poll_returns_poll_self_output_ready_or_pending",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 7
+                            Question(
+                                id: UUID(),
+                                title: "are_futures_lazy",
+                                answers: [
+                                    Answer(id: UUID(), title: "not_lazy_run_immediately", isCorrect: false),
+                                    Answer(id: UUID(), title: "yes_do_nothing_until_await", isCorrect: true),
+                                    Answer(id: UUID(), title: "only_if_explicit", isCorrect: false),
+                                    Answer(id: UUID(), title: "depends_on_runtime", isCorrect: false)
+                                ],
+                                descriptionText: "futures_progress_only_when_polled_or_awaited",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 8
+                            Question(
+                                id: UUID(),
+                                title: "what_is_async_runtime",
+                                answers: [
+                                    Answer(id: UUID(), title: "rust_compiler", isCorrect: false),
+                                    Answer(id: UUID(), title: "library_coordinating_async_code", isCorrect: true),
+                                    Answer(id: UUID(), title: "operating_system", isCorrect: false),
+                                    Answer(id: UUID(), title: "data_type", isCorrect: false)
+                                ],
+                                descriptionText: "runtime_schedules_tasks_provides_async_io",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 9
+                            Question(
+                                id: UUID(),
+                                title: "why_main_not_async_by_default",
+                                answers: [
+                                    Answer(id: UUID(), title: "forbidden_by_syntax", isCorrect: false),
+                                    Answer(id: UUID(), title: "main_initializes_runtime_not_part_of_it", isCorrect: true),
+                                    Answer(id: UUID(), title: "async_cannot_return_values", isCorrect: false),
+                                    Answer(id: UUID(), title: "os_limitation", isCorrect: false)
+                                ],
+                                descriptionText: "main_sets_up_runtime_that_runs_async_code",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 10
+                            Question(
+                                id: UUID(),
+                                title: "what_does_trpl_run_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "compiles_async_code", isCorrect: false),
+                                    Answer(id: UUID(), title: "creates_new_thread", isCorrect: false),
+                                    Answer(id: UUID(), title: "runs_future_to_completion_with_runtime", isCorrect: true),
+                                    Answer(id: UUID(), title: "converts_async_to_sync", isCorrect: false)
+                                ],
+                                descriptionText: "trpl_run_configures_runtime_and_executes_future",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 11
+                            Question(
+                                id: UUID(),
+                                title: "position_of_await",
+                                answers: [
+                                    Answer(id: UUID(), title: "prefix_before_expression", isCorrect: false),
+                                    Answer(id: UUID(), title: "postfix_after_expression", isCorrect: true),
+                                    Answer(id: UUID(), title: "anywhere", isCorrect: false),
+                                    Answer(id: UUID(), title: "must_be_on_separate_line", isCorrect: false)
+                                ],
+                                descriptionText: "await_is_postfix_future_dot_await",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 12
+                            Question(
+                                id: UUID(),
+                                title: "compilation_of_async_block",
+                                answers: [
+                                    Answer(id: UUID(), title: "removed_from_code", isCorrect: false),
+                                    Answer(id: UUID(), title: "anonymous_future_type_created", isCorrect: true),
+                                    Answer(id: UUID(), title: "becomes_regular_function", isCorrect: false),
+                                    Answer(id: UUID(), title: "generates_new_thread", isCorrect: false)
+                                ],
+                                descriptionText: "compiler_generates_state_machine_implementing_future",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 13
+                            Question(
+                                id: UUID(),
+                                title: "async_fn_return_type",
+                                answers: [
+                                    Answer(id: UUID(), title: "returns_t", isCorrect: false),
+                                    Answer(id: UUID(), title: "returns_future_t", isCorrect: false),
+                                    Answer(id: UUID(), title: "returns_impl_future_output_t", isCorrect: true),
+                                    Answer(id: UUID(), title: "returns_task_t", isCorrect: false)
+                                ],
+                                descriptionText: "async_fn_returns_impl_future_with_output_t",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 14
+                            Question(
+                                id: UUID(),
+                                title: "what_does_trpl_race_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "runs_futures_in_parallel", isCorrect: false),
+                                    Answer(id: UUID(), title: "returns_first_completed_future_result", isCorrect: true),
+                                    Answer(id: UUID(), title: "cancels_others", isCorrect: false),
+                                    Answer(id: UUID(), title: "checks_speed", isCorrect: false)
+                                ],
+                                descriptionText: "race_resolves_with_whichever_future_finishes_first",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 15
+                            Question(
+                                id: UUID(),
+                                title: "trpl_race_return_type",
+                                answers: [
+                                    Answer(id: UUID(), title: "result_t_e", isCorrect: false),
+                                    Answer(id: UUID(), title: "option_t", isCorrect: false),
+                                    Answer(id: UUID(), title: "either_a_b", isCorrect: true),
+                                    Answer(id: UUID(), title: "tuple_a_b", isCorrect: false)
+                                ],
+                                descriptionText: "race_returns_either_left_or_right_based_on_winner",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 16
+                            Question(
+                                id: UUID(),
+                                title: "what_is_await_point",
+                                answers: [
+                                    Answer(id: UUID(), title: "program_end", isCorrect: false),
+                                    Answer(id: UUID(), title: "suspension_and_resumption_point", isCorrect: true),
+                                    Answer(id: UUID(), title: "async_entry_point", isCorrect: false),
+                                    Answer(id: UUID(), title: "future_creation_point", isCorrect: false)
+                                ],
+                                descriptionText: "await_points_allow_runtime_to_switch_tasks",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 17
+                            Question(
+                                id: UUID(),
+                                title: "state_machine_in_async",
+                                answers: [
+                                    Answer(id: UUID(), title: "physical_device", isCorrect: false),
+                                    Answer(id: UUID(), title: "compiler_generated_state_tracker", isCorrect: true),
+                                    Answer(id: UUID(), title: "database_type", isCorrect: false),
+                                    Answer(id: UUID(), title: "sorting_algorithm", isCorrect: false)
+                                ],
+                                descriptionText: "async_code_is_transformed_into_state_machine",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 18
+                            Question(
+                                id: UUID(),
+                                title: "what_does_trpl_spawn_task_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "create_os_thread", isCorrect: false),
+                                    Answer(id: UUID(), title: "spawn_runtime_task", isCorrect: true),
+                                    Answer(id: UUID(), title: "block_current_task", isCorrect: false),
+                                    Answer(id: UUID(), title: "delete_task", isCorrect: false)
+                                ],
+                                descriptionText: "spawn_task_creates_runtime_managed_task",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 19
+                            Question(
+                                id: UUID(),
+                                title: "spawn_task_return_value",
+                                answers: [
+                                    Answer(id: UUID(), title: "future_value", isCorrect: false),
+                                    Answer(id: UUID(), title: "thread_handle", isCorrect: false),
+                                    Answer(id: UUID(), title: "join_handle", isCorrect: true),
+                                    Answer(id: UUID(), title: "task_id", isCorrect: false)
+                                ],
+                                descriptionText: "join_handle_can_be_awaited_for_result",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 20
+                            Question(
+                                id: UUID(),
+                                title: "trpl_sleep_vs_thread_sleep",
+                                answers: [
+                                    Answer(id: UUID(), title: "no_difference", isCorrect: false),
+                                    Answer(id: UUID(), title: "trpl_sleep_is_async_future", isCorrect: true),
+                                    Answer(id: UUID(), title: "trpl_sleep_is_faster", isCorrect: false),
+                                    Answer(id: UUID(), title: "thread_sleep_only_in_async", isCorrect: false)
+                                ],
+                                descriptionText: "async_sleep_does_not_block_thread_must_await",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 21
+                            Question(
+                                id: UUID(),
+                                title: "what_does_trpl_join_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "join_two_threads", isCorrect: false),
+                                    Answer(id: UUID(), title: "await_both_and_return_tuple", isCorrect: true),
+                                    Answer(id: UUID(), title: "merge_into_one_future", isCorrect: false),
+                                    Answer(id: UUID(), title: "cancel_futures", isCorrect: false)
+                                ],
+                                descriptionText: "join_waits_for_all_and_returns_both_results",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 22
+                            Question(
+                                id: UUID(),
+                                title: "is_trpl_join_fair",
+                                answers: [
+                                    Answer(id: UUID(), title: "no_polls_in_argument_order", isCorrect: false),
+                                    Answer(id: UUID(), title: "yes_alternates_polling", isCorrect: true),
+                                    Answer(id: UUID(), title: "depends_on_runtime", isCorrect: false),
+                                    Answer(id: UUID(), title: "fairness_not_applicable", isCorrect: false)
+                                ],
+                                descriptionText: "join_alternates_polling_to_prevent_starvation",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 23
+                            Question(
+                                id: UUID(),
+                                title: "what_is_async_channel",
+                                answers: [
+                                    Answer(id: UUID(), title: "regular_thread_channel", isCorrect: false),
+                                    Answer(id: UUID(), title: "channel_for_async_message_passing", isCorrect: true),
+                                    Answer(id: UUID(), title: "network_connection", isCorrect: false),
+                                    Answer(id: UUID(), title: "storage_datatype", isCorrect: false)
+                                ],
+                                descriptionText: "async_channel_allows_message_passing_between_futures",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 24
+                            Question(
+                                id: UUID(),
+                                title: "async_recv_vs_sync_recv",
+                                answers: [
+                                    Answer(id: UUID(), title: "no_difference_between_them", isCorrect: false),
+                                    Answer(id: UUID(), title: "async_recv_returns_future_to_await", isCorrect: true),
+                                    Answer(id: UUID(), title: "async_recv_is_faster", isCorrect: false),
+                                    Answer(id: UUID(), title: "sync_recv_does_not_exist", isCorrect: false)
+                                ],
+                                descriptionText: "async_recv_is_nonblocking_and_yields_future",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 25
+                            Question(
+                                id: UUID(),
+                                title: "why_use_async_move",
+                                answers: [
+                                    Answer(id: UUID(), title: "for_speed", isCorrect: false),
+                                    Answer(id: UUID(), title: "transfer_ownership_of_captured_values", isCorrect: true),
+                                    Answer(id: UUID(), title: "required_for_all_async_blocks", isCorrect: false),
+                                    Answer(id: UUID(), title: "to_create_new_thread", isCorrect: false)
+                                ],
+                                descriptionText: "async_move_captures_by_value_like_closures",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 26
+                            Question(
+                                id: UUID(),
+                                title: "what_does_trpl_join_macro_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "accepts_only_two_futures", isCorrect: false),
+                                    Answer(id: UUID(), title: "accepts_arbitrary_number_of_futures", isCorrect: true),
+                                    Answer(id: UUID(), title: "works_with_one_type_only", isCorrect: false),
+                                    Answer(id: UUID(), title: "creates_new_futures", isCorrect: false)
+                                ],
+                                descriptionText: "join_macro_can_take_any_number_of_futures",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 27
+                            Question(
+                                id: UUID(),
+                                title: "what_does_trpl_join_all_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "waits_for_all_futures_in_collection", isCorrect: true),
+                                    Answer(id: UUID(), title: "combines_futures_into_one", isCorrect: false),
+                                    Answer(id: UUID(), title: "cancels_all_futures", isCorrect: false),
+                                    Answer(id: UUID(), title: "checks_future_types", isCorrect: false)
+                                ],
+                                descriptionText: "join_all_completes_when_all_futures_finish",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 28
+                            Question(
+                                id: UUID(),
+                                title: "join_all_future_requirements",
+                                answers: [
+                                    Answer(id: UUID(), title: "must_be_different_types", isCorrect: false),
+                                    Answer(id: UUID(), title: "must_be_same_type", isCorrect: true),
+                                    Answer(id: UUID(), title: "must_finish_simultaneously", isCorrect: false),
+                                    Answer(id: UUID(), title: "must_not_be_pinned", isCorrect: false)
+                                ],
+                                descriptionText: "join_all_requires_uniform_output_types",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 29
+                            Question(
+                                id: UUID(),
+                                title: "trait_object_in_async_context",
+                                answers: [
+                                    Answer(id: UUID(), title: "oop_class", isCorrect: false),
+                                    Answer(id: UUID(), title: "dynamic_type_via_common_trait", isCorrect: true),
+                                    Answer(id: UUID(), title: "asynchronous_object", isCorrect: false),
+                                    Answer(id: UUID(), title: "function_pointer", isCorrect: false)
+                                ],
+                                descriptionText: "dyn_trait_enables_heterogeneous_types_via_interface",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 30
+                            Question(
+                                id: UUID(),
+                                title: "why_pin_is_needed",
+                                answers: [
+                                    Answer(id: UUID(), title: "to_speed_up_code", isCorrect: false),
+                                    Answer(id: UUID(), title: "guarantee_value_not_moved_in_memory", isCorrect: true),
+                                    Answer(id: UUID(), title: "to_create_pointers", isCorrect: false),
+                                    Answer(id: UUID(), title: "deprecated_feature", isCorrect: false)
+                                ],
+                                descriptionText: "pin_protects_self_referential_structures_used_by_futures",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 31
+                            Question(
+                                id: UUID(),
+                                title: "what_is_unpin_trait",
+                                answers: [
+                                    Answer(id: UUID(), title: "opposite_of_pin", isCorrect: false),
+                                    Answer(id: UUID(), title: "marker_safe_to_move_even_when_pinned", isCorrect: true),
+                                    Answer(id: UUID(), title: "trait_to_remove_pin", isCorrect: false),
+                                    Answer(id: UUID(), title: "alternative_to_future", isCorrect: false)
+                                ],
+                                descriptionText: "unpin_indicates_type_is_safe_to_move",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 32
+                            Question(
+                                id: UUID(),
+                                title: "do_most_types_implement_unpin_automatically",
+                                answers: [
+                                    Answer(id: UUID(), title: "no_manual_impl_required", isCorrect: false),
+                                    Answer(id: UUID(), title: "yes_except_special_cases", isCorrect: true),
+                                    Answer(id: UUID(), title: "only_primitive_types", isCorrect: false),
+                                    Answer(id: UUID(), title: "depends_on_runtime", isCorrect: false)
+                                ],
+                                descriptionText: "compiler_auto_derives_unpin_when_safe",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 33
+                            Question(
+                                id: UUID(),
+                                title: "when_to_use_box_pin",
+                                answers: [
+                                    Answer(id: UUID(), title: "always_for_futures", isCorrect: false),
+                                    Answer(id: UUID(), title: "when_need_pinned_future_on_heap", isCorrect: true),
+                                    Answer(id: UUID(), title: "only_for_large_structs", isCorrect: false),
+                                    Answer(id: UUID(), title: "never_obsolete", isCorrect: false)
+                                ],
+                                descriptionText: "box_pin_creates_pinned_heap_allocation_for_dynamic_futures",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 34
+                            Question(
+                                id: UUID(),
+                                title: "what_is_stream_in_async_rust",
+                                answers: [
+                                    Answer(id: UUID(), title: "network_connection", isCorrect: false),
+                                    Answer(id: UUID(), title: "asynchronous_iterator", isCorrect: true),
+                                    Answer(id: UUID(), title: "data_flow_type", isCorrect: false),
+                                    Answer(id: UUID(), title: "alternative_to_future", isCorrect: false)
+                                ],
+                                descriptionText: "stream_is_async_counterpart_of_iterator",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 35
+                            Question(
+                                id: UUID(),
+                                title: "stream_trait_core_method",
+                                answers: [
+                                    Answer(id: UUID(), title: "next", isCorrect: false),
+                                    Answer(id: UUID(), title: "poll", isCorrect: false),
+                                    Answer(id: UUID(), title: "poll_next", isCorrect: true),
+                                    Answer(id: UUID(), title: "stream_method", isCorrect: false)
+                                ],
+                                descriptionText: "poll_next_combines_future_poll_and_iterator_next",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 36
+                            Question(
+                                id: UUID(),
+                                title: "poll_next_return_type",
+                                answers: [
+                                    Answer(id: UUID(), title: "option_t", isCorrect: false),
+                                    Answer(id: UUID(), title: "poll_t", isCorrect: false),
+                                    Answer(id: UUID(), title: "poll_option_t", isCorrect: true),
+                                    Answer(id: UUID(), title: "result_t_e", isCorrect: false)
+                                ],
+                                descriptionText: "poll_next_returns_poll_option_t_for_readiness_and_sequence",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 37
+                            Question(
+                                id: UUID(),
+                                title: "what_is_streamext",
+                                answers: [
+                                    Answer(id: UUID(), title: "file_extension", isCorrect: false),
+                                    Answer(id: UUID(), title: "trait_with_utility_methods_for_stream", isCorrect: true),
+                                    Answer(id: UUID(), title: "alternative_stream_impl", isCorrect: false),
+                                    Answer(id: UUID(), title: "data_type_kind", isCorrect: false)
+                                ],
+                                descriptionText: "streamext_adds_helpers_like_next_filter_map",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 38
+                            Question(
+                                id: UUID(),
+                                title: "timeout_on_stream",
+                                answers: [
+                                    Answer(id: UUID(), title: "stop_stream", isCorrect: false),
+                                    Answer(id: UUID(), title: "set_time_limit_per_item", isCorrect: true),
+                                    Answer(id: UUID(), title: "speed_up_stream", isCorrect: false),
+                                    Answer(id: UUID(), title: "create_timer", isCorrect: false)
+                                ],
+                                descriptionText: "timeout_wraps_stream_and_errors_if_item_is_late",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 39
+                            Question(
+                                id: UUID(),
+                                title: "throttle_on_stream",
+                                answers: [
+                                    Answer(id: UUID(), title: "increase_speed", isCorrect: false),
+                                    Answer(id: UUID(), title: "limit_polling_rate", isCorrect: true),
+                                    Answer(id: UUID(), title: "stop_stream", isCorrect: false),
+                                    Answer(id: UUID(), title: "filter_items", isCorrect: false)
+                                ],
+                                descriptionText: "throttle_controls_how_often_stream_is_polled",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 40
+                            Question(
+                                id: UUID(),
+                                title: "merge_streams_behavior",
+                                answers: [
+                                    Answer(id: UUID(), title: "combine_into_single_item", isCorrect: false),
+                                    Answer(id: UUID(), title: "combine_multiple_streams_yield_as_ready", isCorrect: true),
+                                    Answer(id: UUID(), title: "remove_duplicates", isCorrect: false),
+                                    Answer(id: UUID(), title: "sort_items", isCorrect: false)
+                                ],
+                                descriptionText: "merge_emits_items_from_several_sources_as_they_arrive",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 41
+                            Question(
+                                id: UUID(),
+                                title: "take_on_stream",
+                                answers: [
+                                    Answer(id: UUID(), title: "remove_items", isCorrect: false),
+                                    Answer(id: UUID(), title: "limit_number_of_items", isCorrect: true),
+                                    Answer(id: UUID(), title: "capture_ownership", isCorrect: false),
+                                    Answer(id: UUID(), title: "create_copy", isCorrect: false)
+                                ],
+                                descriptionText: "take_n_yields_at_most_n_items",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 42
+                            Question(
+                                id: UUID(),
+                                title: "what_is_yield_now",
+                                answers: [
+                                    Answer(id: UUID(), title: "return_value_from_function", isCorrect: false),
+                                    Answer(id: UUID(), title: "explicitly_yield_to_runtime", isCorrect: true),
+                                    Answer(id: UUID(), title: "create_new_task", isCorrect: false),
+                                    Answer(id: UUID(), title: "stop_program", isCorrect: false)
+                                ],
+                                descriptionText: "yield_now_inserts_await_point_without_real_wait",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 43
+                            Question(
+                                id: UUID(),
+                                title: "cpu_bound_vs_io_bound",
+                                answers: [
+                                    Answer(id: UUID(), title: "no_difference", isCorrect: false),
+                                    Answer(id: UUID(), title: "cpu_bound_limited_by_compute_io_bound_by_io", isCorrect: true),
+                                    Answer(id: UUID(), title: "cpu_bound_is_faster", isCorrect: false),
+                                    Answer(id: UUID(), title: "io_bound_requires_more_memory", isCorrect: false)
+                                ],
+                                descriptionText: "cpu_bound_saturates_cpu_io_bound_waits_on_io",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 44
+                            Question(
+                                id: UUID(),
+                                title: "is_async_useful_for_cpu_bound",
+                                answers: [
+                                    Answer(id: UUID(), title: "no_only_for_io_bound", isCorrect: false),
+                                    Answer(id: UUID(), title: "yes_for_structuring_program_relations", isCorrect: true),
+                                    Answer(id: UUID(), title: "only_with_multithreading", isCorrect: false),
+                                    Answer(id: UUID(), title: "never_useful", isCorrect: false)
+                                ],
+                                descriptionText: "async_helps_structure_cooperative_multitasking",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 45
+                            Question(
+                                id: UUID(),
+                                title: "what_is_task_in_async_rust",
+                                answers: [
+                                    Answer(id: UUID(), title: "same_as_thread", isCorrect: false),
+                                    Answer(id: UUID(), title: "unit_of_concurrency_managed_by_runtime", isCorrect: true),
+                                    Answer(id: UUID(), title: "synonym_for_future", isCorrect: false),
+                                    Answer(id: UUID(), title: "data_type", isCorrect: false)
+                                ],
+                                descriptionText: "task_is_lightweight_and_runtime_scheduled",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 46
+                            Question(
+                                id: UUID(),
+                                title: "can_tasks_move_between_threads",
+                                answers: [
+                                    Answer(id: UUID(), title: "never_move", isCorrect: false),
+                                    Answer(id: UUID(), title: "yes_work_stealing_supported", isCorrect: true),
+                                    Answer(id: UUID(), title: "only_manually", isCorrect: false),
+                                    Answer(id: UUID(), title: "forbidden", isCorrect: false)
+                                ],
+                                descriptionText: "many_runtimes_rebalance_tasks_across_threads",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 47
+                            Question(
+                                id: UUID(),
+                                title: "when_threads_are_preferable",
+                                answers: [
+                                    Answer(id: UUID(), title: "never_prefer_threads", isCorrect: false),
+                                    Answer(id: UUID(), title: "for_highly_parallelizable_work", isCorrect: true),
+                                    Answer(id: UUID(), title: "for_network_io", isCorrect: false),
+                                    Answer(id: UUID(), title: "for_guis", isCorrect: false)
+                                ],
+                                descriptionText: "threads_fit_compute_heavy_parallel_workloads",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 48
+                            Question(
+                                id: UUID(),
+                                title: "when_async_is_preferable",
+                                answers: [
+                                    Answer(id: UUID(), title: "always_prefer_async", isCorrect: false),
+                                    Answer(id: UUID(), title: "for_high_concurrency_many_sources", isCorrect: true),
+                                    Answer(id: UUID(), title: "for_math_heavy_computation", isCorrect: false),
+                                    Answer(id: UUID(), title: "for_file_io", isCorrect: false)
+                                ],
+                                descriptionText: "async_excels_at_many_concurrent_events",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 49
+                            Question(
+                                id: UUID(),
+                                title: "combine_threads_and_async",
+                                answers: [
+                                    Answer(id: UUID(), title: "cannot_be_combined", isCorrect: false),
+                                    Answer(id: UUID(), title: "yes_they_complement_each_other", isCorrect: true),
+                                    Answer(id: UUID(), title: "only_with_special_runtime", isCorrect: false),
+                                    Answer(id: UUID(), title: "deprecated_approach", isCorrect: false)
+                                ],
+                                descriptionText: "mix_threads_and_async_to_leverage_strengths",
+                                descriptionLink: "async_fundamentals_link"
+                            ),
+                            // 50
+                            Question(
+                                id: UUID(),
+                                title: "what_is_work_stealing_in_runtime",
+                                answers: [
+                                    Answer(id: UUID(), title: "stealing_data_between_tasks", isCorrect: false),
+                                    Answer(id: UUID(), title: "load_balancing_moves_tasks_between_threads", isCorrect: true),
+                                    Answer(id: UUID(), title: "attack_type", isCorrect: false),
+                                    Answer(id: UUID(), title: "task_cancellation_method", isCorrect: false)
+                                ],
+                                descriptionText: "work_stealing_redistributes_tasks_to_optimize_load",
+                                descriptionLink: "async_fundamentals_link"
+                            )
+                        ]
+                    ),
+                    Quiz(
+                        id: UUID(),
+                        theme: "oop_in_rust",
+                        priority: 14,
+                        questions: [
+                            // 1
+                            Question(
+                                id: UUID(),
+                                title: "what_is_an_object_gang_of_four",
+                                answers: [
+                                    Answer(id: UUID(), title: "only_data", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_methods", isCorrect: false),
+                                    Answer(id: UUID(), title: "package_of_data_and_procedures", isCorrect: true),
+                                    Answer(id: UUID(), title: "class_with_inheritance", isCorrect: false)
+                                ],
+                                descriptionText: "object_combines_data_and_operations_on_that_data",
+                                descriptionLink: "oop_rust_link"
+                            ),
+                            // 2
+                            Question(
+                                id: UUID(),
+                                title: "are_struct_and_enum_objects_by_gof",
+                                answers: [
+                                    Answer(id: UUID(), title: "no_they_are_not_objects", isCorrect: false),
+                                    Answer(id: UUID(), title: "yes_same_functionality_via_impl_methods", isCorrect: true),
+                                    Answer(id: UUID(), title: "only_struct_are_objects", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_enum_are_objects", isCorrect: false)
+                                ],
+                                descriptionText: "struct_and_enum_with_impl_methods_provide_object_like_behavior",
+                                descriptionLink: "oop_rust_link"
+                            ),
+                            // 3
+                            Question(
+                                id: UUID(),
+                                title: "what_is_encapsulation",
+                                answers: [
+                                    Answer(id: UUID(), title: "data_inheritance", isCorrect: false),
+                                    Answer(id: UUID(), title: "hiding_implementation_details", isCorrect: true),
+                                    Answer(id: UUID(), title: "polymorphism", isCorrect: false),
+                                    Answer(id: UUID(), title: "dynamic_dispatch", isCorrect: false)
+                                ],
+                                descriptionText: "encapsulation_means_consumers_cannot_access_internal_details",
+                                descriptionLink: "oop_rust_link"
+                            ),
+                            // 4
+                            Question(
+                                id: UUID(),
+                                title: "how_is_encapsulation_controlled_in_rust",
+                                answers: [
+                                    Answer(id: UUID(), title: "through_classes", isCorrect: false),
+                                    Answer(id: UUID(), title: "through_pub_keyword", isCorrect: true),
+                                    Answer(id: UUID(), title: "through_inheritance", isCorrect: false),
+                                    Answer(id: UUID(), title: "automatically", isCorrect: false)
+                                ],
+                                descriptionText: "pub_defines_visibility_by_default_everything_is_private",
+                                descriptionLink: "oop_rust_link"
+                            ),
+                            // 5
+                            Question(
+                                id: UUID(),
+                                title: "which_fields_private_in_averagedcollection",
+                                answers: [
+                                    Answer(id: UUID(), title: "only_list", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_average", isCorrect: false),
+                                    Answer(id: UUID(), title: "list_and_average", isCorrect: true),
+                                    Answer(id: UUID(), title: "all_fields_public", isCorrect: false)
+                                ],
+                                descriptionText: "both_list_and_average_are_private_to_preserve_invariants",
+                                descriptionLink: "oop_rust_link"
+                            ),
+                            // 6
+                            Question(
+                                id: UUID(),
+                                title: "why_update_average_is_private",
+                                answers: [
+                                    Answer(id: UUID(), title: "for_speed", isCorrect: false),
+                                    Answer(id: UUID(), title: "internal_implementation_detail", isCorrect: true),
+                                    Answer(id: UUID(), title: "compiler_limitation", isCorrect: false),
+                                    Answer(id: UUID(), title: "to_avoid_type_errors", isCorrect: false)
+                                ],
+                                descriptionText: "helper_method_not_part_of_public_api",
+                                descriptionLink: "oop_rust_link"
+                            ),
+                            // 7
+                            Question(
+                                id: UUID(),
+                                title: "does_rust_support_traditional_inheritance",
+                                answers: [
+                                    Answer(id: UUID(), title: "yes_fully", isCorrect: false),
+                                    Answer(id: UUID(), title: "no", isCorrect: true),
+                                    Answer(id: UUID(), title: "only_for_struct", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_via_macros", isCorrect: false)
+                                ],
+                                descriptionText: "no_inheritance_of_fields_methods_between_structs_in_rust",
+                                descriptionLink: "oop_rust_link"
+                            ),
+                            // 8
+                            Question(
+                                id: UUID(),
+                                title: "how_to_reuse_code_instead_of_inheritance",
+                                answers: [
+                                    Answer(id: UUID(), title: "by_copying_code", isCorrect: false),
+                                    Answer(id: UUID(), title: "via_default_trait_method_impls", isCorrect: true),
+                                    Answer(id: UUID(), title: "via_macros_only", isCorrect: false),
+                                    Answer(id: UUID(), title: "via_global_functions", isCorrect: false)
+                                ],
+                                descriptionText: "traits_with_default_methods_enable_code_reuse",
+                                descriptionLink: "oop_rust_link"
+                            ),
+                            // 9
+                            Question(
+                                id: UUID(),
+                                title: "what_is_polymorphism",
+                                answers: [
+                                    Answer(id: UUID(), title: "multiple_inheritance", isCorrect: false),
+                                    Answer(id: UUID(), title: "code_that_works_for_multiple_types", isCorrect: true),
+                                    Answer(id: UUID(), title: "dynamic_typing", isCorrect: false),
+                                    Answer(id: UUID(), title: "encapsulation_feature", isCorrect: false)
+                                ],
+                                descriptionText: "write_generic_code_applicable_to_various_types",
+                                descriptionLink: "oop_rust_link"
+                            ),
+                            // 10
+                            Question(
+                                id: UUID(),
+                                title: "how_rust_implements_polymorphism",
+                                answers: [
+                                    Answer(id: UUID(), title: "via_inheritance", isCorrect: false),
+                                    Answer(id: UUID(), title: "via_generics_and_trait_bounds", isCorrect: true),
+                                    Answer(id: UUID(), title: "via_classes", isCorrect: false),
+                                    Answer(id: UUID(), title: "via_interfaces_keyword", isCorrect: false)
+                                ],
+                                descriptionText: "generics_provide_abstraction_trait_bounds_provide_constraints",
+                                descriptionLink: "oop_rust_link"
+                            ),
+                            // 11
+                            Question(
+                                id: UUID(),
+                                title: "what_is_a_trait_object",
+                                answers: [
+                                    Answer(id: UUID(), title: "instance_of_struct", isCorrect: false),
+                                    Answer(id: UUID(), title: "pointer_plus_vtable_for_trait_methods", isCorrect: true),
+                                    Answer(id: UUID(), title: "generic_type", isCorrect: false),
+                                    Answer(id: UUID(), title: "enum_variant", isCorrect: false)
+                                ],
+                                descriptionText: "trait_object_holds_pointer_to_value_and_method_table_vtable",
+                                descriptionLink: "oop_rust_link"
+                            ),
+                            // 12
+                            Question(
+                                id: UUID(),
+                                title: "how_to_create_trait_object",
+                                answers: [
+                                    Answer(id: UUID(), title: "only_through_box_t", isCorrect: false),
+                                    Answer(id: UUID(), title: "pointer_plus_dyn_plus_trait", isCorrect: true),
+                                    Answer(id: UUID(), title: "through_impl_keyword", isCorrect: false),
+                                    Answer(id: UUID(), title: "through_new_keyword", isCorrect: false)
+                                ],
+                                descriptionText: "use_box_or_ref_with_dyn_trait_to_make_trait_object",
+                                descriptionLink: "oop_rust_link"
+                            ),
+                            // 13
+                            Question(
+                                id: UUID(),
+                                title: "what_does_box_dyn_draw_mean",
+                                answers: [
+                                    Answer(id: UUID(), title: "generic_type", isCorrect: false),
+                                    Answer(id: UUID(), title: "trait_object_for_any_type_implementing_draw", isCorrect: true),
+                                    Answer(id: UUID(), title: "concrete_type_draw", isCorrect: false),
+                                    Answer(id: UUID(), title: "abstract_class", isCorrect: false)
+                                ],
+                                descriptionText: "boxed_trait_object_erases_concrete_type_but_keeps_behavior",
+                                descriptionLink: "oop_rust_link"
+                            ),
+                            // 14
+                            Question(
+                                id: UUID(),
+                                title: "generic_bound_vs_trait_object",
+                                answers: [
+                                    Answer(id: UUID(), title: "no_difference", isCorrect: false),
+                                    Answer(id: UUID(), title: "generic_one_concrete_type_trait_object_many_at_runtime", isCorrect: true),
+                                    Answer(id: UUID(), title: "generic_is_slower", isCorrect: false),
+                                    Answer(id: UUID(), title: "trait_object_only_with_box", isCorrect: false)
+                                ],
+                                descriptionText: "generics_monomorphize_single_type_trait_objects_allow_heterogeneity",
+                                descriptionLink: "oop_rust_link"
+                            ),
+                            // 15
+                            Question(
+                                id: UUID(),
+                                title: "what_is_duck_typing",
+                                answers: [
+                                    Answer(id: UUID(), title: "duck_type_in_program", isCorrect: false),
+                                    Answer(id: UUID(), title: "behavior_based_type_checking", isCorrect: true),
+                                    Answer(id: UUID(), title: "dynamic_typing_only", isCorrect: false),
+                                    Answer(id: UUID(), title: "static_typing", isCorrect: false)
+                                ],
+                                descriptionText: "if_it_quacks_like_a_duck_behavior_defines_compatibility",
+                                descriptionLink: "oop_rust_link"
+                            ),
+                            // 16
+                            Question(
+                                id: UUID(),
+                                title: "what_is_static_dispatch",
+                                answers: [
+                                    Answer(id: UUID(), title: "method_unknown_at_compile_time", isCorrect: false),
+                                    Answer(id: UUID(), title: "compiler_knows_called_method_at_compile_time", isCorrect: true),
+                                    Answer(id: UUID(), title: "runtime_determines_method", isCorrect: false),
+                                    Answer(id: UUID(), title: "same_as_dynamic_dispatch", isCorrect: false)
+                                ],
+                                descriptionText: "static_dispatch_enables_inlining_and_optimizations",
+                                descriptionLink: "oop_rust_link"
+                            ),
+                            // 17
+                            Question(
+                                id: UUID(),
+                                title: "what_is_dynamic_dispatch",
+                                answers: [
+                                    Answer(id: UUID(), title: "compiler_knows_method_at_compile_time", isCorrect: false),
+                                    Answer(id: UUID(), title: "runtime_selects_method_via_trait_object", isCorrect: true),
+                                    Answer(id: UUID(), title: "static_dispatch", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_with_generics", isCorrect: false)
+                                ],
+                                descriptionText: "vtable_lookup_at_runtime_for_trait_object_calls",
+                                descriptionLink: "oop_rust_link"
+                            ),
+                            // 18
+                            Question(
+                                id: UUID(),
+                                title: "disadvantage_of_dynamic_dispatch",
+                                answers: [
+                                    Answer(id: UUID(), title: "uses_more_memory", isCorrect: false),
+                                    Answer(id: UUID(), title: "runtime_overhead_and_fewer_optimizations", isCorrect: true),
+                                    Answer(id: UUID(), title: "always_slower_than_static", isCorrect: false),
+                                    Answer(id: UUID(), title: "cannot_be_used", isCorrect: false)
+                                ],
+                                descriptionText: "dynamic_dispatch_prevents_inlining_and_adds_indirection_cost",
+                                descriptionLink: "oop_rust_link"
+                            ),
+                            // 19
+                            Question(
+                                id: UUID(),
+                                title: "what_is_state_pattern",
+                                answers: [
+                                    Answer(id: UUID(), title: "memory_management_pattern", isCorrect: false),
+                                    Answer(id: UUID(), title: "object_behavior_changes_by_internal_state", isCorrect: true),
+                                    Answer(id: UUID(), title: "multithreading_pattern", isCorrect: false),
+                                    Answer(id: UUID(), title: "database_pattern", isCorrect: false)
+                                ],
+                                descriptionText: "state_pattern_switches_behavior_depending_on_state_object",
+                                descriptionLink: "oop_rust_link"
+                            ),
+                            // 20
+                            Question(
+                                id: UUID(),
+                                title: "why_post_uses_option_box_dyn_state",
+                                answers: [
+                                    Answer(id: UUID(), title: "for_performance", isCorrect: false),
+                                    Answer(id: UUID(), title: "to_use_take_and_move_state_out", isCorrect: true),
+                                    Answer(id: UUID(), title: "for_type_safety", isCorrect: false),
+                                    Answer(id: UUID(), title: "compiler_requirement", isCorrect: false)
+                                ],
+                                descriptionText: "option_allows_take_to_replace_some_with_none_during_transitions",
+                                descriptionLink: "oop_rust_link"
+                            ),
+                            // 21
+                            Question(
+                                id: UUID(),
+                                title: "what_does_option_take_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "deletes_value", isCorrect: false),
+                                    Answer(id: UUID(), title: "moves_out_of_some_leaving_none", isCorrect: true),
+                                    Answer(id: UUID(), title: "clones_value", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_checks_presence", isCorrect: false)
+                                ],
+                                descriptionText: "take_extracts_inner_value_by_move_and_leaves_none",
+                                descriptionLink: "oop_rust_link"
+                            ),
+                            // 22
+                            Question(
+                                id: UUID(),
+                                title: "why_request_review_takes_self_box_self",
+                                answers: [
+                                    Answer(id: UUID(), title: "for_speed", isCorrect: false),
+                                    Answer(id: UUID(), title: "consume_old_state_and_return_new_boxed_state", isCorrect: true),
+                                    Answer(id: UUID(), title: "for_heap_work", isCorrect: false),
+                                    Answer(id: UUID(), title: "syntax_error", isCorrect: false)
+                                ],
+                                descriptionText: "taking_box_self_transfers_ownership_and_enables_state_transition",
+                                descriptionLink: "oop_rust_link"
+                            ),
+                            // 23
+                            Question(
+                                id: UUID(),
+                                title: "why_draftpost_has_no_content_method_in_alt_impl",
+                                answers: [
+                                    Answer(id: UUID(), title: "it_is_an_error", isCorrect: false),
+                                    Answer(id: UUID(), title: "to_prevent_showing_draft_compile_time_error", isCorrect: true),
+                                    Answer(id: UUID(), title: "for_performance", isCorrect: false),
+                                    Answer(id: UUID(), title: "because_drafts_are_empty", isCorrect: false)
+                                ],
+                                descriptionText: "missing_method_makes_invalid_state_unrepresentable_at_compile_time",
+                                descriptionLink: "oop_rust_link"
+                            ),
+                            // 24
+                            Question(
+                                id: UUID(),
+                                title: "type_oriented_request_review_approve_self_handling",
+                                answers: [
+                                    Answer(id: UUID(), title: "take_shared_ref_self", isCorrect: false),
+                                    Answer(id: UUID(), title: "consume_self_and_return_new_type", isCorrect: true),
+                                    Answer(id: UUID(), title: "take_mut_ref_self", isCorrect: false),
+                                    Answer(id: UUID(), title: "clone_self", isCorrect: false)
+                                ],
+                                descriptionText: "methods_take_ownership_and_transform_to_next_state_type",
+                                descriptionLink: "oop_rust_link"
+                            ),
+                            // 25
+                            Question(
+                                id: UUID(),
+                                title: "advantage_of_encoding_states_in_types",
+                                answers: [
+                                    Answer(id: UUID(), title: "shorter_code", isCorrect: false),
+                                    Answer(id: UUID(), title: "invalid_states_become_compile_errors", isCorrect: true),
+                                    Answer(id: UUID(), title: "always_faster", isCorrect: false),
+                                    Answer(id: UUID(), title: "easier_to_read", isCorrect: false)
+                                ],
+                                descriptionText: "type_system_prevents_invalid_transitions_at_compile_time",
+                                descriptionLink: "oop_rust_link"
+                            )
+                        ]
+                    ),
+                    Quiz(
+                        id: UUID(),
+                        theme: "patterns_and_matching",
+                        priority: 15,
+                        questions: [
+                            // 1
+                            Question(
+                                id: UUID(),
+                                title: "where_can_patterns_be_used",
+                                answers: [
+                                    Answer(id: UUID(), title: "only_in_match", isCorrect: false),
+                                    Answer(id: UUID(), title: "in_match_if_let_while_let_for_let_fn_params", isCorrect: true),
+                                    Answer(id: UUID(), title: "only_in_let", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_in_loops", isCorrect: false)
+                                ],
+                                descriptionText: "patterns_work_in_match_if_let_while_let_for_let_and_function_parameters",
+                                descriptionLink: "patterns_matching_link"
+                            ),
+                            // 2
+                            Question(
+                                id: UUID(),
+                                title: "must_match_be_exhaustive",
+                                answers: [
+                                    Answer(id: UUID(), title: "no_optional", isCorrect: false),
+                                    Answer(id: UUID(), title: "yes_cover_all_values", isCorrect: true),
+                                    Answer(id: UUID(), title: "only_for_option_result", isCorrect: false),
+                                    Answer(id: UUID(), title: "depends_on_type", isCorrect: false)
+                                ],
+                                descriptionText: "match_must_cover_all_possible_values",
+                                descriptionLink: "patterns_matching_link"
+                            ),
+                            // 3
+                            Question(
+                                id: UUID(),
+                                title: "underscore_pattern_in_match",
+                                answers: [
+                                    Answer(id: UUID(), title: "creates_variable_named_underscore", isCorrect: false),
+                                    Answer(id: UUID(), title: "matches_any_without_binding", isCorrect: true),
+                                    Answer(id: UUID(), title: "causes_compilation_error", isCorrect: false),
+                                    Answer(id: UUID(), title: "skips_checking", isCorrect: false)
+                                ],
+                                descriptionText: "underscore_is_wildcard_match_no_binding",
+                                descriptionLink: "patterns_matching_link"
+                            ),
+                            // 4
+                            Question(
+                                id: UUID(),
+                                title: "mix_if_let_else_if_else_if_let",
+                                answers: [
+                                    Answer(id: UUID(), title: "no_syntax_error", isCorrect: false),
+                                    Answer(id: UUID(), title: "yes_more_flexible_than_match", isCorrect: true),
+                                    Answer(id: UUID(), title: "only_if_let_and_else", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_with_option", isCorrect: false)
+                                ],
+                                descriptionText: "if_let_chains_are_allowed_and_flexible",
+                                descriptionLink: "patterns_matching_link"
+                            ),
+                            // 5
+                            Question(
+                                id: UUID(),
+                                title: "if_let_exhaustiveness_checked",
+                                answers: [
+                                    Answer(id: UUID(), title: "yes_always", isCorrect: false),
+                                    Answer(id: UUID(), title: "no", isCorrect: true),
+                                    Answer(id: UUID(), title: "only_for_some", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_with_else", isCorrect: false)
+                                ],
+                                descriptionText: "compiler_does_not_require_exhaustiveness_for_if_let",
+                                descriptionLink: "patterns_matching_link"
+                            ),
+                            // 6
+                            Question(
+                                id: UUID(),
+                                title: "what_does_while_let_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "creates_infinite_loop", isCorrect: false),
+                                    Answer(id: UUID(), title: "loops_while_pattern_matches", isCorrect: true),
+                                    Answer(id: UUID(), title: "executes_once", isCorrect: false),
+                                    Answer(id: UUID(), title: "equivalent_to_for", isCorrect: false)
+                                ],
+                                descriptionText: "while_let_runs_while_value_keeps_matching_pattern",
+                                descriptionLink: "patterns_matching_link"
+                            ),
+                            // 7
+                            Question(
+                                id: UUID(),
+                                title: "is_binding_in_for_a_pattern",
+                                answers: [
+                                    Answer(id: UUID(), title: "no_just_variable", isCorrect: false),
+                                    Answer(id: UUID(), title: "yes_pattern", isCorrect: true),
+                                    Answer(id: UUID(), title: "only_if_tuple", isCorrect: false),
+                                    Answer(id: UUID(), title: "depends_on_iterator", isCorrect: false)
+                                ],
+                                descriptionText: "for_binding_is_a_pattern_and_can_destructure",
+                                descriptionLink: "patterns_matching_link"
+                            ),
+                            // 8
+                            Question(
+                                id: UUID(),
+                                title: "what_is_irrefutable_pattern",
+                                answers: [
+                                    Answer(id: UUID(), title: "might_not_match", isCorrect: false),
+                                    Answer(id: UUID(), title: "always_matches", isCorrect: true),
+                                    Answer(id: UUID(), title: "complex_pattern", isCorrect: false),
+                                    Answer(id: UUID(), title: "pattern_with_condition", isCorrect: false)
+                                ],
+                                descriptionText: "irrefutable_matches_all_possible_values",
+                                descriptionLink: "patterns_matching_link"
+                            ),
+                            // 9
+                            Question(
+                                id: UUID(),
+                                title: "what_is_refutable_pattern",
+                                answers: [
+                                    Answer(id: UUID(), title: "always_matches", isCorrect: false),
+                                    Answer(id: UUID(), title: "may_fail_to_match_for_some_values", isCorrect: true),
+                                    Answer(id: UUID(), title: "pattern_with_variables", isCorrect: false),
+                                    Answer(id: UUID(), title: "pattern_in_match_only", isCorrect: false)
+                                ],
+                                descriptionText: "refutable_might_not_match_every_value",
+                                descriptionLink: "patterns_matching_link"
+                            ),
+                            // 10
+                            Question(
+                                id: UUID(),
+                                title: "where_only_irrefutable_allowed",
+                                answers: [
+                                    Answer(id: UUID(), title: "in_match", isCorrect: false),
+                                    Answer(id: UUID(), title: "in_let_for_fn_params", isCorrect: true),
+                                    Answer(id: UUID(), title: "in_if_let", isCorrect: false),
+                                    Answer(id: UUID(), title: "everywhere", isCorrect: false)
+                                ],
+                                descriptionText: "let_for_and_fn_params_require_irrefutable_patterns",
+                                descriptionLink: "patterns_matching_link"
+                            ),
+                            // 11
+                            Question(
+                                id: UUID(),
+                                title: "some_x_in_let_some_x_value_refutable",
+                                answers: [
+                                    Answer(id: UUID(), title: "irrefutable", isCorrect: false),
+                                    Answer(id: UUID(), title: "refutable", isCorrect: true),
+                                    Answer(id: UUID(), title: "depends_on_value", isCorrect: false),
+                                    Answer(id: UUID(), title: "not_a_pattern", isCorrect: false)
+                                ],
+                                descriptionText: "some_x_can_fail_if_value_is_none",
+                                descriptionLink: "patterns_matching_link"
+                            ),
+                            // 12
+                            Question(
+                                id: UUID(),
+                                title: "fix_refutable_pattern_in_let",
+                                answers: [
+                                    Answer(id: UUID(), title: "use_match", isCorrect: false),
+                                    Answer(id: UUID(), title: "use_if_let_or_let_else", isCorrect: true),
+                                    Answer(id: UUID(), title: "remove_pattern", isCorrect: false),
+                                    Answer(id: UUID(), title: "cannot_fix", isCorrect: false)
+                                ],
+                                descriptionText: "refutable_patterns_belong_in_if_let_or_let_else",
+                                descriptionLink: "patterns_matching_link"
+                            ),
+                            // 13
+                            Question(
+                                id: UUID(),
+                                title: "pipe_operator_in_patterns",
+                                answers: [
+                                    Answer(id: UUID(), title: "logical_or_matches_any", isCorrect: true),
+                                    Answer(id: UUID(), title: "logical_and", isCorrect: false),
+                                    Answer(id: UUID(), title: "bitwise_or", isCorrect: false),
+                                    Answer(id: UUID(), title: "creates_tuple", isCorrect: false)
+                                ],
+                                descriptionText: "vertical_bar_matches_any_of_listed_patterns",
+                                descriptionLink: "patterns_matching_link"
+                            ),
+                            // 14
+                            Question(
+                                id: UUID(),
+                                title: "inclusive_range_syntax_in_patterns",
+                                answers: [
+                                    Answer(id: UUID(), title: "exclusive_range", isCorrect: false),
+                                    Answer(id: UUID(), title: "inclusive_range_dot_dot_equal", isCorrect: true),
+                                    Answer(id: UUID(), title: "infinite_range", isCorrect: false),
+                                    Answer(id: UUID(), title: "rest_of_values", isCorrect: false)
+                                ],
+                                descriptionText: "dot_dot_equal_creates_inclusive_range",
+                                descriptionLink: "patterns_matching_link"
+                            ),
+                            // 15
+                            Question(
+                                id: UUID(),
+                                title: "types_supported_for_range_patterns",
+                                answers: [
+                                    Answer(id: UUID(), title: "any_types", isCorrect: false),
+                                    Answer(id: UUID(), title: "numbers_only", isCorrect: false),
+                                    Answer(id: UUID(), title: "chars_and_numbers_only", isCorrect: true),
+                                    Answer(id: UUID(), title: "i32_only", isCorrect: false)
+                                ],
+                                descriptionText: "range_patterns_work_for_numeric_and_char_types",
+                                descriptionLink: "patterns_matching_link"
+                            ),
+                            // 16
+                            Question(
+                                id: UUID(),
+                                title: "struct_destructuring_in_pattern",
+                                answers: [
+                                    Answer(id: UUID(), title: "deletes_struct", isCorrect: false),
+                                    Answer(id: UUID(), title: "breaks_struct_into_bindings", isCorrect: true),
+                                    Answer(id: UUID(), title: "clones_struct", isCorrect: false),
+                                    Answer(id: UUID(), title: "type_check_only", isCorrect: false)
+                                ],
+                                descriptionText: "destructure_extracts_fields_into_variables",
+                                descriptionLink: "patterns_matching_link"
+                            ),
+                            // 17
+                            Question(
+                                id: UUID(),
+                                title: "struct_destructuring_shorthand",
+                                answers: [
+                                    Answer(id: UUID(), title: "point_x_x_y_y", isCorrect: false),
+                                    Answer(id: UUID(), title: "point_x_y", isCorrect: true),
+                                    Answer(id: UUID(), title: "point_tuple_style", isCorrect: false),
+                                    Answer(id: UUID(), title: "point_index_style", isCorrect: false)
+                                ],
+                                descriptionText: "field_init_shorthand_when_names_match",
+                                descriptionLink: "patterns_matching_link"
+                            ),
+                            // 18
+                            Question(
+                                id: UUID(),
+                                title: "difference_between__x_and__",
+                                answers: [
+                                    Answer(id: UUID(), title: "no_difference", isCorrect: false),
+                                    Answer(id: UUID(), title: "_x_binds_value__does_not", isCorrect: true),
+                                    Answer(id: UUID(), title: "underscore_is_faster", isCorrect: false),
+                                    Answer(id: UUID(), title: "_x_is_error", isCorrect: false)
+                                ],
+                                descriptionText: "_x_creates_binding_possibly_taking_ownership__ignores_value",
+                                descriptionLink: "patterns_matching_link"
+                            ),
+                            // 19
+                            Question(
+                                id: UUID(),
+                                title: "double_dot_in_patterns",
+                                answers: [
+                                    Answer(id: UUID(), title: "creates_range", isCorrect: false),
+                                    Answer(id: UUID(), title: "ignores_remaining_parts", isCorrect: true),
+                                    Answer(id: UUID(), title: "creates_array", isCorrect: false),
+                                    Answer(id: UUID(), title: "syntax_error", isCorrect: false)
+                                ],
+                                descriptionText: "double_dot_skips_unspecified_fields_or_elements",
+                                descriptionLink: "patterns_matching_link"
+                            ),
+                            // 20
+                            Question(
+                                id: UUID(),
+                                title: "what_is_match_guard",
+                                answers: [
+                                    Answer(id: UUID(), title: "error_protection", isCorrect: false),
+                                    Answer(id: UUID(), title: "extra_if_condition_after_pattern", isCorrect: true),
+                                    Answer(id: UUID(), title: "type_checking", isCorrect: false),
+                                    Answer(id: UUID(), title: "error_handler", isCorrect: false)
+                                ],
+                                descriptionText: "match_guard_adds_boolean_condition_to_arm",
+                                descriptionLink: "patterns_matching_link"
+                            ),
+                            // 21
+                            Question(
+                                id: UUID(),
+                                title: "exhaustiveness_with_match_guards",
+                                answers: [
+                                    Answer(id: UUID(), title: "checked_always", isCorrect: false),
+                                    Answer(id: UUID(), title: "not_checked", isCorrect: true),
+                                    Answer(id: UUID(), title: "only_for_simple_conditions", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_for_option", isCorrect: false)
+                                ],
+                                descriptionText: "guards_disable_strict_exhaustiveness_checking",
+                                descriptionLink: "patterns_matching_link"
+                            ),
+                            // 22
+                            Question(
+                                id: UUID(),
+                                title: "at_operator_in_patterns",
+                                answers: [
+                                    Answer(id: UUID(), title: "creates_reference", isCorrect: false),
+                                    Answer(id: UUID(), title: "binds_value_while_testing_pattern", isCorrect: true),
+                                    Answer(id: UUID(), title: "checks_type", isCorrect: false),
+                                    Answer(id: UUID(), title: "creates_copy", isCorrect: false)
+                                ],
+                                descriptionText: "at_binds_value_and_applies_subpattern_simultaneously",
+                                descriptionLink: "patterns_matching_link"
+                            ),
+                            // 23
+                            Question(
+                                id: UUID(),
+                                title: "guard_with_or_patterns_order",
+                                answers: [
+                                    Answer(id: UUID(), title: "applies_only_to_last", isCorrect: false),
+                                    Answer(id: UUID(), title: "applies_to_whole_group", isCorrect: true),
+                                    Answer(id: UUID(), title: "applies_only_to_first", isCorrect: false),
+                                    Answer(id: UUID(), title: "does_not_work_with_or", isCorrect: false)
+                                ],
+                                descriptionText: "guard_attaches_to_entire_parenthesized_or_pattern",
+                                descriptionLink: "patterns_matching_link"
+                            ),
+                            // 24
+                            Question(
+                                id: UUID(),
+                                title: "can_double_dot_appear_twice_in_tuple_pattern",
+                                answers: [
+                                    Answer(id: UUID(), title: "yes_no_restrictions", isCorrect: false),
+                                    Answer(id: UUID(), title: "no_ambiguous", isCorrect: true),
+                                    Answer(id: UUID(), title: "only_start_and_end", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_with_explicit_types", isCorrect: false)
+                                ],
+                                descriptionText: "two_ellipsis_would_be_ambiguous_on_how_many_to_ignore",
+                                descriptionLink: "patterns_matching_link"
+                            ),
+                            // 25
+                            Question(
+                                id: UUID(),
+                                title: "nested_enum_struct_destructuring",
+                                answers: [
+                                    Answer(id: UUID(), title: "no_only_one_level", isCorrect: false),
+                                    Answer(id: UUID(), title: "yes_patterns_can_be_nested", isCorrect: true),
+                                    Answer(id: UUID(), title: "only_with_box", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_enums", isCorrect: false)
+                                ],
+                                descriptionText: "patterns_support_arbitrary_nesting_for_complex_structures",
+                                descriptionLink: "patterns_matching_link"
+                            )
+                        ]
+                    ),
+                    Quiz(
+                        id: UUID(),
+                        theme: "advanced_features",
+                        priority: 16,
+                        questions: [
+                            // 1
+                            Question(
+                                id: UUID(),
+                                title: "what_is_unsafe_rust",
+                                answers: [
+                                    Answer(id: UUID(), title: "dangerous_code_cannot_use", isCorrect: false),
+                                    Answer(id: UUID(), title: "second_language_without_memory_safety_guarantees", isCorrect: true),
+                                    Answer(id: UUID(), title: "deprecated_feature", isCorrect: false),
+                                    Answer(id: UUID(), title: "code_with_errors", isCorrect: false)
+                                ],
+                                descriptionText: "unsafe_rust_relaxes_memory_safety_checks_for_more_control",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 2
+                            Question(
+                                id: UUID(),
+                                title: "how_many_unsafe_superpowers",
+                                answers: [
+                                    Answer(id: UUID(), title: "three", isCorrect: false),
+                                    Answer(id: UUID(), title: "four", isCorrect: false),
+                                    Answer(id: UUID(), title: "five", isCorrect: true),
+                                    Answer(id: UUID(), title: "unlimited", isCorrect: false)
+                                ],
+                                descriptionText: "five_abilities_raw_ptr_deref_call_unsafe_access_mut_static_impl_unsafe_trait_access_union_fields",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 3
+                            Question(
+                                id: UUID(),
+                                title: "does_unsafe_disable_borrow_checker",
+                                answers: [
+                                    Answer(id: UUID(), title: "yes_completely", isCorrect: false),
+                                    Answer(id: UUID(), title: "no_it_keeps_working", isCorrect: true),
+                                    Answer(id: UUID(), title: "partially", isCorrect: false),
+                                    Answer(id: UUID(), title: "depends_on_context", isCorrect: false)
+                                ],
+                                descriptionText: "unsafe_does_not_turn_off_rust_safety_checks",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 4
+                            Question(
+                                id: UUID(),
+                                title: "how_are_raw_pointers_created",
+                                answers: [
+                                    Answer(id: UUID(), title: "only_in_unsafe_blocks", isCorrect: false),
+                                    Answer(id: UUID(), title: "with_amp_raw_const_and_amp_raw_mut", isCorrect: true),
+                                    Answer(id: UUID(), title: "through_new_keyword", isCorrect: false),
+                                    Answer(id: UUID(), title: "automatically_by_compiler", isCorrect: false)
+                                ],
+                                descriptionText: "use_raw_pointer_operators_for_const_and_mut",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 5
+                            Question(
+                                id: UUID(),
+                                title: "can_raw_pointers_be_created_in_safe_code",
+                                answers: [
+                                    Answer(id: UUID(), title: "no_only_in_unsafe", isCorrect: false),
+                                    Answer(id: UUID(), title: "yes_but_dereferencing_requires_unsafe", isCorrect: true),
+                                    Answer(id: UUID(), title: "only_on_stack", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_with_compiler_permission", isCorrect: false)
+                                ],
+                                descriptionText: "creation_is_safe_dereference_requires_unsafe",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 6
+                            Question(
+                                id: UUID(),
+                                title: "what_rules_do_raw_pointers_ignore",
+                                answers: [
+                                    Answer(id: UUID(), title: "none", isCorrect: false),
+                                    Answer(id: UUID(), title: "allow_simultaneous_immut_and_mut_to_same_location", isCorrect: true),
+                                    Answer(id: UUID(), title: "only_lifetime_rules", isCorrect: false),
+                                    Answer(id: UUID(), title: "all_rules_automatically", isCorrect: false)
+                                ],
+                                descriptionText: "raw_pointers_can_violate_aliasing_and_borrow_rules",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 7
+                            Question(
+                                id: UUID(),
+                                title: "how_to_call_unsafe_function",
+                                answers: [
+                                    Answer(id: UUID(), title: "directly_anywhere", isCorrect: false),
+                                    Answer(id: UUID(), title: "inside_unsafe_block_only", isCorrect: true),
+                                    Answer(id: UUID(), title: "with_compiler_flag", isCorrect: false),
+                                    Answer(id: UUID(), title: "through_wrapper", isCorrect: false)
+                                ],
+                                descriptionText: "unsafe_fn_calls_require_unsafe_block",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 8
+                            Question(
+                                id: UUID(),
+                                title: "unsafe_block_inside_unsafe_fn_needed",
+                                answers: [
+                                    Answer(id: UUID(), title: "no_function_already_unsafe", isCorrect: false),
+                                    Answer(id: UUID(), title: "yes_still_required_for_unsafe_ops", isCorrect: true),
+                                    Answer(id: UUID(), title: "depends_on_operation", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_for_raw_ptrs", isCorrect: false)
+                                ],
+                                descriptionText: "unsafe_ops_are_marked_even_inside_unsafe_fn",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 9
+                            Question(
+                                id: UUID(),
+                                title: "what_is_safe_abstraction",
+                                answers: [
+                                    Answer(id: UUID(), title: "abstract_type", isCorrect: false),
+                                    Answer(id: UUID(), title: "safe_wrapper_over_unsafe_code", isCorrect: true),
+                                    Answer(id: UUID(), title: "type_without_unsafe", isCorrect: false),
+                                    Answer(id: UUID(), title: "abstract_function", isCorrect: false)
+                                ],
+                                descriptionText: "expose_safe_api_hiding_internal_unsafe",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 10
+                            Question(
+                                id: UUID(),
+                                title: "what_does_extern_c_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "imports_c_code", isCorrect: false),
+                                    Answer(id: UUID(), title: "defines_abi_for_external_calls", isCorrect: true),
+                                    Answer(id: UUID(), title: "compiles_to_c", isCorrect: false),
+                                    Answer(id: UUID(), title: "creates_c_library", isCorrect: false)
+                                ],
+                                descriptionText: "extern_c_sets_application_binary_interface",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 11
+                            Question(
+                                id: UUID(),
+                                title: "must_extern_block_be_unsafe",
+                                answers: [
+                                    Answer(id: UUID(), title: "no_never", isCorrect: false),
+                                    Answer(id: UUID(), title: "yes_always", isCorrect: true),
+                                    Answer(id: UUID(), title: "only_for_some_functions", isCorrect: false),
+                                    Answer(id: UUID(), title: "depends_on_language", isCorrect: false)
+                                ],
+                                descriptionText: "rust_cannot_verify_external_functions",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 12
+                            Question(
+                                id: UUID(),
+                                title: "safe_fns_inside_unsafe_extern_block",
+                                answers: [
+                                    Answer(id: UUID(), title: "no_all_must_be_unsafe", isCorrect: false),
+                                    Answer(id: UUID(), title: "yes_mark_with_safe", isCorrect: true),
+                                    Answer(id: UUID(), title: "only_for_c_functions", isCorrect: false),
+                                    Answer(id: UUID(), title: "automatic_for_some", isCorrect: false)
+                                ],
+                                descriptionText: "individual_items_can_be_declared_safe",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 13
+                            Question(
+                                id: UUID(),
+                                title: "static_vars_vs_constants",
+                                answers: [
+                                    Answer(id: UUID(), title: "no_difference", isCorrect: false),
+                                    Answer(id: UUID(), title: "statics_have_fixed_memory_address", isCorrect: true),
+                                    Answer(id: UUID(), title: "statics_are_faster", isCorrect: false),
+                                    Answer(id: UUID(), title: "consts_are_mutable", isCorrect: false)
+                                ],
+                                descriptionText: "statics_reside_at_fixed_address_consts_are_inlined",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 14
+                            Question(
+                                id: UUID(),
+                                title: "is_accessing_immutable_static_safe",
+                                answers: [
+                                    Answer(id: UUID(), title: "no_always_unsafe", isCorrect: false),
+                                    Answer(id: UUID(), title: "yes_safe", isCorrect: true),
+                                    Answer(id: UUID(), title: "depends_on_type", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_for_reading", isCorrect: false)
+                                ],
+                                descriptionText: "immutable_static_access_is_safe",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 15
+                            Question(
+                                id: UUID(),
+                                title: "why_mutable_static_is_unsafe",
+                                answers: [
+                                    Answer(id: UUID(), title: "it_is_slow", isCorrect: false),
+                                    Answer(id: UUID(), title: "can_cause_data_race_across_threads", isCorrect: true),
+                                    Answer(id: UUID(), title: "uses_too_much_memory", isCorrect: false),
+                                    Answer(id: UUID(), title: "deprecated", isCorrect: false)
+                                ],
+                                descriptionText: "shared_mutable_global_requires_synchronization",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 16
+                            Question(
+                                id: UUID(),
+                                title: "what_is_an_unsafe_trait",
+                                answers: [
+                                    Answer(id: UUID(), title: "trait_with_errors", isCorrect: false),
+                                    Answer(id: UUID(), title: "trait_with_invariants_compiler_cannot_verify", isCorrect: true),
+                                    Answer(id: UUID(), title: "deprecated_trait", isCorrect: false),
+                                    Answer(id: UUID(), title: "systems_programming_trait", isCorrect: false)
+                                ],
+                                descriptionText: "unsafe_trait_has_contract_requiring_manual_uphold",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 17
+                            Question(
+                                id: UUID(),
+                                title: "how_to_declare_unsafe_trait",
+                                answers: [
+                                    Answer(id: UUID(), title: "trait_foo_with_unsafe_fns", isCorrect: false),
+                                    Answer(id: UUID(), title: "unsafe_trait_foo", isCorrect: true),
+                                    Answer(id: UUID(), title: "attr_unsafe_trait", isCorrect: false),
+                                    Answer(id: UUID(), title: "cannot_declare", isCorrect: false)
+                                ],
+                                descriptionText: "put_unsafe_before_trait_keyword",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 18
+                            Question(
+                                id: UUID(),
+                                title: "how_to_impl_unsafe_trait",
+                                answers: [
+                                    Answer(id: UUID(), title: "regular_impl", isCorrect: false),
+                                    Answer(id: UUID(), title: "unsafe_impl", isCorrect: true),
+                                    Answer(id: UUID(), title: "impl_unsafe", isCorrect: false),
+                                    Answer(id: UUID(), title: "compiler_flag", isCorrect: false)
+                                ],
+                                descriptionText: "implementations_must_be_marked_unsafe_impl",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 19
+                            Question(
+                                id: UUID(),
+                                title: "what_is_miri",
+                                answers: [
+                                    Answer(id: UUID(), title: "rust_compiler", isCorrect: false),
+                                    Answer(id: UUID(), title: "tool_detecting_undefined_behavior", isCorrect: true),
+                                    Answer(id: UUID(), title: "unsafe_library", isCorrect: false),
+                                    Answer(id: UUID(), title: "async_runtime", isCorrect: false)
+                                ],
+                                descriptionText: "miri_interprets_rust_to_find_ub_at_runtime",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 20
+                            Question(
+                                id: UUID(),
+                                title: "what_is_associated_type_in_trait",
+                                answers: [
+                                    Answer(id: UUID(), title: "struct_field_type", isCorrect: false),
+                                    Answer(id: UUID(), title: "placeholder_type_chosen_by_impl", isCorrect: true),
+                                    Answer(id: UUID(), title: "generic_parameter", isCorrect: false),
+                                    Answer(id: UUID(), title: "method_return_type", isCorrect: false)
+                                ],
+                                descriptionText: "impl_sets_concrete_type_for_associated_placeholder",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 21
+                            Question(
+                                id: UUID(),
+                                title: "associated_type_vs_generic_on_trait",
+                                answers: [
+                                    Answer(id: UUID(), title: "no_difference", isCorrect: false),
+                                    Answer(id: UUID(), title: "associated_type_fixed_per_impl_generics_allow_multiple_impls", isCorrect: true),
+                                    Answer(id: UUID(), title: "generic_is_faster", isCorrect: false),
+                                    Answer(id: UUID(), title: "associated_only_for_iterator", isCorrect: false)
+                                ],
+                                descriptionText: "associated_type_limits_to_one_impl_per_type",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 22
+                            Question(
+                                id: UUID(),
+                                title: "what_is_default_type_parameter",
+                                answers: [
+                                    Answer(id: UUID(), title: "required_param", isCorrect: false),
+                                    Answer(id: UUID(), title: "default_type_for_generic_param", isCorrect: true),
+                                    Answer(id: UUID(), title: "first_fn_param", isCorrect: false),
+                                    Answer(id: UUID(), title: "std_type", isCorrect: false)
+                                ],
+                                descriptionText: "syntax_placeholder_equals_concrete_type",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 23
+                            Question(
+                                id: UUID(),
+                                title: "what_is_fully_qualified_syntax",
+                                answers: [
+                                    Answer(id: UUID(), title: "full_module_name", isCorrect: false),
+                                    Answer(id: UUID(), title: "explicit_trait_call_syntax_type_as_trait_fn", isCorrect: true),
+                                    Answer(id: UUID(), title: "generic_syntax", isCorrect: false),
+                                    Answer(id: UUID(), title: "full_file_path", isCorrect: false)
+                                ],
+                                descriptionText: "use_type_as_trait_double_colon_function_for_disambiguation",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 24
+                            Question(
+                                id: UUID(),
+                                title: "what_is_supertrait",
+                                answers: [
+                                    Answer(id: UUID(), title: "most_important_trait", isCorrect: false),
+                                    Answer(id: UUID(), title: "trait_required_by_another_trait", isCorrect: true),
+                                    Answer(id: UUID(), title: "base_trait_in_hierarchy", isCorrect: false),
+                                    Answer(id: UUID(), title: "std_only_trait", isCorrect: false)
+                                ],
+                                descriptionText: "dependent_trait_requires_supertrait_implemented",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 25
+                            Question(
+                                id: UUID(),
+                                title: "how_to_specify_supertrait",
+                                answers: [
+                                    Answer(id: UUID(), title: "trait_a_colon_b", isCorrect: true),
+                                    Answer(id: UUID(), title: "trait_a_extends_b", isCorrect: false),
+                                    Answer(id: UUID(), title: "trait_a_arrow_b", isCorrect: false),
+                                    Answer(id: UUID(), title: "trait_a_inherits_b", isCorrect: false)
+                                ],
+                                descriptionText: "use_trait_a_colon_supertrait_syntax",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 26
+                            Question(
+                                id: UUID(),
+                                title: "what_is_newtype_pattern",
+                                answers: [
+                                    Answer(id: UUID(), title: "new_primitive_type", isCorrect: false),
+                                    Answer(id: UUID(), title: "wrap_existing_type_in_tuple_struct", isCorrect: true),
+                                    Answer(id: UUID(), title: "generic_type", isCorrect: false),
+                                    Answer(id: UUID(), title: "enum_variant", isCorrect: false)
+                                ],
+                                descriptionText: "tuple_struct_with_one_field_creates_distinct_type",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 27
+                            Question(
+                                id: UUID(),
+                                title: "why_use_newtype_pattern",
+                                answers: [
+                                    Answer(id: UUID(), title: "for_speed", isCorrect: false),
+                                    Answer(id: UUID(), title: "bypass_orphan_rule_and_gain_type_safety", isCorrect: true),
+                                    Answer(id: UUID(), title: "for_code_beauty", isCorrect: false),
+                                    Answer(id: UUID(), title: "mandatory_requirement", isCorrect: false)
+                                ],
+                                descriptionText: "newtype_enables_external_trait_impls_and_stronger_types",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 28
+                            Question(
+                                id: UUID(),
+                                title: "what_is_type_alias",
+                                answers: [
+                                    Answer(id: UUID(), title: "type_copy", isCorrect: false),
+                                    Answer(id: UUID(), title: "synonym_for_existing_type", isCorrect: true),
+                                    Answer(id: UUID(), title: "new_type", isCorrect: false),
+                                    Answer(id: UUID(), title: "generic_type", isCorrect: false)
+                                ],
+                                descriptionText: "type_alias_does_not_create_distinct_type",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 29
+                            Question(
+                                id: UUID(),
+                                title: "does_type_alias_provide_newtype_safety",
+                                answers: [
+                                    Answer(id: UUID(), title: "yes_completely", isCorrect: false),
+                                    Answer(id: UUID(), title: "no_its_just_a_synonym", isCorrect: true),
+                                    Answer(id: UUID(), title: "partially", isCorrect: false),
+                                    Answer(id: UUID(), title: "depends_on_type", isCorrect: false)
+                                ],
+                                descriptionText: "aliases_share_identity_with_underlying_type",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 30
+                            Question(
+                                id: UUID(),
+                                title: "what_is_never_type",
+                                answers: [
+                                    Answer(id: UUID(), title: "error_type", isCorrect: false),
+                                    Answer(id: UUID(), title: "type_for_functions_that_never_return", isCorrect: true),
+                                    Answer(id: UUID(), title: "empty_enum", isCorrect: false),
+                                    Answer(id: UUID(), title: "type_for_panic", isCorrect: false)
+                                ],
+                                descriptionText: "never_type_bang_indicates_diverging_functions",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 31
+                            Question(
+                                id: UUID(),
+                                title: "which_functions_return_never_type",
+                                answers: [
+                                    Answer(id: UUID(), title: "functions_with_errors", isCorrect: false),
+                                    Answer(id: UUID(), title: "diverging_functions_infinite_loop_or_panic", isCorrect: true),
+                                    Answer(id: UUID(), title: "async_functions", isCorrect: false),
+                                    Answer(id: UUID(), title: "generic_functions", isCorrect: false)
+                                ],
+                                descriptionText: "diverge_never_return_control_to_caller",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 32
+                            Question(
+                                id: UUID(),
+                                title: "what_is_dst",
+                                answers: [
+                                    Answer(id: UUID(), title: "fixed_size_type", isCorrect: false),
+                                    Answer(id: UUID(), title: "dynamically_sized_type_known_only_at_runtime", isCorrect: true),
+                                    Answer(id: UUID(), title: "generic_type", isCorrect: false),
+                                    Answer(id: UUID(), title: "dynamic_memory_type", isCorrect: false)
+                                ],
+                                descriptionText: "dst_size_not_known_at_compile_time",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 33
+                            Question(
+                                id: UUID(),
+                                title: "is_str_a_dst",
+                                answers: [
+                                    Answer(id: UUID(), title: "no_regular_type", isCorrect: false),
+                                    Answer(id: UUID(), title: "yes", isCorrect: true),
+                                    Answer(id: UUID(), title: "depends_on_context", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_in_unsafe", isCorrect: false)
+                                ],
+                                descriptionText: "bare_str_is_dst_length_known_at_runtime",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 34
+                            Question(
+                                id: UUID(),
+                                title: "how_to_work_with_dst",
+                                answers: [
+                                    Answer(id: UUID(), title: "directly", isCorrect: false),
+                                    Answer(id: UUID(), title: "through_pointer_reference_or_box", isCorrect: true),
+                                    Answer(id: UUID(), title: "only_in_unsafe", isCorrect: false),
+                                    Answer(id: UUID(), title: "cannot_work", isCorrect: false)
+                                ],
+                                descriptionText: "use_refs_or_box_like_amp_str_box_str_amp_dyn_trait",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 35
+                            Question(
+                                id: UUID(),
+                                title: "what_is_sized_trait",
+                                answers: [
+                                    Answer(id: UUID(), title: "trait_for_large_types", isCorrect: false),
+                                    Answer(id: UUID(), title: "auto_trait_for_types_with_known_size_at_compile_time", isCorrect: true),
+                                    Answer(id: UUID(), title: "trait_for_dst", isCorrect: false),
+                                    Answer(id: UUID(), title: "optimization_trait", isCorrect: false)
+                                ],
+                                descriptionText: "sized_is_implicit_bound_for_type_parameters",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 36
+                            Question(
+                                id: UUID(),
+                                title: "what_does_qmark_sized_mean",
+                                answers: [
+                                    Answer(id: UUID(), title: "type_must_be_sized", isCorrect: false),
+                                    Answer(id: UUID(), title: "type_may_or_may_not_be_sized", isCorrect: true),
+                                    Answer(id: UUID(), title: "type_must_not_be_sized", isCorrect: false),
+                                    Answer(id: UUID(), title: "syntax_error", isCorrect: false)
+                                ],
+                                descriptionText: "relaxes_default_sized_bound",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 37
+                            Question(
+                                id: UUID(),
+                                title: "what_is_function_pointer_fn",
+                                answers: [
+                                    Answer(id: UUID(), title: "pointer_to_any_function", isCorrect: false),
+                                    Answer(id: UUID(), title: "type_for_passing_functions_as_values", isCorrect: true),
+                                    Answer(id: UUID(), title: "closure_type", isCorrect: false),
+                                    Answer(id: UUID(), title: "trait_for_functions", isCorrect: false)
+                                ],
+                                descriptionText: "fn_pointer_can_be_passed_called_like_function",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 38
+                            Question(
+                                id: UUID(),
+                                title: "fn_pointers_implement_closure_traits",
+                                answers: [
+                                    Answer(id: UUID(), title: "no", isCorrect: false),
+                                    Answer(id: UUID(), title: "yes_fn_fnmut_fnonce", isCorrect: true),
+                                    Answer(id: UUID(), title: "only_fn", isCorrect: false),
+                                    Answer(id: UUID(), title: "depends_on_function", isCorrect: false)
+                                ],
+                                descriptionText: "function_pointers_implement_all_three_closure_traits",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 39
+                            Question(
+                                id: UUID(),
+                                title: "how_to_return_closure",
+                                answers: [
+                                    Answer(id: UUID(), title: "fn_returns_trait", isCorrect: false),
+                                    Answer(id: UUID(), title: "fn_arrow_impl_fn", isCorrect: true),
+                                    Answer(id: UUID(), title: "fn_arrow_closure", isCorrect: false),
+                                    Answer(id: UUID(), title: "cannot_return", isCorrect: false)
+                                ],
+                                descriptionText: "use_impl_trait_to_return_closure_type_opaquely",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 40
+                            Question(
+                                id: UUID(),
+                                title: "when_need_box_dyn_fn_to_return_closure",
+                                answers: [
+                                    Answer(id: UUID(), title: "always", isCorrect: false),
+                                    Answer(id: UUID(), title: "when_various_closure_types_in_one_place", isCorrect: true),
+                                    Answer(id: UUID(), title: "never", isCorrect: false),
+                                    Answer(id: UUID(), title: "only_in_unsafe", isCorrect: false)
+                                ],
+                                descriptionText: "trait_objects_allow_heterogeneous_closures",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 41
+                            Question(
+                                id: UUID(),
+                                title: "what_is_metaprogramming",
+                                answers: [
+                                    Answer(id: UUID(), title: "ai_programming", isCorrect: false),
+                                    Answer(id: UUID(), title: "code_that_writes_code", isCorrect: true),
+                                    Answer(id: UUID(), title: "parallel_programming", isCorrect: false),
+                                    Answer(id: UUID(), title: "low_level_programming", isCorrect: false)
+                                ],
+                                descriptionText: "generate_or_transform_code_programmatically",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 42
+                            Question(
+                                id: UUID(),
+                                title: "macros_vs_functions",
+                                answers: [
+                                    Answer(id: UUID(), title: "no_difference", isCorrect: false),
+                                    Answer(id: UUID(), title: "macros_expand_pre_compile_and_accept_var_args", isCorrect: true),
+                                    Answer(id: UUID(), title: "macros_are_faster", isCorrect: false),
+                                    Answer(id: UUID(), title: "functions_deprecated", isCorrect: false)
+                                ],
+                                descriptionText: "macros_operate_on_tokens_before_type_checking",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 43
+                            Question(
+                                id: UUID(),
+                                title: "what_is_declarative_macro",
+                                answers: [
+                                    Answer(id: UUID(), title: "macro_with_declaration", isCorrect: false),
+                                    Answer(id: UUID(), title: "macro_rules_pattern_matching_macro", isCorrect: true),
+                                    Answer(id: UUID(), title: "procedural_macro", isCorrect: false),
+                                    Answer(id: UUID(), title: "deprecated_macro_type", isCorrect: false)
+                                ],
+                                descriptionText: "macro_rules_uses_match_like_patterns_and_expansions",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 44
+                            Question(
+                                id: UUID(),
+                                title: "how_many_types_of_procedural_macros",
+                                answers: [
+                                    Answer(id: UUID(), title: "one", isCorrect: false),
+                                    Answer(id: UUID(), title: "two", isCorrect: false),
+                                    Answer(id: UUID(), title: "three", isCorrect: true),
+                                    Answer(id: UUID(), title: "four", isCorrect: false)
+                                ],
+                                descriptionText: "custom_derive_attribute_like_function_like",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 45
+                            Question(
+                                id: UUID(),
+                                title: "what_is_custom_derive_macro",
+                                answers: [
+                                    Answer(id: UUID(), title: "macro_for_deriving", isCorrect: false),
+                                    Answer(id: UUID(), title: "proc_macro_generating_code_with_derive_attr", isCorrect: true),
+                                    Answer(id: UUID(), title: "macro_for_structs", isCorrect: false),
+                                    Answer(id: UUID(), title: "macro_for_traits", isCorrect: false)
+                                ],
+                                descriptionText: "uses_attr_derive_yourmacro_to_generate_impls",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 46
+                            Question(
+                                id: UUID(),
+                                title: "proc_macro_input_and_output",
+                                answers: [
+                                    Answer(id: UUID(), title: "string_to_string", isCorrect: false),
+                                    Answer(id: UUID(), title: "tokenstream_to_tokenstream", isCorrect: true),
+                                    Answer(id: UUID(), title: "ast_to_ast", isCorrect: false),
+                                    Answer(id: UUID(), title: "code_to_code", isCorrect: false)
+                                ],
+                                descriptionText: "procedural_macros_transform_token_streams",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 47
+                            Question(
+                                id: UUID(),
+                                title: "what_does_macro_export_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "exports_macro_to_file", isCorrect: false),
+                                    Answer(id: UUID(), title: "makes_macro_available_when_importing_crate", isCorrect: true),
+                                    Answer(id: UUID(), title: "compiles_macro", isCorrect: false),
+                                    Answer(id: UUID(), title: "removes_macro", isCorrect: false)
+                                ],
+                                descriptionText: "attribute_exposes_macro_publicly_for_downstream_crates",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 48
+                            Question(
+                                id: UUID(),
+                                title: "where_proc_macros_must_live",
+                                answers: [
+                                    Answer(id: UUID(), title: "anywhere", isCorrect: false),
+                                    Answer(id: UUID(), title: "separate_crate_with_proc_macro_true", isCorrect: true),
+                                    Answer(id: UUID(), title: "in_main_rs", isCorrect: false),
+                                    Answer(id: UUID(), title: "in_lib_rs_only", isCorrect: false)
+                                ],
+                                descriptionText: "proc_macros_require_dedicated_proc_macro_crate",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 49
+                            Question(
+                                id: UUID(),
+                                title: "what_does_syn_crate_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "synchronizes_code", isCorrect: false),
+                                    Answer(id: UUID(), title: "parses_rust_code_into_data_structures", isCorrect: true),
+                                    Answer(id: UUID(), title: "compiles_macros", isCorrect: false),
+                                    Answer(id: UUID(), title: "checks_syntax", isCorrect: false)
+                                ],
+                                descriptionText: "syn_parses_tokenstream_into_ast_like_structures",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 50
+                            Question(
+                                id: UUID(),
+                                title: "what_does_quote_crate_do",
+                                answers: [
+                                    Answer(id: UUID(), title: "quotes_code", isCorrect: false),
+                                    Answer(id: UUID(), title: "converts_syntax_structures_back_to_rust_code", isCorrect: true),
+                                    Answer(id: UUID(), title: "parses_code", isCorrect: false),
+                                    Answer(id: UUID(), title: "documents_macros", isCorrect: false)
+                                ],
+                                descriptionText: "quote_turns_ast_like_structures_into_tokens_with_macros",
+                                descriptionLink: "advanced_features_link"
+                            ),
+                            // 51
+                            Question(
+                                id: UUID(),
+                                title: "what_is_attribute_like_macro",
+                                answers: [
+                                    Answer(id: UUID(), title: "macro_for_attributes", isCorrect: false),
+                                    Answer(id: UUID(), title: "macro_creating_custom_attributes_for_items", isCorrect: true),
+                                    Answer(id: UUID(), title: "derive_macro", isCorrect: false),
+                                    Answer(id: UUID(), title: "function_macro", isCorrect: false)
+                                ],
+                                descriptionText: "attribute_like_macros_define_new_attributes_for_items",
+                                descriptionLink: "advanced_features_link"
+                            )
+                        ]
                     )
                 ]
             )
