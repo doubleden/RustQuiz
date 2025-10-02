@@ -37,7 +37,7 @@ struct RootScreenView: View {
                         Text("No sources")
                     } else {
                         ForEach(store.sources) { source in
-                            Text(source.titleLocalized)
+                            Text(source.quizzes[0].questions[2].titleLocalized)
                                 .onAppear {
                                     dump(source, name: "Source")
                                 }
