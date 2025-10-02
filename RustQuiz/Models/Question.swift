@@ -5,7 +5,7 @@
 //  Created by Denis Denisov on 30/9/25.
 //
 
-import Foundation
+import SwiftUI
 
 struct Question: Identifiable {
     let id: UUID
@@ -17,5 +17,19 @@ struct Question: Identifiable {
     
     var hasUserAnswered = false
     var isUserAnswerCorrect = false
+}
+
+// MARK: - Localization
+extension Question {
+    var titleLocalized: LocalizedStringKey {
+        LocalizedStringKey(stringLiteral: title)
+    }
     
+    var descriptionTextLocalized: LocalizedStringKey {
+        LocalizedStringKey(stringLiteral: descriptionText)
+    }
+    
+    var descriptionLinkLocalized: LocalizedStringKey {
+        LocalizedStringKey(stringLiteral: descriptionLink)
+    }
 }

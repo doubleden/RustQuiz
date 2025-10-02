@@ -19,47 +19,28 @@ extension SeedService: DependencyKey {
         getTheBookSource: {
             Source(
                 id: UUID(),
-                title: "The Book",
+                title: "the_book",
                 priority: 1,
                 quizzes: [
                     Quiz(
                         id: UUID(),
-                        theme: "Common Programming Concepts",
+                        theme: "common_programming_concepts",
                         priority: 1,
                         questions: [
                             Question(
                                 id: UUID(),
-                                title: "What is a variable?",
+                                title: "how_are_variables_declared_by_default_in_Rust_?",
                                 answers: [
-                                    Answer(id: UUID(),title: "let"),
-                                    Answer(id: UUID(),title: "mut let"),
-                                    Answer(id: UUID(),title: "var"),
-                                    Answer(id: UUID(),title: "const")
+                                    Answer(id: UUID(),title: "mutable", isCorrect: false),
+                                    Answer(id: UUID(),title: "immutable", isCorrect: true),
+                                    Answer(id: UUID(),title: "dynamic", isCorrect: false),
+                                    Answer(id: UUID(),title: "by_reference", isCorrect: false)
                                 ],
-                                descriptionText: "Variable is a name that is used to refer to a value.",
-                                descriptionLink: "https://doc.rust-lang.org/book/ch03-00-common-programming-concepts.html"
+                                descriptionText: "let_creates_an_immutable_binding.mutability_is_only_via_mut.",
+                                descriptionLink: "common_programming_concepts_link"
                             )
                         ]
                     ),
-                    Quiz(
-                        id: UUID(),
-                        theme: "Common Programming Concepts2",
-                        priority: 2,
-                        questions: [
-                            Question(
-                                id: UUID(),
-                                title: "What is a variable?2",
-                                answers: [
-                                    Answer(id: UUID(),title: "let2"),
-                                    Answer(id: UUID(),title: "mut let2"),
-                                    Answer(id: UUID(),title: "var2"),
-                                    Answer(id: UUID(),title: "const2")
-                                ],
-                                descriptionText: "Variable is a name that is used to refer to a value.2",
-                                descriptionLink: "https://doc.rust-lang.org/book/ch03-00-common-programming-concepts.html2"
-                            )
-                        ]
-                    )
                 ]
             )
         }

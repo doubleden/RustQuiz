@@ -16,9 +16,8 @@ struct StorageService {
     var deleteSource: @Sendable (Source) async throws -> Void
 }
 
+// MARK: - Live
 extension StorageService: DependencyKey {
-    
-    // MARK: - Live
     static let liveValue: StorageService = .init(
         createSource: { source in
             @Dependency(\.defaultDatabase) var database
@@ -246,20 +245,14 @@ extension StorageService: DependencyKey {
     )
 }
 
-// MARK: - Test/Preview Value
+// MARK: - Preview
 extension StorageService {
-    static let testValue: StorageService = .init(
-        createSource: { _ in },
-        readSources: { [] },
-        updateSource: { _ in },
-        deleteSource: { _ in }
-    )
-    
     static let previewValue: StorageService = .init(
         createSource: { _ in },
         readSources: {
-            // Можете вернуть здесь тестовые данные для превью
-            []
+            [
+                Source(id: UUID(), title: "the_book", priority: 1, quizzes: [])
+            ]
         },
         updateSource: { _ in },
         deleteSource: { _ in }
