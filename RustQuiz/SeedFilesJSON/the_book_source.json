@@ -1,0 +1,1964 @@
+{
+  "id": "5af02ee8-e37a-42ee-83cb-978281a55806",
+  "title": "The Book",
+  "priority": 1,
+  "quizzes": [
+    {
+      "id": "4d2e6866-5afd-49db-9417-ca5d9b77d38f",
+      "theme": "common_programming_concepts",
+      "priority": 1,
+      "questions": [
+        {
+          "id": "a2d02c39-7679-4270-bcfe-b0dd1904c545",
+          "title": "how_are_variables_declared_by_default_in_Rust",
+          "answers": [
+            {
+              "id": "ddf480fd-fec0-4708-b318-8d766de14801",
+              "title": "mutable",
+              "isCorrect": false
+            },
+            {
+              "id": "c1d1a7ca-3015-46d6-ae92-227fda819ce8",
+              "title": "immutable",
+              "isCorrect": true
+            },
+            {
+              "id": "fc98bb20-a081-4a73-a86e-5c8de4cab410",
+              "title": "dynamic",
+              "isCorrect": false
+            },
+            {
+              "id": "c354a486-e381-4173-b3cb-f443511eb116",
+              "title": "by_reference",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "let_creates_an_immutable_binding_mutability_is_only_via_mut",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "8ad1655a-78bd-43ce-97f5-3ec75dda837c",
+          "title": "to_make_a_variable_mutable_you_need",
+          "answers": [
+            {
+              "id": "27c77d0c-18ff-47ea-9f8a-abda69940649",
+              "title": "var",
+              "isCorrect": false
+            },
+            {
+              "id": "a30e964b-df05-4843-a6df-87f11415094e",
+              "title": "mut",
+              "isCorrect": true
+            },
+            {
+              "id": "491bd964-2437-46bc-b077-13159d5efff9",
+              "title": "const",
+              "isCorrect": false
+            },
+            {
+              "id": "9422996f-6f5b-4322-9cc2-a6d3cee71780",
+              "title": "nothing",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "let_mut_x_this_is_the_only_syntax_to_allow_mutation.",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "2c08aef0-ae99-41c6-b804-d7818f32319e",
+          "title": "what_will_happen_let_x_5_x_10",
+          "answers": [
+            {
+              "id": "32943794-2db6-4702-86a0-20cded0b76c8",
+              "title": "compilation_error_missing_semicolon",
+              "isCorrect": false
+            },
+            {
+              "id": "8625153a-db8d-492d-8001-cab717333c2a",
+              "title": "will_print_10",
+              "isCorrect": false
+            },
+            {
+              "id": "756f28b1-72f2-490f-9086-fd421f908e36",
+              "title": "compilation_error_assignment_to_immutable",
+              "isCorrect": true
+            },
+            {
+              "id": "cb1a025d-def2-4534-bb9f-28c0a71fc33b",
+              "title": "automatically_becomes_mut",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "rust_requires_explicit_mut_also_semicolon_after_5_needed",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "697fa55f-9bbb-4d51-a139-0993eb2f96c0",
+          "title": "how_does_const_differ_from_let",
+          "answers": [
+            {
+              "id": "95a79e2e-6d86-4170-a498-deea44410834",
+              "title": "const_requires_explicit_type",
+              "isCorrect": true
+            },
+            {
+              "id": "8d892c9e-fcba-481f-9b54-60e36a3ba5cd",
+              "title": "const_only_inside_functions",
+              "isCorrect": false
+            },
+            {
+              "id": "b00427de-6158-4d57-96db-0fa02a5fa484",
+              "title": "const_can_be_made_mut",
+              "isCorrect": false
+            },
+            {
+              "id": "b2fd5192-6624-4f06-abdb-8abc3f75ccb9",
+              "title": "let_evaluated_only_at_compile_time",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "constants_always_have_explicit_type_and_constexpr_value",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "539f5582-bd56-45be-af2f-c35c54651c9f",
+          "title": "valid_constant_declaration",
+          "answers": [
+            {
+              "id": "ad42c79d-cdd8-44f9-a9ed-2a974bba99b9",
+              "title": "const_pi_3_14",
+              "isCorrect": false
+            },
+            {
+              "id": "22e52782-a440-435c-954d-da3b31b21f84",
+              "title": "const_pi_f64_3_14",
+              "isCorrect": true
+            },
+            {
+              "id": "b15280cb-17c1-4516-86ac-7a8cfbb50db7",
+              "title": "let_const_pi_f64_3_14",
+              "isCorrect": false
+            },
+            {
+              "id": "a3e3e1c9-b7d1-4120-9256-5df483ebef4e",
+              "title": "constant_pi_3_14",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "type_after_colon_is_required_that_is_language_syntax",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "ee30482c-4a4a-4e62-ae5a-2620bd29813b",
+          "title": "what_is_shadowing",
+          "answers": [
+            {
+              "id": "ac4300ff-aadc-4d52-b644-2bbf8979a4ba",
+              "title": "assignment_without_mut",
+              "isCorrect": false
+            },
+            {
+              "id": "f93a6798-7409-4482-96ef-1887c36b269c",
+              "title": "re_declaring_with_let_same_name",
+              "isCorrect": true
+            },
+            {
+              "id": "ca1f08f8-80c7-4dcf-8298-1d4689e99246",
+              "title": "value_erasure",
+              "isCorrect": false
+            },
+            {
+              "id": "fd04c631-69d6-4f0e-a2c9-a92e274227c0",
+              "title": "automatic_type_casting",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "let_x_let_x_creates_a_new_binding",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "27d0cc91-0a15-4d8d-8f22-933042bf3f9f",
+          "title": "what_can_you_do_with_shadowing_but_not_mut",
+          "answers": [
+            {
+              "id": "9ff41af1-6c2c-42b0-bef8-385204242e40",
+              "title": "change_type_with_same_name",
+              "isCorrect": true
+            },
+            {
+              "id": "d8209e33-d630-4aa8-b017-f003995d2aa3",
+              "title": "change_value",
+              "isCorrect": false
+            },
+            {
+              "id": "c45cf4bb-79bd-4fb3-a790-efc1f3900298",
+              "title": "use_in_loop",
+              "isCorrect": false
+            },
+            {
+              "id": "6b07478d-9547-45f0-9600-847a7d01d79f",
+              "title": "pass_to_function",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "new_let_can_have_different_type_it_is_actually_new_variable",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "30030c4f-415e-4897-aabc-e0cbc3fb65c4",
+          "title": "what_will_this_print_shadowing_example",
+          "answers": [
+            {
+              "id": "36db95dc-f9d8-46bb-acee-9211c83a6390",
+              "title": "5",
+              "isCorrect": false
+            },
+            {
+              "id": "82e994e2-f28a-43d3-8633-c528d59cc577",
+              "title": "7",
+              "isCorrect": false
+            },
+            {
+              "id": "bfbbce39-5a70-4980-87d2-940e1815def8",
+              "title": "15",
+              "isCorrect": false
+            },
+            {
+              "id": "121e7125-d7f4-4413-ae2c-d56497eed606",
+              "title": "21",
+              "isCorrect": true
+            }
+          ],
+          "descriptionText": "7_to_21_each_line_creates_a_new_x",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "699fc635-a2aa-4338-8ec0-69e968da739e",
+          "title": "what_will_happen_let_mut_s_hi_s_s_len",
+          "answers": [
+            {
+              "id": "d9590e08-5752-48b4-9bf2-6eee2b8359cf",
+              "title": "type_error",
+              "isCorrect": true
+            },
+            {
+              "id": "0fcac8ab-4a9f-4a66-9976-7821615ae876",
+              "title": "becomes_2",
+              "isCorrect": false
+            },
+            {
+              "id": "f034330f-9beb-422e-a0b8-ce063f0c468e",
+              "title": "becomes_2_string",
+              "isCorrect": false
+            },
+            {
+              "id": "9a4030e1-1f99-4e40-a058-247a5fd76737",
+              "title": "panic",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "static_str_to_usize_without_shadowing_is_invalid_mut_does_not_change_type",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "63ded012-967f-4e66-b26a-8a754b60354e",
+          "title": "default_integer_type",
+          "answers": [
+            {
+              "id": "1f0377db-0b3a-47fe-95b3-f5a38a719d33",
+              "title": "i32",
+              "isCorrect": true
+            },
+            {
+              "id": "b66a904b-e6f9-4832-a67e-07734eb13ed2",
+              "title": "i64",
+              "isCorrect": false
+            },
+            {
+              "id": "6e7806c4-c7bf-471a-826d-f10e1657c9de",
+              "title": "usize",
+              "isCorrect": false
+            },
+            {
+              "id": "12cd4729-b915-43ea-9c99-4682eb52a2e9",
+              "title": "depends",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "default_is_i32",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "15d2295b-6a07-42c1-830b-d6311f40ce37",
+          "title": "range_of_u8",
+          "answers": [
+            {
+              "id": "11f72f27-21bf-4a57-863e-4ae4e8614e59",
+              "title": "128_to_127",
+              "isCorrect": false
+            },
+            {
+              "id": "2cc251fc-e508-40d5-875d-26b078956956",
+              "title": "0_to_255",
+              "isCorrect": true
+            },
+            {
+              "id": "0c15572b-5f81-497f-adaf-296324a3ce64",
+              "title": "255_to_255",
+              "isCorrect": false
+            },
+            {
+              "id": "c95424ca-add9-4362-9b45-01ae1fb8bfef",
+              "title": "depends",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "8_bits_unsigned",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "5272ff19-7395-4275-bd26-d7359f154304",
+          "title": "what_about_let_x_u8_256_debug",
+          "answers": [
+            {
+              "id": "599bf85b-7795-4ec5-90ac-b3482e6dcaa6",
+              "title": "becomes_0",
+              "isCorrect": false
+            },
+            {
+              "id": "c8da2b5e-e620-4c21-bd97-b949b901b6b8",
+              "title": "compilation_error",
+              "isCorrect": true
+            },
+            {
+              "id": "aa034f7e-225f-48c6-a007-289610873191",
+              "title": "runtime_panic",
+              "isCorrect": false
+            },
+            {
+              "id": "b6c8b6cb-0069-4cb7-8770-d97c5d0d625a",
+              "title": "truncated_to_255",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "constant_out_of_range_256_is_outside_u8_range",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "1ca5aab0-5285-45bd-a45f-f848957ee2db",
+          "title": "type_of_57u8",
+          "answers": [
+            {
+              "id": "8376750b-5815-4597-afad-45ea66cced8f",
+              "title": "i32",
+              "isCorrect": false
+            },
+            {
+              "id": "91e1f182-66ae-4768-8fdc-2fdc3bdeeb4f",
+              "title": "u32",
+              "isCorrect": false
+            },
+            {
+              "id": "892e0161-1b12-4b64-8f2b-2a703f67f71e",
+              "title": "u8",
+              "isCorrect": true
+            },
+            {
+              "id": "058c1e16-0d96-4ccb-8fe4-ec37df35c70e",
+              "title": "usize",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "literal_suffix_sets_type",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "43055550-4868-4831-92a9-d87d7dd799fb",
+          "title": "what_does_0b1111_0000_mean",
+          "answers": [
+            {
+              "id": "3d066f04-24a0-490b-83b8-dbc623eec7ed",
+              "title": "error",
+              "isCorrect": false
+            },
+            {
+              "id": "6ae26139-59c5-419a-af8b-c8fc0c7fc1ff",
+              "title": "binary_literal",
+              "isCorrect": true
+            },
+            {
+              "id": "64ee1e53-1fbe-4c31-8bc1-74f019a7117d",
+              "title": "string",
+              "isCorrect": false
+            },
+            {
+              "id": "5f08261c-5adb-4622-b425-1246200593bb",
+              "title": "char",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "underscores_allowed_for_readability",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "8388fb99-c942-450c-b4bc-73c60215f781",
+          "title": "default_float_type",
+          "answers": [
+            {
+              "id": "3bce7be4-ff07-441c-aea8-a39b65c59e4a",
+              "title": "f32",
+              "isCorrect": false
+            },
+            {
+              "id": "9ca44791-a466-4467-ad2c-5e936309b508",
+              "title": "f64",
+              "isCorrect": true
+            },
+            {
+              "id": "18cbc02a-837d-4920-9d31-85abc0fadc6d",
+              "title": "decimal",
+              "isCorrect": false
+            },
+            {
+              "id": "abc3aed8-b992-4d04-ba49-11940ce0dbea",
+              "title": "depends",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "more_precision_at_similar_cost",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "9db660e3-639c-4185-8d5c-71b52262595c",
+          "title": "result_integers_5_divided_by_3",
+          "answers": [
+            {
+              "id": "1ba90cd7-bc65-4571-acf3-5ba1202aad6d",
+              "title": "2",
+              "isCorrect": false
+            },
+            {
+              "id": "2d7034d0-d6b2-4d48-9634-3f7808208543",
+              "title": "1",
+              "isCorrect": true
+            },
+            {
+              "id": "378f2080-a59b-489f-ae6c-640306907bfd",
+              "title": "0",
+              "isCorrect": false
+            },
+            {
+              "id": "d4a04a95-b9ba-4452-a722-ec443faecaa6",
+              "title": "error",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "division_rounds_toward_zero",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "e42128f3-0491-4335-befa-77be1e0c3f3f",
+          "title": "boolean_literal",
+          "answers": [
+            {
+              "id": "9b7249b8-1a89-4ddd-a1fe-6d779d9b5245",
+              "title": "true_string",
+              "isCorrect": false
+            },
+            {
+              "id": "b9da1b59-b8ea-4099-8f5b-2d97c80fd2f2",
+              "title": "True",
+              "isCorrect": false
+            },
+            {
+              "id": "77b5e0fc-c28c-4838-934f-52d3d536cf11",
+              "title": "false",
+              "isCorrect": true
+            },
+            {
+              "id": "8b30e2e2-64fd-483f-ba04-0ac1f32715b4",
+              "title": "1",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "lowercase_not_a_string",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "cd3a58a7-1ae8-4e5d-b7d7-8d3af41193c3",
+          "title": "char_in_rust",
+          "answers": [
+            {
+              "id": "25412894-33c5-4d28-be99-11ae35986128",
+              "title": "1_byte_ascii",
+              "isCorrect": false
+            },
+            {
+              "id": "ab951ea0-cb7f-47cd-ad04-9427215ee756",
+              "title": "2_bytes_utf16",
+              "isCorrect": false
+            },
+            {
+              "id": "e53c433e-13ba-4eeb-a806-1b1b22586b78",
+              "title": "4_bytes_unicode_scalar",
+              "isCorrect": true
+            },
+            {
+              "id": "2f8c734d-2a7f-4142-84a0-01c19f58f47c",
+              "title": "variable_length",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "one_unicode_scalar",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "cf2f8c3c-fb57-4670-ad59-b7171fe668b7",
+          "title": "about_tuples",
+          "answers": [
+            {
+              "id": "6476a352-6810-4ad3-a912-91d233d12c67",
+              "title": "fixed_length",
+              "isCorrect": false
+            },
+            {
+              "id": "c7a4fd68-c155-4eb9-9903-8610866cfa90",
+              "title": "different_types_allowed",
+              "isCorrect": false
+            },
+            {
+              "id": "f6e6b988-562d-42c4-8bfe-199bdae268f7",
+              "title": "indexed_by_dot_0",
+              "isCorrect": false
+            },
+            {
+              "id": "785a6c92-8d46-4332-97d6-90140d349d94",
+              "title": "all_of_above",
+              "isCorrect": true
+            }
+          ],
+          "descriptionText": "all_true",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "f5c31ee7-a841-4daa-ab22-397d937653d3",
+          "title": "what_will_this_print_tuple_index",
+          "answers": [
+            {
+              "id": "8d17d95b-93b0-4e58-8ac1-10243c059678",
+              "title": "1",
+              "isCorrect": false
+            },
+            {
+              "id": "e43c6cfa-0d8f-432c-be07-6ae03ae80ec2",
+              "title": "2_0",
+              "isCorrect": true
+            },
+            {
+              "id": "c0108b9c-73fc-4a08-a779-7781537cd5e9",
+              "title": "c",
+              "isCorrect": false
+            },
+            {
+              "id": "86bc6ee8-a634-4adf-937e-6e233c30ba8a",
+              "title": "error",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "index_1_to_second_element",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "37de0df2-a27f-4030-82b1-8a058c9d7b7a",
+          "title": "about_i32_5_array",
+          "answers": [
+            {
+              "id": "2bf623e6-410d-40a2-9801-fce70d0bca0e",
+              "title": "only_i32",
+              "isCorrect": false
+            },
+            {
+              "id": "a55bba9f-4cce-46be-8853-77d024714053",
+              "title": "fixed_length",
+              "isCorrect": false
+            },
+            {
+              "id": "55cd92ad-b8a4-405f-b9e7-51e35e96174e",
+              "title": "length_is_part_of_type",
+              "isCorrect": false
+            },
+            {
+              "id": "784c7838-11f8-4cb9-b733-58454c1745f6",
+              "title": "all_of_above",
+              "isCorrect": true
+            }
+          ],
+          "descriptionText": "t_n",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "0d4d40f3-337c-45a2-9b28-d9a531797aca",
+          "title": "what_does_let_a_3_4_create",
+          "answers": [
+            {
+              "id": "dbba4eb8-e1ac-4089-a340-66df6179aeb2",
+              "title": "3",
+              "isCorrect": false
+            },
+            {
+              "id": "7b14fefd-fa85-45c9-9c77-3898bcc11b06",
+              "title": "3_3_3_3",
+              "isCorrect": true
+            },
+            {
+              "id": "2556271a-e4c6-4d56-be42-8e32314d59d1",
+              "title": "4_4_4",
+              "isCorrect": false
+            },
+            {
+              "id": "d5ea574e-d348-496b-b886-3d1f6e7d87e8",
+              "title": "error",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "repetition_syntax",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "5e3222ae-0787-4029-9a6a-0b1a1b45b3c7",
+          "title": "accessing_a_10_when_length_is_5",
+          "answers": [
+            {
+              "id": "ebf7cf8e-e07f-4e15-8e8c-dad64d97b6ab",
+              "title": "ub",
+              "isCorrect": false
+            },
+            {
+              "id": "320f0b6a-95b4-4ec5-bb21-079d91b626d3",
+              "title": "compilation_error",
+              "isCorrect": false
+            },
+            {
+              "id": "21ff7d51-d5a4-4ce1-8f8e-2a2f45598c00",
+              "title": "runtime_panic",
+              "isCorrect": true
+            },
+            {
+              "id": "77a93a7a-43a0-4896-9675-048c8704d40e",
+              "title": "none",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "bounds_checked_at_runtime",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "e36218e9-3320-48f5-a6d7-1d70d4d9ed75",
+          "title": "function_declaration",
+          "answers": [
+            {
+              "id": "bbc3f0cc-1f1d-4b2e-9ee7-a6e64ec80e20",
+              "title": "func_name",
+              "isCorrect": false
+            },
+            {
+              "id": "f2ea0efb-79a8-4bef-a4e0-34e788aea479",
+              "title": "fn_name",
+              "isCorrect": true
+            },
+            {
+              "id": "7782fec4-423d-494c-968b-35c9017286ad",
+              "title": "function_name",
+              "isCorrect": false
+            },
+            {
+              "id": "71183923-094a-4a43-b2d1-5e23862e3ec2",
+              "title": "def_name",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "keyword_fn",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "84bb95dc-00e0-4d58-84be-be856c3f6e1a",
+          "title": "function_parameters",
+          "answers": [
+            {
+              "id": "f376806f-d456-4399-b8e2-b5891147bfc3",
+              "title": "name_only",
+              "isCorrect": false
+            },
+            {
+              "id": "e28ff593-5094-4d15-9fd9-9690ec6f8aaf",
+              "title": "type_only",
+              "isCorrect": false
+            },
+            {
+              "id": "61b6a25e-7544-4636-ba1d-f4f1c7aa52e6",
+              "title": "name_and_type",
+              "isCorrect": true
+            },
+            {
+              "id": "70dcb77f-a0ee-42a1-9436-851d7d1fbf5b",
+              "title": "nothing",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "type_annotations_are_mandatory",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "751a071d-6e1b-4acb-b461-c58e10fb2be8",
+          "title": "default_return",
+          "answers": [
+            {
+              "id": "6cf474ae-21c0-441b-b396-f4ea2896968e",
+              "title": "always_return",
+              "isCorrect": false
+            },
+            {
+              "id": "1e97aaaf-6f36-4db6-b972-562424a65abe",
+              "title": "last_expression_without_semicolon",
+              "isCorrect": true
+            },
+            {
+              "id": "33c128c3-69b9-4ef7-b2a1-5dcbde474cb4",
+              "title": "last_expression_with_semicolon",
+              "isCorrect": false
+            },
+            {
+              "id": "1dbf05c1-a097-4868-9a5f-86d5c003d976",
+              "title": "always_unit",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "tail_expression",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "fbb8fdc1-e621-437e-b07d-17afac3881cd",
+          "title": "if_you_put_semicolon_after_x_plus_1_in_function",
+          "answers": [
+            {
+              "id": "043c34ff-5a6e-47b0-90d6-a3679ecb395e",
+              "title": "returns_x_plus_1",
+              "isCorrect": false
+            },
+            {
+              "id": "1fb68afa-01d3-489b-a440-47c41ec4d756",
+              "title": "type_error_unit",
+              "isCorrect": true
+            },
+            {
+              "id": "11b26a8b-8b7e-42b0-98a2-b6714bade2e2",
+              "title": "auto_return",
+              "isCorrect": false
+            },
+            {
+              "id": "d745f1cc-4e06-46ad-be85-022d560d1f95",
+              "title": "panic",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "semicolon_turns_it_into_statement",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "1561cec5-c92e-4c9d-b0c8-6183433a046c",
+          "title": "statement_vs_expression",
+          "answers": [
+            {
+              "id": "144ce376-28cf-4cf7-a4e1-76d28d21abf5",
+              "title": "statement_returns_value",
+              "isCorrect": false
+            },
+            {
+              "id": "c3e3f372-8b32-4b76-b4d7-b5ad0bcabbd6",
+              "title": "expression_computes_value",
+              "isCorrect": true
+            },
+            {
+              "id": "8662731c-363c-4e03-80ac-c2418333f9a8",
+              "title": "both_return",
+              "isCorrect": false
+            },
+            {
+              "id": "67109812-060f-4bf2-a356-193ea8392a22",
+              "title": "no_difference",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "rust_is_expression_oriented",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "68d0b6a3-861d-4d6a-874f-1819d6533376",
+          "title": "what_happens_let_x_let_y_6",
+          "answers": [
+            {
+              "id": "7a085750-2d64-408c-a6a1-effdd1283bf2",
+              "title": "compilation_error",
+              "isCorrect": true
+            },
+            {
+              "id": "2533ac9b-5810-45b2-8c33-0f4ef6d14cdc",
+              "title": "x_and_y_are_6",
+              "isCorrect": false
+            },
+            {
+              "id": "a77d64ce-93d4-4c39-bfe9-e040f85a992a",
+              "title": "panic",
+              "isCorrect": false
+            },
+            {
+              "id": "17b80087-4e13-4984-8774-70443e105897",
+              "title": "ub",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "let_y_6_is_not_an_expression",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "d5b38058-2f94-420e-8e0e-1dc3da8dded0",
+          "title": "type_of_if_condition",
+          "answers": [
+            {
+              "id": "f04521ca-bd41-4a0d-8ee0-d96a7473e522",
+              "title": "any_nonzero",
+              "isCorrect": false
+            },
+            {
+              "id": "50fcc725-9503-47ad-8f3a-63291aaabde0",
+              "title": "only_bool",
+              "isCorrect": true
+            },
+            {
+              "id": "c6ba9fcd-1a39-4443-b651-2968dc578d27",
+              "title": "int_or_bool",
+              "isCorrect": false
+            },
+            {
+              "id": "d3da0cb4-5b82-474c-a152-222eecbb1285",
+              "title": "any_scalar",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "no_implicit_conversions",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "5b102ded-4ff3-4f39-852e-efb849e240a0",
+          "title": "about_if_else_as_expression",
+          "answers": [
+            {
+              "id": "a7716ef0-fe23-4f53-897b-417b1927b26b",
+              "title": "different_types_allowed",
+              "isCorrect": false
+            },
+            {
+              "id": "8a900551-f688-4efa-a50c-2a3bfc22017d",
+              "title": "branch_types_must_match",
+              "isCorrect": false
+            },
+            {
+              "id": "8149bd49-18c0-4c5f-b395-0cbb6e0c52b1",
+              "title": "else_is_optional",
+              "isCorrect": false
+            },
+            {
+              "id": "c8961bf2-8e7d-4fe0-afcc-0a622848a7a8",
+              "title": "b_and_c",
+              "isCorrect": true
+            }
+          ],
+          "descriptionText": "if_is_expression_else_is_optional",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "f73d27b9-57fb-4e14-b1a6-9972d54bbb77",
+          "title": "what_will_this_print_if_expression",
+          "answers": [
+            {
+              "id": "c4b2e1a8-18d5-485a-836e-2c3385144e02",
+              "title": "1",
+              "isCorrect": true
+            },
+            {
+              "id": "d65a8acb-7f28-4ee4-82f5-e97dea4a50d2",
+              "title": "2",
+              "isCorrect": false
+            },
+            {
+              "id": "402c2f1a-5e90-406a-9660-312fa7e5b6c0",
+              "title": "true",
+              "isCorrect": false
+            },
+            {
+              "id": "a80aa423-f03f-46af-9316-89ba63a5871c",
+              "title": "error",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "took_the_value_of_true_branch",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "319e0023-7faa-450a-a865-30a358c99d8f",
+          "title": "infinite_loop_until_break",
+          "answers": [
+            {
+              "id": "9e18b0cb-9698-49f0-bda1-4295f6a5b134",
+              "title": "loop",
+              "isCorrect": true
+            },
+            {
+              "id": "91101fb7-7674-496c-a229-987a02275af0",
+              "title": "while",
+              "isCorrect": false
+            },
+            {
+              "id": "e19f77ca-8e69-4493-9b48-4cb287ee08d9",
+              "title": "for",
+              "isCorrect": false
+            },
+            {
+              "id": "fca6d9da-19ee-4937-b284-59e084ffc9f9",
+              "title": "repeat",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "loop_has_no_condition",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "d7c4e542-eac6-4091-af9b-e0f552e5e83c",
+          "title": "break_value_in_loop",
+          "answers": [
+            {
+              "id": "f8c7405e-ca59-4ce9-8b2b-5bebd71e3b1d",
+              "title": "skip_iteration",
+              "isCorrect": false
+            },
+            {
+              "id": "c6ed4a11-4d8f-494c-8cac-dfc66ed1e543",
+              "title": "exit_loop_and_return_value",
+              "isCorrect": true
+            },
+            {
+              "id": "92713634-6b8d-49e5-89df-2e8ab947bd0f",
+              "title": "error",
+              "isCorrect": false
+            },
+            {
+              "id": "4839bc63-1abb-4d44-8569-8846caa17580",
+              "title": "return_unit",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "loop_is_an_expression",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "0c314467-9a50-4173-ad0b-7815230b87c5",
+          "title": "loop_labels_label",
+          "answers": [
+            {
+              "id": "d467b1a2-35ce-4e7b-9f8f-fc7965579bfb",
+              "title": "comments",
+              "isCorrect": false
+            },
+            {
+              "id": "84ea7c97-ee3a-4ceb-bd2a-32ff5ce4350e",
+              "title": "target_for_break_continue",
+              "isCorrect": true
+            },
+            {
+              "id": "eed5aec4-1173-466b-9fa5-f728647c225c",
+              "title": "optimization",
+              "isCorrect": false
+            },
+            {
+              "id": "5c371369-21b8-4170-928f-8869166c6ac3",
+              "title": "counter",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "eg_break_outer",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "c6618d28-00a0-4caa-9b70-b7282f52d0c6",
+          "title": "about_while",
+          "answers": [
+            {
+              "id": "ea8aaa9f-e16b-4123-bccf-4fd19ea8f720",
+              "title": "while_condition_is_true",
+              "isCorrect": false
+            },
+            {
+              "id": "f47c2a88-0540-4467-9a04-c39c48738a45",
+              "title": "can_be_infinite",
+              "isCorrect": false
+            },
+            {
+              "id": "75e5ff00-4b00-48e3-9bd2-478a283d2cf3",
+              "title": "condition_is_bool",
+              "isCorrect": false
+            },
+            {
+              "id": "b3979bdf-ee06-4ebc-8f6f-877fbe2386a9",
+              "title": "all_of_above",
+              "isCorrect": true
+            }
+          ],
+          "descriptionText": "depends_on_condition",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "a54ba081-c059-42f9-b78a-90255df59e70",
+          "title": "about_for",
+          "answers": [
+            {
+              "id": "2cb39e51-29d5-43be-9beb-e8731b1516e5",
+              "title": "iterates_into_iterator",
+              "isCorrect": false
+            },
+            {
+              "id": "6c9567f6-a1b7-40c2-b052-204e2483c57b",
+              "title": "works_with_ranges",
+              "isCorrect": false
+            },
+            {
+              "id": "8cea170b-609a-488b-b1ab-927a5aa8af9c",
+              "title": "safer_than_manual_indexing",
+              "isCorrect": false
+            },
+            {
+              "id": "e5d7a385-4768-4927-bdbc-dbec52bba609",
+              "title": "all_of_above",
+              "isCorrect": true
+            }
+          ],
+          "descriptionText": "idiomatic_iteration",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "08cb60ae-dee1-4a06-8615-38b7bb29fdf2",
+          "title": "countdown_3_to_1",
+          "answers": [
+            {
+              "id": "1f2b8543-cc0c-442b-89d7-3e724d3ebcaa",
+              "title": "for_n_in_1_to_3_rev",
+              "isCorrect": true
+            },
+            {
+              "id": "d3076128-1c39-4a93-9b42-4d7cdbe3df51",
+              "title": "for_n_in_3_to_1_rev",
+              "isCorrect": false
+            },
+            {
+              "id": "ea9c3c51-2aea-42f9-8df8-108e15790711",
+              "title": "for_n_in_1_to_3",
+              "isCorrect": false
+            },
+            {
+              "id": "3f62e15f-b2da-4ffd-8bd6-ea72106f8103",
+              "title": "for_n_in_0_to_3_rev",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "1_to_3_gives_1_to_3_rev_gives_3_to_1",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "410ee600-77cd-4e2d-88c4-465f6176b51f",
+          "title": "comments",
+          "answers": [
+            {
+              "id": "9e044440-ebab-4bd0-bca6-c98b4e5d02dd",
+              "title": "hash",
+              "isCorrect": false
+            },
+            {
+              "id": "3d6194b0-46e7-4372-a3cd-ac93af68fe9f",
+              "title": "double_slash",
+              "isCorrect": false
+            },
+            {
+              "id": "fd73d0b1-a212-4580-82de-8da52d740b6e",
+              "title": "slash_star_star_slash",
+              "isCorrect": false
+            },
+            {
+              "id": "d9092af6-fd09-4645-bdc2-a7f3ecd4de3a",
+              "title": "b_and_c",
+              "isCorrect": true
+            }
+          ],
+          "descriptionText": "rust_supports_both",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "5f280cfb-ab2e-4a1e-ac28-bf19bbb67485",
+          "title": "valid_comment",
+          "answers": [
+            {
+              "id": "42d584c1-bb4a-4e4a-8332-187a8021a2b7",
+              "title": "this_is_comment",
+              "isCorrect": true
+            },
+            {
+              "id": "5dae06ec-2cae-4917-85fe-1fb882f1dcdc",
+              "title": "dash_this_is_comment",
+              "isCorrect": false
+            },
+            {
+              "id": "8a984d8b-d026-4eea-94b7-5e6da38fb4aa",
+              "title": "percent_percent_this_is_comment",
+              "isCorrect": false
+            },
+            {
+              "id": "4aa8e855-1304-4f2d-a5a8-66cfc0fb26d0",
+              "title": "hash_this_is_comment",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "hash_is_not_for_comments_used_for_attributes",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "666d2d00-b99b-480a-b8e7-d5d68cdce7ed",
+          "title": "about_usize",
+          "answers": [
+            {
+              "id": "de83d05b-f667-45e1-b8b9-8ebb1e21a97c",
+              "title": "size_depends_on_architecture",
+              "isCorrect": false
+            },
+            {
+              "id": "66887d9c-0c9e-4b1b-be75-782b4a170c49",
+              "title": "used_for_indices_sizes",
+              "isCorrect": false
+            },
+            {
+              "id": "fa75f5aa-8833-478e-a7e7-484a6cea40ac",
+              "title": "unsigned",
+              "isCorrect": false
+            },
+            {
+              "id": "ee3922e6-3513-4cb9-8a67-cc414c7f5cce",
+              "title": "all_of_above",
+              "isCorrect": true
+            }
+          ],
+          "descriptionText": "platform_dependent_index_type",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "f7e81924-77df-468d-bd91-200cf343d854",
+          "title": "tuple_of_three_elements",
+          "answers": [
+            {
+              "id": "e4ac93a2-2403-42ff-b605-1a442943cbea",
+              "title": "1_a_true",
+              "isCorrect": true
+            },
+            {
+              "id": "9c384616-cba1-4dd3-9e58-b4685e2c547c",
+              "title": "1_a_true_braces",
+              "isCorrect": false
+            },
+            {
+              "id": "4ea4e0bb-4864-468c-b386-4a0e7bfd0b8b",
+              "title": "1_a_true_brackets",
+              "isCorrect": false
+            },
+            {
+              "id": "9f0ea38b-0a76-4125-b26d-639ac4f90364",
+              "title": "1_a_true_angle",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "parentheses_to_tuple",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "ca172e39-09f8-417b-9320-22d8f05de225",
+          "title": "what_does_b_A_mean",
+          "answers": [
+            {
+              "id": "a943f8eb-d081-488a-b9d5-657883b4c3cb",
+              "title": "char_A",
+              "isCorrect": false
+            },
+            {
+              "id": "2cccaa1c-27e0-4bdd-be2a-25977bccf741",
+              "title": "u8_with_ascii_value",
+              "isCorrect": true
+            },
+            {
+              "id": "ca49eb47-6889-4528-a1df-a0dce7ad1b03",
+              "title": "A_string",
+              "isCorrect": false
+            },
+            {
+              "id": "ee3f7e46-3402-4866-b2dd-ebd7c74569d0",
+              "title": "bool",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "prefix_b_to_byte_literal",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "0812936a-4c33-49da-a53f-d1dea34c6d6f",
+          "title": "range_of_i16",
+          "answers": [
+            {
+              "id": "7a95444e-4a47-4a48-a906-966db3479445",
+              "title": "32768_to_32767",
+              "isCorrect": true
+            },
+            {
+              "id": "a7573ac4-bb2d-49db-98bd-283e7a68bb0e",
+              "title": "65536_to_65535",
+              "isCorrect": false
+            },
+            {
+              "id": "1888b399-1ac2-47b3-aa94-1f8ec20164e8",
+              "title": "0_to_32767",
+              "isCorrect": false
+            },
+            {
+              "id": "b0575456-159f-448a-ac37-9e796128991a",
+              "title": "0_to_65535",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "16_bit_signed",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "72a113dd-153f-45c2-8b06-7c730f9edb78",
+          "title": "unit_type",
+          "answers": [
+            {
+              "id": "6fd555f7-78c7-449f-ad24-cf00e654c7df",
+              "title": "empty_value",
+              "isCorrect": false
+            },
+            {
+              "id": "40774556-1caa-46c8-a8f2-fd1e5ec3726d",
+              "title": "empty_tuple",
+              "isCorrect": false
+            },
+            {
+              "id": "087a4b80-5a9c-401e-8e07-964757122bd3",
+              "title": "functions_without_return_type_return_it",
+              "isCorrect": false
+            },
+            {
+              "id": "8619ffa3-ce9f-4a4b-8ceb-62fac4ebce25",
+              "title": "all_of_above",
+              "isCorrect": true
+            }
+          ],
+          "descriptionText": "all_properties_of_unit",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "05750c2a-3667-4236-8f70-9119c31feb12",
+          "title": "valid_function_with_parameter",
+          "answers": [
+            {
+              "id": "ff14c452-1938-4acf-8867-6a63390d58e1",
+              "title": "fn_f_x",
+              "isCorrect": false
+            },
+            {
+              "id": "8e8ce24f-8d17-4521-b072-094925de7a59",
+              "title": "fn_f_x_i32",
+              "isCorrect": true
+            },
+            {
+              "id": "95339674-aff2-400c-baae-aad806d796e8",
+              "title": "fn_f_i32_x",
+              "isCorrect": false
+            },
+            {
+              "id": "b3c3eac9-7143-4741-ad9b-7bc790bbf706",
+              "title": "function_f_x_i32",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "type_required_after_colon",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "083c7162-2ce0-4db7-b741-be1addcea50f",
+          "title": "what_will_this_print_block_expression",
+          "answers": [
+            {
+              "id": "b9a6146e-86f7-4f34-8cf5-c66bb5b28dce",
+              "title": "2",
+              "isCorrect": false
+            },
+            {
+              "id": "61795579-dc74-4516-a901-e0162bc3cc30",
+              "title": "3",
+              "isCorrect": false
+            },
+            {
+              "id": "bfad2347-d234-4175-81bd-8effbf902175",
+              "title": "5",
+              "isCorrect": true
+            },
+            {
+              "id": "47fd4dac-2dee-4f6c-8ff6-970af655f7b3",
+              "title": "error",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "block_is_an_expression_returns_y_plus_3",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "7f6de669-7a52-4f0a-82e9-733d25cad897",
+          "title": "what_will_happen_if_false_10_else_ten",
+          "answers": [
+            {
+              "id": "db9beca7-8d94-47c7-8d58-6f5a351d32e5",
+              "title": "becomes_string",
+              "isCorrect": false
+            },
+            {
+              "id": "26e87f7d-189d-416c-9d72-c50e27eb08c4",
+              "title": "compilation_error_different_branch_types",
+              "isCorrect": true
+            },
+            {
+              "id": "daf40985-072e-4551-ad70-a5301c179012",
+              "title": "becomes_option",
+              "isCorrect": false
+            },
+            {
+              "id": "222a76cc-d056-4fa9-8951-5a974f7bca18",
+              "title": "panic",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "if_expression_must_have_single_type",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "412cbe9c-16c8-4d63-bc43-b089cc0af83d",
+          "title": "how_to_exit_infinite_loop_properly",
+          "answers": [
+            {
+              "id": "a781f033-a5e1-4903-bac2-98bde60d93ce",
+              "title": "break",
+              "isCorrect": false
+            },
+            {
+              "id": "3d1e12a0-b02c-4f89-99c5-e2c9b1e43b54",
+              "title": "return",
+              "isCorrect": false
+            },
+            {
+              "id": "caaee2ae-60b6-4a04-b5a1-7eca3c704041",
+              "title": "exit",
+              "isCorrect": false
+            },
+            {
+              "id": "8742a982-e007-4da1-9660-9ac45a4b25bb",
+              "title": "all_of_above_possible",
+              "isCorrect": true
+            }
+          ],
+          "descriptionText": "all_terminate_loop_function_process_but_idiomatic_is_break",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "e25550de-eb25-4f38-a229-fb4dc680a976",
+          "title": "about_keywords",
+          "answers": [
+            {
+              "id": "e83fc0cd-50c8-4d6e-80f7-b5abba2a9f88",
+              "title": "can_be_used_as_names",
+              "isCorrect": false
+            },
+            {
+              "id": "ce31f8c8-1b16-44f2-ad15-99597559a930",
+              "title": "reserved",
+              "isCorrect": true
+            },
+            {
+              "id": "789c8de1-79d7-4209-8426-56eb08d240ec",
+              "title": "ignored",
+              "isCorrect": false
+            },
+            {
+              "id": "839758bb-cb1e-4290-b32b-b5befda9a3ce",
+              "title": "usable_with_at",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "see_appendix_a",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "1c6bb10d-b9b3-4b19-acb0-917348a054b6",
+          "title": "what_about_let_guess_u32_42_parse_unwrap",
+          "answers": [
+            {
+              "id": "fd65fa46-8862-45ab-af1a-950c2b23110a",
+              "title": "string",
+              "isCorrect": false
+            },
+            {
+              "id": "807e9af7-07f1-4397-a746-9274d5300ab1",
+              "title": "u32_equals_42",
+              "isCorrect": true
+            },
+            {
+              "id": "13f559d4-e387-4ad1-94f7-93ca55d8778c",
+              "title": "compilation_error",
+              "isCorrect": false
+            },
+            {
+              "id": "709fb026-8bf8-4279-8b2b-e6de27d9b600",
+              "title": "bool",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "type_annotation_directs_parse",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "52914c32-f1a6-4175-b17a-7113f8d328b1",
+          "title": "what_does_len_do_on_i32_5",
+          "answers": [
+            {
+              "id": "6fdd5188-bb90-4e9d-a042-41d928e0ff19",
+              "title": "5",
+              "isCorrect": true
+            },
+            {
+              "id": "5a58482a-8ef7-4bfa-839b-b0d64e12245e",
+              "title": "last_element",
+              "isCorrect": false
+            },
+            {
+              "id": "42ce1edd-bc35-44c8-a4b6-9c73d9003863",
+              "title": "option",
+              "isCorrect": false
+            },
+            {
+              "id": "88ccef7c-ec55-42b5-a7d2-8c6f779d91a2",
+              "title": "error",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "array_length",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "496c7a27-a1de-4853-a8c6-a767e4eca649",
+          "title": "overflow_of_u8_in_release",
+          "answers": [
+            {
+              "id": "e64f5e6a-8d56-4637-a258-062cc67403d2",
+              "title": "panic",
+              "isCorrect": false
+            },
+            {
+              "id": "ee7ca7c4-6866-40ec-9c25-7aa8e092a796",
+              "title": "compilation_error",
+              "isCorrect": false
+            },
+            {
+              "id": "52169fac-d3ed-4da6-b006-66f8848de723",
+              "title": "wrapping",
+              "isCorrect": true
+            },
+            {
+              "id": "efeb579a-5b64-4f74-bc12-ca69eab79128",
+              "title": "auto_type_promotion",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "two_complement_wrapping",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "704bbc9b-893c-4cff-ab86-6f8f38efa4e2",
+          "title": "modulo_operator",
+          "answers": [
+            {
+              "id": "6204e3fe-8247-43ab-87b5-5ff188fb8cb8",
+              "title": "mod",
+              "isCorrect": false
+            },
+            {
+              "id": "a27bd8da-7b7f-4295-8677-88228bdeb918",
+              "title": "percent",
+              "isCorrect": true
+            },
+            {
+              "id": "0cb10cea-4ab5-4df6-8c70-60736aa55403",
+              "title": "rem",
+              "isCorrect": false
+            },
+            {
+              "id": "494eed6a-ff23-4e98-a296-469a0d6033a2",
+              "title": "div",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "standard_syntax",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "769aeddd-6869-415a-8727-cd95a7ee0592",
+          "title": "function_with_return_value",
+          "answers": [
+            {
+              "id": "e4e42679-9fe2-4985-a703-731b4ca04d33",
+              "title": "fn_f_return_5",
+              "isCorrect": false
+            },
+            {
+              "id": "eaa09812-a55b-4747-a14b-bc2003a6428f",
+              "title": "fn_f_i32_5",
+              "isCorrect": true
+            },
+            {
+              "id": "a6b3034d-cbd8-4bd4-a2de-4d72029b9f9f",
+              "title": "fn_f_i32_5_arrow",
+              "isCorrect": false
+            },
+            {
+              "id": "958c1f76-89d5-4fd0-9b93-83e51db16909",
+              "title": "fn_f_equals_5",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "arrow_type_plus_tail_expression",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "0eab9bd0-e549-4468-a279-16ab0b692726",
+          "title": "about_for_in_rust",
+          "answers": [
+            {
+              "id": "8414ff2b-cfa4-461e-bc5d-6cea68e8eb21",
+              "title": "can_iterate_chars_of_string",
+              "isCorrect": false
+            },
+            {
+              "id": "cf7d8bda-fd74-47eb-b85f-9b02a1c38be1",
+              "title": "can_iterate_ranges",
+              "isCorrect": false
+            },
+            {
+              "id": "bb89ff3c-4aa2-4130-8fda-8cdf4427cc8d",
+              "title": "safer_than_manual_indexing",
+              "isCorrect": false
+            },
+            {
+              "id": "1641bf93-3b96-4c32-960e-1d84528ae98a",
+              "title": "all_of_above",
+              "isCorrect": true
+            }
+          ],
+          "descriptionText": "works_with_any_into_iterator",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "49cd501e-4934-498f-bf7e-e009e2863ae3",
+          "title": "hex_literal",
+          "answers": [
+            {
+              "id": "7b9bc979-e54b-4258-98e1-da04e6373a52",
+              "title": "0xFF",
+              "isCorrect": true
+            },
+            {
+              "id": "fd317624-432a-4697-b44a-0aa9838ed7c1",
+              "title": "FF",
+              "isCorrect": false
+            },
+            {
+              "id": "c1074b88-5789-4fea-9861-cf149c01b6dd",
+              "title": "xFF",
+              "isCorrect": false
+            },
+            {
+              "id": "0d0f74a3-baf8-44d7-9d40-573befcfcdd0",
+              "title": "xFF",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "0x_is_valid_prefix",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "c16bee3e-e0ef-48dd-ad57-882fed5956f8",
+          "title": "what_will_this_print_months_array",
+          "answers": [
+            {
+              "id": "01581256-3966-4b43-bb59-a23d97ef6716",
+              "title": "Jan",
+              "isCorrect": false
+            },
+            {
+              "id": "5f805263-f951-4b64-a5bd-32d4ed51ae58",
+              "title": "Feb",
+              "isCorrect": false
+            },
+            {
+              "id": "e57ce522-356c-445d-aae6-218081800827",
+              "title": "Mar",
+              "isCorrect": true
+            },
+            {
+              "id": "85fe670b-8109-4199-9208-c0bbb2ef1535",
+              "title": "error",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "index_2",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "2ad4e39e-2c23-4b15-bcc6-88e62d3e2a22",
+          "title": "about_continue",
+          "answers": [
+            {
+              "id": "706aa166-520f-45d9-b0dd-2e198cee62ba",
+              "title": "breaks_whole_loop",
+              "isCorrect": false
+            },
+            {
+              "id": "464ca0a3-4df5-4cf3-8ec1-83a8c9392498",
+              "title": "skips_current_iteration",
+              "isCorrect": true
+            },
+            {
+              "id": "2108aa2a-080d-4d37-9e6a-0ab66bd89f5a",
+              "title": "panic",
+              "isCorrect": false
+            },
+            {
+              "id": "99c26ac1-4d1d-476e-82f1-ace695e9d5b8",
+              "title": "only_in_while",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "moves_to_next_iteration",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "a6e1e538-a89b-4490-b593-9f4c67dd48e6",
+          "title": "about_rev",
+          "answers": [
+            {
+              "id": "eba77cae-1b31-4e21-9dae-747686faf3e3",
+              "title": "applies_to_ranges",
+              "isCorrect": false
+            },
+            {
+              "id": "70d8cfdb-d71f-4df9-8861-a0ac33dd32fc",
+              "title": "reverses_iteration_order",
+              "isCorrect": false
+            },
+            {
+              "id": "30785acb-df6b-466f-a145-6815232db60e",
+              "title": "works_with_for",
+              "isCorrect": false
+            },
+            {
+              "id": "995d145d-f796-4da2-ab8f-df56b6436b7c",
+              "title": "all_of_above",
+              "isCorrect": true
+            }
+          ],
+          "descriptionText": "it_is_an_iterator_adapter",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "48f1f184-da9a-49c2-ba3e-3ee04459f85a",
+          "title": "explicit_type_for_variable",
+          "answers": [
+            {
+              "id": "ce768a64-cda4-4942-b6b2-e1ff371d4a5d",
+              "title": "let_x_5",
+              "isCorrect": false
+            },
+            {
+              "id": "17bb0826-6571-4ab9-92a7-783e27270a09",
+              "title": "let_x_i32_5",
+              "isCorrect": true
+            },
+            {
+              "id": "f373558b-23d0-41b2-a828-e063e5688d7c",
+              "title": "var_x_i32_5",
+              "isCorrect": false
+            },
+            {
+              "id": "e550b096-8ef9-40ea-8c16-e8f64eaba11b",
+              "title": "def_x_i32_5",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "let_name_type_equals_expr",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "7bf2cc5c-e9b1-4e1e-80db-ccf6303c9f13",
+          "title": "function_naming_style",
+          "answers": [
+            {
+              "id": "b355c0b3-ec75-4fac-8136-a42b70b00db8",
+              "title": "camelCase",
+              "isCorrect": false
+            },
+            {
+              "id": "834a38df-5953-4592-afa9-327963b7c456",
+              "title": "snake_case",
+              "isCorrect": true
+            },
+            {
+              "id": "a68ff9e8-41e9-4b52-b2ac-36d9c535af69",
+              "title": "PascalCase",
+              "isCorrect": false
+            },
+            {
+              "id": "4beed312-a0c2-4a09-b029-894a45a9b4fd",
+              "title": "kebab_case",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "idiomatic_rust_style",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "d50474f6-e0f4-4c7d-8360-456431304882",
+          "title": "what_will_happen_plus_function",
+          "answers": [
+            {
+              "id": "993d0894-28b0-49fb-90cc-2623205e6f3f",
+              "title": "4",
+              "isCorrect": false
+            },
+            {
+              "id": "213160ae-d78e-4b23-a7f8-a8f8dda15b2c",
+              "title": "5",
+              "isCorrect": true
+            },
+            {
+              "id": "de5f49d7-0ebd-4318-9e1c-e4622c9faee2",
+              "title": "error",
+              "isCorrect": false
+            },
+            {
+              "id": "0aaf3702-4308-4cb9-97b4-23b33e4ed9a4",
+              "title": "unit",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "returns_5_as_tail_expression",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "c03b38bc-5f46-43e3-ab89-604799b492d6",
+          "title": "about_comments",
+          "answers": [
+            {
+              "id": "0e9a8205-b7b9-422e-bc5b-e7da0ad198e2",
+              "title": "single_line",
+              "isCorrect": false
+            },
+            {
+              "id": "966d569d-0385-4575-9aa1-f8e93dcd1901",
+              "title": "multi_line_including_nested",
+              "isCorrect": false
+            },
+            {
+              "id": "9ffd690f-10bb-40eb-ac5d-685fa4918dc1",
+              "title": "ignored_by_compiler",
+              "isCorrect": false
+            },
+            {
+              "id": "2aa1999e-e51f-4254-938c-86a43e6f4895",
+              "title": "all_of_above",
+              "isCorrect": true
+            }
+          ],
+          "descriptionText": "both_syntaxes_valid_block_comments_nest",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        },
+        {
+          "id": "efb027f7-7b63-469c-96b4-e2ffd0c8e43a",
+          "title": "result_of_43_modulo_5",
+          "answers": [
+            {
+              "id": "70b641d5-fddb-4356-9c75-2427012f39b1",
+              "title": "3",
+              "isCorrect": true
+            },
+            {
+              "id": "c33bc1cd-a304-4c1f-ab55-3e9e7aa2d797",
+              "title": "4",
+              "isCorrect": false
+            },
+            {
+              "id": "f73cff6c-c7a2-4ba9-b0ed-7af6d95f951d",
+              "title": "5",
+              "isCorrect": false
+            },
+            {
+              "id": "7f65075a-229a-4307-80e8-14fe9cbe97b2",
+              "title": "8",
+              "isCorrect": false
+            }
+          ],
+          "descriptionText": "43_equals_5_times_8_plus_3",
+          "descriptionLink": "common_programming_concepts_link",
+          "hasUserAnswered": false,
+          "isUserAnswerCorrect": false
+        }
+      ]
+    }
+  ]
+}
