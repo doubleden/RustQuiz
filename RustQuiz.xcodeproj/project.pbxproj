@@ -15,7 +15,7 @@
 		053388572E8C1ACA00554004 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053388562E8C1ACA00554004 /* Quiz.swift */; };
 		053388592E8C1B0900554004 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053388582E8C1B0900554004 /* Question.swift */; };
 		0533885B2E8C1B1800554004 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0533885A2E8C1B1800554004 /* Answer.swift */; };
-		055BD1D32E90492800DD5A7E /* the_book_source.json in Resources */ = {isa = PBXBuildFile; fileRef = 055BD1D22E90492800DD5A7E /* the_book_source.json */; };
+		055BD1D52E905A5900DD5A7E /* the_book_source.json in Resources */ = {isa = PBXBuildFile; fileRef = 055BD1D42E905A5900DD5A7E /* the_book_source.json */; };
 		056C6C132E868A07006C44D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 056C6C0F2E868A07006C44D3 /* Assets.xcassets */; };
 		056C6C152E868A07006C44D3 /* RustQuizApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6C112E868A07006C44D3 /* RustQuizApp.swift */; };
 		056C6C182E868A47006C44D3 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 056C6C172E868A47006C44D3 /* ComposableArchitecture */; };
@@ -44,7 +44,7 @@
 		053388562E8C1ACA00554004 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		053388582E8C1B0900554004 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		0533885A2E8C1B1800554004 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
-		055BD1D22E90492800DD5A7E /* the_book_source.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = the_book_source.json; sourceTree = "<group>"; };
+		055BD1D42E905A5900DD5A7E /* the_book_source.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = the_book_source.json; sourceTree = "<group>"; };
 		056C6C012E868A01006C44D3 /* RustQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RustQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		056C6C0F2E868A07006C44D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		056C6C112E868A07006C44D3 /* RustQuizApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RustQuizApp.swift; sourceTree = "<group>"; };
@@ -88,12 +88,12 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		0538A1C02E8FEA1A00476620 /* SeedFilesJSON */ = {
+		055BD1D62E905AA800DD5A7E /* SeedJSON */ = {
 			isa = PBXGroup;
 			children = (
-				055BD1D22E90492800DD5A7E /* the_book_source.json */,
+				055BD1D42E905A5900DD5A7E /* the_book_source.json */,
 			);
-			path = SeedFilesJSON;
+			path = SeedJSON;
 			sourceTree = "<group>";
 		};
 		056C6BF82E868A01006C44D3 = {
@@ -125,7 +125,7 @@
 				053388532E8C1A5F00554004 /* Models */,
 				056C6D0C2E89306F006C44D3 /* Schema */,
 				056C6D0F2E894088006C44D3 /* Services */,
-				0538A1C02E8FEA1A00476620 /* SeedFilesJSON */,
+				055BD1D62E905AA800DD5A7E /* SeedJSON */,
 				056C6C0F2E868A07006C44D3 /* Assets.xcassets */,
 			);
 			path = RustQuiz;
@@ -281,7 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				056C6C132E868A07006C44D3 /* Assets.xcassets in Resources */,
-				055BD1D32E90492800DD5A7E /* the_book_source.json in Resources */,
+				055BD1D52E905A5900DD5A7E /* the_book_source.json in Resources */,
 				05E636872E8FDDE60017E5B7 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
