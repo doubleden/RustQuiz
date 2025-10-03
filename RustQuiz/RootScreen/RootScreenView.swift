@@ -37,7 +37,7 @@ struct RootScreenView: View {
                         Text("No sources")
                     } else {
                         ForEach(store.sources) { source in
-                            Text(source.quizzes[0].questions[2].titleLocalized)
+                            Text(source.title)
                                 .onAppear {
                                     dump(source, name: "Source")
                                 }
@@ -70,5 +70,6 @@ struct RootScreenView: View {
             RootScreenFeature()
         }
     )
-    .environment(\.locale, Locale(identifier: "ru"))
+    .environment(\.locale, Locale(identifier: "en"))
+//    .environment(\.locale, Locale(identifier: "ru"))
 }

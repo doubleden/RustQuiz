@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Source: Identifiable {
+struct Source: Identifiable, Decodable {
     let id: UUID
     var title: String
     var priority: Int

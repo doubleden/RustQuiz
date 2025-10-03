@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Quiz: Identifiable {
+struct Quiz: Identifiable, Decodable {
     let id: UUID
     var theme: String
     var priority: Int

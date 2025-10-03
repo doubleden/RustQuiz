@@ -15,6 +15,7 @@
 		053388572E8C1ACA00554004 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053388562E8C1ACA00554004 /* Quiz.swift */; };
 		053388592E8C1B0900554004 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053388582E8C1B0900554004 /* Question.swift */; };
 		0533885B2E8C1B1800554004 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0533885A2E8C1B1800554004 /* Answer.swift */; };
+		055BD1D32E90492800DD5A7E /* the_book_source.json in Resources */ = {isa = PBXBuildFile; fileRef = 055BD1D22E90492800DD5A7E /* the_book_source.json */; };
 		056C6C132E868A07006C44D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 056C6C0F2E868A07006C44D3 /* Assets.xcassets */; };
 		056C6C152E868A07006C44D3 /* RustQuizApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6C112E868A07006C44D3 /* RustQuizApp.swift */; };
 		056C6C182E868A47006C44D3 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 056C6C172E868A47006C44D3 /* ComposableArchitecture */; };
@@ -31,7 +32,7 @@
 		056C6D0B2E86C85D006C44D3 /* SQLiteData in Frameworks */ = {isa = PBXBuildFile; productRef = 056C6D0A2E86C85D006C44D3 /* SQLiteData */; };
 		056C6D0E2E89318B006C44D3 /* SourceTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6D0D2E89318B006C44D3 /* SourceTable.swift */; };
 		056C6D112E8940A1006C44D3 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6D102E8940A1006C44D3 /* StorageService.swift */; };
-		05E6360A2E8EDE610017E5B7 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 05E636092E8EDE610017E5B7 /* Localizable.xcstrings */; };
+		05E636872E8FDDE60017E5B7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 05E636852E8FDDE60017E5B7 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		053388562E8C1ACA00554004 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		053388582E8C1B0900554004 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		0533885A2E8C1B1800554004 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		055BD1D22E90492800DD5A7E /* the_book_source.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = the_book_source.json; sourceTree = "<group>"; };
 		056C6C012E868A01006C44D3 /* RustQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RustQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		056C6C0F2E868A07006C44D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		056C6C112E868A07006C44D3 /* RustQuizApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RustQuizApp.swift; sourceTree = "<group>"; };
@@ -58,7 +60,8 @@
 		056C6CEA2E86B6BB006C44D3 /* OnBoardingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingScreenView.swift; sourceTree = "<group>"; };
 		056C6D0D2E89318B006C44D3 /* SourceTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceTable.swift; sourceTree = "<group>"; };
 		056C6D102E8940A1006C44D3 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
-		05E636092E8EDE610017E5B7 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		05E636862E8FDDE60017E5B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		05E636882E8FDDEF0017E5B7 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,14 @@
 				0533885A2E8C1B1800554004 /* Answer.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		0538A1C02E8FEA1A00476620 /* SeedFilesJSON */ = {
+			isa = PBXGroup;
+			children = (
+				055BD1D22E90492800DD5A7E /* the_book_source.json */,
+			);
+			path = SeedFilesJSON;
 			sourceTree = "<group>";
 		};
 		056C6BF82E868A01006C44D3 = {
@@ -114,6 +125,7 @@
 				053388532E8C1A5F00554004 /* Models */,
 				056C6D0C2E89306F006C44D3 /* Schema */,
 				056C6D0F2E894088006C44D3 /* Services */,
+				0538A1C02E8FEA1A00476620 /* SeedFilesJSON */,
 				056C6C0F2E868A07006C44D3 /* Assets.xcassets */,
 			);
 			path = RustQuiz;
@@ -195,7 +207,7 @@
 		05E635F32E8E8A4C0017E5B7 /* Localization */ = {
 			isa = PBXGroup;
 			children = (
-				05E636092E8EDE610017E5B7 /* Localizable.xcstrings */,
+				05E636852E8FDDE60017E5B7 /* Localizable.strings */,
 			);
 			path = Localization;
 			sourceTree = "<group>";
@@ -268,8 +280,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05E6360A2E8EDE610017E5B7 /* Localizable.xcstrings in Resources */,
 				056C6C132E868A07006C44D3 /* Assets.xcassets in Resources */,
+				055BD1D32E90492800DD5A7E /* the_book_source.json in Resources */,
+				05E636872E8FDDE60017E5B7 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +318,18 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		05E636852E8FDDE60017E5B7 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05E636862E8FDDE60017E5B7 /* en */,
+				05E636882E8FDDEF0017E5B7 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		056C6C0A2E868A02006C44D3 /* Debug */ = {

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Question: Identifiable {
+struct Question: Identifiable, Decodable {
     let id: UUID
     var title: String
     var answers: [Answer]
@@ -17,6 +17,7 @@ struct Question: Identifiable {
     
     var hasUserAnswered = false
     var isUserAnswerCorrect = false
+    
 }
 
 // MARK: - Localization

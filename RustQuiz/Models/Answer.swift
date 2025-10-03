@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Answer: Identifiable {
+struct Answer: Identifiable, Decodable {
     let id: UUID
     var title: String
     var isCorrect = false
