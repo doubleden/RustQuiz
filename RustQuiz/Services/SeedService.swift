@@ -26,14 +26,12 @@ extension SeedService: DependencyKey {
                 fatalError("Can't find the_book_source.json in SeedFilesJSON")
             }
             
-            do {
-                let data = try Data(contentsOf: fileURL)
-                return try await MainActor.run {
-                    try JSONDecoder().decode(Source.self, from: data)
-                }
-            } catch {
-                fatalError("Can't decode the_book_source.json")
+
+            let data = try Data(contentsOf: fileURL)
+            return try await MainActor.run {
+                try JSONDecoder().decode(Source.self, from: data)
             }
+            
         },
         getPatternsSource: {
             Source(
@@ -59,3 +57,12 @@ extension DependencyValues {
         set { self[SeedService.self] = newValue }
     }
 }
+
+#if DEBUG
+extension DependencyValues {
+    nonisolated var seedServicePreview: SeedService {
+    get { self[SeedService.self] }
+    set { self[SeedService.self] = newValue }
+  }
+}
+#endif

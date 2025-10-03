@@ -250,8 +250,8 @@ extension StorageService {
     static let previewValue: StorageService = .init(
         createSource: { _ in },
         readSources: {
-            @Dependency(\.seedService) var seedService
-            let book =  try await seedService.getTheBookSource()
+            @Dependency(\.seedServicePreview) var seedServicePreview
+            let book =  try await seedServicePreview.getTheBookSource()
             return [book]
         },
         updateSource: { _ in },
