@@ -36,11 +36,15 @@ struct RootScreenView: View {
                     if store.sources.isEmpty {
                         Text("No sources")
                     } else {
-                        ForEach(store.sources) { source in
-                            Text(source.title)
+                        ScrollView {
+                            ForEach(store.sources) { source in
+                                ForEach(source.quizzes) { quiz in
+                                    Text(quiz.theme)
+                                }
                                 .onAppear {
                                     dump(source, name: "Source")
                                 }
+                            }
                         }
                     }
                 }

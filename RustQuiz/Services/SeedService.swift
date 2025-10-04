@@ -20,10 +20,9 @@ extension SeedService: DependencyKey {
         getTheBookSource: {
             guard let fileURL = Bundle.main.url(
                 forResource: "the_book_source",
-                withExtension: "json",
-                subdirectory: "SeedFilesJSON"
+                withExtension: "json"
             ) else {
-                fatalError("Can't find the_book_source.json in SeedFilesJSON")
+                fatalError("Can't find the_book_source.json in SeedJSON")
             }
             
 
