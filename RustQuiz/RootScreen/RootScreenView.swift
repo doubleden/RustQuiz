@@ -8,62 +8,28 @@ import SwiftUI
 import ComposableArchitecture
 import SQLiteData
 
+@ViewAction(for: RootScreenFeature.self)
 struct RootScreenView: View {
     let store: StoreOf<RootScreenFeature>
-    @State var refresh: Bool = true
+    
     var body: some View {
         ZStack {
             if store.isFirstLaunch {
                 OnBoardingScreenView(
-                    store:Store(
-                        initialState: OnBoardingScreenFeature.State()
-                    ) {
+                    store: Store(initialState: store.onBoardingScreenState) {
                         OnBoardingScreenFeature()
                     }
                 )
             } else {
                 MainScreenView(
-                    store: store.scope(
-                        state: \.mainScreenState,
-                        action: \.mainScreenAction
-                    )
+                    store: Store(initialState: store.mainScreenState) {
+                        MainScreenFeature()
+                    }
                 )
             }
-            
-            //
-            VStack {
-                if refresh {
-                    if store.sources.isEmpty {
-                        Text("No sources")
-                    } else {
-                        ScrollView {
-                            ForEach(store.sources) { source in
-                                ForEach(source.quizzes) { quiz in
-                                    Text(quiz.theme)
-                                }
-                                .onAppear {
-                                    dump(source, name: "Source")
-                                }
-                            }
-                        }
-                    }
-                }
-                
-                Spacer()
-                Button("delete") {
-                    store.send(.delete)
-                }
-                Button("update") {
-                    store.send(.update)
-                }
-                Button("refresh") {
-                    refresh.toggle()
-                }
-            }
-            //
         }
         .onAppear {
-            store.send(.checkQuantityOfSources)
+            send(.checkDatabaseHasBeenLoaded)
         }
     }
 }

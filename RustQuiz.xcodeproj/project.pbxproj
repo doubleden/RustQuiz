@@ -114,7 +114,6 @@
 		056C6C122E868A07006C44D3 /* RustQuiz */ = {
 			isa = PBXGroup;
 			children = (
-				05E635F32E8E8A4C0017E5B7 /* Localization */,
 				05D5259E2E89546A0002C6BE /* App */,
 				056C6C602E868E98006C44D3 /* RootScreen */,
 				056C6CEB2E86B6BB006C44D3 /* OnBoardingScreen */,
@@ -125,6 +124,7 @@
 				056C6D0C2E89306F006C44D3 /* Schema */,
 				056C6D0F2E894088006C44D3 /* Services */,
 				055EB7222E91404E003C2459 /* SeedJSON */,
+				05E635F32E8E8A4C0017E5B7 /* Localization */,
 				056C6C0F2E868A07006C44D3 /* Assets.xcassets */,
 			);
 			path = RustQuiz;

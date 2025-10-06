@@ -12,11 +12,12 @@ struct MainScreenFeature {
     
     @ObservableState
     struct State {
-        
+        var destinationStack = StackState<Destination.State>()
     }
     
     enum Action {
         case action
+        case stackAction(StackActionOf<Destination>)
     }
     
     var body: some Reducer<State, Action> {
@@ -26,5 +27,14 @@ struct MainScreenFeature {
                 return .none
             }
         }
+    }
+}
+
+// MARK: - Enum Destination
+extension MainScreenFeature {
+    @Reducer
+    enum Destination {
+        case settings(SettingsScreenFeature)
+        case quiz(QuizScreenFeature)
     }
 }
