@@ -8,13 +8,26 @@ import SwiftUI
 import ComposableArchitecture
 
 struct MainScreenView: View {
-    let store: StoreOf<MainScreenFeature>
+    @Bindable var store: StoreOf<MainScreenFeature>
     
     var body: some View {
-        VStack {
-            Text("MainScreenView")
-        }
-        .background{Color.yellow}
+        NavigationStack(
+            path: $store.scope(
+                state: \.destinationStack,
+                action: \.destinationStackAction
+            ),
+            root: {
+                MainRootView(store: store)
+            },
+            destination: { store in
+                switch store.case {
+                case .settings(let settingsStore):
+                    SettingsScreenView(store: settingsStore)
+                case .quiz(let quizStore):
+                    QuizScreenView(store: quizStore)
+                }
+            }
+        )
     }
 }
 

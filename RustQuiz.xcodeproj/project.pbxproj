@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		050CB6112E93E6620060E2AD /* MainRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050CB6102E93E6620060E2AD /* MainRootView.swift */; };
 		0533878D2E8A7D7300554004 /* QuizTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0533878C2E8A7D7300554004 /* QuizTable.swift */; };
 		0533878F2E8A7D8B00554004 /* QuestionTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0533878E2E8A7D8B00554004 /* QuestionTable.swift */; };
 		053387912E8A7D9000554004 /* AnswerTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053387902E8A7D9000554004 /* AnswerTable.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		050CB6102E93E6620060E2AD /* MainRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRootView.swift; sourceTree = "<group>"; };
 		0533878C2E8A7D7300554004 /* QuizTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTable.swift; sourceTree = "<group>"; };
 		0533878E2E8A7D8B00554004 /* QuestionTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTable.swift; sourceTree = "<group>"; };
 		053387902E8A7D9000554004 /* AnswerTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTable.swift; sourceTree = "<group>"; };
@@ -76,6 +78,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		050CB60E2E93E6470060E2AD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				050CB6102E93E6620060E2AD /* MainRootView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		050CB60F2E93E64D0060E2AD /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
 		053388532E8C1A5F00554004 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +177,8 @@
 		056C6CE62E86B644006C44D3 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
+				050CB60F2E93E64D0060E2AD /* UIComponents */,
+				050CB60E2E93E6470060E2AD /* Views */,
 				056C6CE42E86B644006C44D3 /*  MainScreenFeature.swift */,
 				056C6CE52E86B644006C44D3 /* MainScreenView.swift */,
 			);
@@ -299,6 +318,7 @@
 				056C6C612E868E98006C44D3 /* RootScreenView.swift in Sources */,
 				0533878D2E8A7D7300554004 /* QuizTable.swift in Sources */,
 				053388592E8C1B0900554004 /* Question.swift in Sources */,
+				050CB6112E93E6620060E2AD /* MainRootView.swift in Sources */,
 				056C6C622E868E98006C44D3 /*  RootScreenFeature.swift in Sources */,
 				056C6CE72E86B644006C44D3 /*  MainScreenFeature.swift in Sources */,
 				056C6CE82E86B644006C44D3 /* MainScreenView.swift in Sources */,

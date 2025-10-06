@@ -27,6 +27,7 @@ struct MainScreenFeature {
                 return .none
             }
         }
+        .forEach(\.destinationStack, action: \.destinationStackAction)
     }
 }
 
