@@ -14,6 +14,7 @@ struct MainScreenView: View {
         VStack {
             Text("MainScreenView")
         }
+        .background{Color.yellow}
     }
 }
 

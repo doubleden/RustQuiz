@@ -33,13 +33,3 @@ struct RootScreenView: View {
         }
     }
 }
-
-#Preview {
-    RootScreenView(
-        store: Store(initialState: RootScreenFeature.State()) {
-            RootScreenFeature()
-        }
-    )
-    .environment(\.locale, Locale(identifier: "en"))
-//    .environment(\.locale, Locale(identifier: "ru"))
-}

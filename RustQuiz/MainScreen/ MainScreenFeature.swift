@@ -17,7 +17,7 @@ struct MainScreenFeature {
     
     enum Action {
         case action
-        case stackAction(StackActionOf<Destination>)
+        case destinationStackAction(StackActionOf<Destination>)
     }
     
     var body: some Reducer<State, Action> {

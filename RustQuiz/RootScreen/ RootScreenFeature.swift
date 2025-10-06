@@ -34,7 +34,6 @@ struct RootScreenFeature {
     var body: some Reducer<State, Action> {
         Reduce { state, action in
             switch action {
-                
             case .view(.checkDatabaseHasBeenLoaded):
                 return .run { send in
                     let sources = try await storageService.readSources()
