@@ -14,7 +14,7 @@ struct RootScreenFeature {
     @ObservableState
     struct State {
         @Shared(.appStorage("isFirstLaunch")) var isFirstLaunch = true
-        var mainScreenState = MainScreenFeature.State()
+        var mainNavigationScreenState = MainNavigationScreenFeature.State()
         var onBoardingScreenState = OnBoardingScreenFeature.State()
     }
     

@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		050CB6112E93E6620060E2AD /* MainRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050CB6102E93E6620060E2AD /* MainRootView.swift */; };
+		050CB6152E93EEDC0060E2AD /*  MainScreenFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050CB6122E93EEDC0060E2AD /*  MainScreenFeature.swift */; };
+		050CB6162E93EEDC0060E2AD /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050CB6132E93EEDC0060E2AD /* MainScreenView.swift */; };
 		0533878D2E8A7D7300554004 /* QuizTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0533878C2E8A7D7300554004 /* QuizTable.swift */; };
 		0533878F2E8A7D8B00554004 /* QuestionTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0533878E2E8A7D8B00554004 /* QuestionTable.swift */; };
 		053387912E8A7D9000554004 /* AnswerTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053387902E8A7D9000554004 /* AnswerTable.swift */; };
@@ -27,8 +28,8 @@
 		056C6CDE2E86B47D006C44D3 /* SettingsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6CDB2E86B47D006C44D3 /* SettingsScreenView.swift */; };
 		056C6CE22E86B48C006C44D3 /* QuizScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6CE02E86B48C006C44D3 /* QuizScreenView.swift */; };
 		056C6CE32E86B48C006C44D3 /*  QuizScreenFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6CDF2E86B48C006C44D3 /*  QuizScreenFeature.swift */; };
-		056C6CE72E86B644006C44D3 /*  MainScreenFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6CE42E86B644006C44D3 /*  MainScreenFeature.swift */; };
-		056C6CE82E86B644006C44D3 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6CE52E86B644006C44D3 /* MainScreenView.swift */; };
+		056C6CE72E86B644006C44D3 /* MainNavigationScreenFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6CE42E86B644006C44D3 /* MainNavigationScreenFeature.swift */; };
+		056C6CE82E86B644006C44D3 /* MainNavigationScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6CE52E86B644006C44D3 /* MainNavigationScreenView.swift */; };
 		056C6CEC2E86B6BB006C44D3 /*  OnBoardingScreenFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6CE92E86B6BB006C44D3 /*  OnBoardingScreenFeature.swift */; };
 		056C6CED2E86B6BB006C44D3 /* OnBoardingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6CEA2E86B6BB006C44D3 /* OnBoardingScreenView.swift */; };
 		056C6D0B2E86C85D006C44D3 /* SQLiteData in Frameworks */ = {isa = PBXBuildFile; productRef = 056C6D0A2E86C85D006C44D3 /* SQLiteData */; };
@@ -37,7 +38,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		050CB6102E93E6620060E2AD /* MainRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRootView.swift; sourceTree = "<group>"; };
+		050CB6122E93EEDC0060E2AD /*  MainScreenFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " MainScreenFeature.swift"; sourceTree = "<group>"; };
+		050CB6132E93EEDC0060E2AD /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
 		0533878C2E8A7D7300554004 /* QuizTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTable.swift; sourceTree = "<group>"; };
 		0533878E2E8A7D8B00554004 /* QuestionTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTable.swift; sourceTree = "<group>"; };
 		053387902E8A7D9000554004 /* AnswerTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTable.swift; sourceTree = "<group>"; };
@@ -57,8 +59,8 @@
 		056C6CDB2E86B47D006C44D3 /* SettingsScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenView.swift; sourceTree = "<group>"; };
 		056C6CDF2E86B48C006C44D3 /*  QuizScreenFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " QuizScreenFeature.swift"; sourceTree = "<group>"; };
 		056C6CE02E86B48C006C44D3 /* QuizScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizScreenView.swift; sourceTree = "<group>"; };
-		056C6CE42E86B644006C44D3 /*  MainScreenFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " MainScreenFeature.swift"; sourceTree = "<group>"; };
-		056C6CE52E86B644006C44D3 /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
+		056C6CE42E86B644006C44D3 /* MainNavigationScreenFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationScreenFeature.swift; sourceTree = "<group>"; };
+		056C6CE52E86B644006C44D3 /* MainNavigationScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationScreenView.swift; sourceTree = "<group>"; };
 		056C6CE92E86B6BB006C44D3 /*  OnBoardingScreenFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " OnBoardingScreenFeature.swift"; sourceTree = "<group>"; };
 		056C6CEA2E86B6BB006C44D3 /* OnBoardingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingScreenView.swift; sourceTree = "<group>"; };
 		056C6D0D2E89318B006C44D3 /* SourceTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceTable.swift; sourceTree = "<group>"; };
@@ -78,19 +80,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		050CB60E2E93E6470060E2AD /* Views */ = {
+		050CB6142E93EEDC0060E2AD /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
-				050CB6102E93E6620060E2AD /* MainRootView.swift */,
+				050CB6122E93EEDC0060E2AD /*  MainScreenFeature.swift */,
+				050CB6132E93EEDC0060E2AD /* MainScreenView.swift */,
 			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		050CB60F2E93E64D0060E2AD /* UIComponents */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UIComponents;
+			path = MainScreen;
 			sourceTree = "<group>";
 		};
 		053388532E8C1A5F00554004 /* Models */ = {
@@ -134,7 +130,8 @@
 				05D5259E2E89546A0002C6BE /* App */,
 				056C6C602E868E98006C44D3 /* RootScreen */,
 				056C6CEB2E86B6BB006C44D3 /* OnBoardingScreen */,
-				056C6CE62E86B644006C44D3 /* MainScreen */,
+				056C6CE62E86B644006C44D3 /* MainNavigationScreen */,
+				050CB6142E93EEDC0060E2AD /* MainScreen */,
 				056C6CDC2E86B47D006C44D3 /* SettingsScreen */,
 				056C6CE12E86B48C006C44D3 /* QuizScreen */,
 				053388532E8C1A5F00554004 /* Models */,
@@ -174,15 +171,13 @@
 			path = QuizScreen;
 			sourceTree = "<group>";
 		};
-		056C6CE62E86B644006C44D3 /* MainScreen */ = {
+		056C6CE62E86B644006C44D3 /* MainNavigationScreen */ = {
 			isa = PBXGroup;
 			children = (
-				050CB60F2E93E64D0060E2AD /* UIComponents */,
-				050CB60E2E93E6470060E2AD /* Views */,
-				056C6CE42E86B644006C44D3 /*  MainScreenFeature.swift */,
-				056C6CE52E86B644006C44D3 /* MainScreenView.swift */,
+				056C6CE42E86B644006C44D3 /* MainNavigationScreenFeature.swift */,
+				056C6CE52E86B644006C44D3 /* MainNavigationScreenView.swift */,
 			);
-			path = MainScreen;
+			path = MainNavigationScreen;
 			sourceTree = "<group>";
 		};
 		056C6CEB2E86B6BB006C44D3 /* OnBoardingScreen */ = {
@@ -316,12 +311,13 @@
 				053387CE2E8AAB0000554004 /* SeedService.swift in Sources */,
 				0533885B2E8C1B1800554004 /* Answer.swift in Sources */,
 				056C6C612E868E98006C44D3 /* RootScreenView.swift in Sources */,
+				050CB6152E93EEDC0060E2AD /*  MainScreenFeature.swift in Sources */,
+				050CB6162E93EEDC0060E2AD /* MainScreenView.swift in Sources */,
 				0533878D2E8A7D7300554004 /* QuizTable.swift in Sources */,
 				053388592E8C1B0900554004 /* Question.swift in Sources */,
-				050CB6112E93E6620060E2AD /* MainRootView.swift in Sources */,
 				056C6C622E868E98006C44D3 /*  RootScreenFeature.swift in Sources */,
-				056C6CE72E86B644006C44D3 /*  MainScreenFeature.swift in Sources */,
-				056C6CE82E86B644006C44D3 /* MainScreenView.swift in Sources */,
+				056C6CE72E86B644006C44D3 /* MainNavigationScreenFeature.swift in Sources */,
+				056C6CE82E86B644006C44D3 /* MainNavigationScreenView.swift in Sources */,
 				053387912E8A7D9000554004 /* AnswerTable.swift in Sources */,
 				056C6D112E8940A1006C44D3 /* StorageService.swift in Sources */,
 				056C6CDD2E86B47D006C44D3 /*  SettingsScreenFeature.swift in Sources */,

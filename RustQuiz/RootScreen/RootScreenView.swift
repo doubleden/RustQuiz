@@ -21,9 +21,9 @@ struct RootScreenView: View {
                     }
                 )
             } else {
-                MainScreenView(
-                    store: Store(initialState: store.mainScreenState) {
-                        MainScreenFeature()
+                MainNavigationScreenView(
+                    store: Store(initialState: store.mainNavigationScreenState) {
+                        MainNavigationScreenFeature()
                     }
                 )
             }
