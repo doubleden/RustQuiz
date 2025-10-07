@@ -7,12 +7,24 @@
 import SwiftUI
 import ComposableArchitecture
 
+@ViewAction(for: MainScreenFeature.self)
 struct MainScreenView: View {
-    let store: StoreOf<MainScreenFeature>
+    @Bindable var store: StoreOf<MainScreenFeature>
     
     var body: some View {
-        VStack {
-            Text("MainScreenView")
+        ScrollView {
+            VStack {
+                ForEach(store.sources) { source in
+                    VStack {
+                        ForEach(source.quizzes) { quiz in
+                            Button("Naviagte to \(quiz.theme)", action: { send(.navigateToQuiz(quiz)) })
+                        }
+                    }
+                }
+            }
+        }
+        .onAppear {
+            send(.fetchSources)
         }
     }
 }

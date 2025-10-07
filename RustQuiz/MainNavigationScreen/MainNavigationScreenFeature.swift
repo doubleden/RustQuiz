@@ -28,6 +28,9 @@ struct MainNavigationScreenFeature {
         
         Reduce { state, action in
             switch action {
+            case .mainScreenAction(.view(.navigateToQuiz(let quiz))):
+                state.destinationStack.append(.quiz(QuizScreenFeature.State(quiz: quiz)))
+                return .none
             default:
                 return .none
             }

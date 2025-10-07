@@ -11,15 +11,21 @@ struct QuizScreenView: View {
     let store: StoreOf<QuizScreenFeature>
     
     var body: some View {
-        VStack {
-            Text("QuizScreenView")
+        ScrollView {
+            VStack {
+                Text("\(store.quiz.theme)")
+                ForEach(store.quiz.questions) { question in
+                    Text(question.title)
+                }
+                Button("Change question", action: {store.send(.action)})
+            }
         }
     }
 }
 
 #Preview {
     QuizScreenView(
-        store: Store(initialState: QuizScreenFeature.State()) {
+        store: Store(initialState: QuizScreenFeature.State(quiz: Quiz(id: UUID(), theme: "", priority: 0, questions: []))) {
             QuizScreenFeature()
         }
     )

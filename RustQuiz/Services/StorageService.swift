@@ -14,6 +14,8 @@ struct StorageService {
     var readSources: @Sendable () async throws -> [Source]
     var updateSource: @Sendable (Source) async throws -> Void
     var deleteSource: @Sendable (Source) async throws -> Void
+    
+    var updateQuiz: @Sendable (Quiz) async throws -> Void
 }
 
 // MARK: - Live
@@ -241,6 +243,23 @@ extension StorageService: DependencyKey {
                 // Удаляем источник (CASCADE удалит все связанные данные)
                 try SourceTable.where { $0.id == source.id }.delete().execute(db)
             }
+        },
+        updateQuiz: { quiz in
+            @Dependency(\.defaultDatabase) var database
+            try await database.write { db in
+                for question in quiz.questions {
+                    let questionTable = QuestionTable(
+                        id: question.id,
+                        title: question.title,
+                        descriptionText: question.descriptionText,
+                        descriptionLink: question.descriptionLink,
+                        hasUserAnswered: question.hasUserAnswered,
+                        isUserAnswerCorrect: question.isUserAnswerCorrect,
+                        quizRowID: quiz.id
+                    )
+                    try QuestionTable.upsert{questionTable}.execute(db)
+                }
+            }
         }
     )
 }
@@ -255,7 +274,8 @@ extension StorageService {
             return [book]
         },
         updateSource: { _ in },
-        deleteSource: { _ in }
+        deleteSource: { _ in },
+        updateQuiz: { _ in }
     )
 }
 
