@@ -26,7 +26,9 @@ struct QuizScreenFeature {
         Reduce { state, action in
             switch action {
             case action:
-                state.quiz.questions[0].title = "did"
+                state.quiz.questions[0].hasUserAnswered = true
+                state.quiz.questions[0].isUserAnswerCorrect = true
+                
                 return .run { [quiz = state.quiz] _ in
                     try await storageService.updateQuiz(quiz)
                 }

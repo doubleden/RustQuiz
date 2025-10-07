@@ -20,7 +20,7 @@ struct Question: Identifiable, Decodable {
     
 }
 
-// MARK: - Localization
+// MARK: - Properties used in view
 extension Question {
     var titleLocalized: LocalizedStringKey {
         LocalizedStringKey(stringLiteral: title)

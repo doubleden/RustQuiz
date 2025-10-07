@@ -14,9 +14,15 @@ struct Source: Identifiable, Decodable {
     var quizzes: [Quiz]
 }
 
-// MARK: - Localization
+// MARK: - Properties used in view
 extension Source {
     var titleLocalized: LocalizedStringKey {
         LocalizedStringKey(stringLiteral: title)
+    }
+    
+    var averageRating: Int {
+        guard !quizzes.isEmpty else { return 0 }
+        let total = quizzes.reduce(0) { $0 + $1.averageRating }
+        return Int((Double(total) / Double(quizzes.count)).rounded())
     }
 }

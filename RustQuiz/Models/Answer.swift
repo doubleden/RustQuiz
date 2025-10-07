@@ -13,7 +13,7 @@ struct Answer: Identifiable, Decodable {
     var isCorrect = false
 }
 
-// MARK: - Localization
+// MARK: - Properties used in view
 extension Answer {
     var titleLocalized: LocalizedStringKey {
         LocalizedStringKey(stringLiteral: title)

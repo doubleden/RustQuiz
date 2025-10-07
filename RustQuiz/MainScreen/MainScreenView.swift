@@ -20,6 +20,7 @@ struct MainScreenView: View {
                             Button("Naviagte to \(quiz.theme)", action: { send(.navigateToQuiz(quiz)) })
                         }
                     }
+                    Text("\(source.averageRating.formatted())")
                 }
             }
         }
