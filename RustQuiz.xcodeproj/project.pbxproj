@@ -17,7 +17,9 @@
 		053388572E8C1ACA00554004 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053388562E8C1ACA00554004 /* Quiz.swift */; };
 		053388592E8C1B0900554004 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053388582E8C1B0900554004 /* Question.swift */; };
 		0533885B2E8C1B1800554004 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0533885A2E8C1B1800554004 /* Answer.swift */; };
-		054D78292E9697F600DFCD34 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D78282E9697F600DFCD34 /* BackgroundView.swift */; };
+		054D782B2E96A04800DFCD34 /* CrabsAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D782A2E96A04800DFCD34 /* CrabsAnimation.swift */; };
+		054D782E2E96AE1600DFCD34 /* CrabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D782D2E96AE1600DFCD34 /* CrabModel.swift */; };
+		054D78302E96AE3800DFCD34 /* CrabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D782F2E96AE3700DFCD34 /* CrabView.swift */; };
 		055EB71D2E9065E4003C2459 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 055EB71C2E9065E4003C2459 /* Localizable.xcstrings */; };
 		055EB7242E914065003C2459 /* the_book_source.json in Resources */ = {isa = PBXBuildFile; fileRef = 055EB7232E914065003C2459 /* the_book_source.json */; };
 		056C6C132E868A07006C44D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 056C6C0F2E868A07006C44D3 /* Assets.xcassets */; };
@@ -49,7 +51,9 @@
 		053388562E8C1ACA00554004 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		053388582E8C1B0900554004 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		0533885A2E8C1B1800554004 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
-		054D78282E9697F600DFCD34 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		054D782A2E96A04800DFCD34 /* CrabsAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrabsAnimation.swift; sourceTree = "<group>"; };
+		054D782D2E96AE1600DFCD34 /* CrabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrabModel.swift; sourceTree = "<group>"; };
+		054D782F2E96AE3700DFCD34 /* CrabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrabView.swift; sourceTree = "<group>"; };
 		055EB71C2E9065E4003C2459 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		055EB7232E914065003C2459 /* the_book_source.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = the_book_source.json; sourceTree = "<group>"; };
 		056C6C012E868A01006C44D3 /* RustQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RustQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,9 +109,26 @@
 		054D78272E9697A700DFCD34 /* UIComponentsGeneral */ = {
 			isa = PBXGroup;
 			children = (
-				054D78282E9697F600DFCD34 /* BackgroundView.swift */,
 			);
 			path = UIComponentsGeneral;
+			sourceTree = "<group>";
+		};
+		054D782C2E96ADEE00DFCD34 /* CrabsAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				054D782A2E96A04800DFCD34 /* CrabsAnimation.swift */,
+				054D782D2E96AE1600DFCD34 /* CrabModel.swift */,
+				054D782F2E96AE3700DFCD34 /* CrabView.swift */,
+			);
+			path = CrabsAnimation;
+			sourceTree = "<group>";
+		};
+		054D78332E96AF4400DFCD34 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				054D782C2E96ADEE00DFCD34 /* CrabsAnimation */,
+			);
+			path = Animations;
 			sourceTree = "<group>";
 		};
 		055EB7222E91404E003C2459 /* SeedJSON */ = {
@@ -145,6 +166,7 @@
 				056C6CDC2E86B47D006C44D3 /* SettingsScreen */,
 				056C6CE12E86B48C006C44D3 /* QuizScreen */,
 				054D78272E9697A700DFCD34 /* UIComponentsGeneral */,
+				054D78332E96AF4400DFCD34 /* Animations */,
 				053388532E8C1A5F00554004 /* Models */,
 				056C6D0C2E89306F006C44D3 /* Schema */,
 				056C6D0F2E894088006C44D3 /* Services */,
@@ -330,12 +352,14 @@
 				056C6CE72E86B644006C44D3 /* MainNavigationScreenFeature.swift in Sources */,
 				056C6CE82E86B644006C44D3 /* MainNavigationScreenView.swift in Sources */,
 				053387912E8A7D9000554004 /* AnswerTable.swift in Sources */,
+				054D782E2E96AE1600DFCD34 /* CrabModel.swift in Sources */,
+				054D78302E96AE3800DFCD34 /* CrabView.swift in Sources */,
 				056C6D112E8940A1006C44D3 /* StorageService.swift in Sources */,
 				056C6CDD2E86B47D006C44D3 /*  SettingsScreenFeature.swift in Sources */,
 				056C6CDE2E86B47D006C44D3 /* SettingsScreenView.swift in Sources */,
 				056C6CE22E86B48C006C44D3 /* QuizScreenView.swift in Sources */,
 				056C6CE32E86B48C006C44D3 /*  QuizScreenFeature.swift in Sources */,
-				054D78292E9697F600DFCD34 /* BackgroundView.swift in Sources */,
+				054D782B2E96A04800DFCD34 /* CrabsAnimation.swift in Sources */,
 				053388552E8C1A8C00554004 /* Source.swift in Sources */,
 				053388572E8C1ACA00554004 /* Quiz.swift in Sources */,
 				056C6D0E2E89318B006C44D3 /* SourceTable.swift in Sources */,
