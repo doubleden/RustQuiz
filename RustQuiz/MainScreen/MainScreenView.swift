@@ -19,6 +19,13 @@ struct MainScreenView: View {
         }
         .padding()
         .mainBackground()
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                Button("Settings") {
+                    print("Settings")
+                }
+            }
+        }
         .onAppear {
             send(.fetchSources)
         }
@@ -26,9 +33,11 @@ struct MainScreenView: View {
 }
 
 #Preview {
-    MainScreenView(
-        store: Store(initialState: MainScreenFeature.State()) {
-            MainScreenFeature()
-        }
-    )
+    NavigationStack {
+        MainScreenView(
+            store: Store(initialState: MainScreenFeature.State()) {
+                MainScreenFeature()
+            }
+        )
+    }
 }

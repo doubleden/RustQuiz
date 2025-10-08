@@ -11,7 +11,7 @@ struct MainTitleView: View {
     var body: some View {
         Text("Rust Quiz")
             .mainFont(size: 80)
-            .foregroundStyle(Color("titleColor"))
+            .foregroundStyle(CustomColor.titleColor.color)
     }
 }
 

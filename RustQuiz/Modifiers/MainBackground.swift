@@ -16,7 +16,7 @@ extension View {
 struct MainBackgroundModifier: ViewModifier {
     func body(content: Content) -> some View {
         ZStack {
-            Color("backgroundColor")
+            CustomColor.backgroundColor.color
                 .ignoresSafeArea()
             CrabsAnimation()
             

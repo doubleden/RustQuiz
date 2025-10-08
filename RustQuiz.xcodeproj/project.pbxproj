@@ -26,6 +26,7 @@
 		054D78572E96B5C000DFCD34 /* MainFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D78562E96B5C000DFCD34 /* MainFont.swift */; };
 		054D785A2E96B7F300DFCD34 /* MainTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D78592E96B7F300DFCD34 /* MainTitleView.swift */; };
 		054D785C2E96BBB900DFCD34 /* SubFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D785B2E96BBB900DFCD34 /* SubFont.swift */; };
+		054D785F2E96BCAC00DFCD34 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D785E2E96BCAC00DFCD34 /* CustomColor.swift */; };
 		055EB71D2E9065E4003C2459 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 055EB71C2E9065E4003C2459 /* Localizable.xcstrings */; };
 		055EB7242E914065003C2459 /* the_book_source.json in Resources */ = {isa = PBXBuildFile; fileRef = 055EB7232E914065003C2459 /* the_book_source.json */; };
 		056C6C132E868A07006C44D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 056C6C0F2E868A07006C44D3 /* Assets.xcassets */; };
@@ -67,6 +68,7 @@
 		054D78562E96B5C000DFCD34 /* MainFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFont.swift; sourceTree = "<group>"; };
 		054D78592E96B7F300DFCD34 /* MainTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTitleView.swift; sourceTree = "<group>"; };
 		054D785B2E96BBB900DFCD34 /* SubFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubFont.swift; sourceTree = "<group>"; };
+		054D785E2E96BCAC00DFCD34 /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
 		055EB71C2E9065E4003C2459 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		055EB7232E914065003C2459 /* the_book_source.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = the_book_source.json; sourceTree = "<group>"; };
 		056C6C012E868A01006C44D3 /* RustQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RustQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,6 +167,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		054D785D2E96BC9C00DFCD34 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				054D785E2E96BCAC00DFCD34 /* CustomColor.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		055EB7222E91404E003C2459 /* SeedJSON */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +213,7 @@
 				054D78272E9697A700DFCD34 /* Modifiers */,
 				054D78332E96AF4400DFCD34 /* Animations */,
 				053388532E8C1A5F00554004 /* Models */,
+				054D785D2E96BC9C00DFCD34 /* Enums */,
 				056C6D0C2E89306F006C44D3 /* Schema */,
 				056C6D0F2E894088006C44D3 /* Services */,
 				055EB7222E91404E003C2459 /* SeedJSON */,
@@ -407,6 +418,7 @@
 				054D785C2E96BBB900DFCD34 /* SubFont.swift in Sources */,
 				056C6CED2E86B6BB006C44D3 /* OnBoardingScreenView.swift in Sources */,
 				054D784F2E96AFED00DFCD34 /* MainBackground.swift in Sources */,
+				054D785F2E96BCAC00DFCD34 /* CustomColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
