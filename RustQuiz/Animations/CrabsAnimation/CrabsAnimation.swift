@@ -15,6 +15,10 @@ struct CrabsAnimation: View {
     private let spawnInterval: TimeInterval = 1.0
     private let maxCrabsOnScreen = 10
     
+    private let crabSpeed = 50.0
+    private let crabSize = 0.2
+    private let crabOpacity = 0.4
+    
     var body: some View {
         GeometryReader { geometry in
             TimelineView(.animation) { context in
@@ -53,7 +57,7 @@ extension CrabsAnimation {
     ) {
         let width = geometry.size.width
         let height = geometry.size.height
-        let crabWidth = width * Crab.size
+        let crabWidth = width * crabSize
         let halfCrab = crabWidth / 2
         
         for i in crabs.indices {
@@ -81,11 +85,9 @@ extension CrabsAnimation {
     }
     
     private func spawnCrab(geometry: GeometryProxy) {
-        var crab = Crab()
-        
         let width = geometry.size.width
         let height = geometry.size.height
-        let crabWidth = width * Crab.size
+        let crabWidth = width * crabSize
         let halfCrab = crabWidth / 2
         
         let sideIsLeft = Bool.random()
@@ -101,7 +103,7 @@ extension CrabsAnimation {
         let maxAttempts = 12
         var chosenY: CGFloat? = nil
         for _ in 0..<maxAttempts {
-            let candidate = CGFloat.random(in: yRange)
+            let candidate = Double.random(in: yRange)
             let overlaps = crabs.contains { existing in
                 abs(existing.y - candidate) < minVerticalSpacing
             }
@@ -113,9 +115,14 @@ extension CrabsAnimation {
         
         guard let y = chosenY else { return }
         
-        crab.x = x
-        crab.y = y
-        crab.direction = direction
+        let crab = Crab(
+            speed: crabSpeed,
+            size: crabSize,
+            opacity: crabOpacity,
+            x: x,
+            y: y,
+            direction: direction
+        )
         
         crabs.append(crab)
     }

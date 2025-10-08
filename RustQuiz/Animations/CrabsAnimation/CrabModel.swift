@@ -9,15 +9,13 @@ import Foundation
 
 struct Crab: Identifiable {
     let id = UUID()
-    static let speed = 50.0
-    static let size = 0.2
+    let speed: Double
+    let size: Double
+    let opacity: Double
     
-    let speed = Self.speed
-    let size = Self.size
-    
-    var x = 0.0
-    var y = 0.0
-    var direction = Direction.left
+    var x: Double
+    var y: Double
+    var direction: Direction
 }
 
 extension Crab {

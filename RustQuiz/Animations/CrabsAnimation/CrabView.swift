@@ -17,7 +17,7 @@ struct CrabView: View {
         Image("crab")
             .resizable()
             .scaledToFit()
-            .opacity(0.4)
+            .opacity(crab.opacity)
             .rotationEffect(.degrees(isAnimating ? 1.5 : -1.5))
             .frame(width: geometry.size.width * crab.size)
             .position(x: crab.x, y: crab.y)
@@ -34,6 +34,14 @@ struct CrabView: View {
 
 #Preview {
     GeometryReader { g in
-        CrabView(geometry: g, crab: Crab(x: g.size.width / 2, y: g.size.height / 2))
+        let crab = Crab(
+            speed: 0.0,
+            size: 0.4,
+            opacity: 0.4,
+            x: g.size.width / 2,
+            y: g.size.height / 2,
+            direction: .left
+        )
+        CrabView(geometry: g, crab: crab)
     }
 }

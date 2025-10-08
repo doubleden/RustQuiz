@@ -20,6 +20,7 @@
 		054D782B2E96A04800DFCD34 /* CrabsAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D782A2E96A04800DFCD34 /* CrabsAnimation.swift */; };
 		054D782E2E96AE1600DFCD34 /* CrabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D782D2E96AE1600DFCD34 /* CrabModel.swift */; };
 		054D78302E96AE3800DFCD34 /* CrabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D782F2E96AE3700DFCD34 /* CrabView.swift */; };
+		054D784F2E96AFED00DFCD34 /* MainBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D784E2E96AFED00DFCD34 /* MainBackground.swift */; };
 		055EB71D2E9065E4003C2459 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 055EB71C2E9065E4003C2459 /* Localizable.xcstrings */; };
 		055EB7242E914065003C2459 /* the_book_source.json in Resources */ = {isa = PBXBuildFile; fileRef = 055EB7232E914065003C2459 /* the_book_source.json */; };
 		056C6C132E868A07006C44D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 056C6C0F2E868A07006C44D3 /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 		054D782A2E96A04800DFCD34 /* CrabsAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrabsAnimation.swift; sourceTree = "<group>"; };
 		054D782D2E96AE1600DFCD34 /* CrabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrabModel.swift; sourceTree = "<group>"; };
 		054D782F2E96AE3700DFCD34 /* CrabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrabView.swift; sourceTree = "<group>"; };
+		054D784E2E96AFED00DFCD34 /* MainBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBackground.swift; sourceTree = "<group>"; };
 		055EB71C2E9065E4003C2459 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		055EB7232E914065003C2459 /* the_book_source.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = the_book_source.json; sourceTree = "<group>"; };
 		056C6C012E868A01006C44D3 /* RustQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RustQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,11 +108,12 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		054D78272E9697A700DFCD34 /* UIComponentsGeneral */ = {
+		054D78272E9697A700DFCD34 /* Modifiers */ = {
 			isa = PBXGroup;
 			children = (
+				054D784E2E96AFED00DFCD34 /* MainBackground.swift */,
 			);
-			path = UIComponentsGeneral;
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 		054D782C2E96ADEE00DFCD34 /* CrabsAnimation */ = {
@@ -165,7 +168,7 @@
 				050CB6142E93EEDC0060E2AD /* MainScreen */,
 				056C6CDC2E86B47D006C44D3 /* SettingsScreen */,
 				056C6CE12E86B48C006C44D3 /* QuizScreen */,
-				054D78272E9697A700DFCD34 /* UIComponentsGeneral */,
+				054D78272E9697A700DFCD34 /* Modifiers */,
 				054D78332E96AF4400DFCD34 /* Animations */,
 				053388532E8C1A5F00554004 /* Models */,
 				056C6D0C2E89306F006C44D3 /* Schema */,
@@ -365,6 +368,7 @@
 				056C6D0E2E89318B006C44D3 /* SourceTable.swift in Sources */,
 				056C6CEC2E86B6BB006C44D3 /*  OnBoardingScreenFeature.swift in Sources */,
 				056C6CED2E86B6BB006C44D3 /* OnBoardingScreenView.swift in Sources */,
+				054D784F2E96AFED00DFCD34 /* MainBackground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
