@@ -12,18 +12,13 @@ struct MainScreenView: View {
     @Bindable var store: StoreOf<MainScreenFeature>
     
     var body: some View {
-        ScrollView {
-            VStack {
-                ForEach(store.sources) { source in
-                    VStack {
-                        ForEach(source.quizzes) { quiz in
-                            Button("Naviagte to \(quiz.theme)", action: { send(.navigateToQuiz(quiz)) })
-                        }
-                    }
-                    Text("\(source.averageRating.formatted())")
-                }
-            }
+        VStack {
+            MainTitleView()
+            
+            Spacer()
         }
+        .padding()
+        .mainBackground()
         .onAppear {
             send(.fetchSources)
         }

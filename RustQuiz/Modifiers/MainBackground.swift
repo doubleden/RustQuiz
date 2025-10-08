@@ -25,7 +25,7 @@ struct MainBackgroundModifier: ViewModifier {
     }
 }
 
-// MARK: - Test View
+// MARK: - Test
 fileprivate struct MainBackgroundTestView: View {
     var body: some View {
         VStack {

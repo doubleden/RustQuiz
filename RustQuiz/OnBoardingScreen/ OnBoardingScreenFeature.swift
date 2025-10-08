@@ -30,7 +30,7 @@ struct OnBoardingScreenFeature {
         Reduce { state, action in
             switch action {
             case .view(.didTapOnNextButton):
-                return .none
+                return .send(.onBoardingCompleted)
                 
             case .onBoardingCompleted:
                 state.$isFirstLaunch.withLock { $0 = false }

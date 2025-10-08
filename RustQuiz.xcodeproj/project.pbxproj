@@ -21,6 +21,11 @@
 		054D782E2E96AE1600DFCD34 /* CrabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D782D2E96AE1600DFCD34 /* CrabModel.swift */; };
 		054D78302E96AE3800DFCD34 /* CrabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D782F2E96AE3700DFCD34 /* CrabView.swift */; };
 		054D784F2E96AFED00DFCD34 /* MainBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D784E2E96AFED00DFCD34 /* MainBackground.swift */; };
+		054D78522E96B44300DFCD34 /* FiraSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 054D78512E96B44300DFCD34 /* FiraSans-Regular.ttf */; };
+		054D78542E96B45200DFCD34 /* AlfaSlabOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 054D78532E96B45200DFCD34 /* AlfaSlabOne-Regular.ttf */; };
+		054D78572E96B5C000DFCD34 /* MainFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D78562E96B5C000DFCD34 /* MainFont.swift */; };
+		054D785A2E96B7F300DFCD34 /* MainTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D78592E96B7F300DFCD34 /* MainTitleView.swift */; };
+		054D785C2E96BBB900DFCD34 /* SubFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D785B2E96BBB900DFCD34 /* SubFont.swift */; };
 		055EB71D2E9065E4003C2459 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 055EB71C2E9065E4003C2459 /* Localizable.xcstrings */; };
 		055EB7242E914065003C2459 /* the_book_source.json in Resources */ = {isa = PBXBuildFile; fileRef = 055EB7232E914065003C2459 /* the_book_source.json */; };
 		056C6C132E868A07006C44D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 056C6C0F2E868A07006C44D3 /* Assets.xcassets */; };
@@ -56,6 +61,12 @@
 		054D782D2E96AE1600DFCD34 /* CrabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrabModel.swift; sourceTree = "<group>"; };
 		054D782F2E96AE3700DFCD34 /* CrabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrabView.swift; sourceTree = "<group>"; };
 		054D784E2E96AFED00DFCD34 /* MainBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBackground.swift; sourceTree = "<group>"; };
+		054D78512E96B44300DFCD34 /* FiraSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-Regular.ttf"; sourceTree = "<group>"; };
+		054D78532E96B45200DFCD34 /* AlfaSlabOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlfaSlabOne-Regular.ttf"; sourceTree = "<group>"; };
+		054D78552E96B46100DFCD34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		054D78562E96B5C000DFCD34 /* MainFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFont.swift; sourceTree = "<group>"; };
+		054D78592E96B7F300DFCD34 /* MainTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTitleView.swift; sourceTree = "<group>"; };
+		054D785B2E96BBB900DFCD34 /* SubFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubFont.swift; sourceTree = "<group>"; };
 		055EB71C2E9065E4003C2459 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		055EB7232E914065003C2459 /* the_book_source.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = the_book_source.json; sourceTree = "<group>"; };
 		056C6C012E868A01006C44D3 /* RustQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RustQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +102,7 @@
 		050CB6142E93EEDC0060E2AD /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
+				054D78582E96B7E100DFCD34 /* Views */,
 				050CB6122E93EEDC0060E2AD /*  MainScreenFeature.swift */,
 				050CB6132E93EEDC0060E2AD /* MainScreenView.swift */,
 			);
@@ -112,6 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				054D784E2E96AFED00DFCD34 /* MainBackground.swift */,
+				054D78562E96B5C000DFCD34 /* MainFont.swift */,
+				054D785B2E96BBB900DFCD34 /* SubFont.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -132,6 +146,23 @@
 				054D782C2E96ADEE00DFCD34 /* CrabsAnimation */,
 			);
 			path = Animations;
+			sourceTree = "<group>";
+		};
+		054D78502E96B41400DFCD34 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				054D78512E96B44300DFCD34 /* FiraSans-Regular.ttf */,
+				054D78532E96B45200DFCD34 /* AlfaSlabOne-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		054D78582E96B7E100DFCD34 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				054D78592E96B7F300DFCD34 /* MainTitleView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		055EB7222E91404E003C2459 /* SeedJSON */ = {
@@ -161,6 +192,7 @@
 		056C6C122E868A07006C44D3 /* RustQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				054D78552E96B46100DFCD34 /* Info.plist */,
 				05D5259E2E89546A0002C6BE /* App */,
 				056C6C602E868E98006C44D3 /* RootScreen */,
 				056C6CEB2E86B6BB006C44D3 /* OnBoardingScreen */,
@@ -175,6 +207,7 @@
 				056C6D0F2E894088006C44D3 /* Services */,
 				055EB7222E91404E003C2459 /* SeedJSON */,
 				05E635F32E8E8A4C0017E5B7 /* Localization */,
+				054D78502E96B41400DFCD34 /* Fonts */,
 				056C6C0F2E868A07006C44D3 /* Assets.xcassets */,
 			);
 			path = RustQuiz;
@@ -331,7 +364,9 @@
 			files = (
 				056C6C132E868A07006C44D3 /* Assets.xcassets in Resources */,
 				055EB7242E914065003C2459 /* the_book_source.json in Resources */,
+				054D78522E96B44300DFCD34 /* FiraSans-Regular.ttf in Resources */,
 				055EB71D2E9065E4003C2459 /* Localizable.xcstrings in Resources */,
+				054D78542E96B45200DFCD34 /* AlfaSlabOne-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,12 +388,14 @@
 				053388592E8C1B0900554004 /* Question.swift in Sources */,
 				056C6C622E868E98006C44D3 /*  RootScreenFeature.swift in Sources */,
 				056C6CE72E86B644006C44D3 /* MainNavigationScreenFeature.swift in Sources */,
+				054D785A2E96B7F300DFCD34 /* MainTitleView.swift in Sources */,
 				056C6CE82E86B644006C44D3 /* MainNavigationScreenView.swift in Sources */,
 				053387912E8A7D9000554004 /* AnswerTable.swift in Sources */,
 				054D782E2E96AE1600DFCD34 /* CrabModel.swift in Sources */,
 				054D78302E96AE3800DFCD34 /* CrabView.swift in Sources */,
 				056C6D112E8940A1006C44D3 /* StorageService.swift in Sources */,
 				056C6CDD2E86B47D006C44D3 /*  SettingsScreenFeature.swift in Sources */,
+				054D78572E96B5C000DFCD34 /* MainFont.swift in Sources */,
 				056C6CDE2E86B47D006C44D3 /* SettingsScreenView.swift in Sources */,
 				056C6CE22E86B48C006C44D3 /* QuizScreenView.swift in Sources */,
 				056C6CE32E86B48C006C44D3 /*  QuizScreenFeature.swift in Sources */,
@@ -367,6 +404,7 @@
 				053388572E8C1ACA00554004 /* Quiz.swift in Sources */,
 				056C6D0E2E89318B006C44D3 /* SourceTable.swift in Sources */,
 				056C6CEC2E86B6BB006C44D3 /*  OnBoardingScreenFeature.swift in Sources */,
+				054D785C2E96BBB900DFCD34 /* SubFont.swift in Sources */,
 				056C6CED2E86B6BB006C44D3 /* OnBoardingScreenView.swift in Sources */,
 				054D784F2E96AFED00DFCD34 /* MainBackground.swift in Sources */,
 			);
@@ -510,6 +548,7 @@
 				DEVELOPMENT_TEAM = AM64M5A8BU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RustQuiz/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -547,6 +586,7 @@
 				DEVELOPMENT_TEAM = AM64M5A8BU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RustQuiz/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
