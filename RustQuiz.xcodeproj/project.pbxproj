@@ -47,6 +47,7 @@
 		056C6D112E8940A1006C44D3 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6D102E8940A1006C44D3 /* StorageService.swift */; };
 		05C16D732E97D7CB00C35053 /* TopBarButtonShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C16D722E97D7CB00C35053 /* TopBarButtonShape.swift */; };
 		05C16D752E97DCEB00C35053 /* TopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C16D742E97DCEB00C35053 /* TopBarView.swift */; };
+		05C16D782E97E75A00C35053 /* ButtonPressInStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C16D772E97E75A00C35053 /* ButtonPressInStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +91,7 @@
 		056C6D102E8940A1006C44D3 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		05C16D722E97D7CB00C35053 /* TopBarButtonShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarButtonShape.swift; sourceTree = "<group>"; };
 		05C16D742E97DCEB00C35053 /* TopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarView.swift; sourceTree = "<group>"; };
+		05C16D772E97E75A00C35053 /* ButtonPressInStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonPressInStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +219,7 @@
 				056C6CDC2E86B47D006C44D3 /* SettingsScreen */,
 				056C6CE12E86B48C006C44D3 /* QuizScreen */,
 				054D78272E9697A700DFCD34 /* Modifiers */,
+				05C16D762E97E73C00C35053 /* Styles */,
 				054D78332E96AF4400DFCD34 /* Animations */,
 				053388532E8C1A5F00554004 /* Models */,
 				054D785D2E96BC9C00DFCD34 /* Enums */,
@@ -293,6 +296,14 @@
 				053387CD2E8AAB0000554004 /* SeedService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		05C16D762E97E73C00C35053 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				05C16D772E97E75A00C35053 /* ButtonPressInStyle.swift */,
+			);
+			path = Styles;
 			sourceTree = "<group>";
 		};
 		05D5259E2E89546A0002C6BE /* App */ = {
@@ -404,6 +415,7 @@
 				05C16D732E97D7CB00C35053 /* TopBarButtonShape.swift in Sources */,
 				0533878D2E8A7D7300554004 /* QuizTable.swift in Sources */,
 				053388592E8C1B0900554004 /* Question.swift in Sources */,
+				05C16D782E97E75A00C35053 /* ButtonPressInStyle.swift in Sources */,
 				056C6C622E868E98006C44D3 /*  RootScreenFeature.swift in Sources */,
 				056C6CE72E86B644006C44D3 /* MainNavigationScreenFeature.swift in Sources */,
 				054D785A2E96B7F300DFCD34 /* MainTitleView.swift in Sources */,

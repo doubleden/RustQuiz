@@ -16,21 +16,22 @@ struct TopBarView: View {
                 Image(systemName: "gear")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 30, height: 30)
+                    .padding(9)
+                    .topBarButtonShape()
             }
-            .frame(width: 50, height: 50)
-            .topBarButtonShape()
+            .buttonStyle(ButtonPressInStyle())
             
             Spacer()
         }
+        .frame(minHeight: 30, idealHeight: 40, maxHeight: 50)
     }
 }
 
 #Preview {
-    VStack {
-        TopBarView{}
-        Spacer()
+    GeometryReader { geometry in
+        TopBarView(
+            settingsButtonAction: {}
+        )
+        .padding()
     }
-    .padding()
-    .mainBackground()
 }
