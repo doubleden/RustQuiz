@@ -15,9 +15,10 @@ struct MainScreenView: View {
         VStack {
             TopBarView(settingsButtonAction: { send(.navigateToSettings) })
             
-            MainTitleView()
-            
-            ProgressView(progress: store.progress)
+            VStack(spacing: 10) {
+                MainTitleView()
+                ProgressView(progress: store.progress)
+            }
             
             Spacer()
         }
