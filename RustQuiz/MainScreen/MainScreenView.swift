@@ -13,19 +13,16 @@ struct MainScreenView: View {
     
     var body: some View {
         VStack {
+            TopBarView(
+                settingsButtonAction: {}
+            )
+            
             MainTitleView()
             
             Spacer()
         }
         .padding()
         .mainBackground()
-        .toolbar {
-            ToolbarItem(placement: .topBarLeading) {
-                Button("Settings") {
-                    print("Settings")
-                }
-            }
-        }
         .onAppear {
             send(.fetchSources)
         }

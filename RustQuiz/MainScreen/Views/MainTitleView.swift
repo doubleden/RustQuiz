@@ -10,7 +10,7 @@ import SwiftUI
 struct MainTitleView: View {
     var body: some View {
         Text("Rust Quiz")
-            .mainFont(size: 80)
+            .mainFont(size: 65)
             .foregroundStyle(CustomColor.titleColor.color)
     }
 }

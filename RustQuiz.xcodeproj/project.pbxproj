@@ -45,6 +45,8 @@
 		056C6D0B2E86C85D006C44D3 /* SQLiteData in Frameworks */ = {isa = PBXBuildFile; productRef = 056C6D0A2E86C85D006C44D3 /* SQLiteData */; };
 		056C6D0E2E89318B006C44D3 /* SourceTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6D0D2E89318B006C44D3 /* SourceTable.swift */; };
 		056C6D112E8940A1006C44D3 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6D102E8940A1006C44D3 /* StorageService.swift */; };
+		05C16D732E97D7CB00C35053 /* TopBarButtonShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C16D722E97D7CB00C35053 /* TopBarButtonShape.swift */; };
+		05C16D752E97DCEB00C35053 /* TopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C16D742E97DCEB00C35053 /* TopBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +88,8 @@
 		056C6CEA2E86B6BB006C44D3 /* OnBoardingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingScreenView.swift; sourceTree = "<group>"; };
 		056C6D0D2E89318B006C44D3 /* SourceTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceTable.swift; sourceTree = "<group>"; };
 		056C6D102E8940A1006C44D3 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		05C16D722E97D7CB00C35053 /* TopBarButtonShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarButtonShape.swift; sourceTree = "<group>"; };
+		05C16D742E97DCEB00C35053 /* TopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,7 @@
 				054D784E2E96AFED00DFCD34 /* MainBackground.swift */,
 				054D78562E96B5C000DFCD34 /* MainFont.swift */,
 				054D785B2E96BBB900DFCD34 /* SubFont.swift */,
+				05C16D722E97D7CB00C35053 /* TopBarButtonShape.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -163,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				054D78592E96B7F300DFCD34 /* MainTitleView.swift */,
+				05C16D742E97DCEB00C35053 /* TopBarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -395,6 +401,7 @@
 				056C6C612E868E98006C44D3 /* RootScreenView.swift in Sources */,
 				050CB6152E93EEDC0060E2AD /*  MainScreenFeature.swift in Sources */,
 				050CB6162E93EEDC0060E2AD /* MainScreenView.swift in Sources */,
+				05C16D732E97D7CB00C35053 /* TopBarButtonShape.swift in Sources */,
 				0533878D2E8A7D7300554004 /* QuizTable.swift in Sources */,
 				053388592E8C1B0900554004 /* Question.swift in Sources */,
 				056C6C622E868E98006C44D3 /*  RootScreenFeature.swift in Sources */,
@@ -406,6 +413,7 @@
 				054D78302E96AE3800DFCD34 /* CrabView.swift in Sources */,
 				056C6D112E8940A1006C44D3 /* StorageService.swift in Sources */,
 				056C6CDD2E86B47D006C44D3 /*  SettingsScreenFeature.swift in Sources */,
+				05C16D752E97DCEB00C35053 /* TopBarView.swift in Sources */,
 				054D78572E96B5C000DFCD34 /* MainFont.swift in Sources */,
 				056C6CDE2E86B47D006C44D3 /* SettingsScreenView.swift in Sources */,
 				056C6CE22E86B48C006C44D3 /* QuizScreenView.swift in Sources */,
