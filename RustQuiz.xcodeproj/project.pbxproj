@@ -172,8 +172,8 @@
 		054D78582E96B7E100DFCD34 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				054D78592E96B7F300DFCD34 /* MainTitleView.swift */,
 				05C16D742E97DCEB00C35053 /* TopBarView.swift */,
+				054D78592E96B7F300DFCD34 /* MainTitleView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

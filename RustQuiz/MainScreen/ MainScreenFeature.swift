@@ -23,6 +23,7 @@ struct MainScreenFeature {
         enum View {
             case fetchSources
             case navigateToQuiz(Quiz)
+            case navigateToSettings
         }
     }
     
@@ -37,13 +38,18 @@ struct MainScreenFeature {
                     await send(.setSources(sources))
                 }
                 
+            case .view(.navigateToQuiz(_)):
+                // Callback MainNavigationFeature
+                return .none
+                
+            case .view(.navigateToSettings):
+                // Callback MainNavigationFeature
+                return .none
+                
             case .setSources(let sources):
                 state.sources = sources
                 return .none
                 
-            case .view(.navigateToQuiz(_)):
-                // MainNavigationFeature
-                return .none
             }
         }
     }

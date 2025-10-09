@@ -13,9 +13,7 @@ struct MainScreenView: View {
     
     var body: some View {
         VStack {
-            TopBarView(
-                settingsButtonAction: {}
-            )
+            TopBarView(settingsButtonAction: { send(.navigateToSettings) })
             
             MainTitleView()
             
