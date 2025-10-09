@@ -17,6 +17,8 @@ struct MainScreenView: View {
             
             MainTitleView()
             
+            ProgressView(progress: store.progress)
+            
             Spacer()
         }
         .padding()

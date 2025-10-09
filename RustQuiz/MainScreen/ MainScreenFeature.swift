@@ -13,6 +13,12 @@ struct MainScreenFeature {
     @ObservableState
     struct State {
         var sources: [Source] = []
+        
+        var progress: Int {
+            guard !sources.isEmpty else { return 0 }
+            let total = sources.reduce(0) { $0 + $1.averageRating }
+            return Int((Double(total) / Double(sources.count)).rounded())
+        }
     }
     
     enum Action: ViewAction {

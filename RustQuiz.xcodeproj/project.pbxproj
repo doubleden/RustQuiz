@@ -49,6 +49,7 @@
 		05C16D752E97DCEB00C35053 /* TopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C16D742E97DCEB00C35053 /* TopBarView.swift */; };
 		05C16D782E97E75A00C35053 /* ButtonPressInStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C16D772E97E75A00C35053 /* ButtonPressInStyle.swift */; };
 		05C16D7A2E97EB8500C35053 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C16D792E97EB8500C35053 /* Banner.swift */; };
+		05C16D7C2E97F10100C35053 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C16D7B2E97F10100C35053 /* ProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +95,7 @@
 		05C16D742E97DCEB00C35053 /* TopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarView.swift; sourceTree = "<group>"; };
 		05C16D772E97E75A00C35053 /* ButtonPressInStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonPressInStyle.swift; sourceTree = "<group>"; };
 		05C16D792E97EB8500C35053 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		05C16D7B2E97F10100C35053 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 			children = (
 				05C16D742E97DCEB00C35053 /* TopBarView.swift */,
 				054D78592E96B7F300DFCD34 /* MainTitleView.swift */,
+				05C16D7B2E97F10100C35053 /* ProgressView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -425,6 +428,7 @@
 				056C6CE82E86B644006C44D3 /* MainNavigationScreenView.swift in Sources */,
 				053387912E8A7D9000554004 /* AnswerTable.swift in Sources */,
 				054D782E2E96AE1600DFCD34 /* CrabModel.swift in Sources */,
+				05C16D7C2E97F10100C35053 /* ProgressView.swift in Sources */,
 				054D78302E96AE3800DFCD34 /* CrabView.swift in Sources */,
 				056C6D112E8940A1006C44D3 /* StorageService.swift in Sources */,
 				056C6CDD2E86B47D006C44D3 /*  SettingsScreenFeature.swift in Sources */,
