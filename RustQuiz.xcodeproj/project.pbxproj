@@ -48,6 +48,7 @@
 		05C16D732E97D7CB00C35053 /* TopBarButtonShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C16D722E97D7CB00C35053 /* TopBarButtonShape.swift */; };
 		05C16D752E97DCEB00C35053 /* TopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C16D742E97DCEB00C35053 /* TopBarView.swift */; };
 		05C16D782E97E75A00C35053 /* ButtonPressInStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C16D772E97E75A00C35053 /* ButtonPressInStyle.swift */; };
+		05C16D7A2E97EB8500C35053 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C16D792E97EB8500C35053 /* Banner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +93,7 @@
 		05C16D722E97D7CB00C35053 /* TopBarButtonShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarButtonShape.swift; sourceTree = "<group>"; };
 		05C16D742E97DCEB00C35053 /* TopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarView.swift; sourceTree = "<group>"; };
 		05C16D772E97E75A00C35053 /* ButtonPressInStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonPressInStyle.swift; sourceTree = "<group>"; };
+		05C16D792E97EB8500C35053 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 				054D78562E96B5C000DFCD34 /* MainFont.swift */,
 				054D785B2E96BBB900DFCD34 /* SubFont.swift */,
 				05C16D722E97D7CB00C35053 /* TopBarButtonShape.swift */,
+				05C16D792E97EB8500C35053 /* Banner.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 				056C6CEC2E86B6BB006C44D3 /*  OnBoardingScreenFeature.swift in Sources */,
 				054D785C2E96BBB900DFCD34 /* SubFont.swift in Sources */,
 				056C6CED2E86B6BB006C44D3 /* OnBoardingScreenView.swift in Sources */,
+				05C16D7A2E97EB8500C35053 /* Banner.swift in Sources */,
 				054D784F2E96AFED00DFCD34 /* MainBackground.swift in Sources */,
 				054D785F2E96BCAC00DFCD34 /* CustomColor.swift in Sources */,
 			);
