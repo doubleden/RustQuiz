@@ -10,6 +10,7 @@ import SwiftUI
 struct ProgressView: View {
     let progress: Int
     
+    @Environment(\.screenSize) private var screenSize
     private var clampedProgress: Double {
         Double(min(max(progress, 0), 100)) / 100.0
     }
@@ -41,7 +42,7 @@ struct ProgressView: View {
                                 radius: 10,
                                 x: 10
                             )
-                            .modifier(ShimmerEffect())
+                            .modifier(ProgressShimmerEffect())
                     }
                 )
                 .mask {
@@ -58,12 +59,15 @@ struct ProgressView: View {
                 )
         }
         .shadow(radius: 3)
-        .frame(minHeight: 20, idealHeight: 50, maxHeight: 60)
-        .frame(maxWidth: 250)
+        .frame(
+            width: screenSize.width * 0.63,
+            height: screenSize.width * 0.15
+        )
     }
 }
 
-fileprivate struct ShimmerEffect: ViewModifier {
+// MARK: - Private Modifiers
+fileprivate struct ProgressShimmerEffect: ViewModifier {
     @State var isAnimating = false
 
     func body(content: Content) -> some View {
@@ -103,11 +107,14 @@ fileprivate struct ShimmerEffect: ViewModifier {
 }
 
 #Preview {
-    ZStack {
-        VStack(spacing: 16) {
-            ProgressView(progress: 50)
+    GeometryReader { geometry in
+        ZStack {
+            VStack(spacing: 16) {
+                ProgressView(progress: 50)
+            }
+            .padding()
         }
-        .padding()
+        .mainBackground()
+        .environment(\.screenSize, geometry.size)
     }
-    .mainBackground()
 }

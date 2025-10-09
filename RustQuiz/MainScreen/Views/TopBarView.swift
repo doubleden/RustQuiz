@@ -10,6 +10,8 @@ import SwiftUI
 struct TopBarView: View {
     let settingsButtonAction: () -> Void
     
+    @Environment(\.screenSize) private var screenSize
+    
     var body: some View {
         HStack {
             Button(action: settingsButtonAction) {
@@ -23,7 +25,7 @@ struct TopBarView: View {
             
             Spacer()
         }
-        .frame(minHeight: 30, idealHeight: 40, maxHeight: 50)
+        .frame(height: screenSize.width * 0.13)
     }
 }
 
@@ -33,5 +35,6 @@ struct TopBarView: View {
             settingsButtonAction: {}
         )
         .padding()
+        .environment(\.screenSize, geometry.size)
     }
 }

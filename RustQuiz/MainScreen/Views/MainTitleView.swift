@@ -8,14 +8,20 @@
 import SwiftUI
 
 struct MainTitleView: View {
+    @Environment(\.screenSize) private var screenSize
+    
     var body: some View {
         Text("Rust Quiz")
-            .mainFont(size: 65)
+            .mainFont(size: screenSize.width * 0.15)
             .foregroundStyle(CustomColor.titleColor.color)
     }
 }
 
 #Preview {
-    MainTitleView()
-        .padding()
+    GeometryReader { geometry in
+        
+        MainTitleView()
+            .padding()
+            .environment(\.screenSize, geometry.size)
+    }
 }

@@ -31,11 +31,12 @@ struct MainScreenView: View {
 }
 
 #Preview {
-    NavigationStack {
+    GeometryReader { geo in
         MainScreenView(
             store: Store(initialState: MainScreenFeature.State()) {
                 MainScreenFeature()
             }
         )
+        .environment(\.screenSize, geo.size)
     }
 }

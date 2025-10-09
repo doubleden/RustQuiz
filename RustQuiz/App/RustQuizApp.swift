@@ -15,12 +15,16 @@ struct RustQuizApp: App {
     
     var body: some Scene {
         WindowGroup {
-            RootScreenView(
-                store: Store(
-                    initialState: RootScreenFeature.State()
-                ) {
-                RootScreenFeature()
-            })
+            GeometryReader { geo in
+                RootScreenView(
+                    store: Store(
+                        initialState: RootScreenFeature.State()
+                    ) {
+                        RootScreenFeature()
+                    }
+                )
+                .environment(\.screenSize, geo.size)
+            }
         }
     }
     
