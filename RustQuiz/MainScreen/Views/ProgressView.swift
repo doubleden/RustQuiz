@@ -41,6 +41,7 @@ struct ProgressView: View {
                                 radius: 10,
                                 x: 10
                             )
+                            .modifier(ShimmerEffect())
                     }
                 )
                 .mask {
@@ -62,10 +63,49 @@ struct ProgressView: View {
     }
 }
 
+fileprivate struct ShimmerEffect: ViewModifier {
+    @State var isAnimating = false
+
+    func body(content: Content) -> some View {
+        ZStack {
+            content
+            content
+                .mask(alignment: .leading) {
+                    GeometryReader { geometry in
+                        Rectangle()
+                            .foregroundStyle(CustomColor.backgroundColor.color)
+                            .frame(
+                                width: isAnimating
+                                ? geometry.size.width * 0.1
+                                : geometry.size.width * 1.1,
+                                height: geometry.size.height,
+                                alignment: .leading
+                            )
+                            .position(
+                                x: isAnimating
+                                ? geometry.size.width * 0.05
+                                : geometry.size.width * 0.45,
+                                y: geometry.size.height * 0.5
+                            )
+                            .blur(radius: 25)
+                    }
+                }
+        }
+        .onAppear {
+            withAnimation(
+                .linear(duration: 1.5)
+                .repeatForever(autoreverses: true)
+            ) {
+                isAnimating = true
+            }
+        }
+    }
+}
+
 #Preview {
     ZStack {
         VStack(spacing: 16) {
-            ProgressView(progress: 70)
+            ProgressView(progress: 50)
         }
         .padding()
     }
