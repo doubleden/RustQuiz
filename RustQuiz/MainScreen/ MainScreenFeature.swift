@@ -30,6 +30,7 @@ struct MainScreenFeature {
             case fetchSources
             case navigateToQuiz(Quiz)
             case navigateToSettings
+            case showAllQuizzes([Quiz])
         }
     }
     
@@ -50,6 +51,9 @@ struct MainScreenFeature {
                 
             case .view(.navigateToSettings):
                 // Callback MainNavigationFeature
+                return .none
+                
+            case .view(.showAllQuizzes(let _)):
                 return .none
                 
             case .setSources(let sources):

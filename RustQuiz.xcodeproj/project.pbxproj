@@ -27,6 +27,8 @@
 		054D785A2E96B7F300DFCD34 /* MainTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D78592E96B7F300DFCD34 /* MainTitleView.swift */; };
 		054D785C2E96BBB900DFCD34 /* SubFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D785B2E96BBB900DFCD34 /* SubFont.swift */; };
 		054D785F2E96BCAC00DFCD34 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D785E2E96BCAC00DFCD34 /* CustomColor.swift */; };
+		0554FDB12E9937F30087A88C /* SourceSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0554FDB02E9937F30087A88C /* SourceSectionView.swift */; };
+		0554FDB52E9941A70087A88C /* QuizButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0554FDB42E9941A70087A88C /* QuizButtonView.swift */; };
 		055EB71D2E9065E4003C2459 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 055EB71C2E9065E4003C2459 /* Localizable.xcstrings */; };
 		055EB7242E914065003C2459 /* the_book_source.json in Resources */ = {isa = PBXBuildFile; fileRef = 055EB7232E914065003C2459 /* the_book_source.json */; };
 		056C6C132E868A07006C44D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 056C6C0F2E868A07006C44D3 /* Assets.xcassets */; };
@@ -75,6 +77,8 @@
 		054D78592E96B7F300DFCD34 /* MainTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTitleView.swift; sourceTree = "<group>"; };
 		054D785B2E96BBB900DFCD34 /* SubFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubFont.swift; sourceTree = "<group>"; };
 		054D785E2E96BCAC00DFCD34 /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
+		0554FDB02E9937F30087A88C /* SourceSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceSectionView.swift; sourceTree = "<group>"; };
+		0554FDB42E9941A70087A88C /* QuizButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizButtonView.swift; sourceTree = "<group>"; };
 		055EB71C2E9065E4003C2459 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		055EB7232E914065003C2459 /* the_book_source.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = the_book_source.json; sourceTree = "<group>"; };
 		056C6C012E868A01006C44D3 /* RustQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RustQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -177,6 +181,8 @@
 			isa = PBXGroup;
 			children = (
 				05C16D742E97DCEB00C35053 /* TopBarView.swift */,
+				0554FDB02E9937F30087A88C /* SourceSectionView.swift */,
+				0554FDB42E9941A70087A88C /* QuizButtonView.swift */,
 				054D78592E96B7F300DFCD34 /* MainTitleView.swift */,
 				05C16D7B2E97F10100C35053 /* ProgressView.swift */,
 			);
@@ -427,6 +433,7 @@
 				053387CE2E8AAB0000554004 /* SeedService.swift in Sources */,
 				0533885B2E8C1B1800554004 /* Answer.swift in Sources */,
 				056C6C612E868E98006C44D3 /* RootScreenView.swift in Sources */,
+				0554FDB12E9937F30087A88C /* SourceSectionView.swift in Sources */,
 				050CB6152E93EEDC0060E2AD /*  MainScreenFeature.swift in Sources */,
 				050CB6162E93EEDC0060E2AD /* MainScreenView.swift in Sources */,
 				05C16D732E97D7CB00C35053 /* TopBarButtonShape.swift in Sources */,
@@ -456,6 +463,7 @@
 				054D785C2E96BBB900DFCD34 /* SubFont.swift in Sources */,
 				056C6CED2E86B6BB006C44D3 /* OnBoardingScreenView.swift in Sources */,
 				05C16D7A2E97EB8500C35053 /* Banner.swift in Sources */,
+				0554FDB52E9941A70087A88C /* QuizButtonView.swift in Sources */,
 				054D784F2E96AFED00DFCD34 /* MainBackground.swift in Sources */,
 				054D785F2E96BCAC00DFCD34 /* CustomColor.swift in Sources */,
 				05ABF8402E982CD90071C08A /* ScreenSizeKey.swift in Sources */,

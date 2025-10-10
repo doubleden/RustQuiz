@@ -271,6 +271,7 @@ extension StorageService {
         readSources: {
             @Dependency(\.seedServicePreview) var seedServicePreview
             let book =  try await seedServicePreview.getTheBookSource()
+            let patterns = try await seedServicePreview.getPatternsSource()
             return [book]
         },
         updateSource: { _ in },

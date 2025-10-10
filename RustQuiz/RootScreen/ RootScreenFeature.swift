@@ -45,7 +45,10 @@ struct RootScreenFeature {
             case .setSeedData:
                 return .run { send in
                     let theBookSource = try await seedService.getTheBookSource()
+                    let patternsSource = try await seedService.getPatternsSource()
+                    
                     try await storageService.createSource(theBookSource)
+                    try await storageService.createSource(patternsSource)
                 }
             }
         }

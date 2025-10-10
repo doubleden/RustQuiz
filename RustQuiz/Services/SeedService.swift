@@ -35,12 +35,12 @@ extension SeedService: DependencyKey {
         getPatternsSource: {
             Source(
                 id: UUID(),
-                title: "patterns",
+                title: "Patterns",
                 priority: 2,
                 quizzes: [
                     Quiz(
                         id: UUID(),
-                        theme: "patterns",
+                        theme: "Patterns",
                         priority: 1,
                         questions: []
                     )
