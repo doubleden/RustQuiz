@@ -17,13 +17,24 @@ struct QuizButtonView: View {
             Text(quiz.theme)
                 .subFont(size: screenSize.width * 0.045, lineLimit: 4)
                 .multilineTextAlignment(.center)
-                .foregroundStyle(CustomColor.generalFontColor.color)
+                .foregroundStyle(
+                    quiz.averageRating == 100
+                    ? CustomColor.backgroundColor.color
+                    : CustomColor.generalFontColor.color
+                )
                 .padding()
                 .frame(
                     width: screenSize.width * 0.36,
                     height: screenSize.width * 0.25
                 )
-                .background(CustomColor.backgroundColor.color)
+                .background{
+                    ZStack {
+                        CustomColor.backgroundColor.color
+                        
+                        CustomColor.activeColor.color
+                            .opacity(Double(quiz.averageRating) / 100.0)
+                    }
+                }
                 .clipShape(RoundedRectangle(cornerRadius: 15))
                 .shadow(radius: 4)
         }
@@ -34,9 +45,21 @@ struct QuizButtonView: View {
 #Preview {
     GeometryReader { geo in
         VStack {
-            QuizButtonView(quiz: Quiz(id: UUID(), theme: "Common Programming Concepts", priority: 1, questions: []), action: {_ in})
+            QuizButtonView(
+                quiz: Quiz(
+                    id: UUID(),
+                    theme: "Common Programming Concepts",
+                    priority: 1,
+                    questions: [
+                        Question(id: UUID(), title: "", answers: [], descriptionText: "", descriptionLink: "", hasUserAnswered: true, isUserAnswerCorrect: true),
+                        Question(id: UUID(), title: "", answers: [], descriptionText: "", descriptionLink: "", hasUserAnswered: true, isUserAnswerCorrect: false)
+                    ]
+                ),
+                action: {_ in
+                })
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .environment(\.screenSize, geo.size)
     }
 }
+

@@ -24,10 +24,8 @@ extension Quiz {
         let answered = questions.filter { $0.hasUserAnswered }
         guard !answered.isEmpty else { return 0 }
         
-        let total = answered.reduce(0) { partial, q in
-            partial + (q.isUserAnswerCorrect ? 100 : 0)
-        }
-        return Int((Double(total) / Double(answered.count)).rounded())
+        let correctCount = answered.reduce(0) { $0 + ($1.isUserAnswerCorrect ? 1 : 0) }
+        return Int((Double(correctCount) / Double(answered.count) * 100).rounded())
     }
 }
 

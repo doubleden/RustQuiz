@@ -13,7 +13,7 @@ struct MainScreenFeature {
     @ObservableState
     struct State {
         var sources: [Source] = []
-        
+        var isAllQuizzesViewPresented = false
         var progress: Int {
             guard !sources.isEmpty else { return 0 }
             let total = sources.reduce(0) { $0 + $1.averageRating }
@@ -53,7 +53,7 @@ struct MainScreenFeature {
                 // Callback MainNavigationFeature
                 return .none
                 
-            case .view(.showAllQuizzes(let _)):
+            case .view(.showAllQuizzes(_)):
                 return .none
                 
             case .setSources(let sources):
