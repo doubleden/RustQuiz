@@ -17,6 +17,8 @@
 		053388572E8C1ACA00554004 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053388562E8C1ACA00554004 /* Quiz.swift */; };
 		053388592E8C1B0900554004 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053388582E8C1B0900554004 /* Question.swift */; };
 		0533885B2E8C1B1800554004 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0533885A2E8C1B1800554004 /* Answer.swift */; };
+		0544F3BE2E9955FB00720EB1 /*  AllQuizzesFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0544F3BB2E9955FB00720EB1 /*  AllQuizzesFeature.swift */; };
+		0544F3BF2E9955FB00720EB1 /* AllQuizzesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0544F3BC2E9955FB00720EB1 /* AllQuizzesView.swift */; };
 		054D782B2E96A04800DFCD34 /* CrabsAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D782A2E96A04800DFCD34 /* CrabsAnimation.swift */; };
 		054D782E2E96AE1600DFCD34 /* CrabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D782D2E96AE1600DFCD34 /* CrabModel.swift */; };
 		054D78302E96AE3800DFCD34 /* CrabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D782F2E96AE3700DFCD34 /* CrabView.swift */; };
@@ -66,6 +68,8 @@
 		053388562E8C1ACA00554004 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		053388582E8C1B0900554004 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		0533885A2E8C1B1800554004 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		0544F3BB2E9955FB00720EB1 /*  AllQuizzesFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " AllQuizzesFeature.swift"; sourceTree = "<group>"; };
+		0544F3BC2E9955FB00720EB1 /* AllQuizzesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllQuizzesView.swift; sourceTree = "<group>"; };
 		054D782A2E96A04800DFCD34 /* CrabsAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrabsAnimation.swift; sourceTree = "<group>"; };
 		054D782D2E96AE1600DFCD34 /* CrabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrabModel.swift; sourceTree = "<group>"; };
 		054D782F2E96AE3700DFCD34 /* CrabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrabView.swift; sourceTree = "<group>"; };
@@ -138,6 +142,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		0544F3BD2E9955FB00720EB1 /* AllQuizzesModalView */ = {
+			isa = PBXGroup;
+			children = (
+				0544F3BB2E9955FB00720EB1 /*  AllQuizzesFeature.swift */,
+				0544F3BC2E9955FB00720EB1 /* AllQuizzesView.swift */,
+			);
+			path = AllQuizzesModalView;
+			sourceTree = "<group>";
+		};
 		054D78272E9697A700DFCD34 /* Modifiers */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,10 +194,11 @@
 			isa = PBXGroup;
 			children = (
 				05C16D742E97DCEB00C35053 /* TopBarView.swift */,
-				0554FDB02E9937F30087A88C /* SourceSectionView.swift */,
-				0554FDB42E9941A70087A88C /* QuizButtonView.swift */,
 				054D78592E96B7F300DFCD34 /* MainTitleView.swift */,
 				05C16D7B2E97F10100C35053 /* ProgressView.swift */,
+				0554FDB02E9937F30087A88C /* SourceSectionView.swift */,
+				0554FDB42E9941A70087A88C /* QuizButtonView.swift */,
+				0544F3BD2E9955FB00720EB1 /* AllQuizzesModalView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -446,6 +460,8 @@
 				056C6CE82E86B644006C44D3 /* MainNavigationScreenView.swift in Sources */,
 				053387912E8A7D9000554004 /* AnswerTable.swift in Sources */,
 				054D782E2E96AE1600DFCD34 /* CrabModel.swift in Sources */,
+				0544F3BE2E9955FB00720EB1 /*  AllQuizzesFeature.swift in Sources */,
+				0544F3BF2E9955FB00720EB1 /* AllQuizzesView.swift in Sources */,
 				05C16D7C2E97F10100C35053 /* ProgressView.swift in Sources */,
 				054D78302E96AE3800DFCD34 /* CrabView.swift in Sources */,
 				056C6D112E8940A1006C44D3 /* StorageService.swift in Sources */,

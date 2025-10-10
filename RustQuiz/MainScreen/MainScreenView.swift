@@ -14,7 +14,9 @@ struct MainScreenView: View {
     var body: some View {
         VStack {
             Group {
-                TopBarView(settingsButtonAction: { send(.navigateToSettings) })
+                TopBarView(
+                    settingsButtonAction: { send(.navigateToSettings) }
+                )
                 
                 VStack(spacing: 10) {
                     MainTitleView()
@@ -31,7 +33,7 @@ struct MainScreenView: View {
                             send(.navigateToQuiz(quiz))
                         },
                         viewAllAction: {
-                            send(.showAllQuizzes(source.quizzes))
+                            send(.showAllQuizzesOf(source))
                         }
                     )
                 }
@@ -41,6 +43,15 @@ struct MainScreenView: View {
             Spacer()
         }
         .mainBackground()
+        .sheet(
+            item: $store.scope(
+                state: \.allQuizzesModalViewState,
+                action: \.allQuizzesModalViewAction
+            ),
+            content: { store in
+                AllQuizzesView(store: store)
+            }
+        )
         .onAppear {
             send(.fetchSources)
         }

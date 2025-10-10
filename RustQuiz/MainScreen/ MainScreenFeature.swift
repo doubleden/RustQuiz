@@ -13,7 +13,8 @@ struct MainScreenFeature {
     @ObservableState
     struct State {
         var sources: [Source] = []
-        var isAllQuizzesViewPresented = false
+        @Presents var allQuizzesModalViewState: AllQuizzesFeature.State?
+        
         var progress: Int {
             guard !sources.isEmpty else { return 0 }
             let total = sources.reduce(0) { $0 + $1.averageRating }
@@ -24,13 +25,14 @@ struct MainScreenFeature {
     enum Action: ViewAction {
         case view(View)
         case setSources([Source])
+        case allQuizzesModalViewAction(PresentationAction<AllQuizzesFeature.Action>)
         
         @CasePathable
         enum View {
             case fetchSources
             case navigateToQuiz(Quiz)
             case navigateToSettings
-            case showAllQuizzes([Quiz])
+            case showAllQuizzesOf(Source)
         }
     }
     
@@ -53,14 +55,24 @@ struct MainScreenFeature {
                 // Callback MainNavigationFeature
                 return .none
                 
-            case .view(.showAllQuizzes(_)):
+            case .allQuizzesModalViewAction(.presented(.navigateToQuiz(_))):
+                // Callback MainNavigationFeature
+                return .none
+                
+            case .view(.showAllQuizzesOf(let source)):
+                state.allQuizzesModalViewState = .init(source: source)
                 return .none
                 
             case .setSources(let sources):
                 state.sources = sources
                 return .none
                 
+            default:
+                return .none
             }
+        }
+        .ifLet(\.$allQuizzesModalViewState, action: \.allQuizzesModalViewAction) {
+            AllQuizzesFeature()
         }
     }
 }

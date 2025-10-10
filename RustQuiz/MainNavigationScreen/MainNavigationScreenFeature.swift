@@ -36,6 +36,10 @@ struct MainNavigationScreenFeature {
                 state.destinationStack.append(.settings(SettingsScreenFeature.State()))
                 return .none
                 
+            case .mainScreenAction(.allQuizzesModalViewAction(.presented(.navigateToQuiz(let quiz)))):
+                state.destinationStack.append(.quiz(QuizScreenFeature.State(quiz: quiz)))
+                return .none
+                
             default:
                 return .none
             }
