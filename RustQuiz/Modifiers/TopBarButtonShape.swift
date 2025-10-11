@@ -20,7 +20,7 @@ struct TopBarButtonShapeModifier: ViewModifier {
             .background(CustomColor.backgroundColor.color)
             .foregroundStyle(CustomColor.activeColor.color)
             .clipShape(RoundedRectangle(cornerRadius: 15))
-            .shadow(radius: 4)
+            .shadow(radius: 2.5)
     }
 }
 

@@ -24,8 +24,8 @@ struct QuizButtonView: View {
                 )
                 .padding()
                 .frame(
-                    width: screenSize.width * 0.36,
-                    height: screenSize.width * 0.25
+                    width: screenSize.width * 0.38,
+                    height: screenSize.width * 0.24
                 )
                 .background{
                     ZStack {
@@ -36,7 +36,7 @@ struct QuizButtonView: View {
                     }
                 }
                 .clipShape(RoundedRectangle(cornerRadius: 15))
-                .shadow(radius: 4)
+                .shadow(radius: 2)
         }
         .buttonStyle(ButtonPressInStyle())
     }

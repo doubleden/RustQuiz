@@ -25,7 +25,7 @@ struct MainScreenView: View {
             }
             .padding()
             
-            VStack {
+            VStack(spacing: 25) {
                 ForEach(store.sources) { source in
                     SourceSectionView(
                         source: source,

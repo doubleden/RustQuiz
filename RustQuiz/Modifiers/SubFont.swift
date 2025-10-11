@@ -8,14 +8,21 @@
 import SwiftUI
 
 extension View {
-    func subFont(size: Double, lineLimit: Int = 1) -> some View {
-        modifier(SubFontModifier(size: size, lineLimit: lineLimit))
+    func subFont(size: Double, lineLimit: Int = 1, scaleFactor: Double = 0.6) -> some View {
+        modifier(
+            SubFontModifier(
+                size: size,
+                lineLimit: lineLimit,
+                scaleFactor: scaleFactor
+            )
+        )
     }
 }
 
 struct SubFontModifier: ViewModifier {
     let size: Double
-    var lineLimit: Int
+    let lineLimit: Int
+    let scaleFactor: Double
     
     func body(content: Content) -> some View {
         content
@@ -27,7 +34,7 @@ struct SubFontModifier: ViewModifier {
                 )
             )
             .lineLimit(lineLimit)
-            .minimumScaleFactor(0.6)
+            .minimumScaleFactor(scaleFactor)
     }
 }
 

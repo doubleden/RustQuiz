@@ -44,11 +44,11 @@ struct RootScreenFeature {
                 
             case .setSeedData:
                 return .run { send in
-                    let theBookSource = try await seedService.getTheBookSource()
-                    let patternsSource = try await seedService.getPatternsSource()
+                    let sources = try await seedService.fetchSourcesFromSeedJSON()
                     
-                    try await storageService.createSource(theBookSource)
-                    try await storageService.createSource(patternsSource)
+                    for source in sources {
+                        try await storageService.createSource(source)
+                    }
                 }
             }
         }

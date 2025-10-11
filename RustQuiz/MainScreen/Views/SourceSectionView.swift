@@ -39,8 +39,9 @@ fileprivate struct HeaderView: View {
     var body: some View {
         HStack {
             Text(sourceTitle)
-                .subFont(size: screenSize.width * 0.065)
+                .subFont(size: screenSize.width * 0.07, scaleFactor: 1)
                 .foregroundColor(CustomColor.titleColor.color)
+            
             Spacer()
             
             Button(action: viewAllAction) {
@@ -66,7 +67,8 @@ fileprivate struct QuizzesScrollView: View {
                         .padding(.leading)
                 }
             }
-            .padding(.vertical)
+            .padding(.top, 2)
+            .padding(.bottom)
         }
         .scrollIndicators(.hidden)
     }

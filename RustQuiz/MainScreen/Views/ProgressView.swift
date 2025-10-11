@@ -58,7 +58,7 @@ struct ProgressView: View {
                     : CustomColor.titleColor.color
                 )
         }
-        .shadow(radius: 3)
+        .shadow(radius: 2.5)
         .frame(
             width: screenSize.width * 0.63,
             height: screenSize.width * 0.15

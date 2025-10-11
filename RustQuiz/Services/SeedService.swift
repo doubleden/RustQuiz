@@ -9,43 +9,27 @@ import Foundation
 import ComposableArchitecture
 
 struct SeedService {
-    var getTheBookSource: @Sendable () async throws -> Source
-    var getPatternsSource: @Sendable () async throws -> Source
+    var fetchSourcesFromSeedJSON: @Sendable () async throws -> [Source]
 }
 
 extension SeedService: DependencyKey {
     
     // MARK: - Live
     static let liveValue: SeedService = .init(
-        getTheBookSource: {
+        fetchSourcesFromSeedJSON: {
             guard let fileURL = Bundle.main.url(
-                forResource: "the_book_source",
+                forResource: "sources",
                 withExtension: "json"
             ) else {
-                fatalError("Can't find the_book_source.json in SeedJSON")
+                fatalError("Can't find the_book_source.json in sources")
             }
             
 
             let data = try Data(contentsOf: fileURL)
             return try await MainActor.run {
-                try JSONDecoder().decode(Source.self, from: data)
+                try JSONDecoder().decode([Source].self, from: data)
             }
             
-        },
-        getPatternsSource: {
-            Source(
-                id: UUID(),
-                title: "Patterns",
-                priority: 2,
-                quizzes: [
-                    Quiz(
-                        id: UUID(),
-                        theme: "Patterns",
-                        priority: 1,
-                        questions: []
-                    )
-                ]
-            )
         }
     )
 }
