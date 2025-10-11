@@ -23,6 +23,7 @@ struct RustQuizApp: App {
                         RootScreenFeature()
                     }
                 )
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .environment(\.screenSize, geo.size)
             }
         }
