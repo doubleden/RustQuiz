@@ -16,9 +16,9 @@ struct SettingsScreenView: View {
             SettingsTopBarView(navigateBackAction: { send(.navigateBack) })
             SettingsTitleView()
             
-            VStack(spacing: -10) {
+            VStack(spacing: -15) {
                 SettingsSectionView(title: "Interface") {
-                    VStack {
+                    VStack(spacing: 15) {
                         SettingsButtonView(
                             title: "Language",
                             description: store.languageName,
@@ -35,7 +35,7 @@ struct SettingsScreenView: View {
                 }
                 
                 SettingsSectionView(title: "App") {
-                    VStack {
+                    VStack(spacing: 15) {
                         SettingsButtonView(
                             title: "Rate App",
                             action: {}

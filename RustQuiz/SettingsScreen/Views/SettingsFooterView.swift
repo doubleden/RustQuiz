@@ -20,15 +20,20 @@ struct SettingsFooterView: View {
                 .subFont(size: screenSize.width * 0.05, scaleFactor: 0.8)
                 .foregroundStyle(CustomColor.footFontColor.color)
             
-            VStack(spacing: 5) {
+            HStack(spacing: 5) {
                 Button(action: showPrivacyPolicy) {
                     Text("Privacy Policy")
+                        .subFont(size: screenSize.width * 0.04, scaleFactor: 0.8)
                         .foregroundStyle(CustomColor.activeColor.color)
                         .underline(true)
                 }
                 
+                Text("&")
+                    .foregroundStyle(CustomColor.titleColor.color)
+                
                 Button(action: showTermsOfUse) {
                     Text("Terms of Use")
+                        .subFont(size: screenSize.width * 0.04, scaleFactor: 0.8)
                         .foregroundStyle(CustomColor.activeColor.color)
                         .underline(true)
                 }
