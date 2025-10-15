@@ -14,9 +14,15 @@ extension View {
 }
 
 struct TopBarButtonShapeModifier: ViewModifier {
+    @Environment(\.screenSize) private var screenSize
     
     func body(content: Content) -> some View {
         content
+            .padding(8)
+            .frame(
+                width: screenSize.width * 0.13,
+                height: screenSize.width * 0.13
+            )
             .background(CustomColor.backgroundColor.color)
             .foregroundStyle(CustomColor.activeColor.color)
             .clipShape(RoundedRectangle(cornerRadius: 15))
@@ -27,22 +33,24 @@ struct TopBarButtonShapeModifier: ViewModifier {
 // MARK: - Test
 fileprivate struct TopBarButtonShape: View {
     var body: some View {
-        NavigationStack {
-            VStack {
-                HStack {
-                    Button(action: {}) {
-                        Image(systemName: "gear")
-                            .resizable()
-                            .scaledToFit()
-                            .padding(10)
+        GeometryReader { geometry in
+            NavigationStack {
+                VStack {
+                    HStack {
+                        Button(action: {}) {
+                            Image(systemName: "gear")
+                                .resizable()
+                                .scaledToFit()
+                        }
+                        .topBarButtonShape()
+                        Spacer()
                     }
-                    .topBarButtonShape()
+                    .frame(height: 50)
                     Spacer()
                 }
-                .frame(height: 50)
-                Spacer()
+                .padding()
             }
-            .padding()
+            .environment(\.screenSize, geometry.size)
         }
     }
 }

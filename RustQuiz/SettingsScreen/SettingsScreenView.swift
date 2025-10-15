@@ -7,20 +7,33 @@
 import SwiftUI
 import ComposableArchitecture
 
+@ViewAction(for: SettingsScreenFeature.self)
 struct SettingsScreenView: View {
     let store: StoreOf<SettingsScreenFeature>
     
     var body: some View {
         VStack {
-            Text("SettingsScreenView")
+            SettingsTopBarView(navigateBackAction: { send(.navigateBack) })
+            SettingsTitleView()
+            
+            Spacer()
         }
+        .mainBackground()
+        .navigationBarBackButtonHidden(true)
     }
 }
 
 #Preview {
-    SettingsScreenView(
-        store: Store(initialState: SettingsScreenFeature.State()) {
-            SettingsScreenFeature()
+    GeometryReader { geo in
+        ZStack {
+            SettingsScreenView(
+                store: Store(initialState: SettingsScreenFeature.State()) {
+                    SettingsScreenFeature()
+                }
+            )
         }
-    )
+        .mainBackground()
+        .environment(\.screenSize, geo.size)
+        
+    }
 }

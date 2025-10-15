@@ -10,22 +10,18 @@ import SwiftUI
 struct MainTopBarView: View {
     let settingsButtonAction: () -> Void
     
-    @Environment(\.screenSize) private var screenSize
-    
     var body: some View {
         HStack {
             Button(action: settingsButtonAction) {
                 Image(systemName: "gear")
                     .resizable()
                     .scaledToFit()
-                    .padding(9)
                     .topBarButtonShape()
             }
             .buttonStyle(ButtonPressInStyle())
             
             Spacer()
         }
-        .frame(height: screenSize.width * 0.13)
     }
 }
 
