@@ -22,7 +22,7 @@ struct FullBannerModifier: ViewModifier {
             .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
             .overlay(
                 RoundedRectangle(cornerRadius: cornerRadius)
-                    .stroke(lineWidth: 1).blur(radius: 4).shadow(radius: 2)
+                    .stroke(lineWidth: 4).blur(radius: 3).shadow(radius: 2)
             )
             .mask(RoundedRectangle(cornerRadius: cornerRadius))
     }
