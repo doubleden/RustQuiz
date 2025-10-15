@@ -1,5 +1,5 @@
 //
-//  TopBarView.swift
+//  MainTopBarView.swift
 //  RustQuiz
 //
 //  Created by Denis Denisov on 9/10/25.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TopBarView: View {
+struct MainTopBarView: View {
     let settingsButtonAction: () -> Void
     
     @Environment(\.screenSize) private var screenSize
@@ -31,7 +31,7 @@ struct TopBarView: View {
 
 #Preview {
     GeometryReader { geometry in
-        TopBarView(
+        MainTopBarView(
             settingsButtonAction: {}
         )
         .padding()

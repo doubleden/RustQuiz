@@ -1,5 +1,5 @@
 //
-//  ProgressView.swift
+//  MainProgressView.swift
 //  RustQuiz
 //
 //  Created by Denis Denisov on 9/10/25.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ProgressView: View {
+struct MainProgressView: View {
     let progress: Int
     
     @Environment(\.screenSize) private var screenSize
@@ -110,7 +110,7 @@ fileprivate struct ProgressShimmerEffect: ViewModifier {
     GeometryReader { geometry in
         ZStack {
             VStack(spacing: 16) {
-                ProgressView(progress: 50)
+                MainProgressView(progress: 50)
             }
             .padding()
         }

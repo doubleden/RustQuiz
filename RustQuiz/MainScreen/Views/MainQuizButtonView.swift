@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct QuizButtonView: View {
+struct MainQuizButtonView: View {
     let quiz: Quiz
     let action: (Quiz) -> Void
     @Environment(\.screenSize) private var screenSize
@@ -45,7 +45,7 @@ struct QuizButtonView: View {
 #Preview {
     GeometryReader { geo in
         VStack {
-            QuizButtonView(
+            MainQuizButtonView(
                 quiz: Quiz(
                     id: UUID(),
                     theme: "Common Programming Concepts",

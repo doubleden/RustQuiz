@@ -66,7 +66,7 @@ fileprivate struct QuizzesGridView: View {
         ScrollView {
             LazyVGrid(columns: columns) {
                 ForEach(quizzes) { quiz in
-                    QuizButtonView(quiz: quiz) { quiz in
+                    MainQuizButtonView(quiz: quiz) { quiz in
                         navigateToQuiz(quiz)
                     }
                     .padding(.vertical)

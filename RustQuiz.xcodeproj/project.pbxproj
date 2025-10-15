@@ -29,8 +29,8 @@
 		054D785A2E96B7F300DFCD34 /* MainTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D78592E96B7F300DFCD34 /* MainTitleView.swift */; };
 		054D785C2E96BBB900DFCD34 /* SubFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D785B2E96BBB900DFCD34 /* SubFont.swift */; };
 		054D785F2E96BCAC00DFCD34 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D785E2E96BCAC00DFCD34 /* CustomColor.swift */; };
-		0554FDB12E9937F30087A88C /* SourceSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0554FDB02E9937F30087A88C /* SourceSectionView.swift */; };
-		0554FDB52E9941A70087A88C /* QuizButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0554FDB42E9941A70087A88C /* QuizButtonView.swift */; };
+		0554FDB12E9937F30087A88C /* MainSourceSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0554FDB02E9937F30087A88C /* MainSourceSectionView.swift */; };
+		0554FDB52E9941A70087A88C /* MainQuizButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0554FDB42E9941A70087A88C /* MainQuizButtonView.swift */; };
 		055EB71D2E9065E4003C2459 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 055EB71C2E9065E4003C2459 /* Localizable.xcstrings */; };
 		056C6C132E868A07006C44D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 056C6C0F2E868A07006C44D3 /* Assets.xcassets */; };
 		056C6C152E868A07006C44D3 /* RustQuizApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6C112E868A07006C44D3 /* RustQuizApp.swift */; };
@@ -51,10 +51,10 @@
 		0591A37D2E9A6D6F00306B7D /* sources.json in Resources */ = {isa = PBXBuildFile; fileRef = 0591A37C2E9A6D6F00306B7D /* sources.json */; };
 		05ABF8402E982CD90071C08A /* ScreenSizeKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ABF83F2E982CD90071C08A /* ScreenSizeKey.swift */; };
 		05C16D732E97D7CB00C35053 /* TopBarButtonShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C16D722E97D7CB00C35053 /* TopBarButtonShape.swift */; };
-		05C16D752E97DCEB00C35053 /* TopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C16D742E97DCEB00C35053 /* TopBarView.swift */; };
+		05C16D752E97DCEB00C35053 /* MainTopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C16D742E97DCEB00C35053 /* MainTopBarView.swift */; };
 		05C16D782E97E75A00C35053 /* ButtonPressInStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C16D772E97E75A00C35053 /* ButtonPressInStyle.swift */; };
 		05C16D7A2E97EB8500C35053 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C16D792E97EB8500C35053 /* Banner.swift */; };
-		05C16D7C2E97F10100C35053 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C16D7B2E97F10100C35053 /* ProgressView.swift */; };
+		05C16D7C2E97F10100C35053 /* MainProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C16D7B2E97F10100C35053 /* MainProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,8 +81,8 @@
 		054D78592E96B7F300DFCD34 /* MainTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTitleView.swift; sourceTree = "<group>"; };
 		054D785B2E96BBB900DFCD34 /* SubFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubFont.swift; sourceTree = "<group>"; };
 		054D785E2E96BCAC00DFCD34 /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
-		0554FDB02E9937F30087A88C /* SourceSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceSectionView.swift; sourceTree = "<group>"; };
-		0554FDB42E9941A70087A88C /* QuizButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizButtonView.swift; sourceTree = "<group>"; };
+		0554FDB02E9937F30087A88C /* MainSourceSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSourceSectionView.swift; sourceTree = "<group>"; };
+		0554FDB42E9941A70087A88C /* MainQuizButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQuizButtonView.swift; sourceTree = "<group>"; };
 		055EB71C2E9065E4003C2459 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		056C6C012E868A01006C44D3 /* RustQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RustQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		056C6C0F2E868A07006C44D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -102,10 +102,10 @@
 		0591A37C2E9A6D6F00306B7D /* sources.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sources.json; sourceTree = "<group>"; };
 		05ABF83F2E982CD90071C08A /* ScreenSizeKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSizeKey.swift; sourceTree = "<group>"; };
 		05C16D722E97D7CB00C35053 /* TopBarButtonShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarButtonShape.swift; sourceTree = "<group>"; };
-		05C16D742E97DCEB00C35053 /* TopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarView.swift; sourceTree = "<group>"; };
+		05C16D742E97DCEB00C35053 /* MainTopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTopBarView.swift; sourceTree = "<group>"; };
 		05C16D772E97E75A00C35053 /* ButtonPressInStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonPressInStyle.swift; sourceTree = "<group>"; };
 		05C16D792E97EB8500C35053 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
-		05C16D7B2E97F10100C35053 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		05C16D7B2E97F10100C35053 /* MainProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,11 +194,11 @@
 		054D78582E96B7E100DFCD34 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				05C16D742E97DCEB00C35053 /* TopBarView.swift */,
+				05C16D742E97DCEB00C35053 /* MainTopBarView.swift */,
 				054D78592E96B7F300DFCD34 /* MainTitleView.swift */,
-				05C16D7B2E97F10100C35053 /* ProgressView.swift */,
-				0554FDB02E9937F30087A88C /* SourceSectionView.swift */,
-				0554FDB42E9941A70087A88C /* QuizButtonView.swift */,
+				05C16D7B2E97F10100C35053 /* MainProgressView.swift */,
+				0554FDB02E9937F30087A88C /* MainSourceSectionView.swift */,
+				0554FDB42E9941A70087A88C /* MainQuizButtonView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -274,6 +274,7 @@
 		056C6CDC2E86B47D006C44D3 /* SettingsScreen */ = {
 			isa = PBXGroup;
 			children = (
+				05FA733A2E9FE1C7003B9E10 /* Views */,
 				056C6CDA2E86B47D006C44D3 /*  SettingsScreenFeature.swift */,
 				056C6CDB2E86B47D006C44D3 /* SettingsScreenView.swift */,
 			);
@@ -357,6 +358,13 @@
 				055EB71C2E9065E4003C2459 /* Localizable.xcstrings */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		05FA733A2E9FE1C7003B9E10 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -447,7 +455,7 @@
 				053387CE2E8AAB0000554004 /* SeedService.swift in Sources */,
 				0533885B2E8C1B1800554004 /* Answer.swift in Sources */,
 				056C6C612E868E98006C44D3 /* RootScreenView.swift in Sources */,
-				0554FDB12E9937F30087A88C /* SourceSectionView.swift in Sources */,
+				0554FDB12E9937F30087A88C /* MainSourceSectionView.swift in Sources */,
 				050CB6152E93EEDC0060E2AD /*  MainScreenFeature.swift in Sources */,
 				050CB6162E93EEDC0060E2AD /* MainScreenView.swift in Sources */,
 				05C16D732E97D7CB00C35053 /* TopBarButtonShape.swift in Sources */,
@@ -462,11 +470,11 @@
 				054D782E2E96AE1600DFCD34 /* CrabModel.swift in Sources */,
 				0544F3BE2E9955FB00720EB1 /*  AllQuizzesFeature.swift in Sources */,
 				0544F3BF2E9955FB00720EB1 /* AllQuizzesView.swift in Sources */,
-				05C16D7C2E97F10100C35053 /* ProgressView.swift in Sources */,
+				05C16D7C2E97F10100C35053 /* MainProgressView.swift in Sources */,
 				054D78302E96AE3800DFCD34 /* CrabView.swift in Sources */,
 				056C6D112E8940A1006C44D3 /* StorageService.swift in Sources */,
 				056C6CDD2E86B47D006C44D3 /*  SettingsScreenFeature.swift in Sources */,
-				05C16D752E97DCEB00C35053 /* TopBarView.swift in Sources */,
+				05C16D752E97DCEB00C35053 /* MainTopBarView.swift in Sources */,
 				054D78572E96B5C000DFCD34 /* MainFont.swift in Sources */,
 				056C6CDE2E86B47D006C44D3 /* SettingsScreenView.swift in Sources */,
 				056C6CE22E86B48C006C44D3 /* QuizScreenView.swift in Sources */,
@@ -479,7 +487,7 @@
 				054D785C2E96BBB900DFCD34 /* SubFont.swift in Sources */,
 				056C6CED2E86B6BB006C44D3 /* OnBoardingScreenView.swift in Sources */,
 				05C16D7A2E97EB8500C35053 /* Banner.swift in Sources */,
-				0554FDB52E9941A70087A88C /* QuizButtonView.swift in Sources */,
+				0554FDB52E9941A70087A88C /* MainQuizButtonView.swift in Sources */,
 				054D784F2E96AFED00DFCD34 /* MainBackground.swift in Sources */,
 				054D785F2E96BCAC00DFCD34 /* CustomColor.swift in Sources */,
 				05ABF8402E982CD90071C08A /* ScreenSizeKey.swift in Sources */,

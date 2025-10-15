@@ -14,20 +14,20 @@ struct MainScreenView: View {
     var body: some View {
         VStack {
             Group {
-                TopBarView(
+                MainTopBarView(
                     settingsButtonAction: { send(.navigateToSettings) }
                 )
                 
                 VStack(spacing: 10) {
                     MainTitleView()
-                    ProgressView(progress: store.progress)
+                    MainProgressView(progress: store.progress)
                 }
             }
             .padding()
             
             VStack(spacing: 25) {
                 ForEach(store.sources) { source in
-                    SourceSectionView(
+                    MainSourceSectionView(
                         source: source,
                         navigateToQuizAction: { quiz in
                             send(.navigateToQuiz(quiz))

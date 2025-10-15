@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SourceSectionView: View {
+struct MainSourceSectionView: View {
     let source: Source
     let navigateToQuizAction:(Quiz) -> Void
     let viewAllAction:() -> Void
@@ -63,7 +63,7 @@ fileprivate struct QuizzesScrollView: View {
         ScrollView(.horizontal) {
             HStack {
                 ForEach(quizzes) { quiz in
-                    QuizButtonView(quiz: quiz, action: navigateToQuizAction)
+                    MainQuizButtonView(quiz: quiz, action: navigateToQuizAction)
                         .padding(.leading)
                 }
             }
@@ -91,6 +91,6 @@ fileprivate struct QuizzesScrollView: View {
     )
     
     return GeometryReader { geo in
-        SourceSectionView(source: source, navigateToQuizAction: {_ in}, viewAllAction: {}).mainBackground().environment(\.screenSize, geo.size)
+        MainSourceSectionView(source: source, navigateToQuizAction: {_ in}, viewAllAction: {}).mainBackground().environment(\.screenSize, geo.size)
     }
 }
