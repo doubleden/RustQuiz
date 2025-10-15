@@ -21,7 +21,7 @@ struct SettingsScreenView: View {
                     VStack {
                         SettingsButtonView(
                             title: "Language",
-                            description: "English",
+                            description: store.languageName,
                             action: { send(.changeLanguage) }
                         )
                         
@@ -62,6 +62,9 @@ struct SettingsScreenView: View {
         .padding(.vertical)
         .mainBackground()
         .navigationBarBackButtonHidden(true)
+        .onAppear {
+            send(.getLanguageName)
+        }
     }
 }
 

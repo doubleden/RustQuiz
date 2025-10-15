@@ -13,7 +13,7 @@ struct SettingsScreenFeature {
     
     @ObservableState
     struct State {
-        
+        var languageName = "None"
     }
     
     enum Action: ViewAction {
@@ -21,6 +21,7 @@ struct SettingsScreenFeature {
         
         @CasePathable
         enum View {
+            case getLanguageName
             case navigateBack
             case changeLanguage
         }
@@ -42,6 +43,12 @@ struct SettingsScreenFeature {
                         UIApplication.shared.open(url, options: [:], completionHandler: nil)
                     }
                 }
+                return .none
+                
+            case .view(.getLanguageName):
+                let languageCode = Locale.current.language.languageCode?.identifier ?? "en"
+                let locale = Locale(identifier: languageCode)
+                state.languageName = locale.localizedString(forLanguageCode: languageCode) ?? "English"
                 return .none
             }
         }
