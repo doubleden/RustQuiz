@@ -33,8 +33,6 @@ struct SettingsScreenFeature {
                 return .run { _ in
                     await dismiss()
                 }
-            default:
-                return .none
             }
         }
     }

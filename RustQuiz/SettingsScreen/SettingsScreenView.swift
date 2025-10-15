@@ -16,8 +16,50 @@ struct SettingsScreenView: View {
             SettingsTopBarView(navigateBackAction: { send(.navigateBack) })
             SettingsTitleView()
             
+            VStack(spacing: 5) {
+                SettingsSectionView(title: "Interface") {
+                    VStack {
+                        SettingsButtonView(
+                            title: "Language",
+                            description: "English",
+                            action: {}
+                        )
+                        
+                        SettingsButtonView(
+                            title: "App icon",
+                            description: "Standart",
+                            action: {}
+                        )
+                    }
+                    .padding()
+                }
+                
+                SettingsSectionView(title: "Interface") {
+                    VStack {
+                        SettingsButtonView(
+                            title: "Rate App",
+                            action: {}
+                        )
+                        
+                        SettingsButtonView(
+                            title: "Clear progress",
+                            action: {}
+                        )
+                    }
+                    .padding()
+                }
+            }
+            
             Spacer()
+            
+            SettingsFooterView(
+                version: "1.0.1",
+                showPrivacyPolicy: {},
+                showTermsOfUse: {}
+            )
+            
         }
+        .padding(.bottom)
         .mainBackground()
         .navigationBarBackButtonHidden(true)
     }
