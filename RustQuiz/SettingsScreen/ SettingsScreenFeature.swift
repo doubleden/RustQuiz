@@ -6,6 +6,7 @@
 
 import Foundation
 import ComposableArchitecture
+import UIKit
 
 @Reducer
 struct SettingsScreenFeature {
@@ -21,6 +22,7 @@ struct SettingsScreenFeature {
         @CasePathable
         enum View {
             case navigateBack
+            case changeLanguage
         }
     }
     
@@ -33,6 +35,14 @@ struct SettingsScreenFeature {
                 return .run { _ in
                     await dismiss()
                 }
+                
+            case .view(.changeLanguage):
+                if let url = URL(string: UIApplication.openSettingsURLString) {
+                    if UIApplication.shared.canOpenURL(url) {
+                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                    }
+                }
+                return .none
             }
         }
     }

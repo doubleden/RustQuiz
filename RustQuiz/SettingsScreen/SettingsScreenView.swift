@@ -16,13 +16,13 @@ struct SettingsScreenView: View {
             SettingsTopBarView(navigateBackAction: { send(.navigateBack) })
             SettingsTitleView()
             
-            VStack(spacing: 5) {
+            VStack(spacing: -10) {
                 SettingsSectionView(title: "Interface") {
                     VStack {
                         SettingsButtonView(
                             title: "Language",
                             description: "English",
-                            action: {}
+                            action: { send(.changeLanguage) }
                         )
                         
                         SettingsButtonView(
@@ -34,7 +34,7 @@ struct SettingsScreenView: View {
                     .padding()
                 }
                 
-                SettingsSectionView(title: "Interface") {
+                SettingsSectionView(title: "App") {
                     VStack {
                         SettingsButtonView(
                             title: "Rate App",
@@ -59,7 +59,7 @@ struct SettingsScreenView: View {
             )
             
         }
-        .padding(.bottom)
+        .padding(.vertical)
         .mainBackground()
         .navigationBarBackButtonHidden(true)
     }

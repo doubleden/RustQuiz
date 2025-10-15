@@ -12,7 +12,7 @@ struct SettingsTitleView: View {
     
     var body: some View {
         Text("Settings")
-            .mainFont(size: screenSize.width * 0.1)
+            .mainFont(size: screenSize.width * 0.1, scaleFactor: 0.8)
             .foregroundStyle(CustomColor.generalFontColor.color)
             .padding()
             .banner()

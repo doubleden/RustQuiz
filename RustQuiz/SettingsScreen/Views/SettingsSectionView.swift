@@ -17,7 +17,7 @@ struct SettingsSectionView<Content: View>: View {
         VStack {
             HStack {
                 Text(title)
-                    .subFont(size: screenSize.width * 0.055)
+                    .subFont(size: screenSize.width * 0.057)
                     .foregroundStyle(CustomColor.generalFontColor.color)
                 Spacer()
             }

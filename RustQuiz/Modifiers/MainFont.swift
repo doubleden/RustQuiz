@@ -12,13 +12,14 @@ import SwiftUI
 //}
 
 extension View {
-    func mainFont(size: Double) -> some View {
-        modifier(MainFontModifier(size: size))
+    func mainFont(size: Double, scaleFactor: Double = 0.6) -> some View {
+        modifier(MainFontModifier(size: size, scaleFactor: scaleFactor))
     }
 }
 
 struct MainFontModifier: ViewModifier {
     let size: Double
+    let scaleFactor: Double
     
     func body(content: Content) -> some View {
         content
@@ -30,7 +31,7 @@ struct MainFontModifier: ViewModifier {
                 )
             )
             .lineLimit(1)
-            .minimumScaleFactor(0.6)
+            .minimumScaleFactor(scaleFactor)
     }
 }
 

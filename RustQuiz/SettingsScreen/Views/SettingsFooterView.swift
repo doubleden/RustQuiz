@@ -17,7 +17,7 @@ struct SettingsFooterView: View {
     var body: some View {
         VStack(spacing: 15) {
             Text("version \(version)")
-                .subFont(size: screenSize.width * 0.05)
+                .subFont(size: screenSize.width * 0.05, scaleFactor: 0.8)
                 .foregroundStyle(CustomColor.footFontColor.color)
             
             VStack(spacing: 5) {
