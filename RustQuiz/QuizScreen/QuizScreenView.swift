@@ -12,7 +12,7 @@ struct QuizScreenView: View {
     let store: StoreOf<QuizScreenFeature>
     
     var body: some View {
-        VStack {
+        VStack(spacing: 20) {
             QuizTopBarView(
                 title: store.quiz.themeLocalized,
                 navigateBackAction: { send(.navigateBack) },
@@ -20,6 +20,12 @@ struct QuizScreenView: View {
             )
             
             QuizQuestionView(question: store.currentQuestion.titleLocalized)
+            
+            QuizProgressIndicator(
+                averageRating: store.quiz.averageRating,
+                numberOfQuestions: store.quiz.questions.count,
+                numberOfAnsweredQuestions: 5
+            )
             
             Spacer()
         }

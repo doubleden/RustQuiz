@@ -23,6 +23,7 @@ struct QuizScreenFeature {
             return quiz.questions[currentQuestionIndex]
         }
         
+        
         init(quiz: Quiz) {
             self.quiz = quiz
         }
