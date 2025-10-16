@@ -15,8 +15,15 @@ struct QuizScreenFeature {
         var quiz: Quiz
     }
     
-    enum Action {
-        case action
+    enum Action: ViewAction {
+        case view(View)
+        case updateQuiz
+        
+        @CasePathable
+        enum View {
+            case navigateBack
+            case pause
+        }
     }
     
     @Dependency(\.dismiss) var dismiss
@@ -25,15 +32,21 @@ struct QuizScreenFeature {
     var body: some Reducer<State, Action> {
         Reduce { state, action in
             switch action {
-            case action:
-                state.quiz.questions[0].hasUserAnswered = true
-                state.quiz.questions[0].isUserAnswerCorrect = true
+            case .view(.navigateBack):
+                return .run { _ in
+                    await dismiss()
+                }
                 
+            case .view(.pause):
+                return .none
+                
+            case .updateQuiz:
                 return .run { [quiz = state.quiz] _ in
                     try await storageService.updateQuiz(quiz)
                 }
-            default:
-                return .none
+                
+//            default:
+//                return .none
             }
         }
     }
