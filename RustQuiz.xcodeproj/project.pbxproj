@@ -23,7 +23,8 @@
 		05402BBD2E9FF44D00AA10EE /* SettingsFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05402BBC2E9FF44D00AA10EE /* SettingsFooterView.swift */; };
 		0544F3BE2E9955FB00720EB1 /*  AllQuizzesFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0544F3BB2E9955FB00720EB1 /*  AllQuizzesFeature.swift */; };
 		0544F3BF2E9955FB00720EB1 /* AllQuizzesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0544F3BC2E9955FB00720EB1 /* AllQuizzesView.swift */; };
-		054AB5F42EA11ED8005EDAC7 /* QuizTopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054AB5F32EA11ED8005EDAC7 /* QuizTopBar.swift */; };
+		054AB5F42EA11ED8005EDAC7 /* QuizTopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054AB5F32EA11ED8005EDAC7 /* QuizTopBarView.swift */; };
+		054AB5F62EA124C0005EDAC7 /* QuizQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054AB5F52EA124C0005EDAC7 /* QuizQuestionView.swift */; };
 		054D782B2E96A04800DFCD34 /* CrabsAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D782A2E96A04800DFCD34 /* CrabsAnimation.swift */; };
 		054D782E2E96AE1600DFCD34 /* CrabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D782D2E96AE1600DFCD34 /* CrabModel.swift */; };
 		054D78302E96AE3800DFCD34 /* CrabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D782F2E96AE3700DFCD34 /* CrabView.swift */; };
@@ -81,7 +82,8 @@
 		05402BBC2E9FF44D00AA10EE /* SettingsFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsFooterView.swift; sourceTree = "<group>"; };
 		0544F3BB2E9955FB00720EB1 /*  AllQuizzesFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " AllQuizzesFeature.swift"; sourceTree = "<group>"; };
 		0544F3BC2E9955FB00720EB1 /* AllQuizzesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllQuizzesView.swift; sourceTree = "<group>"; };
-		054AB5F32EA11ED8005EDAC7 /* QuizTopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTopBar.swift; sourceTree = "<group>"; };
+		054AB5F32EA11ED8005EDAC7 /* QuizTopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTopBarView.swift; sourceTree = "<group>"; };
+		054AB5F52EA124C0005EDAC7 /* QuizQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestionView.swift; sourceTree = "<group>"; };
 		054D782A2E96A04800DFCD34 /* CrabsAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrabsAnimation.swift; sourceTree = "<group>"; };
 		054D782D2E96AE1600DFCD34 /* CrabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrabModel.swift; sourceTree = "<group>"; };
 		054D782F2E96AE3700DFCD34 /* CrabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrabView.swift; sourceTree = "<group>"; };
@@ -169,7 +171,8 @@
 		054AB5F22EA11DA7005EDAC7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				054AB5F32EA11ED8005EDAC7 /* QuizTopBar.swift */,
+				054AB5F32EA11ED8005EDAC7 /* QuizTopBarView.swift */,
+				054AB5F52EA124C0005EDAC7 /* QuizQuestionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -507,11 +510,12 @@
 				056C6D112E8940A1006C44D3 /* StorageService.swift in Sources */,
 				056C6CDD2E86B47D006C44D3 /*  SettingsScreenFeature.swift in Sources */,
 				05C16D752E97DCEB00C35053 /* MainTopBarView.swift in Sources */,
-				054AB5F42EA11ED8005EDAC7 /* QuizTopBar.swift in Sources */,
+				054AB5F42EA11ED8005EDAC7 /* QuizTopBarView.swift in Sources */,
 				054D78572E96B5C000DFCD34 /* MainFont.swift in Sources */,
 				056C6CDE2E86B47D006C44D3 /* SettingsScreenView.swift in Sources */,
 				056C6CE22E86B48C006C44D3 /* QuizScreenView.swift in Sources */,
 				05402BB92E9FEDD100AA10EE /* FullBanner.swift in Sources */,
+				054AB5F62EA124C0005EDAC7 /* QuizQuestionView.swift in Sources */,
 				056C6CE32E86B48C006C44D3 /*  QuizScreenFeature.swift in Sources */,
 				054D782B2E96A04800DFCD34 /* CrabsAnimation.swift in Sources */,
 				053388552E8C1A8C00554004 /* Source.swift in Sources */,

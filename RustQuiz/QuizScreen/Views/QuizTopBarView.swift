@@ -1,5 +1,5 @@
 //
-//  QuizTopBar.swift
+//  QuizTopBarView.swift
 //  RustQuiz
 //
 //  Created by Denis Denisov on 16/10/25.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct QuizTopBar: View {
+struct QuizTopBarView: View {
     let title: String
     let navigateBackAction: () -> Void
     let pauseAction: () -> Void
@@ -47,7 +47,7 @@ struct QuizTopBar: View {
 #Preview {
     GeometryReader { geo in
         VStack {
-            QuizTopBar(title: "Viriables and Mutatability", navigateBackAction: {}, pauseAction: {})
+            QuizTopBarView(title: "Viriables and Mutatability", navigateBackAction: {}, pauseAction: {})
             Spacer()
         }
             .mainBackground()

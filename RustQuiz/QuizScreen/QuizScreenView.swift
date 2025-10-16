@@ -13,11 +13,13 @@ struct QuizScreenView: View {
     
     var body: some View {
         VStack {
-            QuizTopBar(
+            QuizTopBarView(
                 title: store.quiz.theme,
                 navigateBackAction: { send(.navigateBack) },
                 pauseAction: { send(.pause) }
             )
+            
+            QuizQuestionView(question: store.currentQuestion.title)
             
             Spacer()
         }
@@ -29,7 +31,29 @@ struct QuizScreenView: View {
 #Preview {
     GeometryReader { geo in
         QuizScreenView(
-            store: Store(initialState: QuizScreenFeature.State(quiz: Quiz(id: UUID(), theme: "Viriables and Mutatability", priority: 0, questions: []))) {
+            store: Store(
+                initialState: QuizScreenFeature.State(
+                    quiz: Quiz(
+                        id: UUID(),
+                        theme: "Viriables and Mutatability",
+                        priority: 0,
+                        questions: [
+                            Question(
+                                id: UUID(),
+                                title: "SDmlsmdlmsdd?",
+                                answers: [
+                                    .init(id: UUID(), title: "Yes", isCorrect: true),
+                                    .init(id: UUID(), title: "no", isCorrect: false),
+                                    .init(id: UUID(), title: "maybe", isCorrect: false),
+                                    .init(id: UUID(), title: "none", isCorrect: false)
+                                ],
+                                descriptionText: "dsdsdsd",
+                                descriptionLink: "sddsdsd"
+                            )
+                        ]
+                    )
+                )
+            ) {
                 QuizScreenFeature()
             }
         )

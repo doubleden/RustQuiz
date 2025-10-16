@@ -13,6 +13,19 @@ struct QuizScreenFeature {
     @ObservableState
     struct State {
         var quiz: Quiz
+        
+        private var currentQuestionIndex = 0
+        var currentQuestion: Question {
+            guard !quiz.questions.isEmpty else {
+                return Question.get_placeholder()
+            }
+            
+            return quiz.questions[currentQuestionIndex]
+        }
+        
+        init(quiz: Quiz) {
+            self.quiz = quiz
+        }
     }
     
     enum Action: ViewAction {

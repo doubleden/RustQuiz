@@ -18,6 +18,15 @@ struct Question: Identifiable, Decodable {
     var hasUserAnswered = false
     var isUserAnswerCorrect = false
     
+    static func get_placeholder() -> Self {
+        .init(
+            id: UUID(),
+            title: "None",
+            answers: [],
+            descriptionText: "None",
+            descriptionLink: "None"
+        )
+    }
 }
 
 // MARK: - Properties used in view
