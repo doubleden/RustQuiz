@@ -15,7 +15,7 @@ struct MainSourceSectionView: View {
     var body: some View {
         VStack {
             HeaderView(
-                sourceTitle: source.title,
+                sourceTitle: source.titleLocalized,
                 viewAllAction: viewAllAction
             )
             
@@ -31,7 +31,7 @@ struct MainSourceSectionView: View {
 }
 
 fileprivate struct HeaderView: View {
-    let sourceTitle: String
+    let sourceTitle: LocalizedStringKey
     let viewAllAction:() -> Void
     
     @Environment(\.screenSize) private var screenSize

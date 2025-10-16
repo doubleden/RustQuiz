@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct QuizQuestionView: View {
-    let question: String
+    let question: LocalizedStringKey
     
     @Environment(\.screenSize) private var screenSize
     

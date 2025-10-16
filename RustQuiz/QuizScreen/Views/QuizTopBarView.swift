@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct QuizTopBarView: View {
-    let title: String
+    let title: LocalizedStringKey
     let navigateBackAction: () -> Void
     let pauseAction: () -> Void
     

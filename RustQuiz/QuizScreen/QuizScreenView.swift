@@ -14,12 +14,12 @@ struct QuizScreenView: View {
     var body: some View {
         VStack {
             QuizTopBarView(
-                title: store.quiz.theme,
+                title: store.quiz.themeLocalized,
                 navigateBackAction: { send(.navigateBack) },
                 pauseAction: { send(.pause) }
             )
             
-            QuizQuestionView(question: store.currentQuestion.title)
+            QuizQuestionView(question: store.currentQuestion.titleLocalized)
             
             Spacer()
         }

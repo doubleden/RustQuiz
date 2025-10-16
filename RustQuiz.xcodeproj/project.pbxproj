@@ -25,6 +25,7 @@
 		0544F3BF2E9955FB00720EB1 /* AllQuizzesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0544F3BC2E9955FB00720EB1 /* AllQuizzesView.swift */; };
 		054AB5F42EA11ED8005EDAC7 /* QuizTopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054AB5F32EA11ED8005EDAC7 /* QuizTopBarView.swift */; };
 		054AB5F62EA124C0005EDAC7 /* QuizQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054AB5F52EA124C0005EDAC7 /* QuizQuestionView.swift */; };
+		054AB5F82EA15D3A005EDAC7 /* QuizProgressIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054AB5F72EA15D3A005EDAC7 /* QuizProgressIndicator.swift */; };
 		054D782B2E96A04800DFCD34 /* CrabsAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D782A2E96A04800DFCD34 /* CrabsAnimation.swift */; };
 		054D782E2E96AE1600DFCD34 /* CrabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D782D2E96AE1600DFCD34 /* CrabModel.swift */; };
 		054D78302E96AE3800DFCD34 /* CrabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D782F2E96AE3700DFCD34 /* CrabView.swift */; };
@@ -84,6 +85,7 @@
 		0544F3BC2E9955FB00720EB1 /* AllQuizzesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllQuizzesView.swift; sourceTree = "<group>"; };
 		054AB5F32EA11ED8005EDAC7 /* QuizTopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTopBarView.swift; sourceTree = "<group>"; };
 		054AB5F52EA124C0005EDAC7 /* QuizQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestionView.swift; sourceTree = "<group>"; };
+		054AB5F72EA15D3A005EDAC7 /* QuizProgressIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizProgressIndicator.swift; sourceTree = "<group>"; };
 		054D782A2E96A04800DFCD34 /* CrabsAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrabsAnimation.swift; sourceTree = "<group>"; };
 		054D782D2E96AE1600DFCD34 /* CrabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrabModel.swift; sourceTree = "<group>"; };
 		054D782F2E96AE3700DFCD34 /* CrabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrabView.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 			children = (
 				054AB5F32EA11ED8005EDAC7 /* QuizTopBarView.swift */,
 				054AB5F52EA124C0005EDAC7 /* QuizQuestionView.swift */,
+				054AB5F72EA15D3A005EDAC7 /* QuizProgressIndicator.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -499,6 +502,7 @@
 				056C6CE72E86B644006C44D3 /* MainNavigationScreenFeature.swift in Sources */,
 				054D785A2E96B7F300DFCD34 /* MainTitleView.swift in Sources */,
 				056C6CE82E86B644006C44D3 /* MainNavigationScreenView.swift in Sources */,
+				054AB5F82EA15D3A005EDAC7 /* QuizProgressIndicator.swift in Sources */,
 				053387912E8A7D9000554004 /* AnswerTable.swift in Sources */,
 				054D782E2E96AE1600DFCD34 /* CrabModel.swift in Sources */,
 				05402BBB2E9FEED200AA10EE /* SettingsButtonView.swift in Sources */,
