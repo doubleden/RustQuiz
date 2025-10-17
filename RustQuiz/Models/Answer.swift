@@ -7,9 +7,26 @@
 
 import SwiftUI
 
-struct Answer: Identifiable, Decodable {
+struct Answer: Identifiable {
     let id: UUID
     var title: String
     var isCorrect = false
-    var isSelected: Bool? = false
+    var isSelected = false
+}
+
+extension Answer: Decodable {
+    enum CodingKeys: String, CodingKey {
+        case id
+        case title
+        case isCorrect
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        id = try container.decode(UUID.self, forKey: .id)
+        title = try container.decode(String.self, forKey: .title)
+        isCorrect = try container.decode(Bool.self, forKey: .isCorrect)
+        isSelected = false
+    }
 }

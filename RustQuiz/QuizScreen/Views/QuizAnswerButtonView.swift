@@ -12,14 +12,13 @@ struct QuizAnswerButtonView: View {
     let action: () -> Void
     
     var fontColor: Color {
-        return (answer.isSelected ?? false)
+        return answer.isSelected
         ? CustomColor.backgroundColor.color
         : CustomColor.generalFontColor.color
     }
     
     var backgroundColor: Color {
-        guard let isSelected = answer.isSelected else { return CustomColor.subElementsColor.color }
-        guard isSelected else { return CustomColor.subElementsColor.color }
+        guard answer.isSelected else { return CustomColor.subElementsColor.color }
         
         if answer.isCorrect {
             return CustomColor.activeColor.color
