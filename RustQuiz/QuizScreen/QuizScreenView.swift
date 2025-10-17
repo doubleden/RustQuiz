@@ -27,6 +27,15 @@ struct QuizScreenView: View {
                 numberOfAnsweredQuestions: store.quantityOfAnsweredQuestions
             )
             
+            ForEach(store.currentQuestion.answers) { answer in
+                QuizAnswerButtonView(
+                    answer: answer,
+                    hasUserAnswered: store.currentQuestion.hasUserAnswered,
+                    action: {}
+                )
+            }
+            .padding(.horizontal, 30)
+            
             Spacer()
         }
         .mainBackground()

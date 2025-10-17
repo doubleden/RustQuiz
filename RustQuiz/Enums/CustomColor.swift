@@ -10,7 +10,7 @@ import SwiftUI
 enum CustomColor {
     case activeColor
     case backgroundColor
-    case destructiveColor
+    case destructionColor
     case footFontColor
     case generalFontColor
     case subElementsColor
@@ -20,7 +20,7 @@ enum CustomColor {
         switch self {
         case .activeColor: Color("activeColor")
         case .backgroundColor: Color("backgroundColor")
-        case .destructiveColor: Color("destructiveColor")
+        case .destructionColor: Color("destructionColor")
         case .footFontColor: Color("footFontColor")
         case .generalFontColor: Color("generalFontColor")
         case .subElementsColor: Color("subElementsColor")

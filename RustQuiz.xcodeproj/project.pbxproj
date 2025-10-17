@@ -27,6 +27,7 @@
 		054AB5F62EA124C0005EDAC7 /* QuizQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054AB5F52EA124C0005EDAC7 /* QuizQuestionView.swift */; };
 		054AB5F82EA15D3A005EDAC7 /* QuizProgressIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054AB5F72EA15D3A005EDAC7 /* QuizProgressIndicator.swift */; };
 		054AB5FA2EA23E67005EDAC7 /* MainButtonShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054AB5F92EA23E67005EDAC7 /* MainButtonShape.swift */; };
+		054AB5FC2EA25C61005EDAC7 /* QuizAnswerButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054AB5FB2EA25C61005EDAC7 /* QuizAnswerButtonView.swift */; };
 		054D782B2E96A04800DFCD34 /* CrabsAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D782A2E96A04800DFCD34 /* CrabsAnimation.swift */; };
 		054D782E2E96AE1600DFCD34 /* CrabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D782D2E96AE1600DFCD34 /* CrabModel.swift */; };
 		054D78302E96AE3800DFCD34 /* CrabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D782F2E96AE3700DFCD34 /* CrabView.swift */; };
@@ -88,6 +89,7 @@
 		054AB5F52EA124C0005EDAC7 /* QuizQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestionView.swift; sourceTree = "<group>"; };
 		054AB5F72EA15D3A005EDAC7 /* QuizProgressIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizProgressIndicator.swift; sourceTree = "<group>"; };
 		054AB5F92EA23E67005EDAC7 /* MainButtonShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButtonShape.swift; sourceTree = "<group>"; };
+		054AB5FB2EA25C61005EDAC7 /* QuizAnswerButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizAnswerButtonView.swift; sourceTree = "<group>"; };
 		054D782A2E96A04800DFCD34 /* CrabsAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrabsAnimation.swift; sourceTree = "<group>"; };
 		054D782D2E96AE1600DFCD34 /* CrabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrabModel.swift; sourceTree = "<group>"; };
 		054D782F2E96AE3700DFCD34 /* CrabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrabView.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				054AB5F32EA11ED8005EDAC7 /* QuizTopBarView.swift */,
 				054AB5F52EA124C0005EDAC7 /* QuizQuestionView.swift */,
 				054AB5F72EA15D3A005EDAC7 /* QuizProgressIndicator.swift */,
+				054AB5FB2EA25C61005EDAC7 /* QuizAnswerButtonView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -533,6 +536,7 @@
 				054AB5FA2EA23E67005EDAC7 /* MainButtonShape.swift in Sources */,
 				05402BB72E9FE89C00AA10EE /* SettingsSectionView.swift in Sources */,
 				056C6CED2E86B6BB006C44D3 /* OnBoardingScreenView.swift in Sources */,
+				054AB5FC2EA25C61005EDAC7 /* QuizAnswerButtonView.swift in Sources */,
 				05C16D7A2E97EB8500C35053 /* Banner.swift in Sources */,
 				0554FDB52E9941A70087A88C /* MainQuizButtonView.swift in Sources */,
 				054D784F2E96AFED00DFCD34 /* MainBackground.swift in Sources */,

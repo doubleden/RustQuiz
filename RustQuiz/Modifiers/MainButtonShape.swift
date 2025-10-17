@@ -10,8 +10,8 @@ import SwiftUI
 import SwiftUI
 extension View {
     func mainButtonShape(
-        fontColor: Color = CustomColor.generalFontColor.color,
-        backgroundColor: Color = CustomColor.subElementsColor.color
+        fontColor: Color,
+        backgroundColor: Color
     ) -> some View {
         modifier(
             MainButtonShapeModifier(
@@ -25,12 +25,12 @@ extension View {
 struct MainButtonShapeModifier: ViewModifier {
     var fontColor: Color
     var backgroundColor: Color
-    var heightMultiplayer = 0.13
+    var heightMultiplayer = 0.12
     @Environment(\.screenSize) private var screenSize
     
     func body(content: Content) -> some View {
         content
-            .subFont(size: screenSize.width * 0.065)
+            .subFont(size: screenSize.width * 0.06)
             .foregroundColor(fontColor)
             .frame(maxWidth: .infinity)
             .frame(height: screenSize.width * heightMultiplayer)
@@ -45,7 +45,7 @@ struct MainButtonShape: View {
         GeometryReader { geometry in
             VStack {
                 Text("var")
-                    .mainButtonShape()
+                    .mainButtonShape(fontColor: CustomColor.generalFontColor.color, backgroundColor: CustomColor.backgroundColor.color)
                     .environment(\.screenSize, geometry.size)
             }
             .padding()

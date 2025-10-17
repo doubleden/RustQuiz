@@ -16,7 +16,7 @@ struct QuizQuestionView: View {
         Text(question)
             .padding(.horizontal)
             .padding(.vertical)
-            .frame(minHeight: screenSize.width * 0.55)
+            .frame(minHeight: screenSize.width * 0.45)
             .subFont(size: screenSize.width * 0.09, lineLimit: 5, scaleFactor: 0.5)
             .multilineTextAlignment(.center)
             .foregroundStyle(CustomColor.generalFontColor.color)
