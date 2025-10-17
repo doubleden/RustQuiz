@@ -29,6 +29,10 @@ struct QuizScreenFeature {
             quiz.questions.filter({$0.hasUserAnswered}).count
         }
         
+        var expectedMark: Int {
+            quiz.questions.count
+        }
+        
         
         init(quiz: Quiz) {
             self.quiz = quiz
@@ -42,6 +46,7 @@ struct QuizScreenFeature {
         
         @CasePathable
         enum View {
+            case clearQuestionsCache
             case navigateBack
             case pause
             case showQuizWhyView
@@ -56,6 +61,13 @@ struct QuizScreenFeature {
             state,
             action in
             switch action {
+            case .view(.clearQuestionsCache):
+                for questionIndex in state.quiz.questions.indices {
+                    state.quiz.questions[questionIndex].hasUserAnswered = false
+                    state.quiz.questions[questionIndex].isUserAnswerCorrect = false
+                }
+                return .none
+                
             case .view(.navigateBack):
                 return .run { _ in
                     await dismiss()

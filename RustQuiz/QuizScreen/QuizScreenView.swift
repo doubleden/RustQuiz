@@ -44,12 +44,15 @@ struct QuizScreenView: View {
                     QuizWhyButtonView(action: { send(.showQuizWhyView) })
                 }
                 
-                QuizExpectedMarkView(expectedMark: 100)
+                QuizExpectedMarkView(expectedMark: store.quiz.averageRating)
             }
         }
         .padding(.vertical)
         .mainBackground()
         .navigationBarBackButtonHidden(true)
+        .onAppear {
+            send(.clearQuestionsCache)
+        }
         .sheet(
             item: $store.scope(
                 state: \.quizWhyViewState,
@@ -95,9 +98,11 @@ struct QuizScreenView: View {
                                     .init(id: UUID(), title: "none", isCorrect: false)
                                 ],
                                 descriptionText: "dsdsdsd",
-                                descriptionLink: "sddsdsd"
+                                descriptionLink: "sddsdsd",
+                                hasUserAnswered: true,
+                                isUserAnswerCorrect: true
                             )
-                        ]
+                        ],
                     )
                 )
             ) {
