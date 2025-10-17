@@ -28,6 +28,8 @@
 		054AB5F82EA15D3A005EDAC7 /* QuizProgressIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054AB5F72EA15D3A005EDAC7 /* QuizProgressIndicator.swift */; };
 		054AB5FA2EA23E67005EDAC7 /* MainButtonShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054AB5F92EA23E67005EDAC7 /* MainButtonShape.swift */; };
 		054AB5FC2EA25C61005EDAC7 /* QuizAnswerButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054AB5FB2EA25C61005EDAC7 /* QuizAnswerButtonView.swift */; };
+		054AB5FE2EA2628C005EDAC7 /* QuizWhyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054AB5FD2EA2628C005EDAC7 /* QuizWhyButton.swift */; };
+		054AB6002EA2647C005EDAC7 /* QuizExpectedMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054AB5FF2EA2647C005EDAC7 /* QuizExpectedMarkView.swift */; };
 		054D782B2E96A04800DFCD34 /* CrabsAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D782A2E96A04800DFCD34 /* CrabsAnimation.swift */; };
 		054D782E2E96AE1600DFCD34 /* CrabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D782D2E96AE1600DFCD34 /* CrabModel.swift */; };
 		054D78302E96AE3800DFCD34 /* CrabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D782F2E96AE3700DFCD34 /* CrabView.swift */; };
@@ -90,6 +92,8 @@
 		054AB5F72EA15D3A005EDAC7 /* QuizProgressIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizProgressIndicator.swift; sourceTree = "<group>"; };
 		054AB5F92EA23E67005EDAC7 /* MainButtonShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButtonShape.swift; sourceTree = "<group>"; };
 		054AB5FB2EA25C61005EDAC7 /* QuizAnswerButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizAnswerButtonView.swift; sourceTree = "<group>"; };
+		054AB5FD2EA2628C005EDAC7 /* QuizWhyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizWhyButton.swift; sourceTree = "<group>"; };
+		054AB5FF2EA2647C005EDAC7 /* QuizExpectedMarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizExpectedMarkView.swift; sourceTree = "<group>"; };
 		054D782A2E96A04800DFCD34 /* CrabsAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrabsAnimation.swift; sourceTree = "<group>"; };
 		054D782D2E96AE1600DFCD34 /* CrabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrabModel.swift; sourceTree = "<group>"; };
 		054D782F2E96AE3700DFCD34 /* CrabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrabView.swift; sourceTree = "<group>"; };
@@ -181,6 +185,8 @@
 				054AB5F52EA124C0005EDAC7 /* QuizQuestionView.swift */,
 				054AB5F72EA15D3A005EDAC7 /* QuizProgressIndicator.swift */,
 				054AB5FB2EA25C61005EDAC7 /* QuizAnswerButtonView.swift */,
+				054AB5FD2EA2628C005EDAC7 /* QuizWhyButton.swift */,
+				054AB5FF2EA2647C005EDAC7 /* QuizExpectedMarkView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -498,6 +504,7 @@
 				056C6C612E868E98006C44D3 /* RootScreenView.swift in Sources */,
 				05FA733C2E9FE29B003B9E10 /* SettingsTopBarView.swift in Sources */,
 				0554FDB12E9937F30087A88C /* MainSourceSectionView.swift in Sources */,
+				054AB5FE2EA2628C005EDAC7 /* QuizWhyButton.swift in Sources */,
 				050CB6152E93EEDC0060E2AD /*  MainScreenFeature.swift in Sources */,
 				050CB6162E93EEDC0060E2AD /* MainScreenView.swift in Sources */,
 				05C16D732E97D7CB00C35053 /* TopBarButtonShape.swift in Sources */,
@@ -531,6 +538,7 @@
 				053388552E8C1A8C00554004 /* Source.swift in Sources */,
 				053388572E8C1ACA00554004 /* Quiz.swift in Sources */,
 				056C6D0E2E89318B006C44D3 /* SourceTable.swift in Sources */,
+				054AB6002EA2647C005EDAC7 /* QuizExpectedMarkView.swift in Sources */,
 				056C6CEC2E86B6BB006C44D3 /*  OnBoardingScreenFeature.swift in Sources */,
 				054D785C2E96BBB900DFCD34 /* SubFont.swift in Sources */,
 				054AB5FA2EA23E67005EDAC7 /* MainButtonShape.swift in Sources */,

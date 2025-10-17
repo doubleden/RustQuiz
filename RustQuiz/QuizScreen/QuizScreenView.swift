@@ -36,10 +36,32 @@ struct QuizScreenView: View {
             }
             .padding(.horizontal, 30)
             
+            
             Spacer()
+            
+            VStack(spacing: 10) {
+                if !store.currentQuestion.hasUserAnswered {
+                    QuizWhyButton(action: {})
+                }
+                
+                QuizExpectedMarkView(expectedMark: 100)
+            }
         }
+        .padding(.vertical)
         .mainBackground()
         .navigationBarBackButtonHidden(true)
+        .gesture(
+            DragGesture(minimumDistance: 50)
+                .onEnded { value in
+                    if value.translation.width < 0 {
+                        // Свайп влево
+                        print("next question")
+                    } else if value.translation.width > 0 {
+                        // Свайп вправо
+                        print("past question")
+                    }
+                }
+        )
     }
 }
 
