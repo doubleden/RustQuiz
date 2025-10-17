@@ -9,22 +9,24 @@ import SwiftUI
 
 struct QuizAnswerButtonView: View {
     let answer: Answer
-    let hasUserAnswered: Bool
     let action: () -> Void
     
     var fontColor: Color {
-        return hasUserAnswered
+        return (answer.isSelected ?? false)
         ? CustomColor.backgroundColor.color
         : CustomColor.generalFontColor.color
     }
     
     var backgroundColor: Color {
-        if hasUserAnswered && answer.isCorrect {
-            CustomColor.activeColor.color
-        } else if hasUserAnswered && !answer.isCorrect {
-            CustomColor.destructionColor.color
+        guard let isSelected = answer.isSelected else { return CustomColor.subElementsColor.color }
+        guard isSelected else { return CustomColor.subElementsColor.color }
+        
+        if answer.isCorrect {
+            return CustomColor.activeColor.color
+        } else if !answer.isCorrect {
+            return CustomColor.destructionColor.color
         } else {
-            CustomColor.subElementsColor.color
+            return CustomColor.subElementsColor.color
         }
     }
     
@@ -43,7 +45,7 @@ struct QuizAnswerButtonView: View {
 #Preview {
     GeometryReader { geometry in
         VStack {
-            QuizAnswerButtonView(answer: Answer(id: UUID(), title: "var", isCorrect: false), hasUserAnswered: true, action: {})
+            QuizAnswerButtonView(answer: Answer(id: UUID(), title: "var", isCorrect: false, isSelected: true), action: {})
         }
         .padding()
         .mainBackground()

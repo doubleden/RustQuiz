@@ -30,9 +30,9 @@ struct QuizScreenView: View {
             ForEach(store.currentQuestion.answers) { answer in
                 QuizAnswerButtonView(
                     answer: answer,
-                    hasUserAnswered: store.currentQuestion.hasUserAnswered,
-                    action: {}
+                    action: { send(.didSelectAnswer(answer)) }
                 )
+                .disabled(store.currentQuestion.hasUserAnswered)
             }
             .padding(.horizontal, 30)
             
@@ -40,7 +40,7 @@ struct QuizScreenView: View {
             Spacer()
             
             VStack(spacing: 10) {
-                if !store.currentQuestion.hasUserAnswered {
+                if store.currentQuestion.hasUserAnswered {
                     QuizWhyButtonView(action: { send(.showQuizWhyView) })
                 }
                 

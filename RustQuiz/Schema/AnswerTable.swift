@@ -13,5 +13,6 @@ struct AnswerTable: Identifiable {
     let id: UUID
     var title: String
     var isCorrect: Bool
+    var isSelected: Bool
     var questionID: QuestionTable.ID
 }

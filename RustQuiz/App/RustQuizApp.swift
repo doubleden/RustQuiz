@@ -118,6 +118,7 @@ extension RustQuizApp {
                     "id" TEXT PRIMARY KEY NOT NULL,
                     "title" TEXT NOT NULL,
                     "isCorrect" INTEGER NOT NULL DEFAULT 0,
+                    "isSelected" INTEGER NOT NULL DEFAULT 0,
                     "questionID" TEXT NOT NULL,
                     FOREIGN KEY ("questionID") REFERENCES "QuestionTable"("id") ON DELETE CASCADE
                 ) STRICT

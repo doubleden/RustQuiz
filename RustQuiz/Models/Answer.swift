@@ -11,4 +11,5 @@ struct Answer: Identifiable, Decodable {
     let id: UUID
     var title: String
     var isCorrect = false
+    var isSelected: Bool? = false
 }

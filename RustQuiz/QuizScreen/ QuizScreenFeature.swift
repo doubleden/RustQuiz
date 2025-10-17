@@ -16,7 +16,7 @@ struct QuizScreenFeature {
         
         @Presents var quizWhyViewState: QuizWhyFeature.State?
         
-        private var currentQuestionIndex = 0
+        var currentQuestionIndex = 0
         var currentQuestion: Question {
             guard !quiz.questions.isEmpty else {
                 return Question.getNoneQuestion()
@@ -50,6 +50,7 @@ struct QuizScreenFeature {
             case navigateBack
             case pause
             case showQuizWhyView
+            case didSelectAnswer(Answer)
         }
     }
     
@@ -81,6 +82,14 @@ struct QuizScreenFeature {
                     descriptionText: state.currentQuestion.descriptionText,
                     link: state.currentQuestion.descriptionLink
                 )
+                return .none
+                
+            case .view(.didSelectAnswer(let answer)):
+                if let answerIndex = state.currentQuestion.answers.firstIndex(where: { $0.id == answer.id }) {
+                    state.quiz.questions[state.currentQuestionIndex].answers[answerIndex].isSelected = true
+                }
+                state.quiz.questions[state.currentQuestionIndex].hasUserAnswered = true
+                state.quiz.questions[state.currentQuestionIndex].isUserAnswerCorrect = answer.isCorrect
                 return .none
                 
             case .updateQuiz:

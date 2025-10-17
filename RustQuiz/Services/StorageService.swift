@@ -60,6 +60,7 @@ extension StorageService: DependencyKey {
                                 id: answer.id,
                                 title: answer.title,
                                 isCorrect: answer.isCorrect,
+                                isSelected: answer.isSelected ?? false,
                                 questionID: question.id
                             )
                             try AnswerTable.insert{answerTable}.execute(db)
@@ -229,6 +230,7 @@ extension StorageService: DependencyKey {
                                 id: answer.id,
                                 title: answer.title,
                                 isCorrect: answer.isCorrect,
+                                isSelected: answer.isSelected ?? false,
                                 questionID: question.id
                             )
                             try AnswerTable.insert{answerTable}.execute(db)
