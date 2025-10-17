@@ -8,14 +8,11 @@
 import SwiftUI
 
 struct QuizProgressIndicator: View {
-    let averageRating: Int
+    let progress: Double
     let numberOfQuestions: Int
     let numberOfAnsweredQuestions: Int
     
     @Environment(\.screenSize) private var screenSize
-    private var progress: Double {
-        Double(averageRating) / 100
-    }
     
     var body: some View {
         VStack(spacing: 0) {
@@ -54,7 +51,7 @@ struct QuizProgressIndicator: View {
 
 #Preview {
     GeometryReader { geo in
-        QuizProgressIndicator(averageRating: 59, numberOfQuestions: 5, numberOfAnsweredQuestions: 10)
+        QuizProgressIndicator(progress: 59, numberOfQuestions: 5, numberOfAnsweredQuestions: 10)
             .mainBackground()
             .environment(\.screenSize, geo.size)
     }

@@ -22,7 +22,7 @@ struct QuizScreenView: View {
             QuizQuestionView(question: LocalizedStringKey(stringLiteral: store.currentQuestion.title))
             
             QuizProgressIndicator(
-                averageRating: store.quiz.averageRating,
+                progress: store.progress,
                 numberOfQuestions: store.quiz.questions.count,
                 numberOfAnsweredQuestions: store.quantityOfAnsweredQuestions
             )
@@ -30,7 +30,7 @@ struct QuizScreenView: View {
             ForEach(store.currentQuestion.answers) { answer in
                 QuizAnswerButtonView(
                     answer: answer,
-                    action: { send(.didSelectAnswer(answer)) }
+                    action: { send(.didSelectAnswer(answer), animation: .linear) }
                 )
                 .disabled(store.currentQuestion.hasUserAnswered)
             }

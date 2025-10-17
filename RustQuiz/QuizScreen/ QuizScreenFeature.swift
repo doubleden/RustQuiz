@@ -29,8 +29,8 @@ struct QuizScreenFeature {
             quiz.questions.filter({$0.hasUserAnswered}).count
         }
         
-        var expectedMark: Int {
-            quiz.questions.count
+        var progress: Double {
+            (Double(quantityOfAnsweredQuestions) / Double(quiz.questions.count))
         }
         
         
