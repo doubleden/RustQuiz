@@ -34,12 +34,4 @@ extension Question {
     var titleLocalized: LocalizedStringKey {
         LocalizedStringKey(stringLiteral: title)
     }
-    
-    var descriptionTextLocalized: LocalizedStringKey {
-        LocalizedStringKey(stringLiteral: descriptionText)
-    }
-    
-    var descriptionLinkLocalized: LocalizedStringKey {
-        LocalizedStringKey(stringLiteral: descriptionLink)
-    }
 }

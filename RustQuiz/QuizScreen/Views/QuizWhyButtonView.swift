@@ -1,5 +1,5 @@
 //
-//  QuizWhyButton.swift
+//  QuizWhyButtonView.swift
 //  RustQuiz
 //
 //  Created by Denis Denisov on 17/10/25.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct QuizWhyButton: View {
+struct QuizWhyButtonView: View {
     let action: () -> Void
     
     @Environment(\.screenSize) private var screenSize
@@ -26,7 +26,7 @@ struct QuizWhyButton: View {
     GeometryReader { geometry in
         VStack {
             Spacer()
-            QuizWhyButton(action: {})
+            QuizWhyButtonView(action: {})
         }
         .mainBackground()
             .environment(\.screenSize, geometry.size)

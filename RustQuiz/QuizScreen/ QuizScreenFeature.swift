@@ -14,6 +14,8 @@ struct QuizScreenFeature {
     struct State {
         var quiz: Quiz
         
+        @Presents var quizWhyViewState: QuizWhyFeature.State?
+        
         private var currentQuestionIndex = 0
         var currentQuestion: Question {
             guard !quiz.questions.isEmpty else {
@@ -36,11 +38,13 @@ struct QuizScreenFeature {
     enum Action: ViewAction {
         case view(View)
         case updateQuiz
+        case quizWhyViewAction(PresentationAction<QuizWhyFeature.Action>)
         
         @CasePathable
         enum View {
             case navigateBack
             case pause
+            case showQuizWhyView
         }
     }
     
@@ -48,7 +52,9 @@ struct QuizScreenFeature {
     @Dependency(\.storageService) var storageService
     
     var body: some Reducer<State, Action> {
-        Reduce { state, action in
+        Reduce {
+            state,
+            action in
             switch action {
             case .view(.navigateBack):
                 return .run { _ in
@@ -58,14 +64,25 @@ struct QuizScreenFeature {
             case .view(.pause):
                 return .none
                 
+            case .view(.showQuizWhyView):
+                state.quizWhyViewState = .init(
+                    descriptionText: state.currentQuestion.descriptionText,
+                    link: state.currentQuestion.descriptionLink
+                )
+                return .none
+                
             case .updateQuiz:
                 return .run { [quiz = state.quiz] _ in
                     try await storageService.updateQuiz(quiz)
                 }
                 
-//            default:
-//                return .none
+                
+            default:
+                return .none
             }
+        }
+        .ifLet(\.$quizWhyViewState, action: \.quizWhyViewAction) {
+            QuizWhyFeature()
         }
     }
 }

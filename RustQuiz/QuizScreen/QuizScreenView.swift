@@ -9,7 +9,7 @@ import ComposableArchitecture
 
 @ViewAction(for: QuizScreenFeature.self)
 struct QuizScreenView: View {
-    let store: StoreOf<QuizScreenFeature>
+    @Bindable var store: StoreOf<QuizScreenFeature>
     
     var body: some View {
         VStack(spacing: 20) {
@@ -41,7 +41,7 @@ struct QuizScreenView: View {
             
             VStack(spacing: 10) {
                 if !store.currentQuestion.hasUserAnswered {
-                    QuizWhyButton(action: {})
+                    QuizWhyButtonView(action: { send(.showQuizWhyView) })
                 }
                 
                 QuizExpectedMarkView(expectedMark: 100)
@@ -50,6 +50,16 @@ struct QuizScreenView: View {
         .padding(.vertical)
         .mainBackground()
         .navigationBarBackButtonHidden(true)
+        .sheet(
+            item: $store.scope(
+                state: \.quizWhyViewState,
+                action: \.quizWhyViewAction
+            ),
+            content: { store in
+                QuizWhyView(store: store)
+                    .presentationDetents([.medium, .large])
+            }
+        )
         .gesture(
             DragGesture(minimumDistance: 50)
                 .onEnded { value in

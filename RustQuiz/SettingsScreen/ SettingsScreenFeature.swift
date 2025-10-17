@@ -6,7 +6,7 @@
 
 import Foundation
 import ComposableArchitecture
-import UIKit
+import SwiftUI
 
 @Reducer
 struct SettingsScreenFeature {
@@ -28,6 +28,7 @@ struct SettingsScreenFeature {
     }
     
     @Dependency(\.dismiss) var dismiss
+    @Dependency(\.openURL) var openURL
     
     var body: some Reducer<State, Action> {
         Reduce { state, action in
@@ -38,12 +39,10 @@ struct SettingsScreenFeature {
                 }
                 
             case .view(.changeLanguage):
-                if let url = URL(string: UIApplication.openSettingsURLString) {
-                    if UIApplication.shared.canOpenURL(url) {
-                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
-                    }
+                return .run { _ in
+                    guard let url = URL(string: UIApplication.openSettingsURLString) else { return }
+                    await openURL(url)
                 }
-                return .none
                 
             case .view(.getLanguageName):
                 let languageCode = Locale.current.language.languageCode?.identifier ?? "en"
