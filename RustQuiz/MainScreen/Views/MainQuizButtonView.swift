@@ -14,7 +14,7 @@ struct MainQuizButtonView: View {
     
     var body: some View {
         Button(action: { action(quiz) }) {
-            Text(quiz.themeLocalized)
+            Text(LocalizedStringKey(stringLiteral: quiz.theme))
                 .subFont(size: screenSize.width * 0.045, lineLimit: 4)
                 .multilineTextAlignment(.center)
                 .foregroundStyle(

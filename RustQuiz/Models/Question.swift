@@ -17,8 +17,11 @@ struct Question: Identifiable, Decodable {
     
     var hasUserAnswered = false
     var isUserAnswerCorrect = false
-    
-    static func get_placeholder() -> Self {
+}
+
+
+extension Question {
+    static func getNoneQuestion() -> Self {
         .init(
             id: UUID(),
             title: "None",
@@ -26,12 +29,5 @@ struct Question: Identifiable, Decodable {
             descriptionText: "None",
             descriptionLink: "None"
         )
-    }
-}
-
-// MARK: - Properties used in view
-extension Question {
-    var titleLocalized: LocalizedStringKey {
-        LocalizedStringKey(stringLiteral: title)
     }
 }

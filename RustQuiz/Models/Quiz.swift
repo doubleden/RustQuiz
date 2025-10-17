@@ -14,12 +14,8 @@ struct Quiz: Identifiable, Decodable {
     var questions: [Question]
 }
 
-// MARK: - Properties used in view
+
 extension Quiz {
-    var themeLocalized: LocalizedStringKey {
-        LocalizedStringKey(stringLiteral: theme)
-    }
-    
     var averageRating: Int {
         let answered = questions.filter { $0.hasUserAnswered }
         guard !answered.isEmpty else { return 0 }

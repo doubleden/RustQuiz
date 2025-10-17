@@ -15,7 +15,7 @@ struct MainSourceSectionView: View {
     var body: some View {
         VStack {
             HeaderView(
-                sourceTitle: source.titleLocalized,
+                sourceTitle: LocalizedStringKey(stringLiteral: source.title),
                 viewAllAction: viewAllAction
             )
             

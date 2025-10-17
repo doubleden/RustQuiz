@@ -30,7 +30,7 @@ struct QuizAnswerButtonView: View {
     
     var body: some View {
         Button(action: action) {
-            Text(answer.titleLocalized)
+            Text(LocalizedStringKey(stringLiteral: answer.title))
                 .mainButtonShape(
                     fontColor: fontColor,
                     backgroundColor: backgroundColor

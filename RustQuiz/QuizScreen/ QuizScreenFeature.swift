@@ -19,7 +19,7 @@ struct QuizScreenFeature {
         private var currentQuestionIndex = 0
         var currentQuestion: Question {
             guard !quiz.questions.isEmpty else {
-                return Question.get_placeholder()
+                return Question.getNoneQuestion()
             }
             
             return quiz.questions[currentQuestionIndex]

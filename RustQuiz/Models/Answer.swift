@@ -12,10 +12,3 @@ struct Answer: Identifiable, Decodable {
     var title: String
     var isCorrect = false
 }
-
-// MARK: - Properties used in view
-extension Answer {
-    var titleLocalized: LocalizedStringKey {
-        LocalizedStringKey(stringLiteral: title)
-    }
-}
