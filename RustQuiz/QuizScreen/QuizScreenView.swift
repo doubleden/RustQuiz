@@ -24,7 +24,7 @@ struct QuizScreenView: View {
             QuizProgressIndicator(
                 averageRating: store.quiz.averageRating,
                 numberOfQuestions: store.quiz.questions.count,
-                numberOfAnsweredQuestions: 5
+                numberOfAnsweredQuestions: store.quantityOfAnsweredQuestions
             )
             
             Spacer()

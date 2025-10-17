@@ -22,7 +22,7 @@ struct BannerModifier: ViewModifier {
         content
             .frame(maxWidth: .infinity)
             .ignoresSafeArea(.container, edges: .horizontal)
-            .background(CustomColor.backgroundColor.color.opacity(0.7))
+            .background(CustomColor.subElementsColor.color.opacity(0.7))
             .overlay(
                 ZStack {
                     LinearGradient(

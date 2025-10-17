@@ -18,7 +18,7 @@ struct FullBannerModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .frame(maxWidth: .infinity)
-            .background(CustomColor.backgroundColor.color.opacity(0.7))
+            .background(CustomColor.subElementsColor.color.opacity(0.7))
             .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
             .overlay(
                 RoundedRectangle(cornerRadius: cornerRadius)

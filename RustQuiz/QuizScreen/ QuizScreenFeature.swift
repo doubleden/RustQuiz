@@ -23,6 +23,10 @@ struct QuizScreenFeature {
             return quiz.questions[currentQuestionIndex]
         }
         
+        var quantityOfAnsweredQuestions: Int {
+            quiz.questions.filter({$0.hasUserAnswered}).count
+        }
+        
         
         init(quiz: Quiz) {
             self.quiz = quiz

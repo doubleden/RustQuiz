@@ -29,7 +29,7 @@ struct MainQuizButtonView: View {
                 )
                 .background{
                     ZStack {
-                        CustomColor.backgroundColor.color
+                        CustomColor.subElementsColor.color
                         
                         CustomColor.activeColor.color
                             .opacity(Double(quiz.averageRating) / 100.0)

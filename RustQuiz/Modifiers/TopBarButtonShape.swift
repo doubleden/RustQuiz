@@ -23,7 +23,7 @@ struct TopBarButtonShapeModifier: ViewModifier {
                 width: screenSize.width * 0.13,
                 height: screenSize.width * 0.13
             )
-            .background(CustomColor.backgroundColor.color)
+            .background(CustomColor.subElementsColor.color)
             .foregroundStyle(CustomColor.activeColor.color)
             .clipShape(RoundedRectangle(cornerRadius: 15))
             .shadow(radius: 2.5)

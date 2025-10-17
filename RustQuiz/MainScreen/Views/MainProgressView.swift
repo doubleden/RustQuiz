@@ -51,7 +51,7 @@ struct MainProgressView: View {
             
             Text("Learned \(progress)%")
                 .subFont(size: 20)
-                .shadow(radius: progress >= 80 ? 1 : 0)
+//                .shadow(radius: progress >= 80 ? 1 : 0)
                 .foregroundStyle(
                     progress >= 80
                     ? CustomColor.backgroundColor.color

@@ -42,7 +42,7 @@ struct QuizProgressIndicator: View {
                 )
             
             HStack {
-                Text("\(numberOfQuestions) / \(numberOfAnsweredQuestions)")
+                Text("\(numberOfAnsweredQuestions) / \(numberOfQuestions)")
                     .subFont(size: screenSize.width * 0.045)
                 Spacer()
             }
