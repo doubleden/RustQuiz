@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		050CB6152E93EEDC0060E2AD /*  MainScreenFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050CB6122E93EEDC0060E2AD /*  MainScreenFeature.swift */; };
 		050CB6162E93EEDC0060E2AD /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050CB6132E93EEDC0060E2AD /* MainScreenView.swift */; };
+		051D569F2EA3B273006C0D10 /* QuizTransitionButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051D569E2EA3B273006C0D10 /* QuizTransitionButtonsView.swift */; };
 		0533878D2E8A7D7300554004 /* QuizTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0533878C2E8A7D7300554004 /* QuizTable.swift */; };
 		0533878F2E8A7D8B00554004 /* QuestionTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0533878E2E8A7D8B00554004 /* QuestionTable.swift */; };
 		053387912E8A7D9000554004 /* AnswerTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053387902E8A7D9000554004 /* AnswerTable.swift */; };
@@ -75,6 +76,7 @@
 /* Begin PBXFileReference section */
 		050CB6122E93EEDC0060E2AD /*  MainScreenFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " MainScreenFeature.swift"; sourceTree = "<group>"; };
 		050CB6132E93EEDC0060E2AD /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
+		051D569E2EA3B273006C0D10 /* QuizTransitionButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTransitionButtonsView.swift; sourceTree = "<group>"; };
 		0533878C2E8A7D7300554004 /* QuizTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTable.swift; sourceTree = "<group>"; };
 		0533878E2E8A7D8B00554004 /* QuestionTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTable.swift; sourceTree = "<group>"; };
 		053387902E8A7D9000554004 /* AnswerTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTable.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				054AB5FB2EA25C61005EDAC7 /* QuizAnswerButtonView.swift */,
 				054AB5FD2EA2628C005EDAC7 /* QuizWhyButtonView.swift */,
 				054AB5FF2EA2647C005EDAC7 /* QuizExpectedMarkView.swift */,
+				051D569E2EA3B273006C0D10 /* QuizTransitionButtonsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 				050CB6152E93EEDC0060E2AD /*  MainScreenFeature.swift in Sources */,
 				050CB6162E93EEDC0060E2AD /* MainScreenView.swift in Sources */,
 				05C16D732E97D7CB00C35053 /* TopBarButtonShape.swift in Sources */,
+				051D569F2EA3B273006C0D10 /* QuizTransitionButtonsView.swift in Sources */,
 				0533878D2E8A7D7300554004 /* QuizTable.swift in Sources */,
 				053388592E8C1B0900554004 /* Question.swift in Sources */,
 				05C16D782E97E75A00C35053 /* ButtonPressInStyle.swift in Sources */,

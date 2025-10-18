@@ -60,12 +60,22 @@ struct QuizScreenView: View {
             
             Spacer()
             
-            VStack(spacing: 10) {
-                if store.currentQuestion.hasUserAnswered {
-                    QuizWhyButtonView(action: { send(.showQuizWhyView) })
+            GeometryReader { geo in
+                ZStack {
+                    VStack(spacing: 10) {
+                        if store.currentQuestion.hasUserAnswered {
+                            QuizWhyButtonView(action: { send(.showQuizWhyView) })
+                        }
+                        
+                        QuizExpectedMarkView(expectedMark: store.quiz.averageRating)
+                    }
+                    
+                    QuizTransitionButtonsView(
+                        nextAction: { send(.nextQuestion, animation: .linear) },
+                        previousAction: { send(.previousQuestion, animation: .linear) }
+                    )
                 }
-                
-                QuizExpectedMarkView(expectedMark: store.quiz.averageRating)
+                .frame(height: geo.size.width * 0.15)
             }
         }
         .padding(.vertical)
@@ -89,11 +99,9 @@ struct QuizScreenView: View {
                 .onEnded { value in
                     if value.translation.width < 0 {
                         // Свайп влево
-                        print("next question")
                         send(.nextQuestion, animation: .linear)
                     } else if value.translation.width > 0 {
                         // Свайп вправо
-                        print("past question")
                         send(.previousQuestion, animation: .linear)
                     }
                 }
