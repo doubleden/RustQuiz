@@ -14,7 +14,6 @@ struct QuizScreenFeature {
     struct State {
         var quiz: Quiz
         @Presents var quizWhyViewState: QuizWhyFeature.State?
-        var transition = Transition.right
         var isPauseViewPresented = false
         
         var currentQuestionIndex = 0
@@ -103,7 +102,6 @@ struct QuizScreenFeature {
                 guard state.quiz.questions.count > state.currentQuestionIndex + 1 else {
                     return .none
                 }
-                state.transition = .right
                 state.currentQuestionIndex += 1
                 return .none
                 
@@ -111,7 +109,6 @@ struct QuizScreenFeature {
                 guard state.currentQuestionIndex > 0 else {
                     return .none
                 }
-                state.transition = .left
                 state.currentQuestionIndex -= 1
                 return .none
                 
@@ -128,12 +125,5 @@ struct QuizScreenFeature {
         .ifLet(\.$quizWhyViewState, action: \.quizWhyViewAction) {
             QuizWhyFeature()
         }
-    }
-}
-
-// MARK: - Transition
-extension QuizScreenFeature {
-    enum Transition {
-        case left, right
     }
 }

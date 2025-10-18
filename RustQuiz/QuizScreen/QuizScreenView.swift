@@ -10,21 +10,7 @@ import ComposableArchitecture
 @ViewAction(for: QuizScreenFeature.self)
 struct QuizScreenView: View {
     @Bindable var store: StoreOf<QuizScreenFeature>
-    
-    var transition: AnyTransition {
-        switch store.transition {
-        case .right:
-            AnyTransition.asymmetric(
-                insertion: .move(edge: .trailing),
-                removal: .move(edge: .leading)
-            )
-        case .left:
-            AnyTransition.asymmetric(
-                insertion: .move(edge: .leading),
-                removal: .move(edge: .trailing)
-            )
-        }
-    }
+    @State private var transition = Transition.next
     
     var body: some View {
         VStack(spacing: 20) {
@@ -42,7 +28,7 @@ struct QuizScreenView: View {
                 )
             }
             .id(store.currentQuestion.id)
-            .transition(transition)
+            .transition(transition.movement)
             
             QuizProgressIndicator(
                 progress: store.progress,
@@ -63,7 +49,7 @@ struct QuizScreenView: View {
                 }
             }
             .padding(.horizontal, 30)
-            .transition(transition)
+            .transition(transition.movement)
             
             
             Spacer()
@@ -84,9 +70,11 @@ struct QuizScreenView: View {
                     
                     QuizTransitionButtonsView(
                         nextAction: {
+                            transition = .next
                             send(.nextQuestion, animation: .linear)
                         },
                         previousAction: {
+                            transition = .previous
                             send(.previousQuestion, animation: .linear)
                         }
                     )
@@ -122,13 +110,37 @@ struct QuizScreenView: View {
                 .onEnded { value in
                     if value.translation.width < 0 {
                         // Свайп влево
+                        transition = .next
                         send(.nextQuestion, animation: .linear)
                     } else if value.translation.width > 0 {
                         // Свайп вправо
+                        transition = .previous
                         send(.previousQuestion, animation: .linear)
                     }
                 }
         )
+    }
+}
+
+extension QuizScreenView {
+    enum Transition {
+        case next
+        case previous
+        
+        var movement: AnyTransition {
+            switch self {
+            case .next:
+                AnyTransition.asymmetric(
+                    insertion: .move(edge: .trailing),
+                    removal: .move(edge: .leading)
+                )
+            case .previous:
+                AnyTransition.asymmetric(
+                    insertion: .move(edge: .leading),
+                    removal: .move(edge: .trailing)
+                )
+            }
+        }
     }
 }
 
