@@ -48,17 +48,16 @@ struct MainProgressView: View {
                 .mask {
                     RoundedRectangle(cornerRadius: 20)
                 }
+                .shadow(radius: 2.5)
             
             Text("Learned \(progress)%")
                 .subFont(size: 20)
-//                .shadow(radius: progress >= 80 ? 1 : 0)
                 .foregroundStyle(
                     progress >= 80
                     ? CustomColor.backgroundColor.color
                     : CustomColor.titleColor.color
                 )
         }
-        .shadow(radius: 2.5)
         .frame(
             width: screenSize.width * 0.63,
             height: screenSize.width * 0.15

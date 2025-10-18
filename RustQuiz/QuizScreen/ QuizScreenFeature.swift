@@ -15,6 +15,7 @@ struct QuizScreenFeature {
         var quiz: Quiz
         @Presents var quizWhyViewState: QuizWhyFeature.State?
         var transition = Transition.left
+        var isPauseViewPresented = false
         
         var currentQuestionIndex = 0
         var currentQuestion: Question {
@@ -39,8 +40,9 @@ struct QuizScreenFeature {
         }
     }
     
-    enum Action: ViewAction {
+    enum Action: ViewAction, BindableAction {
         case view(View)
+        case binding(BindingAction<State>)
         case updateQuiz
         case quizWhyViewAction(PresentationAction<QuizWhyFeature.Action>)
         
@@ -60,6 +62,8 @@ struct QuizScreenFeature {
     @Dependency(\.storageService) var storageService
     
     var body: some Reducer<State, Action> {
+        BindingReducer()
+        
         Reduce {
             state,
             action in
@@ -77,6 +81,7 @@ struct QuizScreenFeature {
                 }
                 
             case .view(.pause):
+                state.isPauseViewPresented.toggle()
                 return .none
                 
             case .view(.showQuizWhyView):

@@ -10,6 +10,8 @@
 		050CB6152E93EEDC0060E2AD /*  MainScreenFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050CB6122E93EEDC0060E2AD /*  MainScreenFeature.swift */; };
 		050CB6162E93EEDC0060E2AD /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050CB6132E93EEDC0060E2AD /* MainScreenView.swift */; };
 		051D569F2EA3B273006C0D10 /* QuizTransitionButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051D569E2EA3B273006C0D10 /* QuizTransitionButtonsView.swift */; };
+		051D56A12EA3BC0F006C0D10 /* CustomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051D56A02EA3BC0F006C0D10 /* CustomSheet.swift */; };
+		051D56A42EA3BF55006C0D10 /* QuizPauseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051D56A32EA3BF55006C0D10 /* QuizPauseView.swift */; };
 		0533878D2E8A7D7300554004 /* QuizTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0533878C2E8A7D7300554004 /* QuizTable.swift */; };
 		0533878F2E8A7D8B00554004 /* QuestionTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0533878E2E8A7D8B00554004 /* QuestionTable.swift */; };
 		053387912E8A7D9000554004 /* AnswerTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053387902E8A7D9000554004 /* AnswerTable.swift */; };
@@ -77,6 +79,8 @@
 		050CB6122E93EEDC0060E2AD /*  MainScreenFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " MainScreenFeature.swift"; sourceTree = "<group>"; };
 		050CB6132E93EEDC0060E2AD /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
 		051D569E2EA3B273006C0D10 /* QuizTransitionButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTransitionButtonsView.swift; sourceTree = "<group>"; };
+		051D56A02EA3BC0F006C0D10 /* CustomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSheet.swift; sourceTree = "<group>"; };
+		051D56A32EA3BF55006C0D10 /* QuizPauseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizPauseView.swift; sourceTree = "<group>"; };
 		0533878C2E8A7D7300554004 /* QuizTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTable.swift; sourceTree = "<group>"; };
 		0533878E2E8A7D8B00554004 /* QuestionTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTable.swift; sourceTree = "<group>"; };
 		053387902E8A7D9000554004 /* AnswerTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTable.swift; sourceTree = "<group>"; };
@@ -164,6 +168,14 @@
 			path = MainScreen;
 			sourceTree = "<group>";
 		};
+		051D56A22EA3BF2F006C0D10 /* QuizPauseView */ = {
+			isa = PBXGroup;
+			children = (
+				051D56A32EA3BF55006C0D10 /* QuizPauseView.swift */,
+			);
+			path = QuizPauseView;
+			sourceTree = "<group>";
+		};
 		053388532E8C1A5F00554004 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +229,7 @@
 				05C16D792E97EB8500C35053 /* Banner.swift */,
 				05402BB82E9FEDD100AA10EE /* FullBanner.swift */,
 				054AB5F92EA23E67005EDAC7 /* MainButtonShape.swift */,
+				051D56A02EA3BC0F006C0D10 /* CustomSheet.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -341,6 +354,7 @@
 		056C6CE12E86B48C006C44D3 /* QuizScreen */ = {
 			isa = PBXGroup;
 			children = (
+				051D56A22EA3BF2F006C0D10 /* QuizPauseView */,
 				054AB6032EA27A23005EDAC7 /* QuizWhyView */,
 				054AB5F22EA11DA7005EDAC7 /* Views */,
 				056C6CDF2E86B48C006C44D3 /*  QuizScreenFeature.swift */,
@@ -516,6 +530,7 @@
 			files = (
 				0533878F2E8A7D8B00554004 /* QuestionTable.swift in Sources */,
 				056C6C152E868A07006C44D3 /* RustQuizApp.swift in Sources */,
+				051D56A42EA3BF55006C0D10 /* QuizPauseView.swift in Sources */,
 				053387CE2E8AAB0000554004 /* SeedService.swift in Sources */,
 				0533885B2E8C1B1800554004 /* Answer.swift in Sources */,
 				056C6C612E868E98006C44D3 /* RootScreenView.swift in Sources */,
@@ -532,6 +547,7 @@
 				056C6C622E868E98006C44D3 /*  RootScreenFeature.swift in Sources */,
 				056C6CE72E86B644006C44D3 /* MainNavigationScreenFeature.swift in Sources */,
 				054D785A2E96B7F300DFCD34 /* MainTitleView.swift in Sources */,
+				051D56A12EA3BC0F006C0D10 /* CustomSheet.swift in Sources */,
 				056C6CE82E86B644006C44D3 /* MainNavigationScreenView.swift in Sources */,
 				054AB5F82EA15D3A005EDAC7 /* QuizProgressIndicator.swift in Sources */,
 				053387912E8A7D9000554004 /* AnswerTable.swift in Sources */,

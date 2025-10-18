@@ -38,6 +38,7 @@ fileprivate struct HeaderView: View {
                 Button("link", action: linkAction)
                     .foregroundStyle(CustomColor.activeColor.color)
             }
+            .background(CustomColor.backgroundColor.color)
             
             HStack {
                 Spacer()

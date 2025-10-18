@@ -104,6 +104,13 @@ struct QuizScreenView: View {
                     .presentationDetents([.medium, .large])
             }
         )
+        .customSheet(isPresented: $store.isPauseViewPresented) {
+            QuizPauseView(
+                continueAction: { send(.pause) },
+                restartAction: {},
+                backToMenuAction: { send(.navigateBack) }
+            )
+        }
         .gesture(
             DragGesture(minimumDistance: 50)
                 .onEnded { value in

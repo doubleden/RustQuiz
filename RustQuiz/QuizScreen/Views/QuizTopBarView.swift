@@ -15,31 +15,35 @@ struct QuizTopBarView: View {
     @Environment(\.screenSize) private var screenSize
     
     var body: some View {
-        HStack {
-            Button(action: navigateBackAction) {
-                Image(systemName: "chevron.left")
-                    .resizable()
-                    .scaledToFit()
-                    .topBarButtonShape()
+        ZStack {
+            HStack {
+                Button(action: navigateBackAction) {
+                    Image(systemName: "chevron.left")
+                        .resizable()
+                        .scaledToFit()
+                        .topBarButtonShape()
+                }
+                .disabled(true)
+                .opacity(0)
+                
+                Spacer()
+                
+                Text(title)
+                    .subFont(size: screenSize.width * 0.045, lineLimit: 3)
+                    .multilineTextAlignment(.center)
+                    .foregroundStyle(CustomColor.titleColor.color)
+                
+                Spacer()
+                
+                Button(action: pauseAction) {
+                    Image(systemName: "pause")
+                        .resizable()
+                        .scaledToFit()
+                        .topBarButtonShape()
+                }
             }
-            
-            Spacer()
-            
-            Text(title)
-                .subFont(size: screenSize.width * 0.045, lineLimit: 3)
-                .multilineTextAlignment(.center)
-                .foregroundStyle(CustomColor.titleColor.color)
-            
-            Spacer()
-            
-            Button(action: pauseAction) {
-                Image(systemName: "pause")
-                    .resizable()
-                    .scaledToFit()
-                    .topBarButtonShape()
-            }
+            .buttonStyle(ButtonPressInStyle())
         }
-        .buttonStyle(ButtonPressInStyle())
         .padding()
     }
 }
