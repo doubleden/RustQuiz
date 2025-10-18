@@ -48,7 +48,9 @@ struct QuizScreenView: View {
                 VStack {
                     QuizAnswerButtonView(
                         answer: answer,
-                        action: { send(.didSelectAnswer(answer), animation: .linear) }
+                        action: {
+                            send(.didSelectAnswer(answer), animation: .linear)
+                        }
                     )
                     .disabled(store.currentQuestion.hasUserAnswered)
                     
@@ -64,15 +66,23 @@ struct QuizScreenView: View {
                 ZStack {
                     VStack(spacing: 10) {
                         if store.currentQuestion.hasUserAnswered {
-                            QuizWhyButtonView(action: { send(.showQuizWhyView) })
+                            QuizWhyButtonView(
+                                action: { send(.showQuizWhyView) }
+                            )
                         }
                         
-                        QuizExpectedMarkView(expectedMark: store.quiz.averageRating)
+                        QuizExpectedMarkView(
+                            expectedMark: store.quiz.averageRating
+                        )
                     }
                     
                     QuizTransitionButtonsView(
-                        nextAction: { send(.nextQuestion, animation: .linear) },
-                        previousAction: { send(.previousQuestion, animation: .linear) }
+                        nextAction: {
+                            send(.nextQuestion, animation: .linear)
+                        },
+                        previousAction: {
+                            send(.previousQuestion, animation: .linear)
+                        }
                     )
                 }
                 .frame(height: geo.size.width * 0.15)
