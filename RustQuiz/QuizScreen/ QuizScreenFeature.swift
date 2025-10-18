@@ -13,8 +13,8 @@ struct QuizScreenFeature {
     @ObservableState
     struct State {
         var quiz: Quiz
-        
         @Presents var quizWhyViewState: QuizWhyFeature.State?
+        var transition = Transition.left
         
         var currentQuestionIndex = 0
         var currentQuestion: Question {
@@ -51,6 +51,8 @@ struct QuizScreenFeature {
             case pause
             case showQuizWhyView
             case didSelectAnswer(Answer)
+            case nextQuestion
+            case previousQuestion
         }
     }
     
@@ -92,6 +94,22 @@ struct QuizScreenFeature {
                 state.quiz.questions[state.currentQuestionIndex].isUserAnswerCorrect = answer.isCorrect
                 return .none
                 
+            case .view(.nextQuestion):
+                guard state.quiz.questions.count > state.currentQuestionIndex + 1 else {
+                    return .none
+                }
+                state.transition = .right
+                state.currentQuestionIndex += 1
+                return .none
+                
+            case .view(.previousQuestion):
+                guard state.currentQuestionIndex > 0 else {
+                    return .none
+                }
+                state.transition = .left
+                state.currentQuestionIndex -= 1
+                return .none
+                
             case .updateQuiz:
                 return .run { [quiz = state.quiz] _ in
                     try await storageService.updateQuiz(quiz)
@@ -105,5 +123,12 @@ struct QuizScreenFeature {
         .ifLet(\.$quizWhyViewState, action: \.quizWhyViewAction) {
             QuizWhyFeature()
         }
+    }
+}
+
+// MARK: - Transition
+extension QuizScreenFeature {
+    enum Transition {
+        case left, right
     }
 }

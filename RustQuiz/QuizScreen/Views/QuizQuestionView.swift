@@ -13,14 +13,17 @@ struct QuizQuestionView: View {
     @Environment(\.screenSize) private var screenSize
     
     var body: some View {
-        Text(question)
-            .padding(.horizontal)
-            .padding(.vertical)
-            .frame(minHeight: screenSize.width * 0.45)
-            .subFont(size: screenSize.width * 0.09, lineLimit: 5, scaleFactor: 0.5)
-            .multilineTextAlignment(.center)
-            .foregroundStyle(CustomColor.generalFontColor.color)
-            .banner()
+        VStack {
+            Text(question)
+                .padding(.horizontal)
+                .padding(.vertical)
+                .frame(minHeight: screenSize.width * 0.45)
+                .frame(maxWidth: .infinity)
+                .subFont(size: screenSize.width * 0.09, lineLimit: 5, scaleFactor: 0.5)
+                .multilineTextAlignment(.center)
+                .foregroundStyle(CustomColor.generalFontColor.color)
+        }
+        .banner()
     }
 }
 

@@ -11,6 +11,15 @@ import ComposableArchitecture
 struct QuizScreenView: View {
     @Bindable var store: StoreOf<QuizScreenFeature>
     
+    var transition: AnyTransition {
+        switch store.transition {
+        case .right:
+            AnyTransition.move(edge: .trailing)
+        case .left:
+            AnyTransition.move(edge: .leading)
+        }
+    }
+    
     var body: some View {
         VStack(spacing: 20) {
             QuizTopBarView(
@@ -19,7 +28,15 @@ struct QuizScreenView: View {
                 pauseAction: { send(.pause) }
             )
             
-            QuizQuestionView(question: LocalizedStringKey(stringLiteral: store.currentQuestion.title))
+            VStack {
+                QuizQuestionView(
+                    question: LocalizedStringKey(
+                        stringLiteral: store.currentQuestion.title
+                    )
+                )
+            }
+            .id(store.currentQuestion.id)
+            .transition(transition)
             
             QuizProgressIndicator(
                 progress: store.progress,
@@ -28,13 +45,17 @@ struct QuizScreenView: View {
             )
             
             ForEach(store.currentQuestion.answers) { answer in
-                QuizAnswerButtonView(
-                    answer: answer,
-                    action: { send(.didSelectAnswer(answer), animation: .linear) }
-                )
-                .disabled(store.currentQuestion.hasUserAnswered)
+                VStack {
+                    QuizAnswerButtonView(
+                        answer: answer,
+                        action: { send(.didSelectAnswer(answer), animation: .linear) }
+                    )
+                    .disabled(store.currentQuestion.hasUserAnswered)
+                    
+                }
             }
             .padding(.horizontal, 30)
+            .transition(transition)
             
             
             Spacer()
@@ -69,9 +90,11 @@ struct QuizScreenView: View {
                     if value.translation.width < 0 {
                         // Свайп влево
                         print("next question")
+                        send(.nextQuestion, animation: .linear)
                     } else if value.translation.width > 0 {
                         // Свайп вправо
                         print("past question")
+                        send(.previousQuestion, animation: .linear)
                     }
                 }
         )
@@ -96,6 +119,20 @@ struct QuizScreenView: View {
                                     .init(id: UUID(), title: "no", isCorrect: false),
                                     .init(id: UUID(), title: "maybe", isCorrect: false),
                                     .init(id: UUID(), title: "none", isCorrect: false)
+                                ],
+                                descriptionText: "dsdsdsd",
+                                descriptionLink: "sddsdsd",
+                                hasUserAnswered: true,
+                                isUserAnswerCorrect: true
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "333333333?",
+                                answers: [
+                                    .init(id: UUID(), title: "Y", isCorrect: true),
+                                    .init(id: UUID(), title: "o", isCorrect: false),
+                                    .init(id: UUID(), title: "2", isCorrect: false),
+                                    .init(id: UUID(), title: "3", isCorrect: false)
                                 ],
                                 descriptionText: "dsdsdsd",
                                 descriptionLink: "sddsdsd",
