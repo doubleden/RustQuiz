@@ -14,7 +14,7 @@ struct QuizScreenFeature {
     struct State {
         var quiz: Quiz
         @Presents var quizWhyViewState: QuizWhyFeature.State?
-        var transition = Transition.left
+        var transition = Transition.right
         var isPauseViewPresented = false
         
         var currentQuestionIndex = 0

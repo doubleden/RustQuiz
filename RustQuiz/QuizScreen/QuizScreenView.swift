@@ -14,9 +14,15 @@ struct QuizScreenView: View {
     var transition: AnyTransition {
         switch store.transition {
         case .right:
-            AnyTransition.move(edge: .trailing)
+            AnyTransition.asymmetric(
+                insertion: .move(edge: .trailing),
+                removal: .move(edge: .leading)
+            )
         case .left:
-            AnyTransition.move(edge: .leading)
+            AnyTransition.asymmetric(
+                insertion: .move(edge: .leading),
+                removal: .move(edge: .trailing)
+            )
         }
     }
     
@@ -158,6 +164,20 @@ struct QuizScreenView: View {
                                     .init(id: UUID(), title: "o", isCorrect: false),
                                     .init(id: UUID(), title: "2", isCorrect: false),
                                     .init(id: UUID(), title: "3", isCorrect: false)
+                                ],
+                                descriptionText: "dsdsdsd",
+                                descriptionLink: "sddsdsd",
+                                hasUserAnswered: true,
+                                isUserAnswerCorrect: true
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "222222?",
+                                answers: [
+                                    .init(id: UUID(), title: "Y1", isCorrect: true),
+                                    .init(id: UUID(), title: "o2", isCorrect: false),
+                                    .init(id: UUID(), title: "24", isCorrect: false),
+                                    .init(id: UUID(), title: "36", isCorrect: false)
                                 ],
                                 descriptionText: "dsdsdsd",
                                 descriptionLink: "sddsdsd",
