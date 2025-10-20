@@ -11,12 +11,14 @@ import SwiftUI
 extension View {
     func mainButtonShape(
         fontColor: Color,
-        backgroundColor: Color
+        backgroundColor: Color,
+        heightMultiplayer: Double = 0.12
     ) -> some View {
         modifier(
             MainButtonShapeModifier(
                 fontColor: fontColor,
-                backgroundColor: backgroundColor
+                backgroundColor: backgroundColor,
+                heightMultiplayer: heightMultiplayer
             )
         )
     }
@@ -25,7 +27,7 @@ extension View {
 struct MainButtonShapeModifier: ViewModifier {
     var fontColor: Color
     var backgroundColor: Color
-    var heightMultiplayer = 0.12
+    var heightMultiplayer: Double
     @Environment(\.screenSize) private var screenSize
     
     func body(content: Content) -> some View {

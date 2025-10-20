@@ -13,6 +13,62 @@ struct QuizScreenView: View {
     @State private var transition = Transition.next
     
     var body: some View {
+        ZStack {
+            if store.quiz.questions.allSatisfy({ $0.hasUserAnswered }) {
+                ResultView(
+                    title: store.quiz.theme,
+                    averageRating: store.quiz.averageRating,
+                    backToMenuAction: { send(.navigateBack) }
+                )
+                .transition(.opacity)
+            } else {
+                quizView
+                    .transition(.opacity)
+            }
+        }
+        .padding(.vertical)
+        .mainBackground()
+        .navigationBarBackButtonHidden(true)
+        .onAppear {
+            send(.clearQuestionsCache)
+        }
+        .sheet(
+            item: $store.scope(
+                state: \.quizWhyViewState,
+                action: \.quizWhyViewAction
+            ),
+            content: { store in
+                QuizWhyView(store: store)
+                    .presentationDetents([.medium, .large])
+            }
+        )
+        .customSheet(isPresented: $store.isPauseViewPresented) {
+            QuizPauseView(
+                title: store.quiz.theme, continueAction: { send(.pause) },
+                restartAction: { send(.restart) },
+                backToMenuAction: { send(.navigateBack) }
+            )
+        }
+        .gesture(
+            DragGesture(minimumDistance: 50)
+                .onEnded { value in
+                    if value.translation.width < 0 {
+                        // Свайп влево
+                        transition = .next
+                        send(.nextQuestion, animation: .linear)
+                    } else if value.translation.width > 0 {
+                        // Свайп вправо
+                        transition = .previous
+                        send(.previousQuestion, animation: .linear)
+                    }
+                }
+        )
+    }
+}
+
+// MARK: - QuizView
+extension QuizScreenView {
+    var quizView: some View {
         VStack(spacing: 20) {
             QuizTopBarView(
                 questions: store.quiz.questions,
@@ -83,43 +139,6 @@ struct QuizScreenView: View {
                 .frame(height: geo.size.width * 0.15)
             }
         }
-        .padding(.vertical)
-        .mainBackground()
-        .navigationBarBackButtonHidden(true)
-        .onAppear {
-            send(.clearQuestionsCache)
-        }
-        .sheet(
-            item: $store.scope(
-                state: \.quizWhyViewState,
-                action: \.quizWhyViewAction
-            ),
-            content: { store in
-                QuizWhyView(store: store)
-                    .presentationDetents([.medium, .large])
-            }
-        )
-        .customSheet(isPresented: $store.isPauseViewPresented) {
-            QuizPauseView(
-                title: store.quiz.theme, continueAction: { send(.pause) },
-                restartAction: { send(.restart) },
-                backToMenuAction: { send(.navigateBack) }
-            )
-        }
-        .gesture(
-            DragGesture(minimumDistance: 50)
-                .onEnded { value in
-                    if value.translation.width < 0 {
-                        // Свайп влево
-                        transition = .next
-                        send(.nextQuestion, animation: .linear)
-                    } else if value.translation.width > 0 {
-                        // Свайп вправо
-                        transition = .previous
-                        send(.previousQuestion, animation: .linear)
-                    }
-                }
-        )
     }
 }
 

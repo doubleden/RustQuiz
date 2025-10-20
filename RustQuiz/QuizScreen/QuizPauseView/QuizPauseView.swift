@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct QuizPauseView: View {
-    @Environment(\.screenSize) private var screenSize
     let title: String
     let continueAction: () -> Void
     let restartAction: () -> Void
     let backToMenuAction: () -> Void
+    
+    @Environment(\.screenSize) private var screenSize
     
     var body: some View {
         ZStack {

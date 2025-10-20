@@ -96,14 +96,16 @@ struct QuizScreenFeature {
                 state.quiz.questions[state.currentQuestionIndex].hasUserAnswered = true
                 state.quiz.questions[state.currentQuestionIndex].isUserAnswerCorrect = answer.isCorrect
                 
-                if !answer.isCorrect {
+                guard answer.isCorrect else {
                     for (index, answer) in state.quiz.questions[state.currentQuestionIndex].answers.enumerated() {
                         if answer.isCorrect {
                             state.quiz.questions[state.currentQuestionIndex].answers[index].isSelected = true
                         }
                     }
+                    return .none
                 }
-                return .none
+               
+                return .send(.view(.nextQuestion))
                 
             case .view(.nextQuestion):
                 guard state.quiz.questions.count > state.currentQuestionIndex + 1 else {

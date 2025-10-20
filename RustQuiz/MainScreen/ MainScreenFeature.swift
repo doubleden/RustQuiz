@@ -43,7 +43,73 @@ struct MainScreenFeature {
             switch action {
             case .view(.fetchSources):
                 return .run { send in
-                    let sources = try await storageService.readSources()
+                    var sources = try await storageService.readSources()
+                    
+                    sources[0].quizzes.insert(
+                        Quiz(
+                        id: UUID(),
+                        theme: "Test",
+                        priority: 0,
+                        questions: [
+                            Question(
+                                id: UUID(),
+                                title: "first",
+                                answers: [
+                                    Answer(
+                                        id: UUID(),
+                                        title: "correct",
+                                        isCorrect: true
+                                    ),
+                                    Answer(
+                                        id: UUID(),
+                                        title: "incorrect",
+                                        isCorrect: false
+                                    ),
+                                    Answer(
+                                        id: UUID(),
+                                        title: "incorrect",
+                                        isCorrect: false
+                                    ),
+                                    Answer(
+                                        id: UUID(),
+                                        title: "incorrect",
+                                        isCorrect: false
+                                    ),
+                                ],
+                                descriptionText: "",
+                                descriptionLink: ""
+                            ),
+                            Question(
+                                id: UUID(),
+                                title: "first",
+                                answers: [
+                                    Answer(
+                                        id: UUID(),
+                                        title: "correct",
+                                        isCorrect: true
+                                    ),
+                                    Answer(
+                                        id: UUID(),
+                                        title: "incorrect",
+                                        isCorrect: false
+                                    ),
+                                    Answer(
+                                        id: UUID(),
+                                        title: "incorrect",
+                                        isCorrect: false
+                                    ),
+                                    Answer(
+                                        id: UUID(),
+                                        title: "incorrect",
+                                        isCorrect: false
+                                    ),
+                                ],
+                                descriptionText: "",
+                                descriptionLink: ""
+                            )
+                        ]
+                    ), at: 0)
+                    
                     await send(.setSources(sources))
                 }
                 
