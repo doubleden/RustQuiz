@@ -14,50 +14,33 @@ struct QuizProgressIndicator: View {
     
     @Environment(\.screenSize) private var screenSize
     
-    private var quantityOfAnsweredQuestions: Int {
-        questions.filter({$0.hasUserAnswered}).count
-    }
-    
-    private var progress: Double {
-        (Double(quantityOfAnsweredQuestions) / Double(questions.count))
-    }
-    
     var body: some View {
-        VStack(spacing: 0) {
-            HStack(spacing: 2) {
-                ForEach(
-                    Array(questions.enumerated()),
-                    id: \.offset
-                ) { index, question in
-                    Rectangle()
-                        .fill(rectangleBackground(question: question))
-                        .frame(maxWidth: .infinity)
-                        .clipShape(
-                            RoundedRectangle(cornerRadius: 3)
-                        )
-                        .shadow(radius: 1)
-                        .offset(y: index == currentQuestionIndex ? -5 : 0)
-                        .onTapGesture {
-                            transition = index > currentQuestionIndex
-                            ? .next
-                            : .previous
-                            withAnimation {
-                                currentQuestionIndex = index
-                            }
+        HStack(spacing: 2) {
+            ForEach(
+                Array(questions.enumerated()),
+                id: \.offset
+            ) { index, question in
+                Rectangle()
+                    .fill(rectangleBackground(question: question))
+                    .frame(maxWidth: .infinity)
+                    .clipShape(
+                        RoundedRectangle(cornerRadius: 3)
+                    )
+                    .shadow(radius: 1)
+                    .offset(y: index == currentQuestionIndex ? -5 : 0)
+                    .onTapGesture {
+                        transition = index > currentQuestionIndex
+                        ? .next
+                        : .previous
+                        withAnimation {
+                            currentQuestionIndex = index
                         }
-                }
+                    }
             }
-            .frame(height: screenSize.width * 0.05)
-            .padding(.horizontal, 3)
-            
-            HStack {
-                Text("\(quantityOfAnsweredQuestions) / \(questions.count)")
-                    .subFont(size: screenSize.width * 0.045, scaleFactor: 1)
-                    .foregroundStyle(CustomColor.activeColor.color)
-                Spacer()
-            }
-            .padding()
         }
+        .frame(height: screenSize.width * 0.05)
+        .padding(.horizontal, 3)
+        
     }
 }
 

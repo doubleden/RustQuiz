@@ -20,7 +20,6 @@ struct QuizQuestionView: View {
                 .frame(minHeight: screenSize.width * 0.45)
                 .frame(maxWidth: .infinity)
                 .subFont(size: screenSize.width * 0.08, lineLimit: 10, scaleFactor: 0.3)
-//                .multilineTextAlignment(.center)
                 .foregroundStyle(CustomColor.generalFontColor.color)
         }
         .banner()
@@ -30,7 +29,44 @@ struct QuizQuestionView: View {
 #Preview {
     GeometryReader { geo in
         VStack {
-            QuizTopBarView(title: "Viriables and Mutatability", navigateBackAction: {}, pauseAction: {})
+            QuizTopBarView(questions: [
+                Question(
+                    id: UUID(),
+                    title: "njsnds?",
+                    answers: [],
+                    descriptionText: "",
+                    descriptionLink: "",
+                    hasUserAnswered: true,
+                    isUserAnswerCorrect: true
+                ),
+                Question(
+                    id: UUID(),
+                    title: "njsnds?",
+                    answers: [],
+                    descriptionText: "",
+                    descriptionLink: "",
+                    hasUserAnswered: true,
+                    isUserAnswerCorrect: false
+                ),
+                Question(
+                    id: UUID(),
+                    title: "njsnds?",
+                    answers: [],
+                    descriptionText: "",
+                    descriptionLink: "",
+                    hasUserAnswered: false,
+                    isUserAnswerCorrect: false
+                ),
+                Question(
+                    id: UUID(),
+                    title: "njsnds?",
+                    answers: [],
+                    descriptionText: "",
+                    descriptionLink: "",
+                    hasUserAnswered: true,
+                    isUserAnswerCorrect: true
+                ),
+            ], pauseAction: {})
             QuizQuestionView(question: "How to mark a mutable variable?\nHow to mark a mutable variable?\nHow to mark a mutable variable?\nHow to mark a mutable variable?\nHow to mark a mutable variable?\nHow to mark a mutable variable?\nHow to mark a mutable variable?\nHow to mark a mutable variable?\nHow to mark a mutable variable?\nHow to mark a mutable variable?\nHow to mark a mutable variable?\n")
             Spacer()
         }

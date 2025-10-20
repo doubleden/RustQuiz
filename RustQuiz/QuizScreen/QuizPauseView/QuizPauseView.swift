@@ -9,6 +9,7 @@ import SwiftUI
 
 struct QuizPauseView: View {
     @Environment(\.screenSize) private var screenSize
+    let title: String
     let continueAction: () -> Void
     let restartAction: () -> Void
     let backToMenuAction: () -> Void
@@ -18,13 +19,15 @@ struct QuizPauseView: View {
             RoundedRectangle(cornerRadius: 20)
                 .fill(CustomColor.backgroundColor.color)
             VStack {
-                HStack {
-                    Spacer()
-                    Text("Pause")
-                        .mainFont(size: screenSize.width * 0.07, scaleFactor: 1)
-                        .foregroundStyle(CustomColor.generalFontColor.color)
-                    Spacer()
-                }
+                Text(LocalizedStringResource(stringLiteral: title))
+                    .mainFont(
+                        size: screenSize.width * 0.07,
+                        lineLimit: 3,
+                        scaleFactor: 0.5
+                    )
+                    .multilineTextAlignment(.center)
+                    .foregroundStyle(CustomColor.generalFontColor.color)
+                    .padding(.horizontal)
                 
                 VStack(spacing: 15) {
                     Button(action: continueAction) {
@@ -58,7 +61,7 @@ struct QuizPauseView: View {
             }
             .padding(.vertical)
         }
-        .frame(height: screenSize.width * 0.5)
+        .frame(maxHeight: screenSize.width * 0.9)
         .padding(.horizontal)
     }
 }
@@ -69,7 +72,7 @@ struct QuizPauseView: View {
             Rectangle()
                 .opacity(0.7)
                 .ignoresSafeArea()
-            QuizPauseView(continueAction: {}, restartAction: {}, backToMenuAction: {})
+            QuizPauseView(title: "Managing Growing Project with pacakes Managing Growing Project with pacakes Managing Growing Project with pacakes", continueAction: {}, restartAction: {}, backToMenuAction: {})
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .environment(\.screenSize, geo.size)

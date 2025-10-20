@@ -8,39 +8,29 @@
 import SwiftUI
 
 struct QuizTopBarView: View {
-    let title: LocalizedStringKey
-    let navigateBackAction: () -> Void
+    let questions: [Question]
     let pauseAction: () -> Void
     
     @Environment(\.screenSize) private var screenSize
     
+    private var quantityOfAnsweredQuestions: Int {
+        questions.filter({$0.hasUserAnswered}).count
+    }
+    
     var body: some View {
-        ZStack {
+        VStack {
             HStack {
-                Button(action: navigateBackAction) {
-                    Image(systemName: "chevron.left")
-                        .resizable()
-                        .scaledToFit()
-                        .topBarButtonShape()
-                }
-                .disabled(true)
-                .opacity(0)
-                
-                Spacer()
-                
-                Text(title)
-                    .subFont(size: screenSize.width * 0.045, lineLimit: 3)
-                    .multilineTextAlignment(.center)
-                    .foregroundStyle(CustomColor.titleColor.color)
-                
-                Spacer()
-                
                 Button(action: pauseAction) {
                     Image(systemName: "pause")
                         .resizable()
                         .scaledToFit()
                         .topBarButtonShape()
                 }
+                Spacer()
+                
+                Text("\(quantityOfAnsweredQuestions) / \(questions.count)")
+                    .subFont(size: screenSize.width * 0.06, scaleFactor: 1)
+                    .foregroundStyle(CustomColor.activeColor.color)
             }
             .buttonStyle(ButtonPressInStyle())
         }
@@ -51,7 +41,44 @@ struct QuizTopBarView: View {
 #Preview {
     GeometryReader { geo in
         VStack {
-            QuizTopBarView(title: "Viriables and Mutatability", navigateBackAction: {}, pauseAction: {})
+            QuizTopBarView(questions: [
+                Question(
+                    id: UUID(),
+                    title: "njsnds?",
+                    answers: [],
+                    descriptionText: "",
+                    descriptionLink: "",
+                    hasUserAnswered: true,
+                    isUserAnswerCorrect: true
+                ),
+                Question(
+                    id: UUID(),
+                    title: "njsnds?",
+                    answers: [],
+                    descriptionText: "",
+                    descriptionLink: "",
+                    hasUserAnswered: true,
+                    isUserAnswerCorrect: false
+                ),
+                Question(
+                    id: UUID(),
+                    title: "njsnds?",
+                    answers: [],
+                    descriptionText: "",
+                    descriptionLink: "",
+                    hasUserAnswered: false,
+                    isUserAnswerCorrect: false
+                ),
+                Question(
+                    id: UUID(),
+                    title: "njsnds?",
+                    answers: [],
+                    descriptionText: "",
+                    descriptionLink: "",
+                    hasUserAnswered: true,
+                    isUserAnswerCorrect: true
+                ),
+            ], pauseAction: {})
             Spacer()
         }
             .mainBackground()

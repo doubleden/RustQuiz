@@ -15,8 +15,7 @@ struct QuizScreenView: View {
     var body: some View {
         VStack(spacing: 20) {
             QuizTopBarView(
-                title: LocalizedStringKey(stringLiteral: store.quiz.theme),
-                navigateBackAction: { send(.navigateBack) },
+                questions: store.quiz.questions,
                 pauseAction: { send(.pause) }
             )
             
@@ -35,6 +34,8 @@ struct QuizScreenView: View {
                 transition: $transition,
                 currentQuestionIndex: $store.currentQuestionIndex
             )
+            
+            Spacer()
             
             ForEach(store.currentQuestion.answers) { answer in
                 VStack {
@@ -100,7 +101,7 @@ struct QuizScreenView: View {
         )
         .customSheet(isPresented: $store.isPauseViewPresented) {
             QuizPauseView(
-                continueAction: { send(.pause) },
+                title: store.quiz.theme, continueAction: { send(.pause) },
                 restartAction: { send(.restart) },
                 backToMenuAction: { send(.navigateBack) }
             )
