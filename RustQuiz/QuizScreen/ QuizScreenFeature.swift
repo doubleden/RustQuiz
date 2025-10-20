@@ -24,19 +24,6 @@ struct QuizScreenFeature {
             
             return quiz.questions[currentQuestionIndex]
         }
-        
-        var quantityOfAnsweredQuestions: Int {
-            quiz.questions.filter({$0.hasUserAnswered}).count
-        }
-        
-        var progress: Double {
-            (Double(quantityOfAnsweredQuestions) / Double(quiz.questions.count))
-        }
-        
-        
-        init(quiz: Quiz) {
-            self.quiz = quiz
-        }
     }
     
     enum Action: ViewAction, BindableAction {
@@ -105,8 +92,17 @@ struct QuizScreenFeature {
                 if let answerIndex = state.currentQuestion.answers.firstIndex(where: { $0.id == answer.id }) {
                     state.quiz.questions[state.currentQuestionIndex].answers[answerIndex].isSelected = true
                 }
+                
                 state.quiz.questions[state.currentQuestionIndex].hasUserAnswered = true
                 state.quiz.questions[state.currentQuestionIndex].isUserAnswerCorrect = answer.isCorrect
+                
+                if !answer.isCorrect {
+                    for (index, answer) in state.quiz.questions[state.currentQuestionIndex].answers.enumerated() {
+                        if answer.isCorrect {
+                            state.quiz.questions[state.currentQuestionIndex].answers[index].isSelected = true
+                        }
+                    }
+                }
                 return .none
                 
             case .view(.nextQuestion):
