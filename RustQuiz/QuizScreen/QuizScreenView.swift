@@ -101,7 +101,7 @@ struct QuizScreenView: View {
         .customSheet(isPresented: $store.isPauseViewPresented) {
             QuizPauseView(
                 continueAction: { send(.pause) },
-                restartAction: {},
+                restartAction: { send(.restart) },
                 backToMenuAction: { send(.navigateBack) }
             )
         }

@@ -50,6 +50,7 @@ struct QuizScreenFeature {
             case clearQuestionsCache
             case navigateBack
             case pause
+            case restart
             case showQuizWhyView
             case didSelectAnswer(Answer)
             case nextQuestion
@@ -71,6 +72,11 @@ struct QuizScreenFeature {
                 for questionIndex in state.quiz.questions.indices {
                     state.quiz.questions[questionIndex].hasUserAnswered = false
                     state.quiz.questions[questionIndex].isUserAnswerCorrect = false
+                    for (index, answer) in state.quiz.questions[questionIndex].answers.enumerated() {
+                        if answer.isSelected {
+                            state.quiz.questions[questionIndex].answers[index].isSelected = false
+                        }
+                    }
                 }
                 return .none
                 
@@ -82,6 +88,11 @@ struct QuizScreenFeature {
             case .view(.pause):
                 state.isPauseViewPresented.toggle()
                 return .none
+                
+            case .view(.restart):
+                state.isPauseViewPresented.toggle()
+                state.currentQuestionIndex = 0
+                return .send(.view(.clearQuestionsCache))
                 
             case .view(.showQuizWhyView):
                 state.quizWhyViewState = .init(
