@@ -19,8 +19,8 @@ struct QuizQuestionView: View {
                 .padding(.vertical)
                 .frame(minHeight: screenSize.width * 0.45)
                 .frame(maxWidth: .infinity)
-                .subFont(size: screenSize.width * 0.09, lineLimit: 5, scaleFactor: 0.5)
-                .multilineTextAlignment(.center)
+                .subFont(size: screenSize.width * 0.08, lineLimit: 10, scaleFactor: 0.3)
+//                .multilineTextAlignment(.center)
                 .foregroundStyle(CustomColor.generalFontColor.color)
         }
         .banner()
@@ -31,7 +31,7 @@ struct QuizQuestionView: View {
     GeometryReader { geo in
         VStack {
             QuizTopBarView(title: "Viriables and Mutatability", navigateBackAction: {}, pauseAction: {})
-            QuizQuestionView(question: "How to mark a mutable variable?")
+            QuizQuestionView(question: "How to mark a mutable variable?\nHow to mark a mutable variable?\nHow to mark a mutable variable?\nHow to mark a mutable variable?\nHow to mark a mutable variable?\nHow to mark a mutable variable?\nHow to mark a mutable variable?\nHow to mark a mutable variable?\nHow to mark a mutable variable?\nHow to mark a mutable variable?\nHow to mark a mutable variable?\n")
             Spacer()
         }
             .mainBackground()

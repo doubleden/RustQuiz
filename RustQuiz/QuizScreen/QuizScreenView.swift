@@ -31,9 +31,9 @@ struct QuizScreenView: View {
             .transition(transition.movement)
             
             QuizProgressIndicator(
-                progress: store.progress,
-                numberOfQuestions: store.quiz.questions.count,
-                numberOfAnsweredQuestions: store.quantityOfAnsweredQuestions
+                questions: store.quiz.questions,
+                transition: $transition,
+                currentQuestionIndex: $store.currentQuestionIndex
             )
             
             ForEach(store.currentQuestion.answers) { answer in
@@ -119,28 +119,6 @@ struct QuizScreenView: View {
                     }
                 }
         )
-    }
-}
-
-extension QuizScreenView {
-    enum Transition {
-        case next
-        case previous
-        
-        var movement: AnyTransition {
-            switch self {
-            case .next:
-                AnyTransition.asymmetric(
-                    insertion: .move(edge: .trailing),
-                    removal: .move(edge: .leading)
-                )
-            case .previous:
-                AnyTransition.asymmetric(
-                    insertion: .move(edge: .leading),
-                    removal: .move(edge: .trailing)
-                )
-            }
-        }
     }
 }
 
