@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Quiz: Identifiable, Decodable {
+struct Quiz: Identifiable {
     let id: UUID
     var theme: String
     var priority: Int
@@ -25,3 +25,20 @@ extension Quiz {
     }
 }
 
+extension Quiz: Decodable {
+    enum CodingKeys: String, CodingKey {
+        case id
+        case theme
+        case priority
+        case questions
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        id = try container.decode(UUID.self, forKey: .id)
+        theme = try container.decode(String.self, forKey: .theme)
+        priority = try container.decode(Int.self, forKey: .priority)
+        questions = try container.decode([Question].self, forKey: .questions)
+    }
+}
