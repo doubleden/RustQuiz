@@ -29,8 +29,9 @@ struct QuizScreenFeature {
     enum Action: ViewAction, BindableAction {
         case view(View)
         case binding(BindingAction<State>)
-        case updateQuiz
         case quizWhyViewAction(PresentationAction<QuizWhyFeature.Action>)
+        case updateQuiz
+        case showCorrectAnswer
         
         @CasePathable
         enum View {
@@ -96,16 +97,11 @@ struct QuizScreenFeature {
                 state.quiz.questions[state.currentQuestionIndex].hasUserAnswered = true
                 state.quiz.questions[state.currentQuestionIndex].isUserAnswerCorrect = answer.isCorrect
                 
-                guard answer.isCorrect else {
-                    for (index, answer) in state.quiz.questions[state.currentQuestionIndex].answers.enumerated() {
-                        if answer.isCorrect {
-                            state.quiz.questions[state.currentQuestionIndex].answers[index].isSelected = true
-                        }
-                    }
-                    return .none
-                }
-               
-                return .send(.view(.nextQuestion))
+                guard answer.isCorrect else { return .send(.showCorrectAnswer) }
+                
+                return state.quiz.questions.allSatisfy({ $0.hasUserAnswered })
+                ? .send(.updateQuiz)
+                : .send(.view(.nextQuestion))
                 
             case .view(.nextQuestion):
                 guard state.quiz.questions.count > state.currentQuestionIndex + 1 else {
@@ -125,6 +121,14 @@ struct QuizScreenFeature {
                 return .run { [quiz = state.quiz] _ in
                     try await storageService.updateQuiz(quiz)
                 }
+                
+            case .showCorrectAnswer:
+                for (index, answer) in state.quiz.questions[state.currentQuestionIndex].answers.enumerated() {
+                    if answer.isCorrect {
+                        state.quiz.questions[state.currentQuestionIndex].answers[index].isSelected = true
+                    }
+                }
+                return .none
                 
                 
             default:
