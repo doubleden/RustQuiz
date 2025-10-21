@@ -13,6 +13,7 @@ struct OnBoardingScreenFeature {
     @ObservableState
     struct State {
         @Shared(.appStorage("isFirstLaunch")) var isFirstLaunch = true
+        var page = Page.welcome
     }
     
     enum Action: ViewAction {
@@ -40,5 +41,11 @@ struct OnBoardingScreenFeature {
                 return .none
             }
         }
+    }
+}
+
+extension OnBoardingScreenFeature {
+    enum Page {
+        case welcome, quizExample, rustocean
     }
 }
