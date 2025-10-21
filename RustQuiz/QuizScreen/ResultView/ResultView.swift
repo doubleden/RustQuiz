@@ -27,6 +27,7 @@ struct ResultView: View {
             VStack(spacing: 20) {
                 Text(title)
                     .subFont(size: screenSize.width * 0.07)
+                    .foregroundStyle(CustomColor.titleColor.color)
                 
                 VStack {
                     Text("Completed")

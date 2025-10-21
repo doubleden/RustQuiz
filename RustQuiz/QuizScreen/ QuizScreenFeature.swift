@@ -13,6 +13,7 @@ struct QuizScreenFeature {
     @ObservableState
     struct State {
         var quiz: Quiz
+        let previousAverageRating: Int
         @Presents var quizWhyViewState: QuizWhyFeature.State?
         var isPauseViewPresented = false
         
@@ -24,14 +25,21 @@ struct QuizScreenFeature {
             
             return quiz.questions[currentQuestionIndex]
         }
+        
+        init(quiz: Quiz) {
+            self.quiz = quiz
+            previousAverageRating = quiz.averageRating
+        }
     }
     
     enum Action: ViewAction, BindableAction {
         case view(View)
         case binding(BindingAction<State>)
         case quizWhyViewAction(PresentationAction<QuizWhyFeature.Action>)
-        case updateQuiz
+        case didAnswerQuestion(Answer)
         case showCorrectAnswer
+        case checkAllQuestionsAnswered
+        case updateQuiz
         
         @CasePathable
         enum View {
@@ -94,14 +102,7 @@ struct QuizScreenFeature {
                     state.quiz.questions[state.currentQuestionIndex].answers[answerIndex].isSelected = true
                 }
                 
-                state.quiz.questions[state.currentQuestionIndex].hasUserAnswered = true
-                state.quiz.questions[state.currentQuestionIndex].isUserAnswerCorrect = answer.isCorrect
-                
-                guard answer.isCorrect else { return .send(.showCorrectAnswer) }
-                
-                return state.quiz.questions.allSatisfy({ $0.hasUserAnswered })
-                ? .send(.updateQuiz)
-                : .send(.view(.nextQuestion))
+                return .send(.didAnswerQuestion(answer))
                 
             case .view(.nextQuestion):
                 guard state.quiz.questions.count > state.currentQuestionIndex + 1 else {
@@ -117,10 +118,12 @@ struct QuizScreenFeature {
                 state.currentQuestionIndex -= 1
                 return .none
                 
-            case .updateQuiz:
-                return .run { [quiz = state.quiz] _ in
-                    try await storageService.updateQuiz(quiz)
-                }
+            case .didAnswerQuestion(let answer):
+                state.quiz.questions[state.currentQuestionIndex].hasUserAnswered = true
+                state.quiz.questions[state.currentQuestionIndex].isUserAnswerCorrect = answer.isCorrect
+                return answer.isCorrect
+                ? .send(.checkAllQuestionsAnswered)
+                : .send(.showCorrectAnswer)
                 
             case .showCorrectAnswer:
                 for (index, answer) in state.quiz.questions[state.currentQuestionIndex].answers.enumerated() {
@@ -128,8 +131,20 @@ struct QuizScreenFeature {
                         state.quiz.questions[state.currentQuestionIndex].answers[index].isSelected = true
                     }
                 }
-                return .none
+                return .send(.checkAllQuestionsAnswered)
                 
+            case .checkAllQuestionsAnswered:
+                return state.quiz.questions.allSatisfy({ $0.hasUserAnswered })
+                ? .send(.updateQuiz)
+                : .send(.view(.nextQuestion))
+                
+            case .updateQuiz:
+                if state.quiz.averageRating > state.previousAverageRating {
+                    return .run { [quiz = state.quiz] _ in
+                        try await storageService.updateQuiz(quiz)
+                    }
+                }
+                return .none
                 
             default:
                 return .none
