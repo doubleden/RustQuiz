@@ -19,26 +19,36 @@ struct OnBoardingScreenFeature {
     enum Action: ViewAction {
         case view(View)
         case onBoardingCompleted
-        case some
         
         @CasePathable
         enum View {
             case didTapOnNextButton
+            case didTapSkip
         }
     }
     
     var body: some Reducer<State, Action> {
         Reduce { state, action in
             switch action {
-            case .view(.didTapOnNextButton):
+            case .view(.didTapSkip):
                 return .send(.onBoardingCompleted)
+                
+            case .view(.didTapOnNextButton):
+                switch state.page {
+                case .welcome:
+                    state.page = .quizExample
+                    return .none
+                case .quizExample:
+                    state.page = .rustocean
+                    return .none
+                case .rustocean:
+                    return .send(.onBoardingCompleted)
+                }
                 
             case .onBoardingCompleted:
                 state.$isFirstLaunch.withLock { $0 = false }
                 return .none
                 
-            default:
-                return .none
             }
         }
     }
@@ -47,5 +57,12 @@ struct OnBoardingScreenFeature {
 extension OnBoardingScreenFeature {
     enum Page {
         case welcome, quizExample, rustocean
+        
+        var buttonTitle: String {
+            switch self {
+            case .rustocean: "Begin my path"
+            default: "Next"
+            }
+        }
     }
 }

@@ -8,17 +8,22 @@
 import SwiftUI
 
 extension View {
-    func mainBackground() -> some View {
-        modifier(MainBackgroundModifier())
+    func mainBackground(isAnimationOn: Bool = true) -> some View {
+        modifier(MainBackgroundModifier(isAnimationOn: isAnimationOn))
     }
 }
 
 struct MainBackgroundModifier: ViewModifier {
+    let isAnimationOn: Bool
+    
     func body(content: Content) -> some View {
         ZStack {
             CustomColor.backgroundColor.color
                 .ignoresSafeArea()
-            CrabsAnimation()
+            
+            if isAnimationOn {
+                CrabsAnimation()
+            }
             
             content
         }
