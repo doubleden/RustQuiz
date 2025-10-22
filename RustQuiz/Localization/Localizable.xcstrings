@@ -39,6 +39,9 @@
     "Analytics" : {
 
     },
+    "Are you sure you want to delete the data?" : {
+
+    },
     "async_await_link" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -74,6 +77,9 @@
       }
     },
     "Back to menu" : {
+
+    },
+    "Cancel" : {
 
     },
     "close" : {
@@ -124,6 +130,9 @@
 
     },
     "Data Collection" : {
+
+    },
+    "Delete" : {
 
     },
     "enums_and_pattern_matching_link" : {
@@ -329,6 +338,9 @@
       }
     },
     "Study and complete all the quizzes to earn a reward and become a real rustocean!" : {
+
+    },
+    "This action cannot be undone" : {
 
     },
     "understanding_ownership_link" : {

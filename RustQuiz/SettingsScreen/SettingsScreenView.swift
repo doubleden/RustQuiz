@@ -67,6 +67,7 @@ struct SettingsScreenView: View {
         .onAppear {
             send(.getLanguageName)
         }
+        .alert($store.scope(state: \.alert, action: \.alert))
         .sheet(isPresented: $store.isPrivacyPolicyPresented) {
             PrivacyPoliceView(isPresented: $store.isPrivacyPolicyPresented)
         }
