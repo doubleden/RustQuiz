@@ -14,7 +14,6 @@ struct SettingsScreenView: View {
     var body: some View {
         VStack {
             SettingsTopBarView(navigateBackAction: { send(.navigateBack) })
-            SettingsTitleView()
             
             VStack(spacing: -15) {
                 SettingsSectionView(title: "Interface") {

@@ -9,20 +9,28 @@ import SwiftUI
 
 struct SettingsTopBarView: View {
     let navigateBackAction: () -> Void
+    @Environment(\.screenSize) private var screenSize
     
     var body: some View {
-        HStack {
-            Button(action: navigateBackAction) {
-                Image(systemName: "chevron.left")
-                    .resizable()
-                    .scaledToFit()
-                    .topBarButtonShape()
+        ZStack {
+            HStack {
+                Button(action: navigateBackAction) {
+                    Image(systemName: "chevron.left")
+                        .resizable()
+                        .scaledToFit()
+                        .topBarButtonShape()
+                }
+                .buttonStyle(ButtonPressInStyle())
+                
+                Spacer()
             }
-            .buttonStyle(ButtonPressInStyle())
             
-            Spacer()
+            Text("Settings")
+                .mainFont(size: screenSize.width * 0.1, scaleFactor: 0.8)
+                .foregroundStyle(CustomColor.generalFontColor.color)
+                .padding(.horizontal)
         }
-        .padding()
+        .padding(.horizontal)
     }
 }
 
@@ -32,7 +40,6 @@ struct SettingsTopBarView: View {
             VStack(spacing: 16) {
                 SettingsTopBarView{}
             }
-            .padding()
         }
         .mainBackground()
         .environment(\.screenSize, geometry.size)
