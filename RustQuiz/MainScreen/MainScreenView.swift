@@ -23,8 +23,8 @@ struct MainScreenView: View {
                     MainProgressView(progress: store.progress)
                 }
             }
-            .padding()
-            
+            .padding(.horizontal)
+            Spacer()
             VStack(spacing: 25) {
                 ForEach(store.sources) { source in
                     MainSourceSectionView(
@@ -42,6 +42,7 @@ struct MainScreenView: View {
             
             Spacer()
         }
+        .padding(.vertical)
         .mainBackground()
         .sheet(
             item: $store.scope(

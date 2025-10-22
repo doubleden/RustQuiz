@@ -24,8 +24,8 @@ struct MainQuizButtonView: View {
                 )
                 .padding()
                 .frame(
-                    width: screenSize.width * 0.38,
-                    height: screenSize.width * 0.24
+                    width: screenSize.height * 0.19,
+                    height: screenSize.height * 0.13
                 )
                 .background{
                     ZStack {
