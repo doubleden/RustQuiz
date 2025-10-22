@@ -71,6 +71,7 @@
 		056C6D0E2E89318B006C44D3 /* SourceTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6D0D2E89318B006C44D3 /* SourceTable.swift */; };
 		056C6D112E8940A1006C44D3 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6D102E8940A1006C44D3 /* StorageService.swift */; };
 		05767D712EA935F800C29477 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05767D702EA935F800C29477 /* LaunchScreen.storyboard */; };
+		05767D742EA9486700C29477 /* PrivacyPoliceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05767D732EA9486700C29477 /* PrivacyPoliceView.swift */; };
 		0591A37D2E9A6D6F00306B7D /* sources.json in Resources */ = {isa = PBXBuildFile; fileRef = 0591A37C2E9A6D6F00306B7D /* sources.json */; };
 		05ABF8402E982CD90071C08A /* ScreenSizeKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ABF83F2E982CD90071C08A /* ScreenSizeKey.swift */; };
 		05C16D732E97D7CB00C35053 /* TopBarButtonShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C16D722E97D7CB00C35053 /* TopBarButtonShape.swift */; };
@@ -146,6 +147,7 @@
 		056C6D0D2E89318B006C44D3 /* SourceTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceTable.swift; sourceTree = "<group>"; };
 		056C6D102E8940A1006C44D3 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		05767D702EA935F800C29477 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		05767D732EA9486700C29477 /* PrivacyPoliceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPoliceView.swift; sourceTree = "<group>"; };
 		0591A37C2E9A6D6F00306B7D /* sources.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sources.json; sourceTree = "<group>"; };
 		05ABF83F2E982CD90071C08A /* ScreenSizeKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSizeKey.swift; sourceTree = "<group>"; };
 		05C16D722E97D7CB00C35053 /* TopBarButtonShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarButtonShape.swift; sourceTree = "<group>"; };
@@ -391,6 +393,7 @@
 		056C6CDC2E86B47D006C44D3 /* SettingsScreen */ = {
 			isa = PBXGroup;
 			children = (
+				05767D722EA9485900C29477 /* PrivacyPolice */,
 				05FA733A2E9FE1C7003B9E10 /* Views */,
 				056C6CDA2E86B47D006C44D3 /*  SettingsScreenFeature.swift */,
 				056C6CDB2E86B47D006C44D3 /* SettingsScreenView.swift */,
@@ -450,6 +453,14 @@
 				053387CD2E8AAB0000554004 /* SeedService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		05767D722EA9485900C29477 /* PrivacyPolice */ = {
+			isa = PBXGroup;
+			children = (
+				05767D732EA9486700C29477 /* PrivacyPoliceView.swift */,
+			);
+			path = PrivacyPolice;
 			sourceTree = "<group>";
 		};
 		05ABF83E2E982C080071C08A /* EnvironmentKeys */ = {
@@ -633,6 +644,7 @@
 				053FB21C2EA7DBCE002EE73B /* WelcomePage.swift in Sources */,
 				056C6CEC2E86B6BB006C44D3 /*  OnBoardingScreenFeature.swift in Sources */,
 				054D785C2E96BBB900DFCD34 /* SubFont.swift in Sources */,
+				05767D742EA9486700C29477 /* PrivacyPoliceView.swift in Sources */,
 				054AB5FA2EA23E67005EDAC7 /* MainButtonShape.swift in Sources */,
 				05402BB72E9FE89C00AA10EE /* SettingsSectionView.swift in Sources */,
 				056C6CED2E86B6BB006C44D3 /* OnBoardingScreenView.swift in Sources */,
@@ -798,7 +810,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = DenisDenisov.RustQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -839,7 +851,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = DenisDenisov.RustQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;

@@ -6,10 +6,13 @@
 
 import SwiftUI
 import ComposableArchitecture
+import StoreKit
 
 @ViewAction(for: SettingsScreenFeature.self)
 struct SettingsScreenView: View {
-    let store: StoreOf<SettingsScreenFeature>
+    @Bindable var store: StoreOf<SettingsScreenFeature>
+    @AppStorage("isCrabsAnimationOn") private var isCrabsAnimationOn = true
+    @Environment(\.requestReview) var requestReview
     
     var body: some View {
         VStack {
@@ -25,9 +28,10 @@ struct SettingsScreenView: View {
                         )
                         
                         SettingsButtonView(
-                            title: "App icon",
-                            description: "Standart",
-                            action: {}
+                            title: "Crabs Animation",
+                            description: isCrabsAnimationOn ? "On" : "Off",
+                            isArrowVisible: false,
+                            action: { isCrabsAnimationOn.toggle() }
                         )
                     }
                     .padding()
@@ -37,12 +41,12 @@ struct SettingsScreenView: View {
                     VStack(spacing: 15) {
                         SettingsButtonView(
                             title: "Rate App",
-                            action: {}
+                            action: { requestReview() }
                         )
                         
                         SettingsButtonView(
                             title: "Clear progress",
-                            action: {}
+                            action: { send(.clearProgress) }
                         )
                     }
                     .padding()
@@ -52,17 +56,19 @@ struct SettingsScreenView: View {
             Spacer()
             
             SettingsFooterView(
-                version: "1.0.1",
-                showPrivacyPolicy: {},
-                showTermsOfUse: {}
+                version: store.appVersion,
+                showPrivacyPolicy: { send(.showPrivacyPolicy) },
+                showTermsOfUse: { send(.showTermsOfUse) }
             )
-            
         }
         .padding(.vertical)
         .mainBackground()
         .navigationBarBackButtonHidden(true)
         .onAppear {
             send(.getLanguageName)
+        }
+        .sheet(isPresented: $store.isPrivacyPolicyPresented) {
+            PrivacyPoliceView(isPresented: $store.isPrivacyPolicyPresented)
         }
     }
 }

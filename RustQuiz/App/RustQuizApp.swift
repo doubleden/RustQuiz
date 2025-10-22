@@ -12,6 +12,7 @@ import OSLog
 
 @main
 struct RustQuizApp: App {
+    @AppStorage("isCrabsAnimationOn") private var isCrabsAnimationOn = true
     
     var body: some Scene {
         WindowGroup {

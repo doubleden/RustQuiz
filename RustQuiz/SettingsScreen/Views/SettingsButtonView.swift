@@ -10,6 +10,7 @@ import SwiftUI
 struct SettingsButtonView: View {
     let title: String
     var description: String?
+    var isArrowVisible = true
     let action: () -> Void
     
     @Environment(\.screenSize) private var screenSize
@@ -29,9 +30,11 @@ struct SettingsButtonView: View {
                             .subFont(size: screenSize.width * 0.04, scaleFactor: 1)
                     }
                     
-                    Image(systemName: "chevron.right")
-                        .resizable()
-                        .scaledToFit()
+                    if isArrowVisible {
+                        Image(systemName: "chevron.right")
+                            .resizable()
+                            .scaledToFit()
+                    }
                 }
             }
             .padding()

@@ -15,13 +15,14 @@ extension View {
 
 struct MainBackgroundModifier: ViewModifier {
     let isAnimationOn: Bool
+    @AppStorage("isCrabsAnimationOn") private var isCrabsAnimationOn = true
     
     func body(content: Content) -> some View {
         ZStack {
             CustomColor.backgroundColor.color
                 .ignoresSafeArea()
             
-            if isAnimationOn {
+            if isAnimationOn && isCrabsAnimationOn {
                 CrabsAnimation()
             }
             

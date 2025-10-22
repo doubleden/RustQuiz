@@ -28,15 +28,15 @@ struct SettingsFooterView: View {
                         .underline(true)
                 }
                 
-                Text("&")
-                    .foregroundStyle(CustomColor.titleColor.color)
-                
-                Button(action: showTermsOfUse) {
-                    Text("Terms of Use")
-                        .subFont(size: screenSize.width * 0.04, scaleFactor: 0.8)
-                        .foregroundStyle(CustomColor.activeColor.color)
-                        .underline(true)
-                }
+//                Text("&")
+//                    .foregroundStyle(CustomColor.titleColor.color)
+//                
+//                Button(action: showTermsOfUse) {
+//                    Text("Terms of Use")
+//                        .subFont(size: screenSize.width * 0.04, scaleFactor: 0.8)
+//                        .foregroundStyle(CustomColor.activeColor.color)
+//                        .underline(true)
+//                }
             }
         }
     }
