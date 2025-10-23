@@ -12,38 +12,43 @@ struct MainScreenView: View {
     @Bindable var store: StoreOf<MainScreenFeature>
     
     var body: some View {
-        VStack {
-            Group {
-                MainTopBarView(
-                    settingsButtonAction: { send(.navigateToSettings) }
-                )
-                
-                VStack(spacing: 10) {
-                    MainTitleView()
-                    MainProgressView(progress: store.progress)
-                }
+        ZStack {
+            if store.progress == 100 {
+                MainAchievView()
             }
-            .padding(.horizontal)
-            
-            Spacer()
-            
-            VStack(spacing: 25) {
-                ForEach(store.sources) { source in
-                    MainSourceSectionView(
-                        source: source,
-                        navigateToQuizAction: { quiz in
-                            send(.navigateToQuiz(quiz))
-                        },
-                        viewAllAction: {
-                            send(.showAllQuizzesOf(source))
-                        }
+            VStack {
+                Group {
+                    MainTopBarView(
+                        settingsButtonAction: { send(.navigateToSettings) }
                     )
+                    
+                    VStack(spacing: 10) {
+                        MainTitleView()
+                        MainProgressView(progress: store.progress)
+                    }
                 }
+                .padding(.horizontal)
+                
+                Spacer()
+                
+                VStack(spacing: 25) {
+                    ForEach(store.sources) { source in
+                        MainSourceSectionView(
+                            source: source,
+                            navigateToQuizAction: { quiz in
+                                send(.navigateToQuiz(quiz))
+                            },
+                            viewAllAction: {
+                                send(.showAllQuizzesOf(source))
+                            }
+                        )
+                    }
+                }
+                
+                Spacer()
             }
-            
-            Spacer()
+            .padding(.vertical)
         }
-        .padding(.vertical)
         .mainBackground()
         .sheet(
             item: $store.scope(

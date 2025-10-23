@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MainTopBarView: View {
     let settingsButtonAction: () -> Void
-    
+    @Environment(\.screenSize) private var screenSize
     var body: some View {
         HStack {
             Button(action: settingsButtonAction) {
