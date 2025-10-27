@@ -60,7 +60,7 @@ extension OnBoardingScreenView {
     
     var nextButton: some View {
         Button(action: { send(.didTapOnNextButton, animation: .linear)} ) {
-            Text(store.page.buttonTitle)
+            Text(LocalizedStringKey(stringLiteral: store.page.buttonTitle))
                 .mainButtonShape(
                     fontColor: CustomColor.backgroundColor.color,
                     backgroundColor: CustomColor.activeColor.color,

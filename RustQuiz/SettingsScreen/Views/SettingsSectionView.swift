@@ -16,7 +16,7 @@ struct SettingsSectionView<Content: View>: View {
     var body: some View {
         VStack {
             HStack {
-                Text(title)
+                Text(LocalizedStringKey(stringLiteral:title))
                     .subFont(size: screenSize.width * 0.057)
                     .foregroundStyle(CustomColor.generalFontColor.color)
                 Spacer()

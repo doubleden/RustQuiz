@@ -18,7 +18,7 @@ struct SettingsButtonView: View {
     var body: some View {
         Button(action: action) {
             HStack {
-                Text(title)
+                Text(LocalizedStringKey(stringLiteral:title))
                     .subFont(size: screenSize.width * 0.05, scaleFactor: 1)
                     .foregroundStyle(CustomColor.generalFontColor.color)
                 
@@ -26,7 +26,7 @@ struct SettingsButtonView: View {
                 
                 HStack(spacing: 20) {
                     if let description = description {
-                        Text(description)
+                        Text(LocalizedStringKey(stringLiteral:description))
                             .subFont(size: screenSize.width * 0.04, scaleFactor: 1)
                     }
                     
