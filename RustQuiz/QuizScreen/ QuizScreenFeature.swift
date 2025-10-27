@@ -80,6 +80,7 @@ struct QuizScreenFeature {
                         }
                     }
                 }
+                state.quiz.questions.shuffle()
                 return .none
                 
             case .view(.navigateBack):
