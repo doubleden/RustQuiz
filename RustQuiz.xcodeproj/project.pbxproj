@@ -80,6 +80,7 @@
 		05C16D782E97E75A00C35053 /* ButtonPressInStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C16D772E97E75A00C35053 /* ButtonPressInStyle.swift */; };
 		05C16D7A2E97EB8500C35053 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C16D792E97EB8500C35053 /* Banner.swift */; };
 		05C16D7C2E97F10100C35053 /* MainProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C16D7B2E97F10100C35053 /* MainProgressView.swift */; };
+		05E3CFC82EAFA4C900039E59 /* UncompletedQuizButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E3CFC72EAFA4C900039E59 /* UncompletedQuizButtonView.swift */; };
 		05FA733C2E9FE29B003B9E10 /* SettingsTopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FA733B2E9FE29B003B9E10 /* SettingsTopBarView.swift */; };
 /* End PBXBuildFile section */
 
@@ -157,6 +158,7 @@
 		05C16D772E97E75A00C35053 /* ButtonPressInStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonPressInStyle.swift; sourceTree = "<group>"; };
 		05C16D792E97EB8500C35053 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 		05C16D7B2E97F10100C35053 /* MainProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProgressView.swift; sourceTree = "<group>"; };
+		05E3CFC72EAFA4C900039E59 /* UncompletedQuizButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UncompletedQuizButtonView.swift; sourceTree = "<group>"; };
 		05FA733B2E9FE29B003B9E10 /* SettingsTopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTopBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -320,6 +322,7 @@
 				0554FDB02E9937F30087A88C /* MainSourceSectionView.swift */,
 				0554FDB42E9941A70087A88C /* MainQuizButtonView.swift */,
 				054D371E2EAA2787001A53E8 /* MainAchievView.swift */,
+				05E3CFC72EAFA4C900039E59 /* UncompletedQuizButtonView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -630,6 +633,7 @@
 				053FB0452EA635F1002EE73B /* Transition.swift in Sources */,
 				056C6D112E8940A1006C44D3 /* StorageService.swift in Sources */,
 				056C6CDD2E86B47D006C44D3 /*  SettingsScreenFeature.swift in Sources */,
+				05E3CFC82EAFA4C900039E59 /* UncompletedQuizButtonView.swift in Sources */,
 				05C16D752E97DCEB00C35053 /* MainTopBarView.swift in Sources */,
 				054AB5F42EA11ED8005EDAC7 /* QuizTopBarView.swift in Sources */,
 				054D78572E96B5C000DFCD34 /* MainFont.swift in Sources */,

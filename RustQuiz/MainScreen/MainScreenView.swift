@@ -52,8 +52,8 @@ struct MainScreenView: View {
         .overlay(
             ZStack {
                 if let uncompletedQuiz = store.uncompletedQuiz {
-                    Button("current quiz") {
-                        send(.navigateToUncompletedQuiz(uncompletedQuiz))
+                    UncompletedQuizButtonView {
+                        send(.navigateToUncompletedQuiz(uncompletedQuiz)) 
                     }
                 }
             }

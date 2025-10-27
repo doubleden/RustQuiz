@@ -219,9 +219,6 @@
         }
       }
     },
-    "current quiz" : {
-
-    },
     "Data Collection" : {
       "localizations" : {
         "ru" : {
@@ -627,6 +624,9 @@
           }
         }
       }
+    },
+    "Uncompleted Quiz" : {
+
     },
     "understanding_ownership_link" : {
       "extractionState" : "manual",
