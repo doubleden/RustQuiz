@@ -32,7 +32,7 @@ struct MainButtonShapeModifier: ViewModifier {
     
     func body(content: Content) -> some View {
         content
-            .padding(4)
+            .padding(5)
             .subFont(size: screenSize.width * 0.06, lineLimit: 3)
             .multilineTextAlignment(.center)
             .foregroundColor(fontColor)
