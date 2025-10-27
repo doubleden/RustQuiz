@@ -626,7 +626,14 @@
       }
     },
     "Uncompleted Quiz" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не завершенный квиз"
+          }
+        }
+      }
     },
     "understanding_ownership_link" : {
       "extractionState" : "manual",
