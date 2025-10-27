@@ -13,6 +13,9 @@ struct QuizScreenFeature {
     @ObservableState
     struct State {
         var quiz: Quiz
+        var doClearCacheFromQuiz: Bool
+        @Shared(.appStorage("uncompletedQuiz")) var uncompletedQuiz: Data = Data()
+        
         let previousAverageRating: Int
         @Presents var quizWhyViewState: QuizWhyFeature.State?
         var isPauseViewPresented = false
@@ -26,8 +29,9 @@ struct QuizScreenFeature {
             return quiz.questions[currentQuestionIndex]
         }
         
-        init(quiz: Quiz) {
+        init(quiz: Quiz, doClearCacheFromQuiz: Bool = true) {
             self.quiz = quiz
+            self.doClearCacheFromQuiz = doClearCacheFromQuiz
             previousAverageRating = quiz.averageRating
         }
     }
@@ -40,7 +44,9 @@ struct QuizScreenFeature {
         case showCorrectAnswer
         case checkAllQuestionsAnswered
         case updateQuiz
-        
+        case saveUncompletedQuiz
+        case clearUncompletedQuiz
+
         @CasePathable
         enum View {
             case clearQuestionsCache
@@ -122,7 +128,7 @@ struct QuizScreenFeature {
                 state.quiz.questions[state.currentQuestionIndex].hasUserAnswered = true
                 state.quiz.questions[state.currentQuestionIndex].isUserAnswerCorrect = answer.isCorrect
                 return answer.isCorrect
-                ? .send(.checkAllQuestionsAnswered)
+                ? .send(.saveUncompletedQuiz)
                 : .send(.showCorrectAnswer)
                 
             case .showCorrectAnswer:
@@ -131,19 +137,30 @@ struct QuizScreenFeature {
                         state.quiz.questions[state.currentQuestionIndex].answers[index].isSelected = true
                     }
                 }
-                return .send(.checkAllQuestionsAnswered)
+                return .send(.saveUncompletedQuiz)
                 
             case .checkAllQuestionsAnswered:
                 return state.quiz.questions.allSatisfy({ $0.hasUserAnswered })
                 ? .send(.updateQuiz)
-                : .send(.view(.nextQuestion))
+                : .none
                 
             case .updateQuiz:
                 if state.quiz.averageRating > state.previousAverageRating {
-                    return .run { [quiz = state.quiz] _ in
+                    return .run { [quiz = state.quiz] send in
                         try await storageService.updateQuiz(quiz)
+                        await send(.clearUncompletedQuiz)
                     }
                 }
+                return .send(.clearUncompletedQuiz)
+                
+            case .saveUncompletedQuiz:
+                if let data = try? JSONEncoder().encode(state.quiz) {
+                    state.$uncompletedQuiz.withLock { $0 = data }
+                }
+                return .send(.checkAllQuestionsAnswered)
+                
+            case .clearUncompletedQuiz:
+                state.$uncompletedQuiz.withLock { $0 = Data() }
                 return .none
                 
             default:

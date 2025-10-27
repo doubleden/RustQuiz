@@ -25,7 +25,7 @@ extension Quiz {
     }
 }
 
-extension Quiz: Decodable {
+extension Quiz: Codable {
     enum CodingKeys: String, CodingKey {
         case id
         case theme

@@ -32,7 +32,7 @@ extension Question {
     }
 }
 
-extension Question: Decodable {
+extension Question: Codable {
     enum CodingKeys: String, CodingKey {
         case id
         case title

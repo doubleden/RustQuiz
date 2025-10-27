@@ -14,11 +14,12 @@ struct Answer: Identifiable {
     var isSelected = false
 }
 
-extension Answer: Decodable {
+extension Answer: Codable {
     enum CodingKeys: String, CodingKey {
         case id
         case title
         case isCorrect
+        case isSelected
     }
     
     init(from decoder: Decoder) throws {
@@ -27,6 +28,6 @@ extension Answer: Decodable {
         id = try container.decode(UUID.self, forKey: .id)
         title = try container.decode(String.self, forKey: .title)
         isCorrect = try container.decode(Bool.self, forKey: .isCorrect)
-        isSelected = false
+        isSelected = try container.decode(Bool.self, forKey: .isSelected)
     }
 }

@@ -14,6 +14,8 @@ struct MainScreenFeature {
     struct State {
         var sources: [Source] = []
         @Presents var allQuizzesModalViewState: AllQuizzesFeature.State?
+        @Shared(.appStorage("uncompletedQuiz")) var uncompletedQuizData = Data()
+        var uncompletedQuiz: Quiz?
         
         var progress: Int {
             guard !sources.isEmpty else { return 0 }
@@ -26,11 +28,14 @@ struct MainScreenFeature {
         case view(View)
         case setSources([Source])
         case allQuizzesModalViewAction(PresentationAction<AllQuizzesFeature.Action>)
+        case loadUncompletedQuiz
         
         @CasePathable
         enum View {
             case fetchSources
+            case loadUncompletedQuiz
             case navigateToQuiz(Quiz)
+            case navigateToUncompletedQuiz(Quiz)
             case navigateToSettings
             case showAllQuizzesOf(Source)
         }
@@ -47,7 +52,17 @@ struct MainScreenFeature {
                     await send(.setSources(sources))
                 }
                 
+            case .view(.loadUncompletedQuiz):
+                if let quiz = try? JSONDecoder().decode(Quiz.self, from: state.uncompletedQuizData) {
+                    state.uncompletedQuiz = quiz
+                }
+                return .none
+                
             case .view(.navigateToQuiz(_)):
+                // Callback MainNavigationFeature
+                return .none
+                
+            case .view(.navigateToUncompletedQuiz(_)):
                 // Callback MainNavigationFeature
                 return .none
                 

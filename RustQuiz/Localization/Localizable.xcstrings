@@ -219,6 +219,9 @@
         }
       }
     },
+    "current quiz" : {
+
+    },
     "Data Collection" : {
       "localizations" : {
         "ru" : {

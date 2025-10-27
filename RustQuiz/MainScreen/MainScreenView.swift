@@ -49,6 +49,15 @@ struct MainScreenView: View {
             }
             .padding(.vertical)
         }
+        .overlay(
+            ZStack {
+                if let uncompletedQuiz = store.uncompletedQuiz {
+                    Button("current quiz") {
+                        send(.navigateToUncompletedQuiz(uncompletedQuiz))
+                    }
+                }
+            }
+        )
         .mainBackground()
         .sheet(
             item: $store.scope(
@@ -61,6 +70,7 @@ struct MainScreenView: View {
         )
         .onAppear {
             send(.fetchSources)
+            send(.loadUncompletedQuiz)
         }
     }
 }

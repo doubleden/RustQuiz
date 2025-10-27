@@ -30,7 +30,9 @@ struct QuizScreenView: View {
         .mainBackground()
         .navigationBarBackButtonHidden(true)
         .onAppear {
-            send(.clearQuestionsCache)
+            if store.doClearCacheFromQuiz {
+                send(.clearQuestionsCache)
+            }
         }
         .sheet(
             item: $store.scope(

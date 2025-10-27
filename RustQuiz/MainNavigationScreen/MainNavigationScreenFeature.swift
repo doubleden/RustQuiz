@@ -32,6 +32,10 @@ struct MainNavigationScreenFeature {
                 state.destinationStack.append(.quiz(QuizScreenFeature.State(quiz: quiz)))
                 return .none
                 
+            case .mainScreenAction(.view(.navigateToUncompletedQuiz(let quiz))):
+                state.destinationStack.append(.quiz(QuizScreenFeature.State(quiz: quiz, doClearCacheFromQuiz: false)))
+                return .none
+                
             case .mainScreenAction(.view(.navigateToSettings)):
                 state.destinationStack.append(.settings(SettingsScreenFeature.State()))
                 return .none
