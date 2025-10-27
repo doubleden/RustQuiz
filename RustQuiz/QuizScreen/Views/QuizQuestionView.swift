@@ -21,6 +21,7 @@ struct QuizQuestionView: View {
                 .frame(maxWidth: .infinity)
                 .subFont(size: screenSize.width * 0.08, lineLimit: 10, scaleFactor: 0.3)
                 .foregroundStyle(CustomColor.generalFontColor.color)
+                .textSelection(.enabled)
         }
         .banner()
     }
