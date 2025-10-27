@@ -22,7 +22,8 @@ struct MainQuizButtonView: View {
                     ? CustomColor.backgroundColor.color
                     : CustomColor.generalFontColor.color
                 )
-                .padding()
+                .padding(.horizontal, 8)
+                .padding(.vertical, 5)
                 .frame(
                     width: screenSize.height * 0.19,
                     height: screenSize.height * 0.13
