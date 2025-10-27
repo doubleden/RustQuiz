@@ -1,0 +1,20 @@
+Privacy Policy
+Last updated: October 22, 2025
+Data Collection
+RustQuiz does not collect, store, or transmit any personal data. All quiz progress and results are stored locally on your device only.
+Local Storage
+Your quiz progress, scores, and statistics are saved only on your device using local storage. This data is never sent to external servers or shared with third parties.
+Analytics
+We do not use any analytics, tracking, or advertising services.
+Third-Party Services
+RustQuiz does not integrate with any third-party services or SDKs that could collect user data.
+Children's Privacy
+Our app does not knowingly collect any information from children under 13 years of age.
+Changes to This Privacy Policy
+We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.
+Your Rights
+Since we do not collect any personal data, there is no data to access, modify, or delete.
+Contact Us
+If you have any questions about this Privacy Policy, please contact us at:
+Email: denis.denisv8701@gmail.com
+

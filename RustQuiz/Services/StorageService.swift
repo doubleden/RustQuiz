@@ -267,18 +267,18 @@ extension StorageService: DependencyKey {
 }
 
 // MARK: - Preview
-extension StorageService {
-    static let previewValue: StorageService = .init(
-        createSource: { _ in },
-        readSources: {
-            @Dependency(\.seedServicePreview) var seedServicePreview
-            return try await seedServicePreview.fetchSourcesFromSeedJSON()
-        },
-        updateSource: { _ in },
-        deleteSource: { _ in },
-        updateQuiz: { _ in }
-    )
-}
+//extension StorageService {
+//    static let previewValue: StorageService = .init(
+//        createSource: { _ in },
+//        readSources: {
+//            @Dependency(\.seedServicePreview) var seedServicePreview
+//            return try await seedServicePreview.fetchSourcesFromSeedJSON()
+//        },
+//        updateSource: { _ in },
+//        deleteSource: { _ in },
+//        updateQuiz: { _ in }
+//    )
+//}
 
 // MARK: - Dependency Values
 extension DependencyValues {
