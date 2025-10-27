@@ -69,6 +69,7 @@ struct MainScreenView: View {
             }
         )
         .onAppear {
+            print("did appear")
             send(.fetchSources)
             send(.loadUncompletedQuiz)
         }

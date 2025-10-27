@@ -53,6 +53,7 @@ struct MainScreenFeature {
                 }
                 
             case .view(.loadUncompletedQuiz):
+                state.uncompletedQuiz = nil
                 if let quiz = try? JSONDecoder().decode(Quiz.self, from: state.uncompletedQuizData) {
                     state.uncompletedQuiz = quiz
                 }

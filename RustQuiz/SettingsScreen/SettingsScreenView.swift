@@ -61,12 +61,20 @@ struct SettingsScreenView: View {
                 showTermsOfUse: { send(.showTermsOfUse) }
             )
         }
+        .disabled(store.isDeleting)
         .padding(.vertical)
         .mainBackground()
         .navigationBarBackButtonHidden(true)
         .onAppear {
             send(.getLanguageName)
         }
+        .overlay(
+            ZStack {
+                if store.isDeleting {
+                    DeletingIndicatorView()
+                }
+            }
+        )
         .alert($store.scope(state: \.alert, action: \.alert))
         .sheet(isPresented: $store.isPrivacyPolicyPresented) {
             PrivacyPoliceView(isPresented: $store.isPrivacyPolicyPresented)

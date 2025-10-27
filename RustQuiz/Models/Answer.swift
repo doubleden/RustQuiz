@@ -28,6 +28,6 @@ extension Answer: Codable {
         id = try container.decode(UUID.self, forKey: .id)
         title = try container.decode(String.self, forKey: .title)
         isCorrect = try container.decode(Bool.self, forKey: .isCorrect)
-        isSelected = try container.decode(Bool.self, forKey: .isSelected)
+        isSelected = try container.decodeIfPresent(Bool.self, forKey: .isSelected) ?? false
     }
 }

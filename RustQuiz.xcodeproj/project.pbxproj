@@ -81,6 +81,7 @@
 		05C16D7A2E97EB8500C35053 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C16D792E97EB8500C35053 /* Banner.swift */; };
 		05C16D7C2E97F10100C35053 /* MainProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C16D7B2E97F10100C35053 /* MainProgressView.swift */; };
 		05E3CFC82EAFA4C900039E59 /* UncompletedQuizButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E3CFC72EAFA4C900039E59 /* UncompletedQuizButtonView.swift */; };
+		05E3CFCA2EAFAD7800039E59 /* DeletingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E3CFC92EAFAD7800039E59 /* DeletingIndicatorView.swift */; };
 		05FA733C2E9FE29B003B9E10 /* SettingsTopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FA733B2E9FE29B003B9E10 /* SettingsTopBarView.swift */; };
 /* End PBXBuildFile section */
 
@@ -159,6 +160,7 @@
 		05C16D792E97EB8500C35053 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 		05C16D7B2E97F10100C35053 /* MainProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProgressView.swift; sourceTree = "<group>"; };
 		05E3CFC72EAFA4C900039E59 /* UncompletedQuizButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UncompletedQuizButtonView.swift; sourceTree = "<group>"; };
+		05E3CFC92EAFAD7800039E59 /* DeletingIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletingIndicatorView.swift; sourceTree = "<group>"; };
 		05FA733B2E9FE29B003B9E10 /* SettingsTopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTopBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -508,6 +510,7 @@
 				05402BB62E9FE89C00AA10EE /* SettingsSectionView.swift */,
 				05402BBA2E9FEED200AA10EE /* SettingsButtonView.swift */,
 				05402BBC2E9FF44D00AA10EE /* SettingsFooterView.swift */,
+				05E3CFC92EAFAD7800039E59 /* DeletingIndicatorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -622,6 +625,7 @@
 				054AB5F82EA15D3A005EDAC7 /* QuizProgressIndicator.swift in Sources */,
 				053387912E8A7D9000554004 /* AnswerTable.swift in Sources */,
 				054D782E2E96AE1600DFCD34 /* CrabModel.swift in Sources */,
+				05E3CFCA2EAFAD7800039E59 /* DeletingIndicatorView.swift in Sources */,
 				05402BBB2E9FEED200AA10EE /* SettingsButtonView.swift in Sources */,
 				0544F3BE2E9955FB00720EB1 /*  AllQuizzesFeature.swift in Sources */,
 				0544F3BF2E9955FB00720EB1 /* AllQuizzesView.swift in Sources */,

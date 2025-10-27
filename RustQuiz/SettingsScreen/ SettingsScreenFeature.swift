@@ -16,13 +16,16 @@ struct SettingsScreenFeature {
         var languageName = "None"
         var appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "Unknown"
         var isPrivacyPolicyPresented = false
+        var isDeleting = false
         @Presents var alert: AlertState<Action.Alert>?
+        @Shared(.appStorage("uncompletedQuiz")) var uncompletedQuizData = Data()
     }
     
     enum Action: ViewAction, BindableAction {
         case view(View)
         case binding(BindingAction<State>)
         case alert(PresentationAction<Alert>)
+        case clearingProgressFinished
         
         @CasePathable
         enum View {
@@ -86,7 +89,9 @@ struct SettingsScreenFeature {
                 return .none
                 
             case .alert(.presented(.resetData)):
-                return .run { _ in
+                state.isDeleting = true
+                state.$uncompletedQuizData.withLock { $0 = Data() }
+                return .run { send in
                     let sources = try await storageService.readSources()
                     for source in sources {
                         try await storageService.deleteSource(source)
@@ -95,9 +100,14 @@ struct SettingsScreenFeature {
                     for source in seededSources {
                         try await storageService.createSource(source)
                     }
+                    await send(.clearingProgressFinished)
                 }
                 
             case .alert(.presented(.cancel)):
+                return .none
+                
+            case .clearingProgressFinished:
+                state.isDeleting = false
                 return .none
                 
             default:
