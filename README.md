@@ -14,8 +14,8 @@ A SwiftUI-based iOS application designed to help developers learn and reinforce 
   ## Screenshots
 
 <p align="center">
-  <img src="./screenshots/Simulator Screenshot - iPhone 13 Pro Max - 2025-10-27 at 18.28.15.png" width="250" alt="Main Screen">
-  <img src="./screenshots/Simulator Screenshot - iPhone 13 Pro Max - 2025-10-27 at 18.28.51.png" width="250" alt="Quiz Screen">
+  <img src="./Screenshots/Simulator Screenshot - iPhone 13 Pro Max - 2025-10-27 at 18.28.15.png" width="250" alt="Main Screen">
+  <img src="./Screenshots/Simulator Screenshot - iPhone 13 Pro Max - 2025-10-27 at 18.28.51.png" width="250" alt="Quiz Screen">
 </p>
 
 ## Technologies
