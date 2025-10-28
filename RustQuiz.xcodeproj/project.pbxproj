@@ -154,6 +154,8 @@
 		056DCA3B2EAFE68900EAEBF1 /* PrivacyPolicy.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = PrivacyPolicy.txt; sourceTree = "<group>"; };
 		05767D702EA935F800C29477 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05767D732EA9486700C29477 /* PrivacyPoliceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPoliceView.swift; sourceTree = "<group>"; };
+		058BAB592EB0C2F300707555 /* Simulator Screenshot - iPhone 13 Pro Max - 2025-10-27 at 18.28.15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screenshot - iPhone 13 Pro Max - 2025-10-27 at 18.28.15.png"; sourceTree = "<group>"; };
+		058BAB5A2EB0C2F300707555 /* Simulator Screenshot - iPhone 13 Pro Max - 2025-10-27 at 18.28.51.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screenshot - iPhone 13 Pro Max - 2025-10-27 at 18.28.51.png"; sourceTree = "<group>"; };
 		0591A37C2E9A6D6F00306B7D /* sources.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sources.json; sourceTree = "<group>"; };
 		05ABF83F2E982CD90071C08A /* ScreenSizeKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSizeKey.swift; sourceTree = "<group>"; };
 		05C16D722E97D7CB00C35053 /* TopBarButtonShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarButtonShape.swift; sourceTree = "<group>"; };
@@ -351,6 +353,7 @@
 			isa = PBXGroup;
 			children = (
 				056DCA3B2EAFE68900EAEBF1 /* PrivacyPolicy.txt */,
+				058BAB582EB0C2DC00707555 /* Screenshots */,
 				056C6C122E868A07006C44D3 /* RustQuiz */,
 				056C6C022E868A01006C44D3 /* Products */,
 			);
@@ -472,6 +475,15 @@
 				05767D732EA9486700C29477 /* PrivacyPoliceView.swift */,
 			);
 			path = PrivacyPolice;
+			sourceTree = "<group>";
+		};
+		058BAB582EB0C2DC00707555 /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				058BAB592EB0C2F300707555 /* Simulator Screenshot - iPhone 13 Pro Max - 2025-10-27 at 18.28.15.png */,
+				058BAB5A2EB0C2F300707555 /* Simulator Screenshot - iPhone 13 Pro Max - 2025-10-27 at 18.28.51.png */,
+			);
+			path = Screenshots;
 			sourceTree = "<group>";
 		};
 		05ABF83E2E982C080071C08A /* EnvironmentKeys */ = {
