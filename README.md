@@ -2,6 +2,8 @@
 
 A SwiftUI-based iOS application designed to help developers learn and reinforce their knowledge of the Rust programming language through interactive quizzes.
 
+App Store <a>https://apps.apple.com/es/app/rust-quiz/id6754566593</a>
+
 ## Features
 
 - 📚 **Interactive Quizzes** - Test your Rust knowledge with carefully curated quiz questions
@@ -35,7 +37,7 @@ A SwiftUI-based iOS application designed to help developers learn and reinforce 
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/rust-quiz.git
+git clone https://github.com/doubleDen/RustQuiz.git
 ```
 
 2. Open the project in Xcode:
