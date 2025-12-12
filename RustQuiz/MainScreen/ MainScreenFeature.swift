@@ -17,6 +17,8 @@ struct MainScreenFeature {
         @Shared(.appStorage("uncompletedQuiz")) var uncompletedQuizData = Data()
         var uncompletedQuiz: Quiz?
         
+        @Shared(.appStorage("isSubscribed")) var isSubscribed = false
+        
         var progress: Int {
             guard !sources.isEmpty else { return 0 }
             let total = sources.reduce(0) { $0 + $1.averageRating }

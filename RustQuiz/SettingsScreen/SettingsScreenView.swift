@@ -48,6 +48,11 @@ struct SettingsScreenView: View {
                             title: "Clear progress",
                             action: { send(.clearProgress) }
                         )
+                        
+                        SettingsButtonView(
+                            title: "But Subscription",
+                            action: { send(.clearProgress) }
+                        )
                     }
                     .padding()
                 }

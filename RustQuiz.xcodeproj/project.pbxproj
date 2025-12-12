@@ -55,6 +55,8 @@
 		0554FDB12E9937F30087A88C /* MainSourceSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0554FDB02E9937F30087A88C /* MainSourceSectionView.swift */; };
 		0554FDB52E9941A70087A88C /* MainQuizButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0554FDB42E9941A70087A88C /* MainQuizButtonView.swift */; };
 		055EB71D2E9065E4003C2459 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 055EB71C2E9065E4003C2459 /* Localizable.xcstrings */; };
+		055F350A2EEB13F300EA6AC6 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 055F35092EEB13F300EA6AC6 /* StoreKit.framework */; };
+		055F350C2EEB145900EA6AC6 /* SubStore.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 055F350B2EEB145900EA6AC6 /* SubStore.storekit */; };
 		056C6C132E868A07006C44D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 056C6C0F2E868A07006C44D3 /* Assets.xcassets */; };
 		056C6C152E868A07006C44D3 /* RustQuizApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056C6C112E868A07006C44D3 /* RustQuizApp.swift */; };
 		056C6C182E868A47006C44D3 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 056C6C172E868A47006C44D3 /* ComposableArchitecture */; };
@@ -81,6 +83,9 @@
 		05C16D782E97E75A00C35053 /* ButtonPressInStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C16D772E97E75A00C35053 /* ButtonPressInStyle.swift */; };
 		05C16D7A2E97EB8500C35053 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C16D792E97EB8500C35053 /* Banner.swift */; };
 		05C16D7C2E97F10100C35053 /* MainProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C16D7B2E97F10100C35053 /* MainProgressView.swift */; };
+		05CD484D2EEC6B2A00F40F97 /* SubscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CD484C2EEC6B2A00F40F97 /* SubscriptionService.swift */; };
+		05CD48512EEC6D6D00F40F97 /* SubscriptionScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CD484F2EEC6D6D00F40F97 /* SubscriptionScreenView.swift */; };
+		05CD48522EEC6D6D00F40F97 /*  SubscriptionScreenFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CD484E2EEC6D6D00F40F97 /*  SubscriptionScreenFeature.swift */; };
 		05E3CFC82EAFA4C900039E59 /* UncompletedQuizButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E3CFC72EAFA4C900039E59 /* UncompletedQuizButtonView.swift */; };
 		05E3CFCA2EAFAD7800039E59 /* DeletingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E3CFC92EAFAD7800039E59 /* DeletingIndicatorView.swift */; };
 		05FA733C2E9FE29B003B9E10 /* SettingsTopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FA733B2E9FE29B003B9E10 /* SettingsTopBarView.swift */; };
@@ -136,6 +141,8 @@
 		0554FDB02E9937F30087A88C /* MainSourceSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSourceSectionView.swift; sourceTree = "<group>"; };
 		0554FDB42E9941A70087A88C /* MainQuizButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQuizButtonView.swift; sourceTree = "<group>"; };
 		055EB71C2E9065E4003C2459 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		055F35092EEB13F300EA6AC6 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		055F350B2EEB145900EA6AC6 /* SubStore.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = SubStore.storekit; sourceTree = "<group>"; };
 		056C6C012E868A01006C44D3 /* RustQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RustQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		056C6C0F2E868A07006C44D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		056C6C112E868A07006C44D3 /* RustQuizApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RustQuizApp.swift; sourceTree = "<group>"; };
@@ -163,6 +170,9 @@
 		05C16D772E97E75A00C35053 /* ButtonPressInStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonPressInStyle.swift; sourceTree = "<group>"; };
 		05C16D792E97EB8500C35053 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 		05C16D7B2E97F10100C35053 /* MainProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProgressView.swift; sourceTree = "<group>"; };
+		05CD484C2EEC6B2A00F40F97 /* SubscriptionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionService.swift; sourceTree = "<group>"; };
+		05CD484E2EEC6D6D00F40F97 /*  SubscriptionScreenFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " SubscriptionScreenFeature.swift"; sourceTree = "<group>"; };
+		05CD484F2EEC6D6D00F40F97 /* SubscriptionScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionScreenView.swift; sourceTree = "<group>"; };
 		05E3CFC72EAFA4C900039E59 /* UncompletedQuizButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UncompletedQuizButtonView.swift; sourceTree = "<group>"; };
 		05E3CFC92EAFAD7800039E59 /* DeletingIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletingIndicatorView.swift; sourceTree = "<group>"; };
 		05FA733B2E9FE29B003B9E10 /* SettingsTopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTopBarView.swift; sourceTree = "<group>"; };
@@ -173,6 +183,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				055F350A2EEB13F300EA6AC6 /* StoreKit.framework in Frameworks */,
 				056C6D0B2E86C85D006C44D3 /* SQLiteData in Frameworks */,
 				056C6C182E868A47006C44D3 /* ComposableArchitecture in Frameworks */,
 			);
@@ -349,12 +360,21 @@
 			path = SeedJSON;
 			sourceTree = "<group>";
 		};
+		055F35082EEB13F300EA6AC6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				055F35092EEB13F300EA6AC6 /* StoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		056C6BF82E868A01006C44D3 = {
 			isa = PBXGroup;
 			children = (
 				056DCA3B2EAFE68900EAEBF1 /* PrivacyPolicy.txt */,
 				058BAB582EB0C2DC00707555 /* Screenshots */,
 				056C6C122E868A07006C44D3 /* RustQuiz */,
+				055F35082EEB13F300EA6AC6 /* Frameworks */,
 				056C6C022E868A01006C44D3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -376,6 +396,7 @@
 				056C6CEB2E86B6BB006C44D3 /* OnBoardingScreen */,
 				056C6CE62E86B644006C44D3 /* MainNavigationScreen */,
 				050CB6142E93EEDC0060E2AD /* MainScreen */,
+				05CD48502EEC6D6D00F40F97 /* SubscriptionScreen */,
 				056C6CDC2E86B47D006C44D3 /* SettingsScreen */,
 				056C6CE12E86B48C006C44D3 /* QuizScreen */,
 				054D78272E9697A700DFCD34 /* Modifiers */,
@@ -391,6 +412,7 @@
 				054D78502E96B41400DFCD34 /* Fonts */,
 				056C6C0F2E868A07006C44D3 /* Assets.xcassets */,
 				05767D702EA935F800C29477 /* LaunchScreen.storyboard */,
+				055F350B2EEB145900EA6AC6 /* SubStore.storekit */,
 			);
 			path = RustQuiz;
 			sourceTree = "<group>";
@@ -465,6 +487,7 @@
 			children = (
 				056C6D102E8940A1006C44D3 /* StorageService.swift */,
 				053387CD2E8AAB0000554004 /* SeedService.swift */,
+				05CD484C2EEC6B2A00F40F97 /* SubscriptionService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -500,6 +523,15 @@
 				05C16D772E97E75A00C35053 /* ButtonPressInStyle.swift */,
 			);
 			path = Styles;
+			sourceTree = "<group>";
+		};
+		05CD48502EEC6D6D00F40F97 /* SubscriptionScreen */ = {
+			isa = PBXGroup;
+			children = (
+				05CD484E2EEC6D6D00F40F97 /*  SubscriptionScreenFeature.swift */,
+				05CD484F2EEC6D6D00F40F97 /* SubscriptionScreenView.swift */,
+			);
+			path = SubscriptionScreen;
 			sourceTree = "<group>";
 		};
 		05D5259E2E89546A0002C6BE /* App */ = {
@@ -601,6 +633,7 @@
 				056C6C132E868A07006C44D3 /* Assets.xcassets in Resources */,
 				056DCA3C2EAFE68900EAEBF1 /* PrivacyPolicy.txt in Resources */,
 				054D78522E96B44300DFCD34 /* FiraSans-Regular.ttf in Resources */,
+				055F350C2EEB145900EA6AC6 /* SubStore.storekit in Resources */,
 				055EB71D2E9065E4003C2459 /* Localizable.xcstrings in Resources */,
 				05767D712EA935F800C29477 /* LaunchScreen.storyboard in Resources */,
 				0591A37D2E9A6D6F00306B7D /* sources.json in Resources */,
@@ -628,6 +661,8 @@
 				054AB5FE2EA2628C005EDAC7 /* QuizWhyButtonView.swift in Sources */,
 				050CB6152E93EEDC0060E2AD /*  MainScreenFeature.swift in Sources */,
 				050CB6162E93EEDC0060E2AD /* MainScreenView.swift in Sources */,
+				05CD48512EEC6D6D00F40F97 /* SubscriptionScreenView.swift in Sources */,
+				05CD48522EEC6D6D00F40F97 /*  SubscriptionScreenFeature.swift in Sources */,
 				05C16D732E97D7CB00C35053 /* TopBarButtonShape.swift in Sources */,
 				051D569F2EA3B273006C0D10 /* QuizTransitionButtonsView.swift in Sources */,
 				0533878D2E8A7D7300554004 /* QuizTable.swift in Sources */,
@@ -662,6 +697,7 @@
 				05402BB92E9FEDD100AA10EE /* FullBanner.swift in Sources */,
 				054AB5F62EA124C0005EDAC7 /* QuizQuestionView.swift in Sources */,
 				056C6CE32E86B48C006C44D3 /*  QuizScreenFeature.swift in Sources */,
+				05CD484D2EEC6B2A00F40F97 /* SubscriptionService.swift in Sources */,
 				054AB6042EA27A23005EDAC7 /* QuizWhyFeature.swift in Sources */,
 				054AB6052EA27A23005EDAC7 /* QuizWhyView.swift in Sources */,
 				054D782B2E96A04800DFCD34 /* CrabsAnimation.swift in Sources */,
