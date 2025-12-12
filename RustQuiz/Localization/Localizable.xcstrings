@@ -8827,6 +8827,17 @@
         }
       }
     },
+    "Buy Subscription" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Купить подписку"
+          }
+        }
+      }
+    },
     "By convention, a library starts at src/lib.rs" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -26231,6 +26242,9 @@
           }
         }
       }
+    },
+    "Key" : {
+      "extractionState" : "manual"
     },
     "Keyword fn" : {
       "comment" : "A section or theme title.",

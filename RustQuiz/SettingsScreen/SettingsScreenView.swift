@@ -50,8 +50,8 @@ struct SettingsScreenView: View {
                         )
                         
                         SettingsButtonView(
-                            title: "But Subscription",
-                            action: { send(.clearProgress) }
+                            title: "Buy Subscription",
+                            action: { send(.showSubscriptionView) }
                         )
                     }
                     .padding()
@@ -83,6 +83,9 @@ struct SettingsScreenView: View {
         .alert($store.scope(state: \.alert, action: \.alert))
         .sheet(isPresented: $store.isPrivacyPolicyPresented) {
             PrivacyPoliceView(isPresented: $store.isPrivacyPolicyPresented)
+        }
+        .sheet(item: $store.scope(state: \.subscriptionScreenState, action: \.subscriptionScreenAction)) { store in
+            SubscriptionScreenView(store: store)
         }
     }
 }

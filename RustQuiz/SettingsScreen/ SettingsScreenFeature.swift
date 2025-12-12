@@ -17,6 +17,7 @@ struct SettingsScreenFeature {
         var appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "Unknown"
         var isPrivacyPolicyPresented = false
         var isDeleting = false
+        @Presents var subscriptionScreenState: SubscriptionScreenFeature.State?
         @Presents var alert: AlertState<Action.Alert>?
         @Shared(.appStorage("uncompletedQuiz")) var uncompletedQuizData = Data()
     }
@@ -24,6 +25,7 @@ struct SettingsScreenFeature {
     enum Action: ViewAction, BindableAction {
         case view(View)
         case binding(BindingAction<State>)
+        case subscriptionScreenAction(PresentationAction<SubscriptionScreenFeature.Action>)
         case alert(PresentationAction<Alert>)
         case clearingProgressFinished
         
@@ -35,6 +37,7 @@ struct SettingsScreenFeature {
             case clearProgress
             case showPrivacyPolicy
             case showTermsOfUse
+            case showSubscriptionView
         }
         enum Alert: Equatable {
             case resetData
@@ -88,6 +91,10 @@ struct SettingsScreenFeature {
                 state.isPrivacyPolicyPresented = true
                 return .none
                 
+            case .view(.showSubscriptionView):
+                state.subscriptionScreenState = .init()
+                return .none
+                
             case .alert(.presented(.resetData)):
                 state.isDeleting = true
                 state.$uncompletedQuizData.withLock { $0 = Data() }
@@ -115,5 +122,8 @@ struct SettingsScreenFeature {
             }
         }
         .ifLet(\.$alert, action: \.alert)
+        .ifLet(\.$subscriptionScreenState, action: \.subscriptionScreenAction) {
+            SubscriptionScreenFeature()
+        }
     }
 }
